@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <script>document.documentElement.classList.add('js-enabled');</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hồ Sơ Vay Đẹp™ — Kiểm tra Điểm Sẵn Sàng Vay™</title>
+  <meta name="description" content="Chuẩn hóa hồ sơ vay, dòng tiền và câu chuyện tài chính theo góc nhìn ngân hàng. Không chạy hồ sơ, không làm giả, không cam kết duyệt vay." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+:root{
+  --white:#fff;--cream:#f8f7f3;--line:#e8e5dc;--ink:#12140f;--muted:#666b5f;
+  --navy:#172f55;--navy2:#24446f;--gold:#c79a42;--green:#16a34a;--red:#b94a48;
+  --w:1160px;--pad:36px;--r:14px;--font:'Inter',system-ui,-apple-system,Segoe UI,sans-serif;
+  --sh:0 18px 60px rgba(18,20,15,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth} body{font-family:var(--font);color:var(--ink);background:var(--white);line-height:1.65}
+a{text-decoration:none;color:inherit}.container{max-width:var(--w);margin:auto;padding:0 var(--pad)}
+@media(max-width:720px){:root{--pad:20px}}
+.nav{position:fixed;z-index:50;top:0;left:0;right:0;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.navin{height:66px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:-.02em}.brand small{display:block;font-size:11px;color:var(--muted);font-weight:500}
+.navlinks{display:flex;gap:26px;align-items:center;font-size:14px;color:var(--muted)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--navy);color:white;border-radius:999px;padding:13px 22px;font-weight:700;border:0;cursor:pointer}
+.btn:hover{background:var(--navy2)}.btn.alt{background:white;color:var(--navy);border:1px solid var(--line)}
+@media(max-width:860px){.navlinks a:not(.btn){display:none}.navlinks{gap:0}}
+.hero{padding:132px 0 86px;background:linear-gradient(180deg,#fff 0%,var(--cream) 100%)}
+.grid{display:grid;grid-template-columns:1.05fr .95fr;gap:58px;align-items:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:white;border-radius:999px;padding:7px 13px;font-size:13px;color:var(--muted);margin-bottom:24px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--green)}h1{font-size:clamp(38px,5.4vw,68px);line-height:1.04;letter-spacing:-.045em;margin-bottom:22px}h1 span{color:var(--navy)}
+.lead{font-size:19px;color:var(--muted);max-width:610px;margin-bottom:28px}.proof{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;color:var(--muted);font-size:14px}.pill{border:1px solid var(--line);background:white;border-radius:999px;padding:7px 12px}
+.scorecard{background:white;border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:var(--sh)}
+.scoretop{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:22px}.scoretitle{font-size:14px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.08em}.score{font-size:60px;font-weight:800;line-height:1;color:var(--navy)}.score small{font-size:22px;color:var(--muted)}
+.bar{height:12px;border-radius:999px;background:#ece9e0;overflow:hidden;margin:20px 0}.bar span{display:block;height:100%;width:74%;background:linear-gradient(90deg,var(--gold),var(--green))}
+.metric{display:flex;justify-content:space-between;gap:18px;border-top:1px solid var(--line);padding:14px 0;font-size:15px}.metric b{font-weight:700}.stars{color:var(--gold);letter-spacing:2px}.warn{background:#fff7ed;border:1px solid #fed7aa;border-radius:14px;padding:14px;margin-top:16px;font-size:14px;color:#7c2d12}
+section{padding:86px 0}.alt{background:var(--cream)}.dark{background:var(--navy);color:white}.center{text-align:center}.label{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);font-weight:800;margin-bottom:14px}.h2{font-size:clamp(30px,4vw,48px);line-height:1.12;letter-spacing:-.035em;margin-bottom:18px}.sub{font-size:18px;color:var(--muted);max-width:720px}.center .sub{margin:auto}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}.card{background:white;border:1px solid var(--line);border-radius:20px;padding:26px}.card h3{font-size:20px;margin-bottom:10px}.card p{color:var(--muted);font-size:15px}
+.health{display:grid;grid-template-columns:.9fr 1.1fr;gap:42px;align-items:center}.quote{font-size:30px;line-height:1.28;font-weight:800;letter-spacing:-.02em}.quote span{color:var(--navy)}
+.fivec{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:32px}.cbox{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);border-radius:18px;padding:20px}.cbox b{font-size:28px;color:var(--gold)}.cbox h3{font-size:17px;margin:8px 0}.cbox p{color:rgba(255,255,255,.68);font-size:14px}
+.ladder{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}.offer{background:white;border:1px solid var(--line);border-radius:20px;padding:24px;display:flex;flex-direction:column}.offer .tag{font-size:12px;color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:.08em}.offer h3{font-size:22px;margin:10px 0}.price{font-size:28px;font-weight:800;color:var(--navy);margin-bottom:12px}.offer ul{margin:14px 0 22px;padding-left:18px;color:var(--muted);font-size:14px}.offer .btn{margin-top:auto}
+.truth{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px}.truthbox{border:1px solid var(--line);border-radius:20px;padding:28px;background:white}.truthbox.bad{opacity:.66}.truthbox h3{margin-bottom:10px}.truthbox p{color:var(--muted)}
+.formgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:46px;align-items:start}.form{background:white;border:1px solid var(--line);box-shadow:var(--sh);border-radius:22px;padding:28px}.fg{margin-bottom:15px}label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}input,select,textarea{width:100%;height:46px;border:1px solid var(--line);border-radius:12px;padding:0 13px;font:inherit}textarea{height:96px;padding-top:12px}.note{font-size:12px;color:var(--muted);text-align:center;margin-top:12px}
+.faq{max-width:820px;margin:36px auto 0}.qa{border-top:1px solid var(--line);padding:22px 0}.qa b{display:block;margin-bottom:6px}.qa p{color:var(--muted)}
+footer{padding:36px 0;border-top:1px solid var(--line);background:var(--cream);color:var(--muted);font-size:13px}
+.reveal{opacity:0;transform:translateY(16px);transition:.55s ease}.reveal.in{opacity:1;transform:none}
+@media(max-width:920px){.grid,.health,.formgrid,.truth{grid-template-columns:1fr}.cards,.ladder{grid-template-columns:1fr}.fivec{grid-template-columns:1fr 1fr}.scorecard{order:-1}}
+@media(max-width:560px){.fivec{grid-template-columns:1fr}.proof{display:block}.pill{display:inline-block;margin:4px 0}.hero{padding-top:106px}.score{font-size:48px}}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <div class="container navin">
+    <a class="brand" href="#">Hồ Sơ Vay Đẹp™<small>Credit Readiness Platform</small></a>
+    <div class="navlinks">
+      <a href="#score">Điểm vay</a><a href="#5c">5C</a><a href="#offers">Sản phẩm</a><a class="btn" href="#form">Kiểm tra miễn phí</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container grid">
+    <div>
+      <div class="eyebrow reveal"><span class="dot"></span> Không chạy hồ sơ · Không làm giả · Không cam kết duyệt vay</div>
+      <h1 class="reveal">Có tiền thật chưa đủ. <span>Hồ sơ phải kể được câu chuyện tài chính</span> theo cách ngân hàng hiểu.</h1>
+      <p class="lead reveal">Dành cho chủ shop online, freelancer, solopreneur doanh thu 80–300 triệu/tháng đang chuẩn bị vay mua nhà hoặc vay vốn kinh doanh trong 3–6 tháng tới.</p>
+      <a class="btn reveal" href="#form">Kiểm tra Điểm Sẵn Sàng Vay™</a>
+      <div class="proof reveal">
+        <span class="pill">10 năm kinh nghiệm tín dụng cá nhân</span>
+        <span class="pill">Chuẩn hóa dòng tiền thật</span>
+        <span class="pill">Góc nhìn ngân hàng</span>
+      </div>
+    </div>
+    <div class="scorecard reveal" id="score">
+      <div class="scoretop">
+        <div><div class="scoretitle">Loan Readiness Index™</div><p style="color:var(--muted)">Điểm mẫu minh họa</p></div>
+        <div class="score">74<small>/100</small></div>
+      </div>
+      <div class="bar"><span></span></div>
+      <div class="metric"><b>Cashflow — Dòng tiền</b><span class="stars">★★★★★</span></div>
+      <div class="metric"><b>Consistency — Độ ổn định</b><span class="stars">★★★☆☆</span></div>
+      <div class="metric"><b>Clarity — Dễ hiểu</b><span class="stars">★★☆☆☆</span></div>
+      <div class="metric"><b>Compliance — Đúng chuẩn</b><span class="stars">★★★☆☆</span></div>
+      <div class="metric"><b>Credit — CIC</b><span class="stars">★★★★☆</span></div>
+      <div class="warn">Kết luận mẫu: có tiềm năng vay, nhưng chưa nên nộp ngay nếu phần chứng minh thu nhập còn rối.</div>
+    </div>
+  </div>
+</header>
+
+<section class="alt">
+  <div class="container health">
+    <div class="quote reveal">Hồ sơ vay cũng giống <span>hồ sơ sức khỏe.</span></div>
+    <div class="reveal">
+      <p class="sub">Có người khỏe. Có người tưởng mình khỏe. Có người chỉ phát hiện vấn đề khi đi khám. Hồ sơ vay cũng vậy: nhiều người có dòng tiền thật, nhưng chỉ đến khi bị từ chối mới biết hồ sơ chưa đủ rõ.</p>
+      <div class="cards">
+        <div class="card"><h3>Khám trước</h3><p>Biết hồ sơ đang mạnh/yếu ở đâu trước khi gặp ngân hàng.</p></div>
+        <div class="card"><h3>Chấm điểm</h3><p>Nhận Điểm Sẵn Sàng Vay™ dựa trên 5C Hồ Sơ Vay™.</p></div>
+        <div class="card"><h3>Kế hoạch</h3><p>Có checklist cải thiện trong 30–90 ngày nếu chưa sẵn sàng.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="5c">
+  <div class="container">
+    <div class="center reveal">
+      <div class="label">Framework độc quyền</div>
+      <h2 class="h2">5C Hồ Sơ Vay™</h2>
+      <p class="sub" style="color:rgba(255,255,255,.68)">Một bộ hồ sơ đẹp không chỉ có tiền. Nó cần đủ 5 trụ cột để ngân hàng đọc được câu chuyện tài chính của bạn.</p>
+    </div>
+    <div class="fivec reveal">
+      <div class="cbox"><b>C</b><h3>Cashflow</h3><p>Dòng tiền vào ra có thật, đều và hợp lý không?</p></div>
+      <div class="cbox"><b>C</b><h3>Consistency</h3><p>Thu nhập có ổn định qua thời gian không?</p></div>
+      <div class="cbox"><b>C</b><h3>Clarity</h3><p>Hồ sơ có dễ hiểu, dễ giải trình không?</p></div>
+      <div class="cbox"><b>C</b><h3>Compliance</h3><p>Giấy tờ có đúng chuẩn ngân hàng không?</p></div>
+      <div class="cbox"><b>C</b><h3>Credit</h3><p>Lịch sử tín dụng có sạch và đáng tin không?</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="center reveal">
+      <div class="label">Sự thật khó nghe</div>
+      <h2 class="h2">Thu nhập cao không đồng nghĩa hồ sơ dễ duyệt.</h2>
+    </div>
+    <div class="truth">
+      <div class="truthbox bad reveal"><h3>Mọi người thường nghĩ</h3><p>“Tôi kiếm được nhiều tiền thì ngân hàng sẽ cho vay.”</p></div>
+      <div class="truthbox reveal"><h3>Ngân hàng thường nhìn</h3><p>Nguồn tiền có chứng minh được không, có ổn định không, có rủi ro không, và hồ sơ có kể đúng câu chuyện tài chính không.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="offers">
+  <div class="container">
+    <div class="center reveal">
+      <div class="label">Hệ sinh thái sản phẩm</div>
+      <h2 class="h2">Bắt đầu miễn phí. Chỉ nâng cấp khi hồ sơ thật sự cần.</h2>
+    </div>
+    <div class="ladder">
+      <div class="offer reveal"><div class="tag">Lead magnet</div><h3>Phiếu Khám Sức Khỏe Hồ Sơ Vay™</h3><div class="price">Miễn phí</div><ul><li>Điểm sơ bộ</li><li>3 cảnh báo lớn nhất</li><li>Checklist chuẩn bị</li></ul><a class="btn alt" href="#form">Nhận phiếu</a></div>
+      <div class="offer reveal"><div class="tag">MVP bán hàng</div><h3>Soi Hồ Sơ 60 Phút</h3><div class="price">Tư vấn 1:1</div><ul><li>Phân tích trực tiếp</li><li>Điểm Sẵn Sàng Vay™</li><li>Lộ trình 30 ngày</li></ul><a class="btn" href="#form">Đặt lịch</a></div>
+      <div class="offer reveal"><div class="tag">Core offer</div><h3>Hồ Sơ Vay Đẹp™</h3><div class="price">3–6 tuần</div><ul><li>Chuẩn hóa dòng tiền</li><li>Sắp xếp giấy tờ</li><li>Financial Story™</li></ul><a class="btn alt" href="#form">Tìm hiểu</a></div>
+      <div class="offer reveal"><div class="tag">Premium</div><h3>Hồ Sơ Vay Đẹp™ Private</h3><div class="price">Theo hồ sơ</div><ul><li>Hồ sơ phức tạp</li><li>Khoản vay lớn</li><li>Đồng hành sát</li></ul><a class="btn alt" href="#form">Ứng tuyển</a></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container grid">
+    <div class="reveal">
+      <div class="label">Niềm tin</div>
+      <h2 class="h2">10 năm kinh nghiệm trong tín dụng cá nhân.</h2>
+      <p class="sub">Hồ Sơ Vay Đẹp™ được xây dựng từ kinh nghiệm thực tế trong lĩnh vực tín dụng cá nhân và thẩm định hồ sơ vay. Vai trò của chúng tôi không phải “chạy hồ sơ”, mà là giúp hồ sơ thật của bạn rõ hơn, logic hơn và dễ thẩm định hơn.</p>
+    </div>
+    <div class="card reveal">
+      <h3>Nguyên tắc làm việc</h3>
+      <p>Không cam kết duyệt vay. Không làm hồ sơ giả. Không hướng dẫn tạo dòng tiền ảo. Nếu hồ sơ chưa nên nộp, chúng tôi sẽ nói thẳng.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="form">
+  <div class="container formgrid">
+    <div class="reveal">
+      <div class="label">Bắt đầu tại đây</div>
+      <h2 class="h2">Nhận Phiếu Khám Sức Khỏe Hồ Sơ Vay™</h2>
+      <p class="sub">Điền vài thông tin cơ bản. Bạn sẽ nhận đánh giá sơ bộ và hướng chuẩn bị phù hợp.</p>
+      <div class="faq">
+        <div class="qa"><b>Có cam kết duyệt vay không?</b><p>Không. Quyết định duyệt vay thuộc về ngân hàng.</p></div>
+        <div class="qa"><b>Có làm hồ sơ giả không?</b><p>Không. Chúng tôi chỉ làm việc với dữ liệu thật.</p></div>
+        <div class="qa"><b>Chưa vay ngay có cần chuẩn bị không?</b><p>Có. Thời điểm tốt nhất là trước 3–6 tháng.</p></div>
+      </div>
+    </div>
+    <div class="form reveal">
+      <form id="lead-form" onsubmit="handleSubmit(event)">
+        <div class="fg"><label>Họ và tên</label><input id="f-name" required placeholder="Nguyễn Văn A"></div>
+        <div class="fg"><label>Số điện thoại/Zalo</label><input id="f-phone" required placeholder="0901 234 567"></div>
+        <div class="fg"><label>Bạn muốn vay để làm gì?</label><select id="f-purpose" required><option value="">Chọn mục đích</option><option>Mua nhà</option><option>Vay vốn kinh doanh</option><option>Mua xe</option><option>Khác</option></select></div>
+        <div class="fg"><label>Doanh thu/thu nhập tháng</label><select id="f-income" required><option value="">Chọn khoảng</option><option>Dưới 80 triệu</option><option>80–150 triệu</option><option>150–300 triệu</option><option>Trên 300 triệu</option></select></div>
+        <div class="fg"><label>Dự kiến vay trong bao lâu?</label><select id="f-time" required><option value="">Chọn thời gian</option><option>Trong 1 tháng</option><option>3–6 tháng</option><option>6–12 tháng</option><option>Chưa rõ</option></select></div>
+        <div class="fg"><label>Ghi chú thêm</label><textarea id="f-note" placeholder="Ví dụ: đã từng bị từ chối, có sao kê nhưng không có bảng lương..."></textarea></div>
+        <button class="btn" style="width:100%" type="submit">Gửi để kiểm tra điểm</button>
+        <p class="note">Thông tin của bạn được bảo mật. Không chia sẻ cho bên thứ ba.</p>
+      </form>
+      <div id="success" style="display:none;text-align:center;padding:32px 0">
+        <h3>Đã nhận thông tin.</h3><p style="color:var(--muted)">Chúng tôi sẽ liên hệ lại qua Zalo/số điện thoại bạn cung cấp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="container">© 2026 Hồ Sơ Vay Đẹp™ · dochoso.io.vn · Không chạy hồ sơ, không làm giả, không cam kết duyệt vay.</div></footer>
+
+<script>
+const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbzbFCSI2h8AHdHNk7sqAaM49Bp0Kv02oyTK73nSCELlneZoYKWqGM75UrXTh1ehAifSSg/exec";
+const els=document.querySelectorAll('.reveal');const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});els.forEach(el=>io.observe(el));
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.onclick=e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();scrollTo({top:t.offsetTop-70,behavior:'smooth'})}});
+function handleSubmit(e){
+  e.preventDefault();
+  const data={name:fName('f-name'),phone:fName('f-phone'),purpose:fName('f-purpose'),income:fName('f-income'),time:fName('f-time'),note:fName('f-note'),source:'landing-hoso-vay-dep-v2'};
+  if(GOOGLE_SHEET_URL){fetch(GOOGLE_SHEET_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(data)}).catch(console.error)}
+  const msg=encodeURIComponent(`Xin chào, tôi ${data.name} muốn nhận Phiếu Khám Sức Khỏe Hồ Sơ Vay.\nMục đích: ${data.purpose}\nThu nhập/doanh thu: ${data.income}\nThời gian vay: ${data.time}\nSĐT: ${data.phone}`);
+  window.open(`https://zalo.me/0986549414?text=${msg}`,'_blank');
+  document.getElementById('lead-form').style.display='none';document.getElementById('success').style.display='block';
+}
+function fName(id){return document.getElementById(id).value}
+</script>
+</body>
+</html>

@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <script>
+    document.documentElement.classList.add('js-enabled');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cố vấn Hồ sơ Vay Ngân hàng — Nguyễn Hoàng Thanh</title>
+  <meta name="description" content="Suốt 10 năm làm tín dụng ngân hàng, tôi nhận ra: ngân hàng không chỉ đánh giá bạn kiếm được bao nhiêu. Họ đánh giá bạn chứng minh nguồn thu đó như thế nào." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+/* ─────────────────────────────────────
+   DESIGN TOKENS
+───────────────────────────────────────*/
+:root {
+  --white:        #ffffff;
+  --off-white:    #f8f8f6;
+  --gray-100:     #f0efec;
+  --gray-200:     #e5e4e0;
+  --gray-400:     #a09f9a;
+  --gray-600:     #68675f;
+  --gray-700:     #4a4942;
+  --ink:          #16150e;
+  --ink-soft:     #1e1d17;
+  --navy:         #1b3256;
+  --navy-mid:     #243f6b;
+  --navy-light:   #2d4f82;
+  --border:       #e8e7e3;
+  --border-dark:  #c8c7c2;
+
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --w: 1200px;
+  --pad: 40px;
+  --r: 5px;
+
+  --sh-xs: 0 1px 3px rgba(0,0,0,0.06);
+  --sh-sm: 0 2px 8px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.04);
+}
+
+/* ─────────────────────────────────────
+   RESET
+───────────────────────────────────────*/
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  background: var(--white);
+  color: var(--gray-700);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea { font-family: var(--font); }
+
+/* ─────────────────────────────────────
+   LAYOUT
+───────────────────────────────────────*/
+.container {
+  max-width: var(--w);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+@media (max-width: 720px) {
+  :root { --pad: 20px; }
+}
+
+/* ─────────────────────────────────────
+   SECTIONS
+───────────────────────────────────────*/
+.sec          { padding: 96px 0; }
+.sec--sm      { padding: 72px 0; }
+.sec--lg      { padding: 120px 0; }
+.sec--alt     { background: var(--off-white); }
+.sec--dark    { background: var(--navy); }
+.sec--darker  { background: var(--ink-soft); }
+.divider      { height: 1px; background: var(--border); }
+
+/* ─────────────────────────────────────
+   TYPE SCALE
+───────────────────────────────────────*/
+.label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 20px;
+}
+.label--light { color: rgba(255,255,255,0.4); }
+
+.h1 {
+  font-size: clamp(34px, 4.8vw, 58px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.h2 {
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.016em;
+  color: var(--ink);
+}
+.h2--light { color: var(--white); }
+.h3 {
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--ink);
+}
+.body-text {
+  font-size: 17px;
+  line-height: 1.78;
+  color: var(--gray-700);
+}
+.body-text--light { color: rgba(255,255,255,0.62); }
+.body-text p { margin-bottom: 22px; }
+.body-text p:last-child { margin-bottom: 0; }
+.small { font-size: 14px; color: var(--gray-600); line-height: 1.65; }
+
+/* ─────────────────────────────────────
+   NAVBAR
+───────────────────────────────────────*/
+#nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  height: 62px;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center;
+}
+.nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.nav-identity {
+  display: flex; align-items: center; gap: 11px;
+}
+.nav-avatar {
+  width: 34px; height: 34px;
+  background: var(--navy);
+  border-radius: var(--r);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+.nav-name-wrap { }
+.nav-name { font-size: 14px; font-weight: 600; color: var(--ink); line-height: 1.2; }
+.nav-role { font-size: 11px; color: var(--gray-400); line-height: 1; margin-top: 1px; }
+
+.nav-links {
+  display: flex; align-items: center; gap: 30px;
+}
+.nav-links a {
+  font-size: 14px;
+  color: var(--gray-600);
+  transition: color 0.15s;
+  white-space: nowrap;
+}
+.nav-links a:hover { color: var(--ink); }
+
+.nav-cta {
+  font-size: 13px; font-weight: 600;
+  color: var(--white);
+  background: var(--navy);
+  padding: 9px 20px;
+  border-radius: var(--r);
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+.nav-cta:hover { background: var(--navy-mid); }
+
+@media (max-width: 860px) { .nav-links { display: none; } }
+
+/* ─────────────────────────────────────
+   HERO
+───────────────────────────────────────*/
+#hero {
+  padding: 140px 0 96px;
+  background: var(--white);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; font-weight: 500;
+  color: var(--gray-600);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 5px 13px;
+  margin-bottom: 28px;
+  background: var(--off-white);
+}
+.hero-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #16a34a;
+  flex-shrink: 0;
+}
+.hero-h1 { margin-bottom: 24px; }
+.hero-body {
+  font-size: 16px;
+  color: var(--gray-600);
+  line-height: 1.8;
+  margin-bottom: 36px;
+  max-width: 500px;
+}
+.hero-body p { margin-bottom: 14px; }
+.hero-body p:last-child { margin-bottom: 0; }
+.hero-body strong { color: var(--ink); font-weight: 600; }
+.hero-cta {
+  display: inline-flex; align-items: center; gap: 9px;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 15px; font-weight: 600;
+  padding: 14px 28px;
+  border-radius: var(--r);
+  margin-bottom: 16px;
+  transition: background 0.15s, transform 0.1s;
+}
+.hero-cta:hover { background: var(--navy-mid); }
+.hero-cta:active { transform: scale(0.98); }
+.hero-cta-note { font-size: 13px; color: var(--gray-400); }
+
+.hero-img-wrap { position: relative; }
+.hero-img-box {
+  width: 100%;
+  aspect-ratio: 5/4;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--sh-sm);
+  background: var(--gray-100);
+}
+.hero-img-box img { width: 100%; height: 100%; object-fit: cover; }
+
+.hero-badge {
+  position: absolute;
+  bottom: -14px; left: 28px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 11px 16px;
+  box-shadow: var(--sh-sm);
+  display: flex; align-items: center; gap: 10px;
+}
+.badge-ico {
+  width: 30px; height: 30px;
+  background: #f0faf4;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.badge-text .badge-top { font-size: 11px; color: var(--gray-400); }
+.badge-text .badge-bot { font-size: 14px; font-weight: 600; color: var(--ink); }
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+  .hero-img-wrap { order: -1; }
+  .hero-badge { display: none; }
+  .hero-body { max-width: 100%; }
+}
+
+/* ─────────────────────────────────────
+   SECTION 2 — CHECKLIST
+───────────────────────────────────────*/
+.checklist { max-width: 620px; margin: 0 auto; }
+.check-item {
+  display: flex; gap: 14px; align-items: flex-start;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 16px;
+  color: var(--gray-700);
+  line-height: 1.55;
+}
+.check-item:first-child { border-top: 1px solid var(--border); }
+.check-ico {
+  width: 20px; height: 20px; flex-shrink: 0;
+  background: #f0faf4;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin-top: 2px;
+}
+.checklist-note {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 15px;
+  color: var(--gray-600);
+  font-style: italic;
+}
+
+/* ─────────────────────────────────────
+   SECTION 3 — MISCONCEPTION
+───────────────────────────────────────*/
+.misconception-wrap { max-width: 720px; margin: 0 auto; }
+.myth-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 48px;
+}
+.myth-col { }
+.myth-col-label {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--border);
+}
+.myth-col.strike .myth-col-label { color: var(--gray-400); border-color: var(--gray-200); }
+.myth-col.truth .myth-col-label { color: var(--navy); border-color: var(--navy); }
+.myth-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--gray-700);
+}
+.myth-col.strike .myth-text { color: var(--gray-400); }
+.myth-insight {
+  margin-top: 48px;
+  padding: 28px;
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  font-size: 15px;
+  color: var(--gray-700);
+  line-height: 1.75;
+}
+.myth-insight p { margin-bottom: 12px; }
+.myth-insight p:last-child { margin-bottom: 0; }
+.myth-insight strong { color: var(--ink); font-weight: 600; }
+@media (max-width: 640px) {
+  .myth-grid { grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* ─────────────────────────────────────
+   SECTION 4 — MANIFESTO (dark navy)
+───────────────────────────────────────*/
+.manifesto-inner { max-width: 680px; }
+.manifesto-statement {
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  margin-bottom: 40px;
+}
+.manifesto-statement span {
+  color: rgba(255,255,255,0.38);
+  font-weight: 300;
+}
+.manifesto-divider {
+  width: 48px; height: 1px;
+  background: rgba(255,255,255,0.2);
+  margin-bottom: 32px;
+}
+.manifesto-list {
+  display: flex; flex-direction: column; gap: 6px;
+  margin-bottom: 32px;
+}
+.manifesto-list li {
+  list-style: none;
+  font-size: 15px;
+  color: rgba(255,255,255,0.5);
+  padding-left: 16px;
+  position: relative;
+}
+.manifesto-list li::before {
+  content: '—';
+  position: absolute; left: 0;
+  color: rgba(255,255,255,0.2);
+}
+.manifesto-action-list {
+  display: flex; flex-direction: column; gap: 6px;
+}
+.manifesto-action-list li {
+  list-style: none;
+  font-size: 17px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  padding-left: 20px;
+  position: relative;
+}
+.manifesto-action-list li::before {
+  content: '';
+  position: absolute; left: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+}
+.manifesto-end {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 15px;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.7;
+}
+.manifesto-end strong { color: rgba(255,255,255,0.75); font-weight: 500; }
+
+/* ─────────────────────────────────────
+   SECTION 5 — PROCESS
+───────────────────────────────────────*/
+.process-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.process-step {
+  padding: 36px 40px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+.process-step:hover { background: var(--off-white); }
+.process-step:nth-child(2n) { border-right: none; }
+.process-step:nth-last-child(-n+2) { border-bottom: none; }
+.step-num {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 14px;
+}
+.step-title {
+  font-size: 17px; font-weight: 600;
+  color: var(--ink);
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+.step-body { font-size: 14px; color: var(--gray-600); line-height: 1.7; }
+@media (max-width: 680px) {
+  .process-grid { grid-template-columns: 1fr; }
+  .process-step { border-right: none; }
+  .process-step:nth-child(2n) { border-right: none; }
+  .process-step:nth-last-child(-n+2) { border-bottom: 1px solid var(--border); }
+  .process-step:last-child { border-bottom: none; }
+}
+
+/* ─────────────────────────────────────
+   SECTION 6 — BACKSTORY
+───────────────────────────────────────*/
+.backstory-wrap {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.backstory-aside { }
+.backstory-aside-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-400); margin-bottom: 20px; }
+.backstory-stat-stack { display: flex; flex-direction: column; gap: 24px; }
+.bstat { }
+.bstat-num { font-size: 36px; font-weight: 700; color: var(--navy); letter-spacing: -0.02em; line-height: 1; }
+.bstat-label { font-size: 13px; color: var(--gray-600); margin-top: 4px; }
+.backstory-body { }
+@media (max-width: 820px) {
+  .backstory-wrap { grid-template-columns: 1fr; gap: 40px; }
+}
+
+/* ─────────────────────────────────────
+   SECTION 7 — WHO FOR
+───────────────────────────────────────*/
+.who-tags {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  margin-top: 36px;
+}
+.who-tag {
+  font-size: 14px;
+  color: var(--gray-700);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 8px 18px;
+  transition: border-color 0.15s, color 0.15s;
+}
+.who-tag:hover { border-color: var(--navy); color: var(--navy); }
+.who-note {
+  margin-top: 40px;
+  padding: 24px 28px;
+  background: var(--gray-100);
+  border-radius: var(--r);
+  border-left: 3px solid var(--navy);
+  font-size: 15px;
+  color: var(--gray-700);
+  line-height: 1.7;
+  max-width: 600px;
+}
+
+/* ─────────────────────────────────────
+   SECTION 8 — PRICING
+───────────────────────────────────────*/
+.pricing-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--border);
+}
+.p-card {
+  background: var(--white);
+  padding: 40px 36px;
+  display: flex; flex-direction: column;
+}
+.p-card.featured {
+  background: var(--navy);
+}
+.p-tag {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 20px;
+}
+.p-card.featured .p-tag { color: rgba(255,255,255,0.4); }
+.p-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.65);
+  font-size: 9px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 2px 8px; border-radius: 100px;
+  margin-left: 6px;
+}
+.p-name {
+  font-size: 18px; font-weight: 700;
+  color: var(--ink);
+  line-height: 1.25;
+  margin-bottom: 6px;
+}
+.p-card.featured .p-name { color: var(--white); }
+.p-price {
+  font-size: 36px; font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.p-card.featured .p-price { color: var(--white); }
+.p-price-sub { font-size: 14px; font-weight: 400; color: var(--gray-400); }
+.p-card.featured .p-price-sub { color: rgba(255,255,255,0.38); }
+.p-desc {
+  font-size: 14px; color: var(--gray-600);
+  line-height: 1.65; margin: 20px 0 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+  flex: 0 0 auto;
+}
+.p-card.featured .p-desc { color: rgba(255,255,255,0.48); border-color: rgba(255,255,255,0.1); }
+.p-perks {
+  list-style: none; flex: 1;
+  display: flex; flex-direction: column; gap: 11px;
+  margin-bottom: 28px;
+}
+.p-perks li {
+  font-size: 14px; color: var(--gray-700);
+  display: flex; gap: 9px; align-items: flex-start; line-height: 1.5;
+}
+.p-card.featured .p-perks li { color: rgba(255,255,255,0.6); }
+.p-check { width: 16px; height: 16px; flex-shrink: 0; margin-top: 1px; }
+.p-card:not(.featured) .p-check { color: #16a34a; }
+.p-card.featured .p-check { color: rgba(255,255,255,0.4); }
+.p-btn {
+  display: block; text-align: center;
+  font-size: 14px; font-weight: 600;
+  padding: 11px 20px; border-radius: var(--r);
+  transition: all 0.15s;
+}
+.p-card:not(.featured) .p-btn {
+  border: 1.5px solid var(--border); color: var(--navy);
+}
+.p-card:not(.featured) .p-btn:hover {
+  border-color: var(--navy); background: var(--off-white);
+}
+.p-card.featured .p-btn {
+  background: rgba(255,255,255,0.14); color: var(--white);
+  border: 1.5px solid rgba(255,255,255,0.18);
+}
+.p-card.featured .p-btn:hover { background: rgba(255,255,255,0.22); }
+@media (max-width: 780px) {
+  .pricing-wrap { grid-template-columns: 1fr; }
+}
+
+/* ─────────────────────────────────────
+   SECTION 9 — PRINCIPLE
+───────────────────────────────────────*/
+.principle-wrap { max-width: 700px; }
+.principle-quote {
+  font-size: clamp(20px, 2.8vw, 28px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.5;
+  border-left: 3px solid var(--navy);
+  padding-left: 28px;
+  margin-bottom: 28px;
+}
+.principle-body {
+  font-size: 16px; color: var(--gray-600);
+  line-height: 1.8;
+  padding-left: 31px;
+}
+.principle-body p { margin-bottom: 14px; }
+.principle-body p:last-child { margin-bottom: 0; }
+.principle-body strong { color: var(--ink); font-weight: 600; }
+
+/* ─────────────────────────────────────
+   SECTION 10 — FORM
+───────────────────────────────────────*/
+.form-layout {
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 80px;
+  align-items: start;
+}
+.form-copy { }
+.form-copy .h2 { margin-bottom: 20px; }
+.form-copy .body-text { margin-bottom: 28px; }
+.form-receive {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 24px;
+}
+.form-receive-label {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gray-400); margin-bottom: 14px;
+}
+.form-receive-list {
+  display: flex; flex-direction: column; gap: 10px;
+}
+.form-receive-item {
+  display: flex; gap: 10px; align-items: flex-start;
+  font-size: 14px; color: var(--gray-700); line-height: 1.5;
+}
+.form-receive-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--navy);
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+
+.form-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 36px;
+  box-shadow: var(--sh-sm);
+}
+.form-group { margin-bottom: 20px; }
+.form-group:last-of-type { margin-bottom: 0; }
+.form-label {
+  display: block;
+  font-size: 13px; font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 7px;
+}
+.form-label span { color: var(--gray-400); font-weight: 400; }
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  border: 1.5px solid var(--border);
+  border-radius: var(--r);
+  background: var(--white);
+  font-family: var(--font);
+  font-size: 15px;
+  color: var(--ink);
+  transition: border-color 0.15s, box-shadow 0.15s;
+  appearance: none;
+}
+.form-input, .form-select { padding: 11px 14px; height: 46px; }
+.form-textarea { padding: 11px 14px; height: 100px; resize: vertical; }
+.form-input::placeholder, .form-textarea::placeholder { color: var(--gray-400); }
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(27,50,86,0.08);
+}
+.form-select-wrap { position: relative; }
+.form-select-wrap::after {
+  content: '';
+  position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+  width: 0; height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid var(--gray-400);
+  pointer-events: none;
+}
+.form-divider { height: 1px; background: var(--border); margin: 24px 0; }
+.form-submit {
+  width: 100%;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 15px; font-weight: 600;
+  padding: 14px 24px;
+  border-radius: var(--r);
+  border: none; cursor: pointer;
+  transition: background 0.15s;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.form-submit:hover { background: var(--navy-mid); }
+.form-submit:active { background: var(--navy-light); }
+.form-note {
+  text-align: center;
+  font-size: 12px; color: var(--gray-400);
+  margin-top: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 960px) {
+  .form-layout { grid-template-columns: 1fr; gap: 48px; }
+}
+
+/* ─────────────────────────────────────
+   FOOTER
+───────────────────────────────────────*/
+footer {
+  background: var(--off-white);
+  border-top: 1px solid var(--border);
+  padding: 40px 0;
+}
+.footer-row {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 16px;
+}
+.footer-id .f-name { font-size: 14px; font-weight: 600; color: var(--ink); }
+.footer-id .f-sub  { font-size: 12px; color: var(--gray-400); margin-top: 2px; }
+.footer-nav { display: flex; gap: 24px; flex-wrap: wrap; }
+.footer-nav a { font-size: 13px; color: var(--gray-400); transition: color 0.15s; }
+.footer-nav a:hover { color: var(--ink); }
+.footer-copy { font-size: 12px; color: var(--gray-300); }
+.footer-copy { color: var(--gray-400); }
+
+/* ─────────────────────────────────────
+   SCROLL REVEAL
+───────────────────────────────────────*/
+.js-enabled .reveal {
+  opacity: 0; transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.js-enabled .reveal.in { opacity: 1; transform: none; }
+.reveal.d1 { transition-delay: 0.07s; }
+.reveal.d2 { transition-delay: 0.14s; }
+.reveal.d3 { transition-delay: 0.21s; }
+.reveal.d4 { transition-delay: 0.28s; }
+
+/* ─────────────────────────────────────
+   BACK TO TOP
+───────────────────────────────────────*/
+#btt {
+  position: fixed; bottom: 24px; right: 24px; z-index: 50;
+  width: 40px; height: 40px;
+  background: var(--ink);
+  color: var(--white);
+  border-radius: 50%;
+  border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s;
+}
+#btt.show { opacity: 1; pointer-events: auto; }
+#btt:hover { background: var(--navy); }
+
+/* ─────────────────────────────────────
+   SECTION HEADER UTILITY
+───────────────────────────────────────*/
+.sh { margin-bottom: 52px; }
+.sh .label { display: block; }
+.sh .h2 { margin-bottom: 14px; }
+.sh .small { max-width: 520px; }
+.sh--center { text-align: center; }
+.sh--center .h2,
+.sh--center .small { margin-left: auto; margin-right: auto; }
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav id="nav">
+  <div class="container nav-row">
+    <div class="nav-identity">
+      <div class="nav-avatar">HT</div>
+      <div class="nav-name-wrap">
+        <div class="nav-name">Nguyễn Hoàng Thanh</div>
+        <div class="nav-role">Cố vấn Tín dụng · Cựu Giám đốc Tín dụng OCB</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#section2">Vấn đề</a>
+      <a href="#section5">Quy trình</a>
+      <a href="#section8">Dịch vụ</a>
+      <a href="#section6">Về tôi</a>
+      <a href="#section10">Đăng ký</a>
+    </div>
+    <a href="#section10" class="nav-cta" id="nav-cta-btn">Đăng ký đánh giá</a>
+  </div>
+</nav>
+
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-grid">
+
+      <div class="hero-copy">
+        <div class="hero-eyebrow reveal">
+          <span class="hero-dot"></span>
+          Cố vấn hồ sơ vay — Cựu Giám đốc Tín dụng OCB
+        </div>
+        <h1 class="h1 hero-h1 reveal d1">
+          Vì sao có người thu nhập 80 triệu/tháng vẫn bị từ chối vay?
+        </h1>
+        <div class="hero-body reveal d2">
+          <p>Trong khi người khác chỉ chứng minh được 30 triệu lại được giải ngân.</p>
+          <p>Suốt 10 năm làm tín dụng ngân hàng, tôi nhận ra một điều: ngân hàng không chỉ đánh giá <strong>bạn kiếm được bao nhiêu tiền</strong>. Ngân hàng đánh giá <strong>bạn chứng minh nguồn thu đó như thế nào.</strong></p>
+          <p>Đó là lý do rất nhiều chủ shop online, freelancer, người kinh doanh cá nhân có dòng tiền tốt nhưng vẫn bị từ chối.</p>
+          <p>Tôi giúp bạn nhìn hồ sơ dưới góc nhìn của người từng ngồi ở phía xét duyệt.</p>
+        </div>
+        <a href="#section10" class="hero-cta reveal d3" id="hero-cta-btn">
+          Kiểm tra hồ sơ trong 24 giờ
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+        <p class="hero-cta-note reveal d3">Audit 499K — nhận kết quả trong 24 giờ</p>
+      </div>
+
+      <div class="hero-img-wrap reveal d2">
+        <div class="hero-img-box">
+          <img
+            src="workspace_v2.png"
+            alt="Chuyên gia review hồ sơ vay ngân hàng"
+          />
+        </div>
+        <div class="hero-badge">
+          <div class="badge-ico">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="#16a34a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3L5.5 10.5 2 7"/></svg>
+          </div>
+          <div class="badge-text">
+            <div class="badge-top">Hồ sơ gần nhất</div>
+            <div class="badge-bot">Giải ngân 1.2 tỷ · VPBank</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ═══ SECTION 2 — CHECKLIST ═══ -->
+<section id="section2" class="sec sec--alt">
+  <div class="container">
+    <div class="sh sh--center reveal">
+      <span class="label">Bạn đang gặp vấn đề này?</span>
+      <h2 class="h2">Có thể bạn đang gặp<br />một trong những tình huống này</h2>
+    </div>
+    <div class="checklist">
+      <div class="check-item reveal">
+        <div class="check-ico">
+          <svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5.5l2.5 2.5 4.5-5"/></svg>
+        </div>
+        <span>Thu nhập mỗi tháng 30–80 triệu nhưng không có bảng lương</span>
+      </div>
+      <div class="check-item reveal d1">
+        <div class="check-ico">
+          <svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5.5l2.5 2.5 4.5-5"/></svg>
+        </div>
+        <span>Đã bị ngân hàng từ chối nhưng không ai nói lý do thật</span>
+      </div>
+      <div class="check-item reveal d2">
+        <div class="check-ico">
+          <svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5.5l2.5 2.5 4.5-5"/></svg>
+        </div>
+        <span>Có sao kê đẹp nhưng vẫn không được duyệt</span>
+      </div>
+      <div class="check-item reveal">
+        <div class="check-ico">
+          <svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5.5l2.5 2.5 4.5-5"/></svg>
+        </div>
+        <span>Có hộ kinh doanh nhưng ngân hàng đánh giá thu nhập chưa đủ</span>
+      </div>
+      <div class="check-item reveal d1">
+        <div class="check-ico">
+          <svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5.5l2.5 2.5 4.5-5"/></svg>
+        </div>
+        <span>Muốn mua nhà, mua xe trong 6 tháng tới</span>
+      </div>
+      <div class="check-item reveal d2">
+        <div class="check-ico">
+          <svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5.5l2.5 2.5 4.5-5"/></svg>
+        </div>
+        <span>Không biết nên nộp hồ sơ ở ngân hàng nào</span>
+      </div>
+      <p class="checklist-note reveal">Nếu bạn gật đầu với từ hai điều trở lên, hãy đọc tiếp.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ SECTION 3 — MISCONCEPTION ═══ -->
+<section id="section3" class="sec">
+  <div class="container">
+    <div class="misconception-wrap reveal">
+      <span class="label">Sự hiểu lầm phổ biến</span>
+      <h2 class="h2">Điều mà rất nhiều người hiểu sai</h2>
+      <div class="myth-grid">
+        <div class="myth-col strike">
+          <div class="myth-col-label">Mọi người thường nghĩ</div>
+          <div class="myth-text">
+            "Tăng thu nhập rồi hãy đi vay."
+          </div>
+        </div>
+        <div class="myth-col truth">
+          <div class="myth-col-label">Thực tế</div>
+          <div class="myth-text">
+            Trong rất nhiều trường hợp, điều khiến hồ sơ bị từ chối không phải vì thu nhập thấp — mà vì hồ sơ chưa được trình bày theo đúng cách mà ngân hàng đánh giá.
+          </div>
+        </div>
+      </div>
+      <div class="myth-insight">
+        <p>Một bộ hồ sơ giống nhau. Đặt vào hai ngân hàng khác nhau. Có thể cho ra hai kết quả hoàn toàn khác nhau.</p>
+        <p>Vấn đề không phải là <strong>bạn có đủ tiền không</strong>. Vấn đề là <strong>ngân hàng có đọc được câu chuyện tài chính của bạn không</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ═══ SECTION 4 — MANIFESTO (dark) ═══ -->
+<section id="section4" class="sec sec--dark">
+  <div class="container">
+    <div class="manifesto-inner">
+      <div class="label label--light reveal">Định vị rõ ràng</div>
+      <div class="manifesto-statement reveal d1">
+        Tôi không giúp bạn vay tiền.<br />
+        <span>Tôi giúp bạn hiểu hồ sơ của chính mình.</span>
+      </div>
+      <div class="manifesto-divider reveal d1"></div>
+      <ul class="manifesto-list reveal d2">
+        <li>Tôi không phải môi giới.</li>
+        <li>Tôi không cam kết "bao đậu".</li>
+        <li>Tôi không nhận hồ sơ bằng mọi giá.</li>
+      </ul>
+      <ul class="manifesto-action-list reveal d2">
+        <li>Tôi phân tích.</li>
+        <li>Đánh giá.</li>
+        <li>Tái cấu trúc.</li>
+      </ul>
+      <p class="manifesto-end reveal d3">
+        Để hồ sơ phản ánh đúng năng lực tài chính thật của bạn. <strong>Sau đó mới đề xuất ngân hàng phù hợp.</strong><br /><br />
+        Đây là sự khác biệt.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ SECTION 5 — PROCESS ═══ -->
+<section id="section5" class="sec">
+  <div class="container">
+    <div class="sh reveal">
+      <span class="label">Quy trình làm việc</span>
+      <h2 class="h2">Sáu bước từ hồ sơ bị từ chối<br />đến sẵn sàng nộp.</h2>
+      <p class="small">Mỗi bước đều có lý do cụ thể. Không có bước nào là thủ tục hành chính.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step reveal">
+        <div class="step-num">Bước 01</div>
+        <div class="step-title">Audit hồ sơ</div>
+        <div class="step-body">Đọc toàn bộ tài liệu hiện có và chỉ ra các điểm yếu cụ thể — không phải "hồ sơ chưa đủ" theo kiểu chung chung.</div>
+      </div>
+      <div class="process-step reveal d1">
+        <div class="step-num">Bước 02</div>
+        <div class="step-title">Xác định điểm bị đánh giá thấp</div>
+        <div class="step-body">Từng yếu tố trong hồ sơ sẽ được đánh giá dưới góc nhìn của người thẩm định — không phải góc nhìn của người nộp.</div>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">Bước 03</div>
+        <div class="step-title">Đề xuất phương án tái cấu trúc</div>
+        <div class="step-body">Sắp xếp lại cách trình bày sao kê, hợp đồng, giấy tờ kinh doanh để phản ánh đúng năng lực tài chính thật.</div>
+      </div>
+      <div class="process-step reveal d1">
+        <div class="step-num">Bước 04</div>
+        <div class="step-title">Lựa chọn ngân hàng phù hợp</div>
+        <div class="step-body">Chỉ ra 3 ngân hàng đang có room tín dụng và phù hợp nhất với hồ sơ lúc đó — không phải quen biết, là phân tích thực tế.</div>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">Bước 05</div>
+        <div class="step-title">Chuẩn bị câu hỏi thẩm định</div>
+        <div class="step-body">Luyện trước các câu hỏi nhân viên tín dụng thường hỏi. Phần này giúp tránh những sai lầm làm hỏng hồ sơ tốt vào phút cuối.</div>
+      </div>
+      <div class="process-step reveal d1">
+        <div class="step-num">Bước 06</div>
+        <div class="step-title">Đồng hành trong suốt quá trình</div>
+        <div class="step-body">Từ khi nộp đến khi có kết quả, tôi vẫn ở đó. Không giao hồ sơ rồi cắt liên lạc.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ═══ SECTION 6 — BACKSTORY ═══ -->
+<section id="section6" class="sec sec--alt">
+  <div class="container">
+    <div class="backstory-wrap">
+      <div class="backstory-aside reveal">
+        <div class="backstory-aside-label">Kinh nghiệm</div>
+        <div class="backstory-stat-stack">
+          <div class="bstat">
+            <div class="bstat-num">10</div>
+            <div class="bstat-label">Năm làm tín dụng tại OCB</div>
+          </div>
+          <div class="bstat">
+            <div class="bstat-num">200+</div>
+            <div class="bstat-label">Hồ sơ đã được xét duyệt</div>
+          </div>
+          <div class="bstat">
+            <div class="bstat-num">95%</div>
+            <div class="bstat-label">Tỷ lệ hồ sơ được duyệt sau tái cấu trúc</div>
+          </div>
+        </div>
+      </div>
+      <div class="backstory-body reveal d1">
+        <span class="label">Tại sao tôi làm điều này</span>
+        <h2 class="h2" style="margin-bottom: 28px;">10 năm ngồi phía xét duyệt dạy tôi điều gì.</h2>
+        <div class="body-text">
+          <p>Tôi từng làm tín dụng tại OCB trong 10 năm. Trong khoảng thời gian đó, tôi đọc và xử lý hàng nghìn hồ sơ vay.</p>
+          <p>Có những bộ hồ sơ rất đẹp nhưng không thể giải ngân. Có những bộ hồ sơ tưởng như không có cơ hội lại được phê duyệt.</p>
+          <p>Điều tạo nên khác biệt thường không nằm ở thu nhập. Mà nằm ở cách hồ sơ được nhìn nhận.</p>
+          <p>Sau khi rời ngân hàng, tôi chọn giúp người đi vay hiểu được góc nhìn đó — để không ai phải bị từ chối chỉ vì không biết cách kể câu chuyện tài chính của mình.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ SECTION 7 — WHO FOR ═══ -->
+<section id="section7" class="sec">
+  <div class="container">
+    <div class="sh reveal">
+      <span class="label">Phù hợp với ai</span>
+      <h2 class="h2">Dịch vụ phù hợp với ai?</h2>
+      <p class="small">Bất kỳ ai có dòng tiền thực nhưng không chứng minh được bằng bảng lương truyền thống.</p>
+    </div>
+    <div class="who-tags reveal d1">
+      <span class="who-tag">Chủ shop online</span>
+      <span class="who-tag">Freelancer</span>
+      <span class="who-tag">Designer</span>
+      <span class="who-tag">Developer</span>
+      <span class="who-tag">Digital Marketer</span>
+      <span class="who-tag">Agency Owner</span>
+      <span class="who-tag">Kinh doanh cá nhân</span>
+      <span class="who-tag">Người có dòng tiền chuyển khoản</span>
+      <span class="who-tag">Không có hợp đồng lao động</span>
+      <span class="who-tag">Đang chuẩn bị mua nhà</span>
+      <span class="who-tag">Chuẩn bị mua xe</span>
+      <span class="who-tag">Muốn vay kinh doanh</span>
+    </div>
+    <div class="who-note reveal d2">
+      Nếu bạn không chắc mình có phù hợp không — đó chính xác là lý do tồn tại của bước Audit 499K. Tôi đọc và nói thật, bao gồm trường hợp hồ sơ của bạn chưa đủ điều kiện.
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ═══ SECTION 8 — PRICING ═══ -->
+<section id="section8" class="sec sec--alt">
+  <div class="container">
+    <div class="sh sh--center reveal">
+      <span class="label">Các gói dịch vụ</span>
+      <h2 class="h2">Ba gói, tùy mức độ chuẩn bị bạn cần.</h2>
+      <p class="small">Bắt đầu từ Audit để biết hồ sơ đang ở đâu — rồi mới quyết định bước tiếp theo.</p>
+    </div>
+    <div class="pricing-wrap reveal d1">
+
+      <div class="p-card" id="pc-audit">
+        <div class="p-tag">Bước khởi đầu</div>
+        <div class="p-name">Audit Hồ sơ 24H</div>
+        <div class="p-price">499<span class="p-price-sub">K</span></div>
+        <p class="p-desc">Đánh giá khả năng vay dựa trên hồ sơ hiện có. Nhận báo cáo trong vòng 24 giờ với 5 điểm cụ thể cần cải thiện.</p>
+        <ul class="p-perks">
+          <li>
+            <svg class="p-check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6.5 11.5 13 4.5"/></svg>
+            Đánh giá toàn bộ hồ sơ trong 24 giờ
+          </li>
+          <li>
+            <svg class="p-check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6.5 11.5 13 4.5"/></svg>
+            Chỉ ra 5 điểm cần cải thiện cụ thể
+          </li>
+          <li>
+            <svg class="p-check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6.5 11.5 13 4.5"/></svg>
+            Đánh giá khả năng vay thực tế
+          </li>
+          <li>
+            <svg class="p-check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6.5 11.5 13 4.5"/></svg>
+            Gợi ý hướng xử lý tiếp theo
+          </li>
+        </ul>
+        <a href="#section10" class="p-btn" id="btn-pc-audit">Bắt đầu Audit →</a>
+      </div>
+
+      <div class="p-card featured" id="pc-main">
+        <div class="p-tag">Phổ biến nhất <span class="p-badge">Recommended</span></div>
+        <div class="p-name">Tái cấu trúc Hồ sơ</div>
+        <div class="p-price">4.9<span class="p-price-sub"> triệu</span></div>
+        <p class="p-desc">Xây dựng lại cách chứng minh thu nhập theo đúng chuẩn ngân hàng. Bao gồm đề xuất ngân hàng phù hợp và luyện thẩm định.</p>
+        <ul class="p-perks">
+          <li>
+            <svg class="p-check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6.5 11.5 13 4.5"/></svg>
+            Bao gồm toàn bộ Audit 24H
+          </li>
+          <li>
+            <svg class="p-check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6.5 11.5 13 4.5"/></svg>
+            Tái cấu trúc cách chứng minh thu nhập
+          </li>
+          <li>
+            <svg class="p-check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6.5 11.5 13 4.5"/></svg>
+            Đề xuất 3 ngân hàng có room phù hợp
+          </li>
+          <li>
+            <svg class="p-check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6.5 11.5 13 4.5"/></svg>
+            Mock thẩm định — luyện câu hỏi thật
+          </li>
+          <li>
+            <svg class="p-check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6.5 11.5 13 4.5"/></svg>
+            Hỗ trợ Zalo trong suốt quá trình
+          </li>
+        </ul>
+        <a href="#section10" class="p-btn" id="btn-pc-main">Đăng ký gói này →</a>
+      </div>
+
+      <div class="p-card" id="pc-vip">
+        <div class="p-tag">Toàn diện nhất</div>
+        <div class="p-name">Đồng hành đến khi hoàn tất</div>
+        <div class="p-price">14.9<span class="p-price-sub"> triệu</span></div>
+        <p class="p-desc">Theo sát trong toàn bộ quá trình từ audit đến khi tiền giải ngân vào tài khoản. Bảo hành hoàn 100% nếu không có ngân hàng nào duyệt.</p>
+        <ul class="p-perks">
+          <li>
+            <svg class="p-check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6.5 11.5 13 4.5"/></svg>
+            Tất cả từ gói Tái cấu trúc
+          </li>
+          <li>
+            <svg class="p-check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6.5 11.5 13 4.5"/></svg>
+            Đồng hành không giới hạn thời gian
+          </li>
+          <li>
+            <svg class="p-check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6.5 11.5 13 4.5"/></svg>
+            Xử lý vấn đề phát sinh trong quá trình
+          </li>
+          <li>
+            <svg class="p-check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6.5 11.5 13 4.5"/></svg>
+            Ưu tiên phản hồi bất cứ khi nào cần
+          </li>
+          <li>
+            <svg class="p-check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 8 6.5 11.5 13 4.5"/></svg>
+            <span style="color: var(--navy); font-weight: 600;">Hoàn 100% nếu không ngân hàng nào duyệt</span>
+          </li>
+        </ul>
+        <a href="#section10" class="p-btn" id="btn-pc-vip">Hỏi thêm về gói này →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ SECTION 9 — PRINCIPLE ═══ -->
+<section id="section9" class="sec">
+  <div class="container">
+    <div class="sh reveal">
+      <span class="label">Nguyên tắc làm việc</span>
+    </div>
+    <div class="principle-wrap reveal d1">
+      <div class="principle-quote">
+        Nếu tôi đánh giá hồ sơ của bạn chưa đủ điều kiện — tôi sẽ nói ngay.
+      </div>
+      <div class="principle-body">
+        <p>Không nhận hồ sơ để thu phí. Không hứa những điều mình không kiểm soát.</p>
+        <p><strong>Sự minh bạch luôn quan trọng hơn một hợp đồng.</strong></p>
+        <p>Đó là lý do tôi giới hạn số hồ sơ nhận mỗi tháng — để đảm bảo mỗi trường hợp được quan tâm đúng mức, không phải chạy theo số lượng.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ═══ SECTION 10 — FORM ═══ -->
+<section id="section10" class="sec sec--lg">
+  <div class="container">
+    <div class="form-layout">
+
+      <div class="form-copy reveal">
+        <span class="label">Đăng ký đánh giá hồ sơ</span>
+        <h2 class="h2" style="margin-bottom: 16px;">Bạn chỉ cần gửi.<br />Tôi đánh giá trong 24 giờ.</h2>
+        <div class="body-text" style="margin-bottom: 28px;">
+          <p>Bạn chỉ cần gửi sao kê, thông tin nguồn thu và mục đích vay. Trong vòng 24 giờ, bạn sẽ biết:</p>
+        </div>
+        <div class="form-receive">
+          <div class="form-receive-label">Bạn sẽ nhận được</div>
+          <div class="form-receive-list">
+            <div class="form-receive-item">
+              <span class="form-receive-dot"></span>
+              <span>Hồ sơ đang mạnh ở đâu, yếu ở đâu</span>
+            </div>
+            <div class="form-receive-item">
+              <span class="form-receive-dot"></span>
+              <span>Điểm nào khiến ngân hàng có thể từ chối</span>
+            </div>
+            <div class="form-receive-item">
+              <span class="form-receive-dot"></span>
+              <span>Có nên nộp ngay hay cần chuẩn bị thêm</span>
+            </div>
+            <div class="form-receive-item">
+              <span class="form-receive-dot"></span>
+              <span>Ngân hàng nào phù hợp nhất với hồ sơ hiện tại</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <div class="reveal d1">
+        <div class="form-card">
+          <!--
+            Để nhận dữ liệu form:
+            Thay action="" bằng:
+            - Formspree: https://formspree.io/f/YOUR_FORM_ID
+            - Hoặc dùng Zalo/Messenger link trực tiếp
+          -->
+          <form id="lead-form" action="#" method="POST" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label class="form-label" for="f-name">Họ và tên</label>
+              <input class="form-input" type="text" id="f-name" name="name" placeholder="Nguyễn Thị A" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-phone">Số điện thoại</label>
+              <input class="form-input" type="tel" id="f-phone" name="phone" placeholder="0901 234 567" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-email">Email <span>(tùy chọn)</span></label>
+              <input class="form-input" type="email" id="f-email" name="email" placeholder="ten@gmail.com" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-purpose">Mục đích vay</label>
+              <div class="form-select-wrap">
+                <select class="form-select" id="f-purpose" name="purpose" required>
+                  <option value="" disabled selected>Chọn mục đích vay</option>
+                  <option value="mua-nha">Mua nhà / chung cư</option>
+                  <option value="mua-xe">Mua xe</option>
+                  <option value="kinh-doanh">Vay kinh doanh</option>
+                  <option value="tieu-dung">Vay tiêu dùng</option>
+                  <option value="khac">Khác</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-income">Thu nhập bình quân <span>(triệu/tháng)</span></label>
+              <div class="form-select-wrap">
+                <select class="form-select" id="f-income" name="income" required>
+                  <option value="" disabled selected>Chọn khoảng thu nhập</option>
+                  <option value="15-30">15 – 30 triệu</option>
+                  <option value="30-50">30 – 50 triệu</option>
+                  <option value="50-80">50 – 80 triệu</option>
+                  <option value="80+">Trên 80 triệu</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-divider"></div>
+            <button type="submit" class="form-submit" id="form-submit-btn">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              Gửi hồ sơ đánh giá
+            </button>
+          </form>
+          <div id="form-success" style="display:none; text-align:center; padding: 24px 0;">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style="margin: 0 auto 12px;"><circle cx="20" cy="20" r="19" stroke="#16a34a" stroke-width="1.5"/><polyline points="12 20 17.5 25.5 28 14" stroke="#16a34a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p style="font-size:16px; font-weight:600; color: var(--ink); margin-bottom: 6px;">Đã gửi thành công.</p>
+            <p style="font-size:14px; color: var(--gray-600);">Tôi sẽ liên hệ lại trong vòng 24 giờ qua số điện thoại bạn cung cấp.</p>
+          </div>
+          <p class="form-note">Thông tin của bạn được bảo mật. Tôi không chia sẻ với bên thứ ba.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container footer-row">
+    <div class="footer-id">
+      <div class="f-name">Nguyễn Hoàng Thanh</div>
+      <div class="f-sub">Cố vấn Tín dụng · Cựu Giám đốc Tín dụng OCB</div>
+    </div>
+    <div class="footer-nav">
+      <a href="#section2">Vấn đề</a>
+      <a href="#section5">Quy trình</a>
+      <a href="#section8">Dịch vụ</a>
+      <a href="#section6">Về tôi</a>
+      <a href="#section10">Đăng ký</a>
+    </div>
+    <div class="footer-copy">© 2026</div>
+  </div>
+</footer>
+
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Về đầu trang">
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11V3M3 6l4-4 4 4"/></svg>
+</button>
+
+
+<script>
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const ro = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => ro.observe(el));
+
+  // Back to top
+  const btt = document.getElementById('btt');
+  window.addEventListener('scroll', () => btt.classList.toggle('show', window.scrollY > 480), { passive: true });
+
+  // Smooth anchor
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (!t) return;
+      e.preventDefault();
+      window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 70, behavior: 'smooth' });
+    });
+  });
+
+  // URL kịch bản Google Apps Script của bạn (Thay URL này sau khi cấu hình xong Google Sheets)
+  const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbzbFCSI2h8AHdHNk7sqAaM49Bp0Kv02oyTK73nSCELlneZoYKWqGM75UrXTh1ehAifSSg/exec";
+
+  // Form submit handler
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = document.getElementById('lead-form');
+    const success = document.getElementById('form-success');
+
+    // Lấy dữ liệu form
+    const data = {
+      name: document.getElementById('f-name').value,
+      phone: document.getElementById('f-phone').value,
+      email: document.getElementById('f-email').value,
+      purpose: document.getElementById('f-purpose').value,
+      income: document.getElementById('f-income').value,
+    };
+
+    console.log('Form data:', data);
+
+    // 1. Gửi thông tin lên Google Sheets trong nền (không làm gián đoạn Zalo)
+    if (GOOGLE_SHEET_URL && GOOGLE_SHEET_URL !== "YOUR_GOOGLE_APPS_SCRIPT_URL") {
+      fetch(GOOGLE_SHEET_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: JSON.stringify(data)
+      }).catch(err => console.error('Error saving to Google Sheets:', err));
+    }
+
+    // 2. Mở Zalo lập tức để chat và tư vấn
+    const zaloMsg = encodeURIComponent(`Xin chào, tôi ${data.name} muốn đăng ký đánh giá hồ sơ vay.\nMục đích: ${data.purpose}\nThu nhập: ${data.income} triệu\nSố điện thoại: ${data.phone}`);
+    window.open(`https://zalo.me/0986549414?text=${zaloMsg}`, '_blank');
+
+    // 3. Hiển thị thông báo thành công
+    form.style.display = 'none';
+    success.style.display = 'block';
+  }
+</script>
+</body>
+</html>
