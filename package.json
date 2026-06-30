@@ -1,0 +1,13 @@
+{
+  "name": "dna-kinh-doanh",
+  "version": "1.0.0",
+  "description": "Website & Admin Panel DNA Kinh Doanh",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "dependencies": {}
+}
