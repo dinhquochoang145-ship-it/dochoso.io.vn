@@ -826,6 +826,191 @@
       .brand span:last-child { display: none; }
       .report { transform: none; }
     }
+
+    /* Payment Modal Styles */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 12, 8, 0.88);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .modal-overlay.active {
+      display: flex;
+      opacity: 1;
+    }
+    .modal-card {
+      background: var(--panel-2);
+      border: 1px solid var(--gold);
+      border-radius: var(--radius-xl);
+      width: min(680px, calc(100% - 32px));
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      animation: modalSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes modalSlideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .modal-header {
+      padding: 20px 24px 16px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .modal-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--gold-2);
+      letter-spacing: -0.02em;
+    }
+    .modal-close {
+      background: none;
+      border: none;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 28px;
+      padding: 4px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.2s;
+    }
+    .modal-close:hover {
+      color: var(--gold-2);
+      transform: scale(1.15);
+    }
+    .modal-body {
+      padding: 24px;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 28px;
+    }
+    @media (max-width: 600px) {
+      .modal-body {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+    .qr-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .qr-wrapper {
+      position: relative;
+      border-radius: var(--radius-md);
+      padding: 8px;
+      background: #fff;
+      box-shadow: 0 0 20px rgba(233, 184, 93, 0.15);
+    }
+    .qr-wrapper::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: calc(var(--radius-md) + 2px);
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      z-index: -1;
+      animation: qrPulse 2s infinite alternate;
+    }
+    @keyframes qrPulse {
+      from { opacity: 0.4; }
+      to { opacity: 1; }
+    }
+    .qr-image {
+      width: 200px;
+      height: auto;
+      display: block;
+    }
+    .payment-info {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .info-row {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      text-align: left;
+    }
+    .info-label {
+      font-size: 11px;
+      color: var(--soft);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .info-value-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: rgba(0, 0, 0, 0.22);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 10px 14px;
+    }
+    .info-value {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .info-value.highlight {
+      color: var(--gold-2);
+      font-size: 17px;
+    }
+    .btn-copy {
+      background: rgba(233, 184, 93, 0.15);
+      border: 1px solid rgba(233, 184, 93, 0.3);
+      color: var(--gold-2);
+      border-radius: 8px;
+      padding: 4px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn-copy:hover {
+      background: var(--gold);
+      color: #24170b;
+    }
+    .status-box {
+      margin-top: 6px;
+      padding: 12px;
+      border-radius: var(--radius-md);
+      background: rgba(233, 184, 93, 0.08);
+      border: 1px solid rgba(233, 184, 93, 0.16);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--gold);
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(0.8); opacity: 0.5; }
+      50% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(0.8); opacity: 0.5; }
+    }
+    .status-text {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gold-2);
+    }
   </style>
 </head>
 
@@ -1177,6 +1362,13 @@
               <textarea id="message" name="message" placeholder="Ví dụ: Tôi không biết nên làm dịch vụ hay bán sản phẩm, sợ bỏ vốn sai..."></textarea>
             </div>
 
+            <div class="field">
+              <label for="productSelect">Gói dịch vụ đăng ký *</label>
+              <select id="productSelect" name="productSelect" required>
+                <option value="1" data-price="3800000" data-type="digital">Bản Đồ DNA Kinh Doanh - 3.800.000đ</option>
+              </select>
+            </div>
+
             <button class="btn btn-primary full" type="submit">Gửi thông tin để được hướng dẫn</button>
             <div class="fine-print" id="formMsg">Không có chuyện spam. Nếu chưa phù hợp, nói thẳng cho đỡ mất công.</div>
           </form>
@@ -1245,20 +1437,63 @@
 
     const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycby_hUNFqcRBrMCFQs_zuHQdJuYvSi9QoxqqNupZ2zb6pi0b9jZwvaVt78cnBuPirZWZ/exec";
 
-    document.getElementById("leadForm").addEventListener("submit", function(e) {
+    // Tải danh sách sản phẩm từ API
+    let dynamicProducts = [];
+
+    async function loadFormProducts() {
+      const prodSelect = document.getElementById("productSelect");
+      if (!prodSelect) return;
+
+      try {
+        const res = await fetch("/api/products");
+        if (res.ok) {
+          dynamicProducts = await res.json();
+          if (dynamicProducts.length > 0) {
+            prodSelect.innerHTML = "";
+            dynamicProducts.forEach(p => {
+              const option = document.createElement("option");
+              option.value = p.id;
+              option.dataset.price = p.price;
+              option.dataset.type = p.type;
+              option.textContent = `${p.name} - ${p.price.toLocaleString('vi-VN')}đ`;
+              prodSelect.appendChild(option);
+            });
+            return;
+          }
+        }
+      } catch (err) {
+        console.warn("Không thể kết nối API Sản phẩm, dùng mặc định.");
+      }
+
+      // Mặc định nếu không có API
+      prodSelect.innerHTML = `
+        <option value="1" data-price="3800000" data-type="digital">Bản Đồ DNA Kinh Doanh - 3.800.000đ</option>
+      `;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      loadFormProducts();
+    });
+
+    document.getElementById("leadForm").addEventListener("submit", async function(e) {
       e.preventDefault();
       
       const submitBtn = e.target.querySelector('button[type="submit"]');
       submitBtn.disabled = true;
       const originalText = submitBtn.textContent;
-      submitBtn.textContent = "Đang gửi thông tin...";
+      submitBtn.textContent = "Đang xử lý...";
       
-      const data = {
-        name: document.getElementById('name').value,
-        phone: document.getElementById('phone').value,
-        stage: document.getElementById('stage').value,
-        message: document.getElementById('message').value
-      };
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const stage = document.getElementById('stage').value;
+      const message = document.getElementById('message').value;
+      
+      const prodSelect = document.getElementById("productSelect");
+      const selectedOption = prodSelect.options[prodSelect.selectedIndex];
+      const product_id = parseInt(selectedOption.value);
+      const price = parseFloat(selectedOption.dataset.price);
+
+      const data = { name, phone, stage, message, product_id, price };
 
       // Gửi ngầm tới Google Sheet
       if(GOOGLE_SHEET_URL) {
@@ -1269,25 +1504,247 @@
         }).catch(err => console.error(err));
       }
 
-      // Xây dựng link Zalo chuyển tiếp
-      const textMsg = `Xin chào, tôi tên là ${data.name} muốn nhận tư vấn Bản Đồ DNA Kinh Doanh.\n- Số điện thoại/Zalo: ${data.phone}\n- Giai đoạn hiện tại: ${data.stage}\n- Điều rối nhất lúc này: ${data.message || 'Không có'}`;
-      const zaloUrl = `https://zalo.me/0986549414?text=${encodeURIComponent(textMsg)}`;
+      let customerId = null;
+      let orderId = null;
+
+      // Đồng bộ khách hàng và tạo đơn hàng 'pending' vào database
+      try {
+        const customerRes = await fetch("/api/customers", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, phone, zalo: phone })
+        });
+        
+        if (customerRes.ok) {
+          const customerResult = await customerRes.json();
+          customerId = customerResult.id;
+
+          const orderRes = await fetch("/api/orders", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              customer_id: customerId,
+              product_id: product_id,
+              amount: price,
+              status: "pending"
+            })
+          });
+
+          if (orderRes.ok) {
+            const orderResult = await orderRes.json();
+            orderId = orderResult.id;
+          }
+        }
+      } catch (err) {
+        console.error("Lỗi đồng bộ SQLite:", err);
+      }
+
+      // Tạo mã thanh toán duy nhất cho lead này
+      const memo = generateMemo();
       
-      // Hiển thị thông báo thành công và chuyển hướng
+      // Hiển thị thông báo thành công và mở Modal thanh toán VietQR
       const msg = document.getElementById("formMsg");
-      msg.innerHTML = `Đăng ký thành công! Đang chuyển hướng tới Zalo... <br><a href="${zaloUrl}" target="_blank" style="color:var(--gold-2);text-decoration:underline;font-weight:bold;">Click vào đây nếu không tự chuyển hướng</a>`;
+      msg.innerHTML = `Đăng ký thành công! Đang khởi tạo mã thanh toán VietQR...`;
       msg.style.color = "var(--success)";
       
-      // Chuyển hướng sang Zalo
-      window.open(zaloUrl, '_blank');
+      // Khôi phục lại trạng thái nút
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
       
-      // Khôi phục lại trạng thái nút sau 3 giây
-      setTimeout(() => {
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalText;
-      }, 3000);
+      // Mở modal thanh toán động
+      openPaymentModal(memo, price, orderId);
     });
+
+    // Cấu hình SePay - Người dùng thay đổi các giá trị này
+    const SEPAY_CONFIG = {
+      bank: "ACB",      // Tên viết tắt ngân hàng của bạn
+      accountNo: "16997077",   // Số tài khoản ngân hàng của bạn
+      accountName: "DINH QUOC HOANG" // Tên chủ tài khoản viết hoa không dấu
+    };
+
+    function generateMemo() {
+      // Tạo mã thanh toán ngẫu nhiên dạng: DNA1234 để phân biệt từng giao dịch của khách hàng
+      const randomNum = Math.floor(1000 + Math.random() * 9000);
+      return `DNA${randomNum}`;
+    }
+
+    let paymentCheckInterval = null;
+
+    function startCheckingPayment(memo, amount, orderId) {
+      if (paymentCheckInterval) clearInterval(paymentCheckInterval);
+      
+      let attempts = 0;
+      const maxAttempts = 120; // 120 lần * 5s = 10 phút tối đa
+
+      paymentCheckInterval = setInterval(async () => {
+        attempts++;
+        if (attempts > maxAttempts) {
+          clearInterval(paymentCheckInterval);
+          document.getElementById("paymentStatusText").textContent = "Hết thời hạn chờ thanh toán. Vui lòng liên hệ Zalo.";
+          document.getElementById("paymentStatusText").style.color = "var(--danger)";
+          return;
+        }
+
+        try {
+          // Gọi API an toàn từ backend của chính ta
+          const response = await fetch(`/api/check-payment?memo=${encodeURIComponent(memo)}&amount=${amount}`);
+          if (!response.ok) {
+            throw new Error('Lỗi máy chủ check-payment');
+          }
+
+          const data = await response.json();
+          if (data.success && data.transaction) {
+            clearInterval(paymentCheckInterval);
+            handlePaymentSuccess(data.transaction, orderId);
+          }
+        } catch (err) {
+          console.error("Lỗi khi kiểm tra thanh toán:", err);
+        }
+      }, 5000);
+    }
+
+    async function handlePaymentSuccess(tx, orderId) {
+      // 1. Cập nhật trạng thái đơn hàng thành completed trong SQLite
+      if (orderId) {
+        try {
+          await fetch("/api/orders", {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ id: orderId, status: "completed" })
+          });
+        } catch (err) {
+          console.error("Lỗi cập nhật SQLite:", err);
+        }
+      }
+
+      const statusBox = document.querySelector(".status-box");
+      const statusDot = document.querySelector(".status-dot");
+      const statusText = document.getElementById("paymentStatusText");
+
+      statusDot.style.background = "var(--success)";
+      statusDot.style.animation = "none";
+      statusText.textContent = "Thanh toán thành công! Đang xử lý...";
+      statusText.style.color = "var(--success)";
+      statusBox.style.background = "rgba(148, 221, 163, 0.1)";
+      statusBox.style.borderColor = "rgba(148, 221, 163, 0.2)";
+
+      setTimeout(() => {
+        // Tạo tin nhắn Zalo gửi thông tin xác nhận sau khi thanh toán thành công
+        const textMsg = `Tôi đã thanh toán thành công Bản Đồ DNA Kinh Doanh.\nMã giao dịch: ${tx.id}\nSố tiền: ${parseFloat(tx.amount_in).toLocaleString('vi-VN')}đ\nNội dung chuyển khoản: ${tx.transaction_content}`;
+        const zaloUrl = `https://zalo.me/0986549414?text=${encodeURIComponent(textMsg)}`;
+        
+        window.open(zaloUrl, '_blank');
+        closePaymentModal();
+
+        const msg = document.getElementById("formMsg");
+        msg.innerHTML = `Thanh toán thành công! <a href="${zaloUrl}" target="_blank" style="color:var(--success);text-decoration:underline;font-weight:bold;">Nhấn vào đây để nhận báo cáo qua Zalo</a>`;
+        msg.style.color = "var(--success)";
+      }, 2000);
+    }
+
+    function openPaymentModal(memo, amount, orderId) {
+      const modal = document.getElementById("paymentModal");
+      modal.classList.add("active");
+
+      document.getElementById("displayBankAcc").textContent = `${SEPAY_CONFIG.bank} - ${SEPAY_CONFIG.accountNo}`;
+      document.getElementById("displayAmount").textContent = amount.toLocaleString('vi-VN') + "đ";
+      document.getElementById("displayMemo").textContent = memo;
+
+      // Link tạo VietQR động từ SePay
+      const qrUrl = `https://vietqr.app/img?acc=${SEPAY_CONFIG.accountNo}&bank=${SEPAY_CONFIG.bank}&amount=${amount}&des=${encodeURIComponent(memo)}&template=compact&showinfo=true&holder=${encodeURIComponent(SEPAY_CONFIG.accountName)}`;
+      document.getElementById("paymentQrImg").src = qrUrl;
+
+      // Reset giao diện Trạng thái
+      const statusBox = document.querySelector(".status-box");
+      const statusDot = document.querySelector(".status-dot");
+      const statusText = document.getElementById("paymentStatusText");
+      statusDot.style.background = "var(--gold)";
+      statusDot.style.animation = "pulse 1.5s infinite";
+      statusText.textContent = "Đang chờ bạn quét mã thanh toán...";
+      statusText.style.color = "var(--gold-2)";
+      statusBox.style.background = "rgba(233, 184, 93, 0.08)";
+      statusBox.style.borderColor = "rgba(233, 184, 93, 0.16)";
+
+      // Bắt đầu quét kiểm tra biến động số dư qua API SePay
+      startCheckingPayment(memo, amount, orderId);
+    }
+
+    function closePaymentModal() {
+      document.getElementById("paymentModal").classList.remove("active");
+      if (paymentCheckInterval) {
+        clearInterval(paymentCheckInterval);
+        paymentCheckInterval = null;
+      }
+    }
+
+    function copyText(elementId) {
+      const textElement = document.getElementById(elementId);
+      let textToCopy = textElement.textContent;
+
+      if (elementId === 'displayAmount') {
+        textToCopy = SEPAY_CONFIG.amount.toString();
+      } else if (elementId === 'displayBankAcc') {
+        textToCopy = SEPAY_CONFIG.accountNo;
+      }
+
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const btn = textElement.nextElementSibling;
+        const originalText = btn.textContent;
+        btn.textContent = "Đã sao chép";
+        setTimeout(() => {
+          btn.textContent = originalText;
+        }, 1500);
+      }).catch(err => {
+        console.error("Lỗi copy:", err);
+      });
+    }
   </script>
+
+  <!-- Hộp thoại thanh toán tự động (Modal) -->
+  <div id="paymentModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 id="modalTitle" class="modal-title">Thanh toán tự động qua VietQR</h2>
+        <button class="modal-close" onclick="closePaymentModal()" aria-label="Đóng">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="qr-container">
+          <div class="qr-wrapper">
+            <img id="paymentQrImg" class="qr-image" src="" alt="VietQR quét mã thanh toán" />
+          </div>
+          <span class="fine-print">Mở App ngân hàng quét mã để tự điền nội dung</span>
+        </div>
+        <div class="payment-info">
+          <div class="info-row">
+            <span class="info-label">Ngân hàng & Số tài khoản</span>
+            <div class="info-value-wrap">
+              <span id="displayBankAcc" class="info-value">VCB - 0000000000</span>
+              <button class="btn-copy" onclick="copyText('displayBankAcc')">Sao chép</button>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Số tiền cần thanh toán</span>
+            <div class="info-value-wrap">
+              <span id="displayAmount" class="info-value highlight">3.800.000đ</span>
+              <button class="btn-copy" onclick="copyText('displayAmount')">Sao chép</button>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Nội dung chuyển khoản (Bắt buộc đúng)</span>
+            <div class="info-value-wrap">
+              <span id="displayMemo" class="info-value highlight" style="letter-spacing: 0.05em;">DNA...</span>
+              <button class="btn-copy" onclick="copyText('displayMemo')">Sao chép</button>
+            </div>
+          </div>
+          <div class="status-box">
+            <div class="status-dot"></div>
+            <span id="paymentStatusText" class="status-text">Đang chờ bạn quét mã thanh toán...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Chatbot bán hàng tự động -->
   <script src="chatbot.js"></script>
 </body>

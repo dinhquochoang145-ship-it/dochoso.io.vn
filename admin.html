@@ -1,0 +1,1054 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Panel — DNA Kinh Doanh</title>
+  <style>
+    :root {
+      --bg: #0f0c08;
+      --bg-2: #17110c;
+      --panel: #211810;
+      --panel-2: #2d2117;
+      --text: #fff8ee;
+      --muted: #d8c8b1;
+      --soft: #a99477;
+      --line: rgba(255, 232, 190, .16);
+      --gold: #e9b85d;
+      --gold-2: #f7d58d;
+      --danger: #ff8d72;
+      --success: #94dda3;
+      --shadow: 0 24px 70px rgba(0, 0, 0, .35);
+      --radius-xl: 20px;
+      --radius-md: 12px;
+      --radius-sm: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(1200px, calc(100% - 40px));
+      margin-inline: auto;
+      padding: 40px 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(24px, 4vw, 36px);
+      letter-spacing: -.04em;
+      color: var(--gold-2);
+      font-weight: 900;
+    }
+
+    .subtitle {
+      color: var(--soft);
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    .btn-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 248, 238, .05);
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .btn-home:hover {
+      background: rgba(255, 248, 238, .1);
+      color: var(--gold-2);
+    }
+
+    /* Tabs Component */
+    .tabs-bar {
+      display: flex;
+      gap: 12px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 6px;
+      margin-bottom: 28px;
+      width: fit-content;
+    }
+
+    .tab-btn {
+      background: none;
+      border: none;
+      color: var(--muted);
+      padding: 10px 24px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .tab-btn:hover {
+      color: var(--text);
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      color: #21150a;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Panel Actions */
+    .panel-actions {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 18px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: var(--radius-sm);
+      font-weight: 800;
+      font-size: 14px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: 0.2s;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      color: #24170b;
+      box-shadow: 0 8px 24px rgba(233, 184, 93, 0.15);
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 30px rgba(233, 184, 93, 0.25);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 248, 238, .05);
+      border-color: var(--line);
+      color: var(--text);
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 248, 238, .1);
+    }
+
+    /* Table styles */
+    .table-container {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    th, td {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: middle;
+    }
+
+    th {
+      color: var(--gold-2);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(255, 248, 238, .02);
+      font-weight: 800;
+    }
+
+    td {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Badges */
+    .badge {
+      display: inline-flex;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .02em;
+    }
+
+    .badge-digital { background: rgba(233, 184, 93, 0.15); color: var(--gold-2); }
+    .badge-physical { background: rgba(148, 221, 163, 0.15); color: var(--success); }
+    .badge-service { background: rgba(255, 141, 114, 0.15); color: var(--danger); }
+
+    .badge-completed { background: rgba(148, 221, 163, 0.15); color: var(--success); }
+    .badge-pending { background: rgba(233, 184, 93, 0.15); color: var(--gold-2); }
+    .badge-cancelled { background: rgba(255, 141, 114, 0.15); color: var(--danger); }
+
+    /* Action buttons in tables */
+    .actions-cell {
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn-action {
+      background: none;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.15s;
+    }
+
+    .btn-action.edit:hover {
+      border-color: var(--gold);
+      color: var(--gold-2);
+    }
+
+    .btn-action.delete:hover {
+      border-color: var(--danger);
+      color: var(--danger);
+    }
+
+    /* Modal dialog */
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 12, 8, .85);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .modal-card {
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      width: min(520px, calc(100% - 32px));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      animation: modalSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes modalSlideUp {
+      from { transform: translateY(24px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .modal-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--gold-2);
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      color: var(--soft);
+      cursor: pointer;
+      font-size: 24px;
+      line-height: 1;
+      padding: 0;
+    }
+
+    .modal-body {
+      padding: 24px;
+    }
+
+    .modal-footer {
+      padding: 16px 24px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+
+    /* Forms */
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      background: rgba(15, 12, 8, .5);
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      min-height: 44px;
+      padding: 10px 14px;
+      outline: none;
+      font: inherit;
+      font-size: 14px;
+      transition: border-color 0.2s;
+    }
+
+    textarea { min-height: 80px; resize: vertical; }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--gold);
+    }
+
+    .stock-warning {
+      font-size: 12px;
+      color: var(--danger);
+      margin-top: 4px;
+      font-weight: 700;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div>
+      <h1>DNA Kinh Doanh — Admin Panel</h1>
+      <div class="subtitle">Quản trị Sản phẩm, Khách hàng và Đơn hàng tự động nhận tiền</div>
+    </div>
+    <a class="btn-home" href="/">
+      <span>← Về trang chủ</span>
+    </a>
+  </header>
+
+  <!-- Navigation Tab Bar -->
+  <div class="tabs-bar">
+    <button class="tab-btn active" onclick="switchTab('products')">Sản phẩm</button>
+    <button class="tab-btn" onclick="switchTab('customers')">Khách hàng</button>
+    <button class="tab-btn" onclick="switchTab('orders')">Đơn hàng</button>
+  </div>
+
+  <!-- TAB CONTENT: PRODUCTS -->
+  <div id="products-tab" class="tab-content active">
+    <div class="panel-actions">
+      <button class="btn btn-primary" onclick="openAddProductModal()">+ Thêm Sản phẩm</button>
+    </div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 80px;">ID</th>
+            <th>Tên sản phẩm</th>
+            <th style="width: 140px;">Loại</th>
+            <th style="width: 160px;">Giá bán</th>
+            <th>Mô tả</th>
+            <th style="width: 120px;">Tồn kho</th>
+            <th style="width: 160px;">Hành động</th>
+          </tr>
+        </thead>
+        <tbody id="products-list">
+          <tr><td colspan="7" style="text-align: center;">Đang tải dữ liệu...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- TAB CONTENT: CUSTOMERS -->
+  <div id="customers-tab" class="tab-content">
+    <div class="panel-actions">
+      <button class="btn btn-primary" onclick="openAddCustomerModal()">+ Thêm Khách hàng</button>
+    </div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 80px;">ID</th>
+            <th>Họ và tên</th>
+            <th>Số điện thoại</th>
+            <th>Zalo</th>
+            <th style="width: 200px;">Ngày đăng ký</th>
+            <th style="width: 160px;">Hành động</th>
+          </tr>
+        </thead>
+        <tbody id="customers-list">
+          <tr><td colspan="6" style="text-align: center;">Đang tải dữ liệu...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- TAB CONTENT: ORDERS -->
+  <div id="orders-tab" class="tab-content">
+    <div class="panel-actions">
+      <button class="btn btn-primary" onclick="openAddOrderModal()">+ Tạo Đơn hàng mới</button>
+    </div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 80px;">ID</th>
+            <th>Khách hàng</th>
+            <th>Sản phẩm</th>
+            <th style="width: 160px;">Số tiền</th>
+            <th style="width: 140px;">Trạng thái</th>
+            <th style="width: 200px;">Ngày đặt</th>
+            <th style="width: 120px;">Hành động</th>
+          </tr>
+        </thead>
+        <tbody id="orders-list">
+          <tr><td colspan="7" style="text-align: center;">Đang tải dữ liệu...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== MODALS ==================== -->
+
+<!-- Product Add/Edit Modal -->
+<div id="productModal" class="modal">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h3 id="productModalTitle" class="modal-title">Thêm sản phẩm mới</h3>
+      <button class="modal-close" onclick="closeModal('productModal')">&times;</button>
+    </div>
+    <form id="productForm">
+      <input type="hidden" id="prod-id" />
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="prod-name">Tên sản phẩm *</label>
+          <input type="text" id="prod-name" required placeholder="Ví dụ: Bản đồ DNA Kinh doanh" />
+        </div>
+        <div class="form-group">
+          <label for="prod-type">Loại sản phẩm *</label>
+          <select id="prod-type" required onchange="toggleStockField()">
+            <option value="digital">Sản phẩm số (Digital)</option>
+            <option value="physical">Sản phẩm vật lý (Physical)</option>
+            <option value="service">Dịch vụ (Service)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="prod-price">Giá bán (VNĐ) *</label>
+          <input type="number" id="prod-price" required min="0" placeholder="Ví dụ: 3800000" />
+        </div>
+        <div id="stock-group" class="form-group" style="display: none;">
+          <label for="prod-stock">Số lượng tồn kho *</label>
+          <input type="number" id="prod-stock" min="0" placeholder="Ví dụ: 50" />
+        </div>
+        <div class="form-group">
+          <label for="prod-desc">Mô tả ngắn</label>
+          <textarea id="prod-desc" placeholder="Nhập mô tả sản phẩm..."></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" onclick="closeModal('productModal')">Hủy</button>
+        <button type="submit" class="btn btn-primary">Lưu lại</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Customer Add/Edit Modal -->
+<div id="customerModal" class="modal">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h3 id="customerModalTitle" class="modal-title">Thêm khách hàng mới</h3>
+      <button class="modal-close" onclick="closeModal('customerModal')">&times;</button>
+    </div>
+    <form id="customerForm">
+      <input type="hidden" id="cust-id" />
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="cust-name">Họ và tên *</label>
+          <input type="text" id="cust-name" required placeholder="Ví dụ: Nguyễn Văn A" />
+        </div>
+        <div class="form-group">
+          <label for="cust-phone">Số điện thoại *</label>
+          <input type="tel" id="cust-phone" required placeholder="Ví dụ: 0987654321" />
+        </div>
+        <div class="form-group">
+          <label for="cust-zalo">Link Zalo hoặc Số Zalo</label>
+          <input type="text" id="cust-zalo" placeholder="Ví dụ: 0987654321 hoặc link zalo" />
+        </div>
+        <div class="form-group">
+          <label for="cust-date">Ngày đăng ký</label>
+          <input type="datetime-local" id="cust-date" />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" onclick="closeModal('customerModal')">Hủy</button>
+        <button type="submit" class="btn btn-primary">Lưu lại</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Order Add Modal -->
+<div id="orderModal" class="modal">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h3 class="modal-title">Tạo đơn hàng mới</h3>
+      <button class="modal-close" onclick="closeModal('orderModal')">&times;</button>
+    </div>
+    <form id="orderForm">
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="ord-customer">Chọn khách hàng *</label>
+          <select id="ord-customer" required>
+            <option value="">-- Chọn khách hàng --</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="ord-product">Chọn sản phẩm *</label>
+          <select id="ord-product" required onchange="handleProductSelect()">
+            <option value="">-- Chọn sản phẩm --</option>
+          </select>
+          <div id="ord-stock-warning" class="stock-warning"></div>
+        </div>
+        <div class="form-group">
+          <label for="ord-amount">Giá trị thanh toán (VNĐ) *</label>
+          <input type="number" id="ord-amount" required min="0" />
+        </div>
+        <div class="form-group">
+          <label for="ord-status">Trạng thái đơn hàng</label>
+          <select id="ord-status" required>
+            <option value="pending">Chờ quét mã (Pending)</option>
+            <option value="completed">Thành công (Completed)</option>
+            <option value="cancelled">Hủy đơn (Cancelled)</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" onclick="closeModal('orderModal')">Hủy</button>
+        <button type="submit" id="orderSubmitBtn" class="btn btn-primary">Tạo đơn hàng</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ==================== LOGIC JAVASCRIPT ==================== -->
+<script>
+  let cachedProducts = [];
+  let cachedCustomers = [];
+
+  // Khởi tạo trang: tải bảng đầu tiên
+  document.addEventListener('DOMContentLoaded', () => {
+    loadTab('products');
+  });
+
+  // Chuyển tab giao diện
+  function switchTab(tabName) {
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+    const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(btn => btn.textContent.toLowerCase().includes(tabName.substring(0, 3)));
+    if (activeBtn) activeBtn.classList.add('active');
+
+    const contentDiv = document.getElementById(`${tabName}-tab`);
+    if (contentDiv) contentDiv.classList.add('active');
+
+    loadTab(tabName);
+  }
+
+  // Tải dữ liệu tương ứng của tab
+  function loadTab(tabName) {
+    if (tabName === 'products') loadProducts();
+    if (tabName === 'customers') loadCustomers();
+    if (tabName === 'orders') loadOrders();
+  }
+
+  // --- HÀM CHO MODALS ---
+  function openModal(id) {
+    document.getElementById(id).classList.add('active');
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('active');
+  }
+
+  // ==================== QUẢN LÝ SẢN PHẨM ====================
+  async function loadProducts() {
+    try {
+      const res = await fetch('/api/products');
+      cachedProducts = await res.json();
+      const tbody = document.getElementById('products-list');
+      tbody.innerHTML = '';
+
+      if (cachedProducts.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="7" style="text-align: center;">Chưa có sản phẩm nào.</td></tr>';
+        return;
+      }
+
+      cachedProducts.forEach(p => {
+        const tr = document.createElement('tr');
+        const priceFormatted = p.price.toLocaleString('vi-VN') + 'đ';
+        const stockText = p.stock !== null ? p.stock : '<span style="color:var(--soft);">Không giới hạn</span>';
+        
+        tr.innerHTML = `
+          <td><b>${p.id}</b></td>
+          <td><b>${p.name}</b></td>
+          <td><span class="badge badge-${p.type}">${p.type}</span></td>
+          <td><b style="color:var(--gold-2);">${priceFormatted}</b></td>
+          <td>${p.description || ''}</td>
+          <td>${stockText}</td>
+          <td>
+            <div class="actions-cell">
+              <button class="btn-action edit" onclick="editProduct(${p.id})">Sửa</button>
+              <button class="btn-action delete" onclick="deleteProduct(${p.id})">Xóa</button>
+            </div>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  function toggleStockField() {
+    const type = document.getElementById('prod-type').value;
+    const stockGroup = document.getElementById('stock-group');
+    const stockInput = document.getElementById('prod-stock');
+
+    if (type === 'physical') {
+      stockGroup.style.display = 'block';
+      stockInput.required = true;
+    } else {
+      stockGroup.style.display = 'none';
+      stockInput.required = false;
+      stockInput.value = '';
+    }
+  }
+
+  function openAddProductModal() {
+    document.getElementById('productForm').reset();
+    document.getElementById('prod-id').value = '';
+    document.getElementById('productModalTitle').textContent = 'Thêm sản phẩm mới';
+    toggleStockField();
+    openModal('productModal');
+  }
+
+  function editProduct(id) {
+    const p = cachedProducts.find(item => item.id === id);
+    if (!p) return;
+
+    document.getElementById('prod-id').value = p.id;
+    document.getElementById('prod-name').value = p.name;
+    document.getElementById('prod-type').value = p.type;
+    document.getElementById('prod-price').value = p.price;
+    document.getElementById('prod-desc').value = p.description;
+    
+    toggleStockField();
+    if (p.type === 'physical') {
+      document.getElementById('prod-stock').value = p.stock;
+    }
+
+    document.getElementById('productModalTitle').textContent = 'Chỉnh sửa sản phẩm';
+    openModal('productModal');
+  }
+
+  document.getElementById('productForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const id = document.getElementById('prod-id').value;
+    const name = document.getElementById('prod-name').value;
+    const type = document.getElementById('prod-type').value;
+    const price = document.getElementById('prod-price').value;
+    const description = document.getElementById('prod-desc').value;
+    const stock = document.getElementById('prod-stock').value;
+
+    const data = { name, type, price, description, stock };
+    let method = 'POST';
+    if (id) {
+      data.id = id;
+      method = 'PUT';
+    }
+
+    try {
+      const res = await fetch('/api/products', {
+        method,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const result = await res.json();
+      
+      if (res.ok) {
+        closeModal('productModal');
+        loadProducts();
+      } else {
+        alert("Lỗi: " + result.error);
+      }
+    } catch (err) {
+      alert("Lỗi kết nối máy chủ.");
+    }
+  });
+
+  async function deleteProduct(id) {
+    if (!confirm("Bạn có chắc chắn muốn xóa sản phẩm này?")) return;
+    try {
+      const res = await fetch(`/api/products?id=${id}`, { method: 'DELETE' });
+      const result = await res.json();
+      if (res.ok) {
+        loadProducts();
+      } else {
+        alert("Lỗi: " + result.error);
+      }
+    } catch (err) {
+      alert("Lỗi kết nối.");
+    }
+  }
+
+  // ==================== QUẢN LÝ KHÁCH HÀNG ====================
+  async function loadCustomers() {
+    try {
+      const res = await fetch('/api/customers');
+      cachedCustomers = await res.json();
+      const tbody = document.getElementById('customers-list');
+      tbody.innerHTML = '';
+
+      if (cachedCustomers.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="6" style="text-align: center;">Chưa có khách hàng nào.</td></tr>';
+        return;
+      }
+
+      cachedCustomers.forEach(c => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><b>${c.id}</b></td>
+          <td><b>${c.name}</b></td>
+          <td><code>${c.phone}</code></td>
+          <td>${c.zalo || '<span style="color:var(--soft);">Trống</span>'}</td>
+          <td>${c.register_date}</td>
+          <td>
+            <div class="actions-cell">
+              <button class="btn-action edit" onclick="editCustomer(${c.id})">Sửa</button>
+              <button class="btn-action delete" onclick="deleteCustomer(${c.id})">Xóa</button>
+            </div>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  function openAddCustomerModal() {
+    document.getElementById('customerForm').reset();
+    document.getElementById('cust-id').value = '';
+    document.getElementById('cust-date').value = '';
+    document.getElementById('customerModalTitle').textContent = 'Thêm khách hàng mới';
+    openModal('customerModal');
+  }
+
+  function editCustomer(id) {
+    const c = cachedCustomers.find(item => item.id === id);
+    if (!c) return;
+
+    document.getElementById('cust-id').value = c.id;
+    document.getElementById('cust-name').value = c.name;
+    document.getElementById('cust-phone').value = c.phone;
+    document.getElementById('cust-zalo').value = c.zalo;
+    
+    // Convert SQLite timestamp format to datetime-local standard (YYYY-MM-DDThh:mm)
+    if (c.register_date) {
+      const formattedDate = c.register_date.replace(' ', 'T').substring(0, 16);
+      document.getElementById('cust-date').value = formattedDate;
+    } else {
+      document.getElementById('cust-date').value = '';
+    }
+
+    document.getElementById('customerModalTitle').textContent = 'Chỉnh sửa khách hàng';
+    openModal('customerModal');
+  }
+
+  document.getElementById('customerForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const id = document.getElementById('cust-id').value;
+    const name = document.getElementById('cust-name').value;
+    const phone = document.getElementById('cust-phone').value;
+    const zalo = document.getElementById('cust-zalo').value;
+    const register_date = document.getElementById('cust-date').value;
+
+    const data = { name, phone, zalo, register_date: register_date ? register_date.replace('T', ' ') + ':00' : null };
+    let method = 'POST';
+    if (id) {
+      data.id = id;
+      method = 'PUT';
+    }
+
+    try {
+      const res = await fetch('/api/customers', {
+        method,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const result = await res.json();
+      
+      if (res.ok) {
+        closeModal('customerModal');
+        loadCustomers();
+      } else {
+        alert("Lỗi: " + result.error);
+      }
+    } catch (err) {
+      alert("Lỗi kết nối.");
+    }
+  });
+
+  async function deleteCustomer(id) {
+    if (!confirm("Bạn có chắc chắn muốn xóa khách hàng này? Mọi thông tin liên quan có thể bị ảnh hưởng.")) return;
+    try {
+      const res = await fetch(`/api/customers?id=${id}`, { method: 'DELETE' });
+      const result = await res.json();
+      if (res.ok) {
+        loadCustomers();
+      } else {
+        alert("Lỗi: " + result.error);
+      }
+    } catch (err) {
+      alert("Lỗi kết nối.");
+    }
+  }
+
+  // ==================== QUẢN LÝ ĐƠN HÀNG ====================
+  async function loadOrders() {
+    try {
+      const res = await fetch('/api/orders');
+      const orders = await res.json();
+      const tbody = document.getElementById('orders-list');
+      tbody.innerHTML = '';
+
+      if (orders.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="7" style="text-align: center;">Chưa có đơn hàng nào.</td></tr>';
+        return;
+      }
+
+      orders.forEach(o => {
+        const tr = document.createElement('tr');
+        const amountFormatted = o.amount.toLocaleString('vi-VN') + 'đ';
+        
+        tr.innerHTML = `
+          <td><b>${o.id}</b></td>
+          <td><b>${o.customer_name}</b><br><small style="color:var(--soft);">${o.customer_phone}</small></td>
+          <td><b>${o.product_name}</b> <span class="badge badge-${o.product_type}" style="transform: scale(0.85);">${o.product_type}</span></td>
+          <td><b style="color:var(--gold-2);">${amountFormatted}</b></td>
+          <td><span class="badge badge-${o.status}">${o.status}</span></td>
+          <td>${o.order_date}</td>
+          <td>
+            <div class="actions-cell">
+              ${o.status !== 'completed' && o.status !== 'cancelled' ? `
+                <select style="min-height:30px; font-size:12px; padding:2px;" onchange="updateOrderStatus(${o.id}, this.value)">
+                  <option value="pending" ${o.status === 'pending' ? 'selected' : ''}>Chờ quét</option>
+                  <option value="completed">Thành công</option>
+                  <option value="cancelled">Hủy</option>
+                </select>
+              ` : `<span style="color:var(--soft); font-size:12px; font-weight:700;">Đã chốt</span>`}
+              <button class="btn-action delete" style="padding: 2px 8px;" onclick="deleteOrder(${o.id})">Xóa</button>
+            </div>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  // Tải danh sách lựa chọn cho Form Tạo đơn hàng
+  async function populateOrderDropdowns() {
+    try {
+      // 1. Tải danh sách khách hàng
+      const custRes = await fetch('/api/customers');
+      const customers = await custRes.json();
+      const custSelect = document.getElementById('ord-customer');
+      custSelect.innerHTML = '<option value="">-- Chọn khách hàng --</option>';
+      customers.forEach(c => {
+        custSelect.innerHTML += `<option value="${c.id}">${c.name} (${c.phone})</option>`;
+      });
+
+      // 2. Tải danh sách sản phẩm
+      const prodRes = await fetch('/api/products');
+      const products = await prodRes.json();
+      cachedProducts = products; // Lưu lại để dùng khi lựa chọn sản phẩm
+      const prodSelect = document.getElementById('ord-product');
+      prodSelect.innerHTML = '<option value="">-- Chọn sản phẩm --</option>';
+      products.forEach(p => {
+        prodSelect.innerHTML += `<option value="${p.id}">${p.name} [${p.type}] - ${p.price.toLocaleString('vi-VN')}đ</option>`;
+      });
+    } catch (err) {
+      console.error("Lỗi đồng bộ danh sách dropdown:", err);
+    }
+  }
+
+  function openAddOrderModal() {
+    document.getElementById('orderForm').reset();
+    document.getElementById('ord-stock-warning').style.display = 'none';
+    document.getElementById('orderSubmitBtn').disabled = false;
+    populateOrderDropdowns();
+    openModal('orderModal');
+  }
+
+  // Tự động điền tiền và kiểm tra tồn kho khi chọn sản phẩm
+  function handleProductSelect() {
+    const productVal = document.getElementById('ord-product').value;
+    const warningDiv = document.getElementById('ord-stock-warning');
+    const submitBtn = document.getElementById('orderSubmitBtn');
+    
+    if (!productVal) {
+      document.getElementById('ord-amount').value = '';
+      warningDiv.style.display = 'none';
+      submitBtn.disabled = false;
+      return;
+    }
+
+    const p = cachedProducts.find(item => item.id === parseInt(productVal));
+    if (!p) return;
+
+    // Tự động điền giá tiền sản phẩm vào ô Giá trị thanh toán
+    document.getElementById('ord-amount').value = p.price;
+
+    // Kiểm tra tồn kho đối với sản phẩm vật lý (physical)
+    if (p.type === 'physical') {
+      warningDiv.style.display = 'block';
+      if (p.stock === null || p.stock === undefined) {
+        warningDiv.textContent = `⚠️ Sản phẩm vật lý chưa được cấu hình tồn kho!`;
+        submitBtn.disabled = true;
+      } else if (p.stock <= 0) {
+        warningDiv.textContent = `❌ SẢN PHẨM ĐÃ HẾT HÀNG! (Tồn kho: 0). Không thể tạo đơn hàng.`;
+        submitBtn.disabled = true;
+      } else {
+        warningDiv.textContent = `✓ Sản phẩm vật lý. Tồn kho hiện tại: ${p.stock} sản phẩm. (Sẽ tự động trừ 1 khi tạo đơn)`;
+        warningDiv.style.color = 'var(--success)';
+        submitBtn.disabled = false;
+      }
+    } else {
+      warningDiv.style.display = 'block';
+      warningDiv.textContent = `✓ Sản phẩm số/Dịch vụ. (Không giới hạn và không trừ tồn kho)`;
+      warningDiv.style.color = 'var(--success)';
+      submitBtn.disabled = false;
+    }
+  }
+
+  document.getElementById('orderForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const customer_id = document.getElementById('ord-customer').value;
+    const product_id = document.getElementById('ord-product').value;
+    const amount = document.getElementById('ord-amount').value;
+    const status = document.getElementById('ord-status').value;
+
+    const data = { customer_id, product_id, amount, status };
+
+    try {
+      const res = await fetch('/api/orders', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const result = await res.json();
+      
+      if (res.ok) {
+        closeModal('orderModal');
+        loadOrders();
+      } else {
+        alert("Lỗi tạo đơn hàng: " + result.error);
+      }
+    } catch (err) {
+      alert("Lỗi kết nối.");
+    }
+  });
+
+  async function updateOrderStatus(id, newStatus) {
+    try {
+      const res = await fetch('/api/orders', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id, status: newStatus })
+      });
+      const result = await res.json();
+      if (res.ok) {
+        loadOrders();
+      } else {
+        alert("Lỗi: " + result.error);
+      }
+    } catch (err) {
+      alert("Lỗi kết nối.");
+    }
+  }
+
+  async function deleteOrder(id) {
+    if (!confirm("Bạn có chắc chắn muốn xóa đơn hàng này?")) return;
+    try {
+      const res = await fetch(`/api/orders?id=${id}`, { method: 'DELETE' });
+      if (res.ok) {
+        loadOrders();
+      } else {
+        const result = await res.json();
+        alert("Lỗi: " + result.error);
+      }
+    } catch (err) {
+      alert("Lỗi kết nối.");
+    }
+  }
+</script>
+</body>
+</html>

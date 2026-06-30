@@ -1,5 +1,23 @@
+# Vercel configuration
+.vercel/
+
+# AI Agent configuration, logs and workspace scripts
 .agent/
-.gemini/
-node_modules/
+
+# OS generated files
 .DS_Store
 Thumbs.db
+
+# Database temp or journal files
+*.db-journal
+*.db-shm
+*.db-wal
+
+# Large asset and documentation folders (optional but recommended to keep repository small)
+tai lieu/
+extracted_second_brain/
+
+# Local Node modules (if any)
+node_modules/
+package-lock.json
+npm-debug.log
