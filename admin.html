@@ -895,15 +895,16 @@
           <td><span class="badge badge-${o.status}">${o.status}</span></td>
           <td>${o.order_date}</td>
           <td>
-            <div class="actions-cell">
-              ${o.status !== 'completed' && o.status !== 'cancelled' ? `
-                <select style="min-height:30px; font-size:12px; padding:2px;" onchange="updateOrderStatus(${o.id}, this.value)">
-                  <option value="pending" ${o.status === 'pending' ? 'selected' : ''}>Chờ quét</option>
-                  <option value="completed">Thành công</option>
-                  <option value="cancelled">Hủy</option>
-                </select>
-              ` : `<span style="color:var(--soft); font-size:12px; font-weight:700;">Đã chốt</span>`}
-              <button class="btn-action delete" style="padding: 2px 8px;" onclick="deleteOrder(${o.id})">Xóa</button>
+            <div class="actions-cell" style="align-items: center; gap: 8px;">
+              ${o.status === 'pending' ? `
+                <button class="btn-action edit" style="background: rgba(148, 221, 163, 0.15); color: var(--success); border-color: var(--success); font-weight: 800; padding: 4px 10px;" onclick="updateOrderStatus(${o.id}, 'completed')">Duyệt nhanh</button>
+              ` : ''}
+              <select style="min-height:30px; font-size:12px; padding: 2px 6px; background: rgba(15,12,8,.3); border-radius: 6px; color: var(--text); border: 1px solid var(--line);" onchange="updateOrderStatus(${o.id}, this.value)">
+                <option value="pending" ${o.status === 'pending' ? 'selected' : ''}>Chờ quét</option>
+                <option value="completed" ${o.status === 'completed' ? 'selected' : ''}>Thành công</option>
+                <option value="cancelled" ${o.status === 'cancelled' ? 'selected' : ''}>Đã hủy</option>
+              </select>
+              <button class="btn-action delete" style="padding: 4px 8px;" onclick="deleteOrder(${o.id})">Xóa</button>
             </div>
           </td>
         `;
