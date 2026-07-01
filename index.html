@@ -1342,8 +1342,13 @@
             </div>
 
             <div class="field">
-              <label for="phone">Số điện thoại / Zalo</label>
-              <input id="phone" name="phone" type="tel" placeholder="Ví dụ: 09xx xxx xxx" required />
+              <label for="phone">Số điện thoại / Zalo *</label>
+              <input id="phone" name="phone" type="tel" placeholder="Ví dụ: 0987654321" required pattern="[0-9]{10}" title="Số điện thoại phải gồm đúng 10 chữ số" />
+            </div>
+
+            <div class="field">
+              <label for="email">Địa chỉ Email *</label>
+              <input id="email" name="email" type="email" placeholder="Ví dụ: email@gmail.com" required />
             </div>
 
             <div class="field">
@@ -1484,16 +1489,26 @@
       submitBtn.textContent = "Đang xử lý...";
       
       const name = document.getElementById('name').value;
-      const phone = document.getElementById('phone').value;
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
       const stage = document.getElementById('stage').value;
       const message = document.getElementById('message').value;
+      
+      // Validate số điện thoại bằng biểu thức chính quy (đúng 10 chữ số)
+      const phoneRegex = /^[0-9]{10}$/;
+      if (!phoneRegex.test(phone)) {
+        alert("Số điện thoại không hợp lệ. Vui lòng nhập đúng 10 chữ số (Ví dụ: 0987654321).");
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+        return;
+      }
       
       const prodSelect = document.getElementById("productSelect");
       const selectedOption = prodSelect.options[prodSelect.selectedIndex];
       const product_id = parseInt(selectedOption.value);
       const price = parseFloat(selectedOption.dataset.price);
 
-      const data = { name, phone, stage, message, product_id, price };
+      const data = { name, phone, email, stage, message, product_id, price };
 
       // Gửi ngầm tới Google Sheet
       if(GOOGLE_SHEET_URL) {
@@ -1512,7 +1527,7 @@
         const customerRes = await fetch("/api/customers", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, phone, zalo: phone })
+          body: JSON.stringify({ name, phone, email, zalo: phone })
         });
         
         if (customerRes.ok) {
@@ -1587,7 +1602,7 @@
 
         try {
           // Gọi API an toàn từ backend của chính ta
-          const response = await fetch(`/api/check-payment?memo=${encodeURIComponent(memo)}&amount=${amount}`);
+          const response = await fetch(`/api/check-payment?memo=${encodeURIComponent(memo)}&amount=${amount}&orderId=${orderId || ''}`);
           if (!response.ok) {
             throw new Error('Lỗi máy chủ check-payment');
           }
@@ -1617,34 +1632,33 @@
         }
       }
 
-      const statusBox = document.querySelector(".status-box");
-      const statusDot = document.querySelector(".status-dot");
-      const statusText = document.getElementById("paymentStatusText");
+      // Tạo tin nhắn Zalo gửi thông tin xác nhận sau khi thanh toán thành công
+      const amountIn = parseFloat(tx.amount_in || tx.amount || 0);
+      const textMsg = `Tôi đã thanh toán thành công Bản Đồ DNA Kinh Doanh.\nMã giao dịch: ${tx.id}\nSố tiền: ${amountIn.toLocaleString('vi-VN')}đ\nNội dung chuyển khoản: ${tx.transaction_content || tx.memo || ''}`;
+      const zaloUrl = `https://zalo.me/0986549414?text=${encodeURIComponent(textMsg)}`;
 
-      statusDot.style.background = "var(--success)";
-      statusDot.style.animation = "none";
-      statusText.textContent = "Thanh toán thành công! Đang xử lý...";
-      statusText.style.color = "var(--success)";
-      statusBox.style.background = "rgba(148, 221, 163, 0.1)";
-      statusBox.style.borderColor = "rgba(148, 221, 163, 0.2)";
+      // Điền thông tin vào giao diện Success
+      document.getElementById("successTxId").textContent = tx.id;
+      document.getElementById("successAmount").textContent = amountIn.toLocaleString('vi-VN') + "đ";
+      document.getElementById("successMemo").textContent = tx.transaction_content || tx.memo || '';
+      document.getElementById("successZaloBtn").href = zaloUrl;
 
-      setTimeout(() => {
-        // Tạo tin nhắn Zalo gửi thông tin xác nhận sau khi thanh toán thành công
-        const textMsg = `Tôi đã thanh toán thành công Bản Đồ DNA Kinh Doanh.\nMã giao dịch: ${tx.id}\nSố tiền: ${parseFloat(tx.amount_in).toLocaleString('vi-VN')}đ\nNội dung chuyển khoản: ${tx.transaction_content}`;
-        const zaloUrl = `https://zalo.me/0986549414?text=${encodeURIComponent(textMsg)}`;
-        
-        window.open(zaloUrl, '_blank');
-        closePaymentModal();
+      // Chuyển đổi màn hình hiển thị trong modal
+      document.getElementById("paymentPendingContent").style.display = "none";
+      document.getElementById("paymentSuccessContent").style.display = "flex";
 
-        const msg = document.getElementById("formMsg");
-        msg.innerHTML = `Thanh toán thành công! <a href="${zaloUrl}" target="_blank" style="color:var(--success);text-decoration:underline;font-weight:bold;">Nhấn vào đây để nhận báo cáo qua Zalo</a>`;
-        msg.style.color = "var(--success)";
-      }, 2000);
+      const msg = document.getElementById("formMsg");
+      msg.innerHTML = `Thanh toán thành công! <a href="${zaloUrl}" target="_blank" style="color:var(--success);text-decoration:underline;font-weight:bold;">Nhấn vào đây để nhận báo cáo qua Zalo</a>`;
+      msg.style.color = "var(--success)";
     }
 
     function openPaymentModal(memo, amount, orderId) {
       const modal = document.getElementById("paymentModal");
       modal.classList.add("active");
+
+      // Reset giao diện về trạng thái chờ thanh toán ban đầu
+      document.getElementById("paymentPendingContent").style.display = "block";
+      document.getElementById("paymentSuccessContent").style.display = "none";
 
       document.getElementById("displayBankAcc").textContent = `${SEPAY_CONFIG.bank} - ${SEPAY_CONFIG.accountNo}`;
       document.getElementById("displayAmount").textContent = amount.toLocaleString('vi-VN') + "đ";
@@ -1703,43 +1717,70 @@
   <!-- Hộp thoại thanh toán tự động (Modal) -->
   <div id="paymentModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-card">
-      <div class="modal-header">
-        <h2 id="modalTitle" class="modal-title">Thanh toán tự động qua VietQR</h2>
-        <button class="modal-close" onclick="closePaymentModal()" aria-label="Đóng">&times;</button>
-      </div>
-      <div class="modal-body">
-        <div class="qr-container">
-          <div class="qr-wrapper">
-            <img id="paymentQrImg" class="qr-image" src="" alt="VietQR quét mã thanh toán" />
-          </div>
-          <span class="fine-print">Mở App ngân hàng quét mã để tự điền nội dung</span>
+      <!-- Trạng thái chờ thanh toán -->
+      <div id="paymentPendingContent">
+        <div class="modal-header">
+          <h2 id="modalTitle" class="modal-title">Thanh toán tự động qua VietQR</h2>
+          <button class="modal-close" onclick="closePaymentModal()" aria-label="Đóng">&times;</button>
         </div>
-        <div class="payment-info">
-          <div class="info-row">
-            <span class="info-label">Ngân hàng & Số tài khoản</span>
-            <div class="info-value-wrap">
-              <span id="displayBankAcc" class="info-value">VCB - 0000000000</span>
-              <button class="btn-copy" onclick="copyText('displayBankAcc')">Sao chép</button>
+        <div class="modal-body">
+          <div class="qr-container">
+            <div class="qr-wrapper">
+              <img id="paymentQrImg" class="qr-image" src="" alt="VietQR quét mã thanh toán" />
+            </div>
+            <span class="fine-print">Mở App ngân hàng quét mã để tự điền nội dung</span>
+          </div>
+          <div class="payment-info">
+            <div class="info-row">
+              <span class="info-label">Ngân hàng & Số tài khoản</span>
+              <div class="info-value-wrap">
+                <span id="displayBankAcc" class="info-value">VCB - 0000000000</span>
+                <button class="btn-copy" onclick="copyText('displayBankAcc')">Sao chép</button>
+              </div>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Số tiền cần thanh toán</span>
+              <div class="info-value-wrap">
+                <span id="displayAmount" class="info-value highlight">3.800.000đ</span>
+                <button class="btn-copy" onclick="copyText('displayAmount')">Sao chép</button>
+              </div>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Nội dung chuyển khoản (Bắt buộc đúng)</span>
+              <div class="info-value-wrap">
+                <span id="displayMemo" class="info-value highlight" style="letter-spacing: 0.05em;">DNA...</span>
+                <button class="btn-copy" onclick="copyText('displayMemo')">Sao chép</button>
+              </div>
+            </div>
+            <div class="status-box">
+              <div class="status-dot"></div>
+              <span id="paymentStatusText" class="status-text">Đang chờ bạn quét mã thanh toán...</span>
             </div>
           </div>
-          <div class="info-row">
-            <span class="info-label">Số tiền cần thanh toán</span>
-            <div class="info-value-wrap">
-              <span id="displayAmount" class="info-value highlight">3.800.000đ</span>
-              <button class="btn-copy" onclick="copyText('displayAmount')">Sao chép</button>
-            </div>
-          </div>
-          <div class="info-row">
-            <span class="info-label">Nội dung chuyển khoản (Bắt buộc đúng)</span>
-            <div class="info-value-wrap">
-              <span id="displayMemo" class="info-value highlight" style="letter-spacing: 0.05em;">DNA...</span>
-              <button class="btn-copy" onclick="copyText('displayMemo')">Sao chép</button>
-            </div>
-          </div>
-          <div class="status-box">
-            <div class="status-dot"></div>
-            <span id="paymentStatusText" class="status-text">Đang chờ bạn quét mã thanh toán...</span>
-          </div>
+        </div>
+      </div>
+
+      <!-- Trạng thái thanh toán thành công & cảm ơn -->
+      <div id="paymentSuccessContent" style="display: none; padding: 40px 24px; text-align: center; flex-direction: column; align-items: center; justify-content: center; gap: 20px;">
+        <div style="width: 72px; height: 72px; border-radius: 50%; background: rgba(148, 221, 163, 0.15); border: 2px solid var(--success); display: grid; place-items: center; margin: 0 auto 16px;">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <h2 style="font-size: 24px; font-weight: 900; color: var(--success); margin: 0 0 8px; letter-spacing: -0.02em;">CẢM ƠN BẠN ĐÃ ĐĂNG KÝ!</h2>
+        <p style="color: var(--muted); font-size: 15px; max-width: 480px; margin: 0 auto 24px; line-height: 1.6;">
+          Hệ thống đã ghi nhận thanh toán thành công của bạn. Bản đồ <b>DNA Kinh Doanh</b> cá nhân hóa đang được chuẩn bị và sẽ gửi tới bạn trong vòng 72h qua Zalo hoặc Email.
+        </p>
+        <div style="background: rgba(0, 0, 0, 0.22); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 16px 20px; width: 100%; max-width: 400px; margin: 0 auto 28px; text-align: left;">
+          <div style="display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 8px;"><span style="color: var(--soft);">Mã giao dịch:</span> <span style="font-weight: 700; color: var(--text);" id="successTxId">---</span></div>
+          <div style="display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 8px;"><span style="color: var(--soft);">Số tiền:</span> <span style="font-weight: 700; color: var(--gold-2);" id="successAmount">---</span></div>
+          <div style="display: flex; justify-content: space-between; font-size: 14px;"><span style="color: var(--soft);">Nội dung:</span> <span style="font-weight: 700; color: var(--gold-2);" id="successMemo">---</span></div>
+        </div>
+        <div style="display: flex; gap: 12px; justify-content: center; width: 100%; max-width: 400px; margin: 0 auto;">
+          <a id="successZaloBtn" href="#" target="_blank" class="btn btn-primary" style="text-decoration: none; flex: 1; min-height: 48px; display: inline-flex; align-items: center; justify-content: center;">
+            Nhận báo cáo qua Zalo ngay
+          </a>
+          <button class="btn btn-secondary" onclick="closePaymentModal()" style="min-height: 48px; padding: 0 20px;">Đóng</button>
         </div>
       </div>
     </div>

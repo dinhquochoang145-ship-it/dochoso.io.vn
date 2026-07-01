@@ -19,6 +19,18 @@ let db;
 try {
   db = new DatabaseSync(DB_PATH);
   db.exec("PRAGMA foreign_keys = ON;");
+  
+  // Tự động thêm cột email nếu chưa có
+  try {
+    db.exec("ALTER TABLE customers ADD COLUMN email TEXT;");
+    console.log("-> Đã bổ sung cột 'email' vào bảng 'customers' thành công.");
+  } catch (alterErr) {
+    // Nếu cột đã tồn tại (lỗi duplicate column name), bỏ qua
+    if (!alterErr.message.includes("duplicate column name")) {
+      console.warn("-> Cảnh báo khi cấu trúc bảng customers:", alterErr.message);
+    }
+  }
+  
   console.log(`-> Đã kết nối SQLite database thành công tại: ${DB_PATH}`);
 } catch (err) {
   console.error("-> Lỗi kết nối database:", err);
@@ -62,10 +74,30 @@ const server = http.createServer(async (req, res) => {
     try {
       const memo = url.searchParams.get('memo');
       const amountStr = url.searchParams.get('amount');
+      const orderIdStr = url.searchParams.get('orderId');
       if (!memo || !amountStr) {
         return sendError(res, 400, "Thiếu tham số memo hoặc amount.");
       }
       const amount = parseFloat(amountStr);
+
+      // --- MỚI: KIỂM TRA TRẠNG THÁI TRONG CƠ SỞ DỮ LIỆU ĐỊA PHƯƠNG TRƯỚC ---
+      if (orderIdStr) {
+        const orderId = parseInt(orderIdStr);
+        if (!isNaN(orderId)) {
+          const orderStmt = db.prepare("SELECT status, amount FROM orders WHERE id = ?");
+          const order = orderStmt.get(orderId);
+          if (order && order.status === 'completed') {
+            return sendJson(res, 200, {
+              success: true,
+              transaction: {
+                id: "MANUAL_" + orderId,
+                amount_in: order.amount,
+                transaction_content: memo
+              }
+            });
+          }
+        }
+      }
 
       const apiToken = SEPAY_CONFIG.apiToken;
       const sepayUrl = `https://my.sepay.vn/userapi/transactions/list?limit=20`;
@@ -188,14 +220,14 @@ const server = http.createServer(async (req, res) => {
   if (pathname === '/api/customers') {
     try {
       if (method === 'GET') {
-        const stmt = db.prepare("SELECT id, name, phone, zalo, datetime(register_date, 'localtime') as register_date FROM customers ORDER BY id DESC");
+        const stmt = db.prepare("SELECT id, name, phone, email, zalo, datetime(register_date, 'localtime') as register_date FROM customers ORDER BY id DESC");
         const customers = stmt.all();
         return sendJson(res, 200, customers);
       } 
       
       else if (method === 'POST') {
         const body = await getJsonBody(req);
-        const { name, phone, zalo, register_date } = body;
+        const { name, phone, email, zalo, register_date } = body;
 
         if (!name || !phone) {
           return sendError(res, 400, "Tên và Số điện thoại là bắt buộc.");
@@ -203,14 +235,17 @@ const server = http.createServer(async (req, res) => {
 
         try {
           const stmt = db.prepare(`
-            INSERT INTO customers (name, phone, zalo, register_date)
-            VALUES (?, ?, ?, COALESCE(?, CURRENT_TIMESTAMP))
+            INSERT INTO customers (name, phone, email, zalo, register_date)
+            VALUES (?, ?, ?, ?, COALESCE(?, CURRENT_TIMESTAMP))
           `);
-          const info = stmt.run(name, phone, zalo || '', register_date || null);
+          const info = stmt.run(name, phone, email || '', zalo || '', register_date || null);
           return sendJson(res, 201, { id: info.lastInsertRowid, message: "Thêm khách hàng thành công." });
         } catch (err) {
           if (err.message.includes('UNIQUE constraint failed')) {
-            // Khách hàng đã tồn tại -> Tìm và trả về ID của họ để frontend có thể tạo đơn hàng
+            // Khách hàng đã tồn tại -> Cập nhật email của họ nếu có và trả về ID
+            const updateStmt = db.prepare("UPDATE customers SET email = COALESCE(NULLIF(?, ''), email) WHERE phone = ?");
+            updateStmt.run(email || '', phone);
+
             const findStmt = db.prepare("SELECT id FROM customers WHERE phone = ?");
             const customer = findStmt.get(phone);
             return sendJson(res, 200, { id: customer.id, message: "Khách hàng đã tồn tại." });
@@ -221,7 +256,7 @@ const server = http.createServer(async (req, res) => {
       
       else if (method === 'PUT') {
         const body = await getJsonBody(req);
-        const { id, name, phone, zalo, register_date } = body;
+        const { id, name, phone, email, zalo, register_date } = body;
 
         if (!id || !name || !phone) {
           return sendError(res, 400, "Thiếu thông tin cập nhật khách hàng.");
@@ -230,10 +265,10 @@ const server = http.createServer(async (req, res) => {
         try {
           const stmt = db.prepare(`
             UPDATE customers
-            SET name = ?, phone = ?, zalo = ?, register_date = ?
+            SET name = ?, phone = ?, email = ?, zalo = ?, register_date = ?
             WHERE id = ?
           `);
-          const info = stmt.run(name, phone, zalo || '', register_date || null, parseInt(id));
+          const info = stmt.run(name, phone, email || '', zalo || '', register_date || null, parseInt(id));
           if (info.changes === 0) {
             return sendError(res, 404, "Không tìm thấy khách hàng cần sửa.");
           }
