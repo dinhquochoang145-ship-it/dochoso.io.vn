@@ -402,9 +402,9 @@ app.post("/mcp/messages", async (req, res) => {
 });
 
 const PORT = 3001;
-app.listen(PORT, "127.0.0.1", () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`\n==================================================`);
   console.log(`🚀 MCP SERVER FOR AI AGENT ĐANG CHẠY CỤC BỘ`);
-  console.log(`👉 Endpoint SSE: http://127.0.0.1:${PORT}/mcp`);
+  console.log(`👉 Endpoint SSE: http://localhost:${PORT}/mcp`);
   console.log(`==================================================\n`);
 });
