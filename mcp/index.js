@@ -322,6 +322,40 @@ server.tool(
   }
 );
 
+// 4. Tool: save_post
+server.tool(
+  "save_post",
+  "Lưu một bài viết hoặc nội dung kiến thức mới vào bảng knowledge của cơ sở dữ liệu.",
+  {
+    title: z.string().describe("Tiêu đề bài viết hoặc chủ đề."),
+    content: z.string().describe("Nội dung chi tiết của bài viết.")
+  },
+  async ({ title, content }) => {
+    try {
+      console.log(`[MCP - save_post] Saving post: ${title}`);
+      const stmt = db.prepare("INSERT INTO knowledge (title, content) VALUES (?, ?)");
+      const info = stmt.run(title, content);
+      
+      if (info.changes > 0) {
+        return {
+          content: [{ type: "text", text: `Lưu bài viết thành công vào bảng knowledge với ID: ${info.lastInsertRowid}` }]
+        };
+      } else {
+        return {
+          isError: true,
+          content: [{ type: "text", text: "Không có thay đổi nào được thực hiện trong database." }]
+        };
+      }
+    } catch (err) {
+      console.error("[MCP Error - save_post]:", err.message);
+      return {
+        isError: true,
+        content: [{ type: "text", text: `Lỗi lưu bài viết: ${err.message}` }]
+      };
+    }
+  }
+);
+
 // ------------------- SERVER SETUP -------------------
 const app = express();
 app.use(express.json());
