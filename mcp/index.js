@@ -361,7 +361,7 @@ app.get("/mcp", async (req, res) => {
 app.post("/mcp/messages", async (req, res) => {
   console.log(`[${new Date().toISOString()}] Received POST message`);
   if (transport) {
-    await transport.handlePostMessage(req, res);
+    await transport.handlePostMessage(req, res, req.body);
   } else {
     res.status(500).send("No active SSE transport channel established.");
   }
