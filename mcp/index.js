@@ -330,10 +330,32 @@ let transport;
 
 app.get("/mcp", async (req, res) => {
   console.log(`[${new Date().toISOString()}] SSE Transport connect request received`);
+  
+  if (server.isConnected()) {
+    console.log("McpServer is already connected to a transport. Closing old connection...");
+    try {
+      await server.close();
+    } catch (err) {
+      console.error("Error during closing old connection:", err.message);
+    }
+  }
+
   // SSE requires keeping response open
   transport = new SSEServerTransport("/mcp/messages", res);
   await server.connect(transport);
   console.log(`[${new Date().toISOString()}] SSE Transport connected`);
+
+  req.on("close", async () => {
+    console.log(`[${new Date().toISOString()}] SSE Connection closed by client`);
+    try {
+      if (server.isConnected()) {
+        await server.close();
+        console.log(`[${new Date().toISOString()}] Server disconnected from transport.`);
+      }
+    } catch (err) {
+      console.error("Error closing server on connection close:", err.message);
+    }
+  });
 });
 
 app.post("/mcp/messages", async (req, res) => {
