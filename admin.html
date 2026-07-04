@@ -383,9 +383,9 @@
 
   <!-- Navigation Tab Bar -->
   <div class="tabs-bar">
-    <button class="tab-btn active" onclick="switchTab('products')">Sản phẩm</button>
-    <button class="tab-btn" onclick="switchTab('customers')">Khách hàng</button>
-    <button class="tab-btn" onclick="switchTab('orders')">Đơn hàng</button>
+    <button class="tab-btn active" data-tab="products" onclick="switchTab('products')">Sản phẩm</button>
+    <button class="tab-btn" data-tab="customers" onclick="switchTab('customers')">Khách hàng</button>
+    <button class="tab-btn" data-tab="orders" onclick="switchTab('orders')">Đơn hàng</button>
   </div>
 
   <!-- TAB CONTENT: PRODUCTS -->
@@ -606,7 +606,7 @@
     document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
     document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
 
-    const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(btn => btn.textContent.toLowerCase().includes(tabName.substring(0, 3)));
+    const activeBtn = document.querySelector(`.tab-btn[data-tab="${tabName}"]`);
     if (activeBtn) activeBtn.classList.add('active');
 
     const contentDiv = document.getElementById(`${tabName}-tab`);

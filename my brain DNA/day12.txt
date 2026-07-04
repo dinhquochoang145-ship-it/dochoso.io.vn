@@ -1,0 +1,58 @@
+Mọi người thường thích khoe doanh thu trăm triệu, nghìn đơn khi kể về hành trình khởi nghiệp của mình.
+
+Nhưng mình muốn chia sẻ một con số thật hơn, trần trụi hơn một chút.
+
+Vì mình tin thị trường luôn muốn nhìn thấy sự thật.
+
+12 ngày trước, mình bắt đầu dự án DNA Kinh Doanh gần như từ số không.
+
+Không website, không email tự động, không CRM quản lý khách hàng.
+
+Và điều quan trọng là, mình vẫn làm việc theo thói quen cũ: làm tay, cảm tính và tự mày mò rất mất thời gian.
+
+Hôm nay, sau 12 ngày trầy trật, đây là những gì mình đã làm được:
+
+- Tự build xong 1 website bán hàng có tích hợp chatbot tư vấn, hệ thống email tự động, CRM và 1 second brain để quản trị dữ liệu.
+- Đăng được 7 bài viết trong 7 ngày qua.
+
+Nhưng đây mới là số liệu thật sự:
+
+- Số lượng khách hàng (waitlist): chưa có.
+- Tổng số đơn hàng: chưa có.
+- Doanh thu: 0 đồng.
+
+Đúng vậy, chưa có một đồng doanh thu nào sau 12 ngày nỗ lực.
+
+Nếu là trước đây, có lẽ mình đã bắt đầu sốt ruột và nản lòng.
+
+Nhưng bạn thử nghĩ xem.
+
+Giá trị của 12 ngày qua có phải chỉ đo bằng tiền?
+
+Thật ra, điều khó khăn nhất mình đã vượt qua không phải là việc setup đống công nghệ kia.
+
+Nó là việc thay đổi thói quen làm việc hàng ngày: dịch chuyển sang tư duy "AI-first".
+
+Trước đây, cứ gặp khó là mình lại ngồi tự bóp trán suy nghĩ hoặc tra Google cả buổi.
+
+Bây giờ, phản xạ đầu tiên của mình là hỏi AI, thảo luận với AI để làm cho nhanh và ra kết quả.
+
+Tất nhiên, mình biết bản thân làm chưa tốt.
+
+Sản phẩm vẫn chưa được tối ưu sâu về mặt nội dung và cách bán.
+
+Nếu được quay lại ngày đầu tiên, mình sẽ luôn hỏi AI ngay lập tức để rút ngắn thời gian thử sai.
+
+Hành trình xây dựng móng luôn là phần tẻ nhạt và ít ai muốn khoe nhất.
+
+Nhưng nền móng vững thì mới đi đường dài được.
+
+Hệ thống đã chạy, và mình tin Bản đồ DNA Kinh Doanh sẽ sớm tìm được những người thực sự cần nó.
+
+Nếu bạn tò mò về những gì mình đã build trong 12 ngày qua, bạn có thể ghé xem tại đây:
+
+👉 http://dochoso.io.vn
+
+Hôm nay là ngày 12 của mình. 
+
+Còn bạn, bạn đã thử đưa AI vào thói quen làm việc hàng ngày của mình chưa?

@@ -1,0 +1,27 @@
+CHÍNH THỨC HOÀN THÀNH: HỆ THỐNG EMAIL CHĂM SÓC KHÁCH HÀNG TỰ ĐỘNG CHO DNA KINH DOANH!
+
+Chào anh em, hôm nay mình có một tin siêu vui muốn chia sẻ. Hệ thống website và CRM DNA Kinh Doanh vừa hoàn tất một đợt nâng cấp cực kỳ "xịn sò" – tự động hóa hoàn toàn quy trình chăm sóc khách hàng qua email!
+
+Thật ra, trước đây hệ thống chỉ lấy số điện thoại và Zalo, còn việc gửi thông tin hay xác nhận thanh toán đều phải làm tay khá vất vả. Nhưng từ hôm nay, mọi thứ đã tự vận hành trơn tru:
+
+1. Thu thập và quản lý Email:
+Form đăng ký ở trang chủ và bảng Customers trong CRM Admin đã được bổ sung trường Email. Giờ đây, cứ có khách đăng ký là thông tin email lập tức được lưu trữ ngăn nắp vào database SQLite cục bộ.
+
+2. Xác thực tên miền riêng gửi mail:
+Tụi mình đã kết nối Resend API thành công bằng chính domain riêng: hi@dochoso.io.vn. Nhìn email gửi đi từ tên miền thương hiệu riêng trông uy tín và chuyên nghiệp hơn hẳn so với việc dùng đuôi mặc định @resend.dev!
+
+3. Chuỗi Email Nuôi Dưỡng Tự Động (Email Sequence):
+Hệ thống sẽ tự động lên lịch gửi 3 email theo tiến trình chuẩn Brand Voice (ngắn gọn, thực chiến, không màu mè):
+- Email 1 (Chào mừng): Gửi ngay lập tức khi đăng ký.
+- Email 2 (Nurture - Chia sẻ insight): Gửi sau 2 ngày để trao giá trị trước.
+- Email 3 (Chốt - Giới thiệu sản phẩm): Gửi sau 1 ngày tiếp theo kèm link thanh toán.
+
+4. Chế độ Test "Thần Tốc":
+Để test nhanh hệ thống mà không cần chờ 2-3 ngày, tụi mình đã xây dựng cơ chế Test Mode. Chỉ cần điền email có chứa ký tự "+test" (ví dụ: hoang+test@gmail.com) khi đăng ký, hệ thống sẽ gửi liên tục cả 3 email chỉ trong vòng 10 giây!
+
+5. Xác nhận đơn hàng tự động:
+Mỗi khi có đơn hàng mới được tạo (do admin bấm thêm thủ công trong CRM hoặc khách thanh toán thành công), một email xác nhận kèm đầy đủ thông tin sản phẩm, số tiền và hướng dẫn nhận hàng sẽ tự động bay vào inbox của khách.
+
+Mọi tính năng đã được kiểm thử chạy mượt mà ngay trên máy local. Bước tiếp theo là đẩy toàn bộ cập nhật này lên Render để hệ thống chạy live 24/7!
+
+Cảm ơn anh em đã theo dõi hành trình tự động hóa này của DNA Kinh Doanh nhé!

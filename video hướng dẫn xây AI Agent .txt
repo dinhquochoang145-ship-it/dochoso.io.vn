@@ -1,0 +1,4754 @@
+0:01
+Mình bắt đầu ha. Ờ
+0:06
+mọi người nghe mọi người nghe mọi người nghe mình chưa?
+0:09
+>> Nghe anh ơi.
+0:11
+>> Ok một người nghe. Mọi người nhớ tương tác trong cái quá
+0:16
+trình mà mình à mình mình mới tin với nhau ha. Thì à mình à thực tế là bây giờ
+0:24
+mình bệnh chưa hết nha. Nói chung là
+0:29
+à bạo bệnh được khoảng hơn tuần rồi nhưng mà không hiểu sao là chưa ăn thua.
+0:36
+Không chưa hết. Nên là à bữa nay á thì mình mình
+0:43
+để lông long long trong team của mình
+0:48
+hướng dẫn cho mọi người cái cái setup cái cái agent giống như con
+0:55
+lưỡng mật ha. Thì tại sao tại sao tới nhiệm vụ thứ 13
+1:00
+đó chầm mắm nhẹ nhàng chà mắm nhẹ nhàng để
+1:04
+chò mắm nhẹ nhàng là bệnh hết tuần đó à
+1:11
+và đầu óc mình nó cũng không có minh mẫn luôn nói chung là mình
+1:15
+mình đang bị ngu ngu á là chắc là mình sẽ nói ít thôi khoảng
+1:20
+chừng 5 phút nữa thì mình sẽ vào lại cho Long Thì à
+1:25
+thì á thì tại sao tới nhiệm vụ thứ 13 á mặc dù là trước đó là khoảng 5 ngày thôi
+1:33
+là bắt đầu là nhiều người đòi làm sớm đi làm sớm nhưng mà trên thực tế thì nếu
+1:37
+mọi người không có cái nền tảng á mọi người không không đi từ cái ngày thứ
+1:43
+nhất cho tới bây giờ á là mọi người không hiểu gì đâu tại vì Asian nó cũng
+1:47
+nó nói khó quá khó thì nó không khó nhưng mà nói mà nó dễ á thì nó cũng
+1:51
+không dễ được chưa? Cho nên á là mọi người cần chuẩn bị là mười mấy ngày á là
+1:56
+quen với cái việc dùng agent coding ở dưới máy tính của mọi người. Có nghĩa là
+2:01
+mọi người đã quen cái việc coding làm ra này kia họ và quen với chuyện là tương
+2:05
+tác với AI thì thời điểm này là thời điểm thích hợp nhất để mà những người đã
+2:09
+đi từ không cho tới cái nhiệm vụ thứ 13 thì làm agent là là là mới hợp lý. Rồi
+2:15
+sau đó những cái ngày sau cũng nhiều người hỏi là ủa vậy thì mấy cái nội dung
+2:19
+khác như là làm media hay làm cái khác thì sao? thì dĩ nhiên là có rồi. Nhưng
+2:24
+mà nếu mọi người ở giai đoạn này á, mọi người làm được agent rồi á thì tiếp theo
+2:31
+khi mọi người làm những cái linh tinh như là làm media, làm hình ảnh này kia
+2:35
+nọ sẽ biết làm được một việc rất là hay đó là
+2:39
+tích hợp cái các cái tính năng đó để agent nó có thể nó có thể là làm thay
+2:45
+cho mọi người được luôn. Thì hiện tại công ty mình á là những cái
+2:50
+những cái tác trong cái nội bộ quản lý hoặc là vấn đề
+2:55
+thu chi công ty này kia nọ đó thì mình đưa mình đưa cho Asian nó nó hỗ trợ nó
+3:00
+làm việc hết. Thì cái phần foundation trước ngày 13 rất quan trọng và ngày hôm
+3:06
+nay cũng là một cái cột mót quan trọng thì bởi vì nó sẽ có meeting. Thì mọi
+3:10
+người để ý là hầu hết những cái nhiệm vụ mọi người được giao đó thì hầu hết là
+3:14
+SOP để cho mọi người luyện cái AI first. Cái đó rất quan trọng. Thì hồi sáng này
+3:18
+tôi thấy có một người nói là giờ muốn trở lại với cái builder giống như ngày
+3:23
+xưa. Tức là act gì đâu mà kêu hoài không thấy nó làm được. Thì cái tôi nói luôn
+3:28
+nha, tôi cảnh báo luôn người mà gặp khó mà không vượt ngưỡng được đó mà bỏ qua
+3:34
+cái đợt này đó là sau này là sẽ tục hộ luôn mãi mãi vĩnh diễn luôn đó. Cho nên
+3:39
+là và vấn đề á là hầu hết mọi người đều đều đọc SOP và ứng dụng AIF làm được và
+3:45
+rất happy. Thì thì cái cái cái lời khuyên á là cho cho dành riêng cho cái
+3:50
+bạn nào không biết bạn nào tức là gặp khó đó thì phải tiếp tục. Tức là mình có
+3:55
+thể là kêu các anh em khác nó hỗ trợ hoặc là kêu meeting. Cái cộng đồng, cái
+3:59
+ý nghĩa của nó là vậy đó chứ không phải là chỉ đọc SOP làm không đâu. Với lại á
+4:04
+là mình canh me coi ông nào yếu quá đó mà không vượt được qua cái thử thách đó
+4:08
+thì à sắp tới đó mình sẽ làm những cái elaning nhỏ thôi, những cái hướng dẫn
+4:13
+nhỏ để mà cho những người mà yếu sinh lý quá nó có thể bass qua được các cái cái
+4:19
+thử thách nó dễ hơn ha. Nhưng mà cái luồng thử thách vẫn không đổi được chưa?
+4:24
+Cái vò cái luồng của thử thách là không đổi. Rồi à
+4:29
+rồi mình không mình định nói nhiều đó nhưng mà nói hết nổi rồi nên là chắc là
+4:35
+có khi có khi là 5 ngày nữa mình cũng chưa hết đâu. Mình khả năng là vậy đó.
+4:39
+Cho nên là là mình không không thể để anh em đợi lâu cái cái cái cái vụ AON
+4:46
+này được. Nên càng sớm càng update sớm càng tốt. Nên là hôm nay thì Hữu Long sẽ
+4:51
+hướng dẫn cho mọi người cái phần này. À trên thực tế thì team mình có có Thái
+4:56
+Sơn, Voding, Hữu Long với lại mình với lại Ngọc thì
+5:01
+mọi người từng gặp rồi đó thì Ngọc setup mấy cái agent mà cho cái cho cái
+5:07
+là chốt đơn ở trên Facebook rồi đó. Có có
+5:12
+Nhân Nguyễn nữa hả? Có Nhân Nguyễn luôn. Thì tụi mình có cái group masterm
+5:16
+chung với nhau hay thảo luận mấy đồ quỷ này nè. À với lại á hổm mình với Nhân
+5:20
+Nguyễn có bàn là ai học xuất sắc nhất cái khóa này hoặc là có xuất sắc mà
+5:24
+không cần nhất đúng không ta? Thì sẽ nhận được một cái gói một cái gì ta? Một
+5:30
+cái cơ hội mentor trực tiếp từ Nhân Nguyễn. Thì nếu mà mọi người mà mà muốn
+5:38
+học hỏi mấy vấn đề truyền thông á rồi làm sao đưa nó vào cái chuyện kinh doanh
+5:43
+cho liên quan tới khía cạnh truyền thông á thì mọi người sẽ sẽ biết nhân rồi
+5:50
+đó kèo là như vậy đó thôi nói chung là bây giờ chắc là tôi nên căm miệng lại để
+5:54
+cho Hữu Long lên dĩa thì à foundation từ bữa giờ rồi đã voice
+6:01
+coding đã làm tốt một số việc rồi biết chỏ domain biết VBS này nọ rồi đó thì
+6:06
+tới ngày hôm nay biết hết rồi gì ai mà hục cái nào á thì mình sẽ đi tiếp để mà
+6:10
+mình bù đắp những cái phần kiến thức hục đó còn ai mà mới vô ngày 1 ngày 2i thì
+6:14
+hôm nay không hiểu đâu coi chơi cho chơi vui thôi rồi để giống như coi trước để
+6:18
+lấy lấy hên á để mốt là tới hồi đụng chuyện á thì c còn có thể làm qua được
+6:22
+cái thử thách này ha rồi vậy thì chắc là mời lông hên quá bữa nay mình có khoảng
+6:28
+50 người thì chắc là hầu hết là những người đã đến được ngày 13 à chắc là mời
+6:34
+lông luôn. Tức là bay vô á là bắt đầu làm luôn nha. MC này kia giới thiệu tùm
+6:39
+lum hết trơn rồi. Thì à thì bay vô làm luôn. Thì cái phần thì là miễn sao mà à
+6:46
+có nghĩa là cứ cứ mọi người cứ trong lúc mà Long hướng dẫn á thì mọi người tập
+6:50
+trung để ý đừng có đừng có cầm đèn chạy trước ô tô. Nhưng mà tới cái đoạn nào mà
+6:56
+nó sẽ up xong hết trơn rồi mọi người có thể bật bắt đầu đặt những câu hỏi thì
+7:00
+mình mình thì mình có khả năng agenda cho nên mình sẽ agenda trước để Long đi
+7:06
+vô luồng nó dễ hơn. Đó là cái cái vụ mà set agent này á thì nó có rất là nhiều
+7:12
+cách tiếp cận. Mọi người có thể tự vai coding ra một hệ thống agent luôn nữa
+7:17
+chứ không nhất thiết là phải sử dụng bất cứ một cái mã nguồn mở nào. Nhưng mà á
+7:21
+để nhanh chóng đưa vào cái cuộc sống với lại đưa vào cái công ty để mọi người sử
+7:24
+dụng được liền á thì mọi người nên ứng dụng cái cái open suột có tên là Go
+7:29
+Clot. Cái này của team Việt Nam mình làm ra nha. thì nó đầy đủ và nó rất là xịn
+7:34
+rồi. Cho nên á mọi người đừng có ngồi v coding. Dĩ nhiên mọi người nên thử vi
+7:39
+coding ra một agent mà không dùng suột cho nó vui, cho nó biết mùi. Nhưng mà
+7:44
+không có nên là để xài luôn. Tại vì để mà xài được á thì nó có nó có nhiều thứ
+7:50
+lắm nha. Rồi để con agent nó có khả năng thông minh như được con lửng mật á thì
+7:54
+bên dưới nó phải có một cái hệ thống có một cái system prom. Thì chút xíu nữa
+7:58
+Long sẽ nói luôn. Thì có nghĩa là hôm nay mình sẽ tập trung vô cái khí cạnh
+8:00
+thứ nhất á là mình sẽ up một cái cái open suột tên là go clot. Đó là cái và
+8:05
+sau đó mình create ra cái agent đầu tiên ở bên trong đó ha. Có nghĩa là mình sẽ
+8:09
+không có làm mấy cái chuyện khác mà mình sẽ tập trung vô cái chuyện đó. Thứ hai
+8:12
+khía cạnh rất quan trọng đó là làm sao để mà agent nó mọi người nên đặt câu hỏi
+8:17
+này cho Long nha là làm sao để mà agent đó nó được lửng mật. Tức là nghĩa là
+8:22
+nhiều người thắc mắc là ủa sao tao cũng thấy nhiều con acent rồi nhưng mà không
+8:25
+có con nào được như con lưỡng mực. Thật ra cũng không có biết kiếp gì đâu. Chẳng
+8:29
+qua là chưa đóng tiền thì mình giấu thôi chứ còn đóng tiền vô hết rồi thì share
+8:34
+hết thôi. Nó không có gì cả. Cho nên là Ok. Mời Long. Vậy chắc là Long bắt đầu
+8:40
+luôn đi ha.
+8:41
+>> Dạ. Ờ em chào mọi người. À anh anh nghĩ chỗ cái domain với lại gửi em cái VPS
+8:49
+đi.
+8:50
+>> Ờ để lấy cái VPS này được. Cái phần chỏ domain với lại VPS thì chắc là mọi người
+8:55
+ở những cái ngày trước thì chắc nắm hết rồi á ha.
+8:59
+>> Ờ không nắm á thì hỏi những người khác. Nói chung là cái vấn đề mà.
+9:03
+>> Dạ thì em cứ nét em cứ nét qua cái đó đi nha. Thì chỉ cần mọi người mua cái VPS à
+9:11
+cái VPS á để mà chạy cái con Goot này á thì VPS mọi người nên mua là tối thiểu
+9:17
+là 2 GB nha. RAM á RAM là nên mua tối thiểu là 2 GB nha.
+9:22
+thì nó sẽ chạy được ổn áp nhất và tùy theo cái nhu cầu sử dụng. Nếu mà nhu cầu
+9:29
+sử dụng nhiều á thì mình có thể là sau này nâng cấp thêm. Nhưng mà những cái
+9:34
+nhu cầu sử dụng cơ bản á thì mình chỉ cần cứ gói nào cứ 2 GB thôi là ok.
+9:42
+Ai mà không hiểu là ông đang nói cái đó là nói cái gì á thì một á là do chưa tới
+9:46
+ngày 13 nên không hiểu. Còn ai đã đi từ không cho tới ngày 13 rồi mà không hiểu
+9:51
+á thì à thì có thể là cần bác trở lại là giao thêm một vài nhiệm vụ nhỏ ha. Thì à
+9:59
+khi mà mình tổ chức cái này á thì dĩ nhiên là cái cái cái chên lệch về
+10:05
+kiến thức thông tin năng lực của mỗi người nó khác nhau rất nhiều, khó để gom
+10:09
+lại nhưng mà hiện tại thì mình thấy cái cách là đẩy mọi người đi từ 0 tới tới
+10:13
+ngày 13 thì mọi thứ đang khá ổn nhưng mà dĩ nhiên là mình biết là sẽ lọt ra một
+10:17
+vài người là có thể là hơi hơi hơi cái gì ta yếu tch chút xíu thì không sao cái
+10:23
+chừa những tình ai mà lọt vô tình huống đó đó thì nên la lên để cộng đồng
+10:28
+support hoặc là mình bay ra mình sẽ có những cách hỗ trợ à bằng meeting bằng
+10:33
+những cái meeting trẻ nhỏ trong quá trình hoặc là bằng các cái eling nhỏ
+10:37
+kiểu vậy ha không có lo là nói mà không hiểu là cái gì thì một là hỏi hai là đợi
+10:42
+sau đó hỏi lại cộng đồng ba là nghiên cứu tiếp a first nhớ n đặc biệt là a cái
+10:47
+tư duy đó rất là quan trọng à anh chỏ lên cái domain tên là
+10:54
+chỏ lên a chỏ gì giờ Long
+11:00
+>> thì anh chỏ lên cái VPS hồi nãy anh gửi em á. Ừ. Nhưng mà trở lên domain gì ở
+11:04
+chắc enable hood cái phiên họ để
+11:09
+>> cái gì cũng được an làm xong mình gỡ xong.
+11:12
+>> Ok
+11:12
+>> mua cho mọi người xem thôi.
+11:14
+>> Ok. Đây anh chỏ lên cái là từ từ từ.
+11:21
+Ừ. Trong quá trình em chia sẻ thì mọi người
+11:33
+có cái câu hỏi thắc mắc gì á thì cứ hỏi em nha. Thì mình đóng tiền rồi mà hỏi
+11:38
+nhé. Ok. Nói chung là em thấy là cái giá trị
+11:45
+nhất của cái việc đón tiền là được có người hỏi
+11:48
+chứ còn bình thường là ví dụ như bên ngoài người ta hỏi thì hên xuôi. Hứng
+11:53
+thì trả lời, trả lời thì chưa biết đúng hay không nha. Tại vì mấy cái mấy cái mà
+11:58
+đem ra kiếm tiền thì thường là nó có giá trị mà thì ai đâu mà chỉ n còn mà đã
+12:02
+đóng tiền rồi thì nên nên bào nên hỏi. Ok. Anh chỏ cái a để chỏ cái này đi để
+12:12
+để để anh quăng cái domain qua đây. À
+12:17
+>> đúng rồi anh Thơ mình phải mua VPS nha chứ nó không có nó không có chạy được
+12:26
+trên cái hosting rồi đâu.
+12:31
+>> Chỗ qua cái Đ Vbet nha Long ha. Dạ cái nào cũng được anh. Anh chỉ cần chỗ gửi
+12:36
+em cái domain đó là được.
+12:38
+>> Ý là anh đang lựa domain nào á cho nó dễ nhớ á. Hồi ấy dễ
+12:46
+tí cái này nó hơi ấy. Với lại là cái VPS á mọi người mua á thì mọi người phải nên
+12:52
+nhớ là mua cái loại là Ubon tu nha. U bên em em mở cái luôn đi Long ơi. Em mở
+13:00
+cái đó ra em em em chỉ mọi người luôn đi chứ đừng nói vậy không không hiểu đâu.
+13:05
+>> Thì ý là đây để em share trong lúc anh chờ anh ấy thì em sẽ share luôn ha.
+13:09
+>> Ờ share màn hình đi.
+13:14
+>> Anh Long ơi, anh Long cho em hỏi là hôm trước có deploy lên VPS mua về để đẩy
+13:20
+web lên đấy ạ. Thì bây giờ có dùng được VPS đấy à? VPS đấy được không ạ? Được
+13:23
+anh.
+13:25
+>> Dạ
+13:26
+>> được nha.
+13:27
+>> Được ạ. Vâng vâng
+13:27
+>> đúng rồi. Được được anh vẫn anh anh vẫn dùng được bình thường. Nhưng mà lưu ý á
+13:33
+là cái VPS kia của anh á đang chạy cái gì? Đang chạy như nào nha.
+13:37
+>> À đang chạy website thôi ạ. Ờ đúng rồi. Thì ví dụ như anh chạy một cái gì đó nó
+13:42
+nặng đi thì mà anh đưa một cái nặng đó lên nhưng mà cái VPS nó chỉ có một chút
+13:46
+xíu thôi
+13:47
+>> thì nó sẽ dẫn đến là nó sẽ bị lỗi phát sinh hoặc là chạy không nổi.
+13:53
+>> À vâng vâng. Vậy để thôi có gì em mua mới nên cho nó
+13:57
+>> thật ra là nên tách nha. Nói chung là nên tách đi. Nên tách thì nó hay hơn.
+14:01
+Thì mình có gửi cái mình đã chỏ domain rồi đó. Thì à cái domain mình nó hơi lạ
+14:06
+nha. Đó là vn.tas. T là thuế đó. Thì mình sẽ cài cái action
+14:13
+lên trên cái domain đó ha. Cài cài thôi mà ai làm gì đâu mà liệu.
+14:27
+>> Ủa ủa anh gửi đâu?
+14:30
+>> Anh gửi trong cái group cha lệ á. À
+14:36
+trờ anh gõ ra coi từ VN VN. Đúng không?
+14:41
+>> Đúng rồi.
+14:43
+>> Rồi vn.
+14:47
+>> Hay không? Domain hay không? Sorry mọi người là em đang bệnh cho nên
+14:56
+là trong lúc nói mà có ho á thì
+15:01
+>> ủa má sao sao đi có vàng vậy ta? Bữa trước là nguyên công ty luôn
+15:07
+>> nó lâ cái đèn mà. Đây nè. Thì bây giờ á là đầu tiên ha em
+15:14
+sẽ a chia sẻ cho mọi người. Thứ nhất á nha là nói về go clot trước đi.
+15:20
+Thì mọi người á ờ gõ cái chữ là go clot như này thì nó sẽ ch là nó sẽ ra ha. Nó
+15:29
+sẽ ra cái cái phần đó. Rồi thì khi mà mọi người vô cái đây là cái trang web
+15:35
+của bên bên nhà cung cấp đó thì mọi người bấm vô cái chữ mà view on cái th
+15:40
+này nè. Đó mọi người bấm vô đây nè. Bấm vô đây
+15:44
+thì nó sẽ ra cái nó sẽ ra cái trang nó sẽ ra cái trang kết thúc.
+15:51
+Rồi đợi đợi em xíu nha. Rồi đợi em một tí
+16:00
+tự nhiên cái nó nó bắt xét thì lần nào loog mới vô cũng bắt xác
+16:08
+thực mà. Ờ nhớ nhớ giải thích chút xíu cái g nha
+16:17
+Long ơi. Dạ đờ đợi em xíu n mấy cái kiến thức nó mới
+16:31
+đang bị sao rồi. Ok.
+16:53
+Rồi thì mọi người sẽ bấm vô cái chữ mà view
+16:57
+on kub này nè thì nó sẽ ra cái trang kết thúc ha. Nó sẽ ra cái trang kết thup của
+17:02
+cái go clot. Thì mọi người hiểu thub nó là cái gì? Thì ở cái thời điểm mà mới á
+17:08
+thì mọi người chỉ cần hiểu cho em nó sẽ là một cái nơi lưu chữ S code.
+17:13
+Một nơi lưu chữ cái sụ code. Thì ở trên này á mình cũng có thể sẽ lưu trữ cái sự
+17:19
+code của mình lên trên cái gitub này. Thì cái mục tiêu của nó thay vì đúng
+17:24
+không mọi người thực hiện vi coding đi thì cái sụ code của nó nó sẽ nằm ở trong
+17:30
+cái máy. Tức là cái code của nó nó sẽ nằm trong cái máy của mọi người. Mà mọi
+17:34
+người muốn gửi cho ai á thì nó sẽ chỉ có gọi là gửi cái file đi thôi. Đó. Còn nếu
+17:40
+trường hợp mọi người sử dụng cái thup á để mà mọi người upload cái code lên trên
+17:44
+cái thub á thì nó sẽ nằm ở trên cái thub và nó sẽ là một cái link. Thì cái link
+17:49
+này mọi người có thể gửi sang một cho những người khác hoặc có thể là sử dụng
+17:54
+nó cho một cái máy tính khác để mà mình làm. Và ở trên này á khi mà mình upload
+17:58
+cái sự code lên á thì cái phần mềm của mình nó cũng sẽ nằm ở trên đây luôn. Cho
+18:02
+nên á là nó sẽ là một cái nơi gọi là hiểu đơn giản ở thời điểm ban đầu và mới
+18:07
+nha. Thì nó sẽ là nơi để lưu trữ cái S code của mình ha. và cũng sẽ là nơi để
+18:12
+mà nó deploy cái phần mềm của mình lên trên cái gọi là cái VPS. Đó thì mọi
+18:19
+người hiểu đơn giản cái sự code nó là như vậy ha. Ơ là sorry mọi người hiểu
+18:22
+đơn giản cái thup nó là như vậy. Rồi thì ở trong phần này á thì cái này nó sẽ là
+18:27
+cái sù code nè. Mọi người nhìn thấy không? Cái sù code của cái go clot nè.
+18:33
+Đó thì cái việc của mọi người của mình á là mình sẽ chỉ cần là clon về tức là
+18:38
+mình sẽ cần lấy về để sử dụng thôi. Còn cái việc lấy như nào á thì đây thì ở
+18:43
+trong phần này á em đã có sẵn một cái a đây ờ em đã có sẵn một cái a một cái
+18:57
+prom mà em đã có nghiên cứu và em cài rất là nhiều rồi. Cái này á nó là one
+19:02
+shot nha. Thì mọi người sẽ chỉ cần á để em copy cái em copy cái này để lên trên
+19:08
+nhóm để lấy copy trên nhóm thì mọi người chỉ cần dán đúng cái cái nội dung này
+19:14
+vào trong cái thằng antiravity á hoặc là vào trong cái thằng Clou á Cloudy code á
+19:20
+thì nó sẽ tự động là nó sẽ làm được hết nha. Nhưng mà trước đó là mọi người thay
+19:24
+giúp em một số thông tin như sau nha. Thứ nhất là á cái chỗ tên domain nè. Cái
+19:31
+chỗ này nè. À mọi người thấy chữ to hơn rồi đúng
+19:38
+không? Ai ai ai mà không thấy chữ thì bật mic lên nói giùm em nha. Tại em đang
+19:42
+ở bên này em không có nhìn cái tin nhắn được á.
+19:45
+>> Rồi mọi người nha, mọi người thay giúp em cái chỗ là cái chỗ domain này nè. Đó
+19:49
+cái tên domain này nè mọi người thay thành cái domain mà mọi người muốn sử
+19:52
+dụng nha. Trước đó là mọi người đã phải trỏ cái domain này về cái VPS rồi nha.
+19:56
+Rồi mọi người dán nó vô đây. Dán vô. Rồi chỗ này cũng có nè mọi người dán vô đó.
+20:03
+Rồi cái thứ hai là khi mà mọi người đã mua cái thông tin VPS rồi á thì bên nhà
+20:08
+cung cấp là họ sẽ gửi cho mình một cái thông tin nó sẽ có sẵn cái thông tin
+20:12
+VPS. Thì ví dụ như em đang có sẵn thông tin VPS như này. Mọi người copy cái này
+20:16
+nha. Mọi người dán vô cái chỗ chấm chấm này nè. Dán vô đó. Rồi sau đó chỗ này nè
+20:22
+nó có một cái phần là link thất. Tức là hồi nãy em có nóiá cái kích thup nó là
+20:26
+cái gì? Nó là cái nơi để lưu trữ cái sự code của mình và là nơi để mà mình
+20:31
+deploy cái phần mềm của mình lên trên cái VPS. Cho nên á là để mà mọi người
+20:37
+làm á thì mọi người phải nên tạo một cái kích thước nha. Thì cái phần kí thúc này
+20:43
+hồi trước là trong cái mấy cái khó trước là đã có nói chưa anh?
+20:49
+Chưa đâu, chưa đâu, chưa. Hôm nay sẽ là cái ngày đầu tiên mọi người kích hoạt
+20:55
+cái việc tiếp cận cái git hub. Thì từ những cái nhiệm vụ tiếp theo á thì mọi
+21:01
+người sẽ bắt đầu làm quen luôn.
+21:04
+>> Rồi nha. Để để dạ
+21:07
+>> để để nói luôn xong đi.
+21:09
+>> May quá nhờ làm bài tập nên nghe hiểu đoạn này thì đúng rồi. Không làm sao mà
+21:13
+hiểu. Nói nãy giờ những người mà chưa tới ngày 13 không hiểu đâu. À ít nhất á
+21:18
+là khi mọi người đã vi code bằng cái cái thư mục
+21:23
+code á chứa code của mọi người dưới máy tính rồi á thì mọi người hiểu là GitHub
+21:26
+á là cái chỗ để mà lưu cái sụ code online thôi. Hết chuyện ha. Nhưng mà
+21:31
+thay vì lưu ở trên driver á thì nó không có tính cấu trúc. Còn khi mà sột code mà
+21:36
+lưu trên GHU nó giống như là cái nền tảng dành riêng cho viện cho việc lưu
+21:40
+code vậy đó. Còn thằng driver á là cái nền tảng cho cái chuyện là lưu file tùm
+21:45
+lum tà la. Còn GitHub là nền tảng riêng cho chuyện lưu code. Thì thì sau buổi
+21:50
+hôm nay thì những buổi sắp tới mọi người cũng sẽ học cái cách á là đẩy cái sù
+21:54
+code của cái dự án của mọi người á lên trên GitHub. Sau đó khi mọi người deploy
+21:59
+lên trên các cái VPS của mọi người á thì sẽ deploy thông qua V thông qua GitHub
+22:03
+luôn. Thì còn cái đó là cái gì á thì mọi người sẽ nhận cái hướng dẫn của những
+22:07
+nhiệm vụ tiếp theo ha. À thì hôm nay cũng sẽ là cái ngày mọi
+22:14
+người tiếp cận cái chuyện là deploy trên VPS lần đầu tiên luôn. Còn các cái hướng
+22:19
+dẫn thì mọi người sẽ coi trong cái cái cái meting này luôn. Long cứ đi từ cái
+22:24
+đoạn á là lấy cái a cái VPS rồi lấy cái rồi còn cái chỗ domain thì dễ rồi ha.
+22:33
+thì lấy cái IP của cái domain á thì chỏ qua VPS. Còn VPS á thì bây giờ chỉ cần
+22:39
+mở cho mọi người coi là cái cái VPS ở bên lấy thông tin ở đâu thôi. Thật ra
+22:43
+khi mọi người mua á là nó có cái VPS nằm ở trong cái a cái gì trong cái email
+22:49
+hoặc là trong cái tài khoản VPS á. Và hôm nay cũng là cái cái bữa mà cho mọi
+22:54
+người biết là deploy một thứ gì đó lên VPS là như thế nào luôn. Thì cái quy tắc
+22:58
+để mà deploy cái go clot hay là deploy cái dự án của mọi người trên máy dưới
+23:03
+máy tính của mọi người á thì không khác nhau y chang nhau hết nha.
+23:12
+May quá bài trước lui kì đó mỗi người thì sẽ có cái nó khác nhau ở cái cách
+23:19
+tiếp cận. Thì như tôi nói cái người nào mà bị hục á cái phần kiến thức nào đó
+23:24
+thì sẽ phải hỏi những người khác ở trong cộng đồng à hoặc là chờ có cái hướng dẫn
+23:31
+sau đó thì khi nào mà có người la lên là không không không biết mấy phần đó đó
+23:35
+thì sẽ có cái h có cái hướng dẫn cái SOP lại cho phần đó ha. Thì hôm nay nè, hôm
+23:41
+nay là sẽ có cái phần liên quan tới VPS. Rồi bắt đầu luôn đi Long ơi.
+23:47
+cho mọi người coi cái chỗ lấy cái Đ Thì bây giờ nha, khi mà mọi người mua
+24:20
+cái cái hosting ở cái cái VPS ở 123 host á thì khi mà mọi người mua xong mọi
+24:27
+người sẽ vào nó sẽ hiển thị nó như thế này nè. Nó sẽ hiển thị nó như thế này
+24:31
+nè. Đó thì bây giờ ở nha mọi người nhìn thấy nha cái chỗ này nè em có để nè nó
+24:37
+là Ubentu thì mọi người khi mà mọi người mua á nó sẽ có cái phần chọn hệ điều
+24:42
+hành Ubentu. Mọi người cứ để cho em là Ubento 24 nha. Ubento mới nhất là được.
+24:48
+Đó thì cứ cái số nào cứ Ubent mà cái số nào mà cao nhất là là cứ chọn vô nó là
+24:53
+được. Đó cái đó là trong Long ơi. Để anh để anh show cái chỗ đó anh hướng dẫn mọi
+24:58
+người mua luôn nó như thế nào luôn đ cho nó dễ hiểu luôn. À vậy vậy anh sau cái
+25:02
+chỗ mua đi xong rồi em sẽ nói tiếp mấy phần còn lại.
+25:04
+>> Ờ cho nó chắc để tới hồi á là coi record là có hết đủ luôn khỏi cần ấy lại. Có
+25:10
+nghĩa là mọi người á là bấm vô cái link affiliate của tôi xong thì mọi người sẽ
+25:15
+vô được cái chỗ để mình share full cái màn hình luôn.
+25:26
+Mọi người á là đăng đang đang đăng nhập vô được cái chỗ này nè. đăng nhập vô cái
+25:30
+1 2 3 hot ha. Đăng ký xong rồi đăng nhập thôi. Cái này mà hướng dẫn nữa là thôi
+25:34
+luôn. Xong cái là mình bấm vô đăng ký dịch vụ. Cái mọi người thấy cái chỗ là
+25:37
+server nè. Cái cái mọi người là sẽ bấm vô là NVMI VPS chư.
+25:45
+Rồi nhớ là mọi người mua tháng cũng được. Đó là mua cái đầu tiên thôi. Được
+25:49
+rồi. À cấu hình hấp nhất á test chơi thôi. Không cần mua cái gì nhiều đâu.
+25:55
+Xong cái chỗ này nè thì 1 tháng cứ để 1 tháng ha. Cái tên thì mình cứ thật ra để
+26:00
+gì cũng được, không quan trọng chỗ này nha. Giống như cái tên để quản lý thôi.
+26:04
+Thì mình sẽ thường gõ cái domain, cái tên domain của mình vô để cho nó
+26:09
+quản lý vậy thôi cho biết là VPS này dùng cho cái nào á. Mà xong cái chỗ này
+26:13
+nè là mình chọn cái này nha. 24.04 nè. 48 bit đó là xong rồi. Xong rồi đó. Giờ
+26:22
+khúc này là dễ rồi đó. bấm né tiếp tục xong rồi thanh toán thôi. Thì là mình
+26:28
+mua xong cái VPS để qua chỗ thanh toán coi. Rồi nó vậy
+26:34
+ha. Cái mình chọn ở đây quét V thì cái này hình thức thanh toán thôi. Xong bấm
+26:39
+hoàn tất thanh toán thì à mình sẽ bấm thanh toán. Thì khi mình bấm
+26:45
+thanh toán xong rồi á thì đây thì chỗ này là thông tin liên quan tới chuyện là
+26:51
+là là nhận hóa đơn này nọ thôi. Rồi xong rồi
+26:56
+mọi người vô không lấy hóa đơn nè. Mình tích vậy cho ấy thôi nha chứ còn đúng là
+27:00
+mọi người để lấy hóa đơn á. Rồi cái bấm thanh toán nè. Thì khi bấm thanh toán
+27:05
+thì mọi người quét V thanh toán thôi chứ không có vậy ha. Rồi bây giờ mình back
+27:09
+trở lại cái cái chỗ đó. Nếu mà mua xong rồi thì nó như thế nào ha? Thì mua xong
+27:15
+rồi thì mọi người vô cái mục quản lý dịch vụ nè server nè. Cái bấm vô đây
+27:19
+NVMI VVS không cái ở đây nó sẽ liệt kê mấy cái VPS mọi người đang đang đang có
+27:24
+đó. Thì mọi người bấm vô a bấm vô một cái VPS nào đó nếu mọi người có nhiều
+27:30
+cái VPS à. Rồi khi mà có VPS rồi thì nó vậy mật khẩu này nó ẩn ha. Thì đây là
+27:36
+tên đăng nhập nè. Thì mặc định nó sẽ là root. À đây là địa chỉ IP nè. Đó, cổng
+27:41
+là 2008 nè. Rồi vậy thôi. Đó, nó chỉ có thông số này, thông số này và 2018 là ba
+27:47
+thông số cộng với mật khẩu là bốn thông số là quan trọng nhất của cái VPS. Nó
+27:51
+chỉ có bốn cái đó thôi. Thì mọi người sẽ lấy cái IP này nè. Mọi người chõ cái
+27:54
+domain. Chỏ domain thì thì tùy là mọi người xài
+28:00
+cái a cái mua cái tên miền ở đâu thì cái giao diện nó có khác nhau chút xíu.
+28:05
+Nhưng mà nó có khác đi nữa cỡ nào đi nữa thì nó cũng lanh quanh nó có nhiêu đó
+28:09
+thôi. À vô nó nó cụ thể là nó vô cái DNS nè. Thì có quan trọng nhất đó là mọi
+28:16
+người mua tên miền ở đâu ha. Mình thì mua ở đâu mình cũng trở về cái thằng
+28:20
+cloud fair này hết trơn á. Thế mọi người thêm record thì mọi người dán cái IP vô
+28:23
+thôi. Cái IP hồi nãy đó ở đây IP vô đây chứ v ở đây. Rồi ở đây là A+ rồi xong
+28:31
+bấm lưu là xong là mọi người đã kết nối cái domain đó với lại cái VPS rồi đó.
+28:36
+Thì từ đoạn này á là mọi người coi hướng dẫn long tiếp được rồi đó. À cái phần
+28:41
+hướng dẫn mà cái VPS nó vậy đó. nói hồi nữa chắc tôi chết quá.
+28:53
+Rồi thì em sẽ nói tiếp ha. Thì mọi người sẽ thay thế nè. Ở trong cái phần này nè
+28:59
+em có để nè Ubanto 24 mọi người có để như này ha. IP á thì mọi người sẽ copy
+29:05
+cái chỗ này đây nè. Hoặc là ở dưới B này nó cũng có chữ IP nè. Mọi người copy cái
+29:09
+phần này đó. có vô dán vô trong phần này. Còn username á thì nó sẽ là cái
+29:14
+phần root này nè. Tên đăng nhập nè thì nó là root. Rồi ở cái phần B á thì mọi
+29:20
+người bấm vô mọi người bấm vô cái chữ mà sao chép này nè. Cái nút sao chép này
+29:24
+nè. Đó mọi người bấm vô thôi thì nó sẽ sao chép được và mọi người dán nó vô ở
+29:27
+trong phần B. Còn cái phần bọt á cái phần bọt này nè thì nó sẽ là cái phần nè
+29:32
+bọt SH nè nó sẽ là 2018. Thì cái thằng 2018 này là cứ mua trên 1 23 host là mặc
+29:37
+định là đều 2018 hết đó. Thì khi mà mọi người có đầy đủ cái thông tin như thế
+29:42
+này xong rồi, đó là cái phần thứ hai mà mọi cần phải thay thế nha. Đầu tiên là
+29:47
+thay thế cái domain vô là một, hai là mình sẽ dán cái thông tin vô đã mua vô.
+29:53
+Và cái thứ ba á đây nè mọi người để mình sẽ dán cái link kết thúc này. Thì cái
+29:58
+link kết thúc này á là để khi mà cái phần mà cloudy rồi cái thứ nó tự làm á
+30:03
+là nó làm xong rồi nó bú cái code lên thất cho mình luôn. Đó cho nên á là mọi
+30:08
+người sẽ quay qua đây đây nè. Khi mà mọi người vào khi mà mọi người đăng ký và
+30:13
+đăng nhập xong cái kết thúc á bởi vì em đang có rồi đăng ký thì mail biết rồi.
+30:17
+Cái thứ nữa thì mọi người cứ login bằng mail thôi.
+30:21
+Đây nè. Ví dụ như hả mọi người khi mà vô đúng không mọi người bấm vô chỗ mà si up
+30:26
+nè. Đó mọi người bấm cái chỗ mà login và mail nè là cứ nét nét nét nét nét là
+30:31
+xong ha. Rồi rồi sau khi mà vào xong á mọi người sẽ vào cái trang nó sẽ như thế
+30:35
+này nè. Thì cái này là do em đã có dự án rồi cho nên nó có dữ liệu thôi. Còn
+30:39
+không á thì mọi người nó sẽ chống hết. Thì lúc đó nó sẽ có cái chữ new nè. Mọi
+30:43
+người bấm giúp em vô cái chữ new này. Đó ở cái phần này nè nó sẽ có cái phần chọn
+30:47
+tên ha. Thì cái tên này mọi người đặt cái tên gì cũng được. Em thì thường sẽ
+30:51
+đặt theo cái tên dự án. Ví dụ như là go cloud đi. Go cloud xong rồi gạch cái là
+30:59
+challeng chẳng hạn đi. Challent chẳng hạn. Đó thì nó hiện sao
+31:04
+mà nó hiện ra tên như này nha. là ok nha. Nó hiện thì ra cái phần màu xanh
+31:07
+này nè nó hiện đỏ thì mọi người phải đổi cái tên nha. Còn như mấy cái phần như là
+31:11
+chấm như này nè đó thì nó cũng vẫn được nha. Nhưng mà ví dụ như là một số cái
+31:15
+phần khác mà nó có dấu có gì á thì cứ hiện xanh là được. Rồi mấy phần khác
+31:19
+không cần quan tâm. Ở cái phần chỗ này nè. Mọi người lưu ý giúp em là cái chỗ
+31:23
+này, cái chỗ public này mọi người. Một á là mọi người cứ để public như thế này.
+31:29
+Public á thì nó sẽ là công khai ra và ai cũng ai có cái link đó đều sẽ có thể vô
+31:35
+được cái sự code của mình. Cho nên á là về mặt khuyến khích á thì nên khuyến
+31:39
+khích là private là khuyến khích nhất. Đó thì em thì em chỉ chọn là private
+31:43
+thôi để mà mình code mình thì mình giữ thôi. Đó. Rồi khi mà mình chọn private á
+31:49
+thì mình khi mà chọn vô như này đúng không? Xong rồi đó là mình sẽ bấm vô là
+31:52
+red nè. Bấm red reboot nè. Thì khi bấm red reboot xong á nó sẽ vào trong cái
+31:57
+trang như thế này. Rồi sau đó là mọi người bấm giúp em này nè. Mọi người lên
+32:01
+cho khu nè. Đó thì mọi người copy giúp em nha. Mọi người copy
+32:07
+đó hoặc là bấm phía dưới này cũng được nha. Rồi mọi người dán cho em vô cái
+32:11
+phần này nè. Dán vô đây. Đó là xong ha. Là đây là một cái câu Rom chuẩn. Còn cái
+32:17
+phần cuối này nè. Cái phần cuối này nè nó là cái phần là về
+32:24
+cái bộ skill cludy kit á. Đó thì cái này là em do em có sử dụng cái bộ skill đó
+32:31
+cho nên là em sẽ em sẽ xẹt em CK cái nữa nè. Ví dụ như em CK xong mà chấm xong m
+32:38
+plan đó. Xong m plan như này đó là nó sẽ hiển thị ra ha.
+32:43
+Bỏ bỏ qua khúc đó đi Long ơi.
+32:45
+>> Đó thì ví dụ như là cái đó em em chỉ thêm thôi.
+32:48
+>> Cái phần cái phần skill đó là những nhiệm vụ tiếp theo thì sẽ có nha.
+32:53
+Có nghĩa là cái phần sau. Với lại á mình nói luôn hồi nãy mình có nói đó là thật
+32:57
+ra mọi người không cần full cái prom này để mọi người có thể làm. Khi mọi người
+33:01
+ai first á mọi người chỉ cần dán cái mọi người chỉ cần biết cái định hướng là à
+33:05
+tôi muốn cài cái open suc là go clot mọi người lấy link ghub go clot quăng vô
+33:09
+xong kêu là bây giờ tôi muốn cài thì nó sẽ hướng dẫn mọi người thì từ từ mọi
+33:14
+người cũng cài được hình dung không có nghĩa là mọi người phải hiểu là mọi
+33:16
+người không cần cũng cài được chẳng qua á là khi có cái á thì có nghĩa là long
+33:20
+cũng đã từng cài kiểu vậy xong cái tới cuối cùng là mò rồi làm tới làm lui cái
+33:24
+hiểu rằng à nếu mà ghi đầy đủ vậy là ra được một sót tức là làm một lần được
+33:28
+luôn thì mọi người nếu mọi người ai F á thì mọi người cũng sẽ trải qua quá trình
+33:32
+đó. Có nghĩa là mọi người không có one shot được mà mọi người chỉ kêu là tôi
+33:36
+muốn cài go clot thì nó hướng dẫn mọi người tới lui cuối cùng mọi người cài
+33:39
+được thì nó lâu. Xong mọi người sẽ bắt đầu đút rút ra à thì ra là nó có bao
+33:43
+nhiêu đi bước thôi mình prom hết mẹ các bước vào trong luôn cùng một lúc thì nó
+33:47
+làm được một cái một sót giống như Long làm hiểu không? Có nghĩa là có nghĩa là
+33:52
+mọi người đừng có thấy ai share cái prom xong đó mọi người bị là bị kẹt trong đầu
+33:57
+là à tôi phải có cái prom nếu tôi không có cái prom đó tôi cài không được. thì
+34:00
+nó sai nha. Như nhưng mà có nghĩa là mọi người nên
+34:03
+xài cái from này của Long để cho nó nhanh. Hình dung không? Nhưng nhưng luôn
+34:07
+phải nhớ á là khi mọi người muốn đạt được cái mục tiêu khác á là mọi người
+34:10
+không bao giờ bị kẹt vô cái chuyện là tôi phải có cái prom. Không có cái prom
+34:14
+nào cũng xà cũng làm được. Cái gì cũng làm được hết trơn á nha.
+34:18
+Đó. Rồi nha. Khi mà mọi người đã có một cái prom chuẩn như này rồi nè. Đó thì
+34:25
+mọi người sẽ copy rồi sau đó mọi người quay lại cái to gravity rồi mọi người sẽ
+34:29
+vào trong cái cái dự án ha. Mọi người sẽ vào trong cái dự án mà mình còn code á.
+34:35
+Thì cái này là cái này là mọi người biết hết rồi đúng không? Bởi vì đã qua tới
+34:38
+ngày 10 thứ 13 rồi mà cho nên là em sẽ không em lướt qua nha.
+34:44
+>> Anh Long thêm hỏi là cái dự án là coi như là cái dự án này nó coi như mình mở
+34:48
+tạo một cái folder mới đúng không anh?
+34:50
+>> Ờ dạ đúng rồi anh ơi. Cái này là mình tạo một cái folder mới á.
+34:54
+trong cái dự án mới á.
+34:56
+>> Đó thì khi mà mọi người tạo xong á, mọi người sẽ mọi người tạo xong đúng
+35:03
+không? Thì mọi người sẽ gọi là dán cái cái câu này vô, dán cái câu lệnh
+35:09
+này vô và chỉ cần dán vô xong thôi và bấm enter thôi thì mọi thứ nó sẽ xong
+35:15
+nha. Đó, ví dụ như bấm enter xong thì bây giờ cái việc còn lại á của mình á là
+35:20
+sẽ chỉ còn chờ cho nó làm thôi. Đó, coi như là tới khúc này là là coi
+35:25
+như là cài xong phần mềm rồi á. Đó, thì bây giờ là mình sẽ chờ thì thường á cái
+35:29
+này á, sorry mọi người,
+35:35
+thường cái này á là nó sẽ cài nó rơi vào đâu đó là tầm khoảng cỡ 30 phút á, 20 30
+35:40
+phút là nó sẽ cài xong. Tại cái này là nó cài one shot, nó cài một phát là nó
+35:44
+cài được luôn. Cho nên á là nó sẽ hơi lâu một chút xíu. Đó thì bây giờ á khi
+35:50
+mà mình sử dụng cái này xong rồi á thì bây giờ là mình sẽ chờ thôi ha. Nhưng mà
+35:55
+nó sẽ có một số cái lưu ý nha. Đôi khi trong một số trường hợp thì tùy theo tùy
+36:03
+theo cái công cụ mà mọi người sử dụng để code không? Cái AI mà mọi người sử dụng
+36:09
+decode nếu mà mọi người đang sử dụng là antiravity
+36:14
+thì á nó sẽ nó có thể là có nhiều hình thức để nó hỏi lại. Tức là mọi người
+36:19
+hiểu đơn giản á là cái con AI chỉ cần một cái câu prom đó và á khi mà AI nó
+36:25
+làm á nó có thắc mắc gì thì nó sẽ tự động nó hỏi lại nó hỏi lại mọi người để
+36:31
+mọi người cung cấp. Thì cái việc của mọi người chỉ là chọn thôi. Cái việc của mọi
+36:35
+người chỉ là chọn thôi. Còn cái việc á mà ví dụ như ở trong những cái lựa chọn
+36:39
+mà nó đưa ra
+36:40
+>> mà nó mọi người không biết là chọn cái gì đi thì vẫn nguyên lý là AI first. Mọi
+36:45
+người hỏi lại nó bây giờ ở cái trường hợp này này tôi chọn cái gì là nó là nó
+36:50
+ok là nó đúng là nó hợp lý là nó tốt nhất. Còn không á mọi người cứ nói nó là
+36:55
+ok. Nếu mà mọi người có hỏi nó mà mọi người cũng không biết á thì ok mình cứ
+37:01
+nói luôn cái nó là bây giờ bạn hãy tự lựa chọn hết giúp tôi luôn nhé. Miễn sao
+37:05
+là lựa chọn nó là tối ưu và phù hợp nhất thì tự động là nó sẽ tự động nó lựa chọn
+37:09
+hết cho mình luôn. Long ơi, Long ơi, tắt đi Long ơi, tắt cái này đi, tắt đi để
+37:16
+tốn tiền, tốn tiền.
+37:17
+>> Tắt cái gì anh? Tắt cái anti á có nghĩa là mình giải thích tới đó được rồi. Tại
+37:22
+vì đằng nào nó cũng cài tới nửa tiếng mà bây giờ á là tại vì nãy mình đã chuẩn bị
+37:26
+rồi, mình sẽ setup sẵn rồi thì bây giờ mình coi như là nó đã xong đi thì bây
+37:31
+giờ mình sẽ lên cái domain đó nó đã chạy rồi thì mình sẽ bắt đầu setup hướng dẫn
+37:35
+mọi người setup rồi trend agent luôn ha. Có nghĩa là one shot hoặc là không shot
+37:40
+thì mọi người cứ tới lui với anvity cuối cùng mọi người sẽ cài được nha.
+37:46
+Đó thì nói chung là cái prom cái prom mà em đưa ra á là mọi người cứ yên tâm á là
+37:50
+nó đã dọn sẵn hết rồi. Mình chỉ còn là mình mở miệng ra và mình đớt thôi.
+37:56
+Đó thì bây giờ sau khi mà sau khi mà nó làm xong nha thì bây giờ á em là đang là
+38:02
+để trong trường hợp á là nó đã làm xong rồi ha. Thì khi mà nó làm xong rồi á mọi
+38:08
+người sẽ vào trong cái domain nó sẽ ra cái giao diện như này nè. Đây nè. Ví dụ
+38:11
+đây là cái domain nè. Cái này là sub domain. Hồi nãy ai hỏi là
+38:15
+có cần mua domain mới không? Thì sub domain cái cách mà mình chỏ sub domain á
+38:20
+là giống như hồi nãy nhưng mà mình để cái IP vô ở bên tay cái cột bên tay phải
+38:24
+đúng không? Còn cái tay trái thay vậy mình để cái cái chữ a+ thì mình sẽ để
+38:28
+một cái chữ nào đó cũng được. Như trường hợp của mình là mình để cái chữ agent
+38:32
+thì nó sẽ nó sẽ biến cái domain nó thành một cái subdomain là agent chấm ha. Còn
+38:37
+nếu mà mọi người bể là abc thì nó sẽ là abc ch. cái domain của mọi người. Đó là
+38:41
+cách mà chỏ sub domain đó. Rồi
+38:46
+thì khi mà nó vô như thế này nha, nó sẽ có hai loại, một loại là token và một
+38:50
+loại là ghép nối. Thì cái ghép nối này á nó sẽ thường là
+38:55
+em sẽ ít dùng cái này lắm bởi vì nó sẽ là một cái phần ghép nối tới một cái
+38:59
+conent khác thôi. Ví dụ một cái mã user ID nào đó khác thôi. Đó chứ nó không
+39:04
+phải là cái cái của mình mà giống kiểu mình kết nối với với người ta rồi thôi.
+39:09
+Còn m cái thằng token á thì ở đây á khi mà mọi người làm xong á nó mặc định nó
+39:14
+sẽ là cái phần system nha. Và nó sẽ có cái phần là getway token. Thì cái getway
+39:19
+token này á là trong quá trình mà chỗ con AI nó cài và nó tạo cho mình á thì
+39:25
+nó sẽ tự động nó sinh ra luôn. Nó sẽ có hai trường hợp mà nó sẽ xảy ra. Một là
+39:31
+nó khi mà con AI nó cài xong á nó sẽ cho mọi người cái đúng cái chính xác cái
+39:37
+getway token nó là cái gì luôn nha. Mọi người chỉ cần copy thôi. Và cái user ID
+39:42
+này mọi người chỉ để nó là cái chữ system thôi. Rồi cái đó là trường hợp
+39:45
+thứ nhất. Nhưng mà trong một số trường hợp là AI nó không trả về cho mình cái
+39:50
+phần đăng nhập này. Mọi người không biết cái phần đăng nhập này nó là cái gì cả
+39:53
+thì mọi người á vẫn là AI first ha. Mọi người chụp lại giùm em cái này hoặc là
+39:56
+mọi người hỏi là hãy cho tao cái user ID và cái getway token nó là cái gì thì lúc
+40:01
+đó con AI nó sẽ trả lại cho mọi người cái getway cái getway token và cái user
+40:07
+ID để mọ m mọi người đăng nhập vô. Rồi thì cái này coi như là em đã có cái phần
+40:12
+token rồi nha. Đó thì em sẽ bỏ qua cái phần này và em sẽ đi tới cái phần là khi
+40:18
+mà em đã đăng nhập vô rồi thì mặc định là nó sẽ hiển thị ra như thế này nha. nó
+40:23
+sẽ hiển thị ra cái phần là go cloud setup này nè. Thì ở cái phần này á là nó
+40:29
+sẽ yêu cầu mọi người á là cấu hình cái provider.
+40:33
+Thì hiểu đơn giản đó là cấu hình cái con AI để mà cái con A đó nó có thể sử dụng
+40:40
+cái con AI đó nha. cái model nha. Mình mình
+40:43
+>> gọi là cái model á, cái model á hay là ví dụ như Clou hay là CBT hay bất
+40:51
+kỳ một cái gì đó. Đó. Rồi ở đây á là mọi người chọn giúp em ha. Thì ở trong cái
+40:57
+trường hợp này á là em có một hướng đó cũng là một trong những cái con lưỡng
+41:02
+mật hiện tại nó đang làm là gì? là mình người bình thường tức là bình thường á
+41:08
+là nó sẽ sử dụng mọi người sẽ tốn phí tốn tiền token tốn tiền token tốn tiền
+41:14
+cho ai khi mà hở cái con boss của mình nó trả lời ví dụ như lưỡng mật đi ờ nó
+41:18
+trả lời mỗi cái lần nó trả lời mỗi lần nó request á là mỗi lần mà nó ví dụ như
+41:22
+mọi người hỏi nó á là nó sẽ tốn cái token thì có một cái phương án đó là mọi
+41:27
+người vô cho em á là cái AI Studio nha mọi người vô cho em cái AI Studio.
+41:33
+Thì khi mọi người tức là mình sẽ sử dụng hiện tại á nha mình sẽ sử dụng một cái
+41:38
+con model mới đây của Google nó gọi là cái con Game Ma 4 nha. Nó sẽ gọi là con
+41:44
+Game Ma 4. Thì cái con game 4 này á hiện tại á là nó là đang là cái con AI nó
+41:51
+cũng khá là ok, cũng khá là mạnh và nó đang cho miễn phí. Và ở trên cái Google
+41:56
+AI Studio này nè, nó đang cho mọi người sử dụng cái con model đó với cái lượng á
+42:02
+là 1500 request, tức là 1500 lượt gọi trong vòng 1 ngày cho nên là xài tẹt ga
+42:08
+luôn. Thì lúc đó mọi người vô AI Studio nha. Rồi sau đó mọi người bấm xuống dưới
+42:13
+cùng này nó có cái chữ là get ADI key nè. Đó mọi người bấm vô trong này thì nó
+42:18
+sẽ ra cái phần như này ha. Và sau khi mọi người get AP xong á nó sẽ hiện thị
+42:22
+ra. Thì bây giờ em cứ cho chỗ này nó là trống nha. Thì mọi người sẽ mọi người sẽ
+42:26
+bấm vô cái chữ gọi là red API key này. Bấm vô thì nó sẽ bảo mọi người là đặt
+42:31
+tên ví dụ như là tên test vn vậy đi. Đó ở dưới này á thì mọi người cứ cứ chọn
+42:37
+ha. Thì thường á là nó sẽ có thể chống mọi người chống á thì mọi đây nè. Ví dụ
+42:42
+như này đi. À đây nè. Thường á là nó sẽ đó nó sẽ chống
+42:47
+như này nè. Thì mọi người bấm break hơn, mọi người cứ bấm tạo
+42:52
+đó. Mọi người cứ bấm tạo á là đó là nó sẽ được nha. Thì lúc này á là nó sẽ ra
+42:57
+cái cái AV key này mọi người sẽ copy. Mọi người để đây nha. Mọi người sẽ để
+43:02
+đây. Rồi mọi người quay lại cái phần là go clot
+43:12
+rồi. Đ rồi mọi người quay lại cái phần go clot này nè. Và mọi người ở ở cái
+43:16
+phần mà chọn lộ provider á mọi người bấm vô mọi người chọn giùm em là cái Google
+43:21
+sem mini nha. Thì ở trong phần này nó sẽ là cái tên. Cái tên này á mọi người đặt
+43:26
+cái gì cũng được nha. Em thì em thường hay đặt là AI Studio.
+43:31
+Tụi đ cho mình dễ biết thôi. Cái này là dễ phân biệt được là à cái này á là mình
+43:34
+đang dùng của cái AI Studio thôi. Rồi ờ cái phần abi key này nè là mọi người
+43:40
+quay lại đây và mọi người copy giúp em là cái API key này nha. copy. Rồi sau đó
+43:46
+mọi người qua đây mọi người dán cái ID này vô nha. Dán vô. Rồi cái phần bên
+43:52
+dưới này mọi người không cần phải đụng vô nha. Rồi mọi người bấm tạo provider
+43:56
+thì lúc này á là nó sẽ ra cái phần chỗ để mà mọi người chọn cái model ID. Thì
+44:02
+mọi người bấm giúp em nè. Mọi người đ mọi người đừng bấm vô đây nha. Đừng bấm
+44:05
+vô đây là nó bắt sẽ mọi người ghi. Mọi người bấm vô cái chỗ này nè. Nè cái chỗ
+44:08
+này nè. Nó có cái mũi tên nè. bấm vô rồi mọi người chọn xuống kéo xuống kéo chút
+44:13
+xíu thôi. Mọi người tìm cho em cái chỗ là Game
+44:18
+4 31B IT đó mọi người bấm vô mọi người chọn
+44:22
+cho em rồi sau đó mọi người bấm xác minh nha. Nếu không bấm xác minh thì chỗ này
+44:26
+bấm tiếp tục cũng được đâu nha. Bấm xác minh thì để cho nó xác minh cái đó.
+44:31
+Rồi khi mà nó ra như thế này nè là coi như là mình hiện ra chữ tiếp tục được
+44:35
+rồi nè. Mọi người bấm vô chữ tiếp tục. Rồi ở đây á nó sẽ khi mà mọi người tạo
+44:40
+ra xong á nó sẽ có một cái con gọi là tạo asent đầu tiên. Thì cái đây là sẽ là
+44:45
+cái cái thông tin mẫu. Thì cái này tạm thời em sẽ mọi người cứ để cho nó đúng
+44:48
+như vậy nha. Không cần phải chỉnh sửa. Lát nữa mình chỉnh sửa sau. Lát nữa mình
+44:52
+sẽ tạo riêng ra một cái con agent riêng của mình để mà mình tạo sau ha. Rồi mọi
+44:58
+người bán tạo
+45:17
+>> ồ rồi mọi người đợi em xíu nha. Đó thì trong trường hợp mà nó có một số
+45:24
+cái vấn đề vậy thì mọi người cứ chọn qua mấy cái kiểu khác cũng được nha, không
+45:27
+quan trọng nha. Rồi mọi người sẽ đợi một chút xíu.
+45:32
+Mọi người đợi một chút xíu nó sẽ đang chịu hồi cái con legend
+45:44
+đó mọi người. Cái này là cái khúc này mọi người chỉ cần đợi thôi nha.
+45:52
+Trời ơi thư hết rồi ơi.
+46:00
+>> Trong lúc này mọi người có câu hỏi trắm mắt gì mọi người cứ hỏi em nha.
+46:21
+Anh Long ơi, anh Long cho em hỏi là cái chỗ mà phần để mà lấy code ở GHUP là có
+46:26
+phải là lấy code của cái con Go Cloud có đúng không ạ?
+46:32
+>> Code ở Ghub là sao ta?
+46:35
+>> À cái cái phần mà anh đẩy code lên GPHub ấy.
+46:38
+>> Dạ. là anh lấy code đấy là cái code đấy là
+46:42
+code nào ạ?
+46:43
+>> Không cái code đó là cái phần mềm của mình đang làm á
+46:46
+cái phần mềm go mà mình làm á là ở cái bước này nè là nó làm xong là nó sẽ bớt
+46:51
+cái code của mình lên á.
+46:52
+>> À vâng.
+46:54
+>> Tức là cái con ai nó sẽ tự làm nha. không có như là ý là cái lúc mà anh anh
+47:02
+viết cái prom đấy anh thì nó có một cái link của GHUP đấy anh.
+47:06
+>> Dạ đúng rồi.
+47:07
+>> Thì thì cái cái link cái link cái link của GHub đấy thì nó lưu chữ của cái phần
+47:13
+code nào ạ? Không
+47:14
+>> à đây đây đây đây để để để nói chỗ này đi để nó dễ hiểu. Đó là cái thứ nhất á
+47:19
+cái link đầu tiên á là cái link mà nó chứa cái mã nguồn của Go không? Đó là
+47:25
+cái link đó là em vô cái goclot.sh á là em sẽ thấy được cái chỗ để lấy đó. Đây
+47:30
+bấm vô đây nè. Thì đó là mình đang lấy cái mã nguồn của Goiểu không? Cái thứ
+47:35
+hai á là mình lên cái GHub của mình á mình tạo ra một cái reboi. Nó nó là cái
+47:41
+rebo để mình chứa cái code cũng là của Go Plus Club nhưng mà là chứa cái cái
+47:46
+con Go của riêng mình sau khi mình đã lấy cái mã nguồn từ trên cái cái nhà cái
+47:52
+đó từ trên cái clot gốc á. Thấy không? Thì từ đó về sau á là mọi thứ mà mình
+47:59
+mình xây dựng này kia nọ đó thì nó không còn liên quan tới cái link mà mình lấy
+48:06
+suột từ từ go clot góc nữa mà từ đó về sau là mình contribute tức là mình xây
+48:10
+dựng thêm từ cái góc đó xây dựng thêm hiểu không? Thì cái xây dựng thêm đó
+48:15
+link thứ hai đó bao l bấm qua cái prom đi.
+48:20
+>> Bấm vào cái gì anh?
+48:21
+>> Cái cái cái cái cái prom á. Đó cái link thứ hai đó là cái link mà
+48:27
+của mình hình vô không có nghĩa là còn trên máy tính á em không cần quan tâm
+48:33
+tại vì khi mà nó bú về á thì nó nó lưu đại ở đâu đó thôi nó lưu đại trên cái
+48:37
+máy tính vì đằng nào nó cũng chỉ lưu tạm để mà nó đẩy ngược trở lên cái cái gitub
+48:41
+của mình á hiểu không? Cho nên nó không có quan trọng là là nó nằm cái thư mục
+48:46
+nào đâu. Tại vì từ đó về sau mình làm gì nó cũng trên cái Ghup hết rồi.
+48:51
+Dạ vâng có như là để em a em nói lại để xem anh có phương đúng không nhá. Coi
+48:55
+nhiên là mình lấy cái code à cái mã nguồn của thằng Go Cloud của trên GHUP
+49:00
+về máy xong là bắt đầu mình sẽ đẩy ngược lên GUP đúng không ạ?
+49:06
+Ừ đúng rồi.
+49:09
+>> Vâng vâng cảm ơn anh
+49:10
+>> à. À chị Lâm hỏi là khái niệm ý nghĩa của
+49:14
+API. Cái này á thì chị cái này Google cũng ra hoặc là chị Lâm hỏi AI là dễ
+49:19
+nhất nha. Tại vì cái quá trình mình AI first mình hỏi nó mình dễ hiểu hơn. Còn
+49:23
+giải thích giải thích cái ở trên meeting á thì thứ nhất nó lâu, thứ hai nó thật
+49:27
+ra nó cũng khó hiểu á. Tại vì nó sẽ còn nhiều khái niệm nhỏ mọi người không thể
+49:31
+không không đ nói chung á tư duy mọi người đừng đợi ai giải thích trơn á. A
+49:35
+first hết đi. Đợi tiếp đi.
+49:45
+Cái gì? À à Long ơi copy cái cái cái nguyên cái prom đó cho mọi người đi.
+49:51
+Long quăng vô trong group Telegram luôn đi. Nhớ nhớ bỏ cái cái cái bass ra nha.
+49:56
+Cái bass thì mọi người thấy rồi nhưng mà sau sau bữa nay thì phải đổi á.
+50:01
+Dạ để để lát lát nữa đi. Lát nữa em xong đi rồi em em máấy cho chả
+50:09
+>> rồi. Ờ bây giờ á nha là nó đã tạo xong rồi nè. Đó nó nó khi mà nó ra cái phần
+50:16
+chịu hồi hồn tất á thì mọi người bấm vô cái chữ tiếp tục giúp em nha. Thì sau
+50:20
+khi mà họ tiếp tục xong á thì nó sẽ tới cái bước á là mọi người sẽ kết nối cái
+50:26
+channel. Thì ở cái phần này á mọi người có thể làm cũng được và mọi người chưa
+50:31
+cần làm cũng được nha. Thì cái này á coi như là em bỏ qua đi. Em sẽ bỏ qua cái
+50:36
+phần này để em sẽ chỉ cho mọi người cái này khi mà vô trong rồi á nó sẽ nằm ở
+50:41
+đâu ha. Thì để mà mọi người bỏ qua á thì mọi người bấm giúp em là bỏ qua và hoàn
+50:46
+thành nha. Mọi người bấm vô rồi nó sẽ bấm t đi đến điều khiển nè.
+50:58
+À sorry mọi người em bị ho thì khi mà thì khi mà gọi là vào trong
+51:08
+rồi á nha thì nó sẽ cái giao diện của mọi người ra là y chang như nè. Đây nè
+51:11
+cái giao diện của em nó như nào là mọi người cũng y chang như vậy luôn á.
+51:16
+Đó thì bởi vì là cái bản này là cài là cài mới toanh luôn á. Rồi thì bây giờ á
+51:23
+là mọi người nha, cái việc đầu tiên của mọi người khi mà mọi người làm là những
+51:29
+cái một số cái men à không để bây giờ em giải thích sơ bộ qua từng cái menu nó là
+51:34
+cái gì đi. Thì cái das boy thì nó sẽ là cái trang tổng quan để mà mình overview
+51:38
+cái mình view cái cái cái tình hình thôi. Nhưng mà em chả bao giờ em xem
+51:42
+trong cái trang tổng quan này hết á. Tại cũng không có biết xem là cái gì hết á.
+51:46
+>> Rồi cái thứ hai á là cái một trò chuyện. Cái mục trò chuyện này á là sẽ sử dụng
+51:52
+để cho trường hợp á mọi người chưa có kết nối một cái channel nào cả. Channel
+51:56
+nó t có nghĩa là một cái Zalo hay là cái Telegram hay là gọi là một cái con boss
+52:01
+ở đâu đó đi. Nhưng mà mọi người muốn test trước ở trên trên cái giao diện này
+52:05
+thì nó vẫn sẽ được nha. Đó. Rồi cái asent này á là nó sẽ là nơi để mà hả
+52:13
+hiển thị ra danh sách các agent là ví dụ như như con lưỡng mật nó là một cái con
+52:17
+asent á nó cũng là một con boss luôn đó. Rồi thì bây giờ đến cái phần gọi là
+52:24
+asent team và asent link á thì cái này em sẽ bỏ qua nha bởi vì cái này nó cũng
+52:28
+khá là phức tạp. Em nghĩ là trong một lúc mà nó nói hết tất cả thì nó sẽ rất
+52:33
+là quá tải đúng không mọi người? Nhưng mà lát nữa sẽ có một cái món quà dành
+52:36
+cho mọi người cho nên là mấy phần này nó lại gì thì không cần phải lo lắng nha.
+52:43
+Rồi đến cái phần á là system. Sist á mọi người hiểu đơn giản á là bởi
+52:49
+vì cái con Go á thì em sẽ note nha. Tại sao mọi người không mình không có vai
+52:56
+code ra một cái con A luôn. Đó là bởi vì á là hiện tại như Goot là
+53:02
+nó đã dọn sẵn cho mọi người hết rồi. Nó đã làm thông minh sẵn hết rồi. Những cái
+53:06
+gì mà làm cho cái con nó thông minh á là nó cũng đã làm sẵn ra hết rồi. Thì mình
+53:11
+chỉ có việc gọi là mình hưởng thôi. Thì ở cái phần session này nè nó sẽ là nơi
+53:16
+để lưu trữ lại những cái lịch sử, những cái lịch sử, cái cuộc hội thoại của
+53:23
+trong những cái người mà mình nhắn tin. Ví dụ như trong AI challeng này hay là
+53:27
+trong những người mà mình đã nhắn tin á. Bởi vì á clot á nó có một cái tính năng
+53:33
+đó là nó có thể lưu nhớ lại cái lịch sử nói chuyện của một người để nó hiểu được
+53:39
+cái ngựa cảnh và từ đó nó sẽ suy nghĩ và nó sẽ trả lời và phản hồi ở cái người đó
+53:46
+đúng. Nó không phải bị cái câu chuyện là ờ nói trước quên sau hay là như thế nào
+53:50
+đó bởi vì nó hiểu hết tất cả mọi thứ. Đó là một cái điểm hay của cái thằng Goot
+53:54
+là như vậy đó. Và nó cũng là một cái điểm làm cho cái con Asian của mình nó
+53:58
+thông minh hơn. Rồi cái phần tin nhắn đang chờ á thì cái này rất là ít sử dụng
+54:03
+nha. Em gần như là em chả bao giờ em sử dụng nó luôn. Nhưng mà lát nữa sẽ có nằm
+54:07
+trong một cái món quà mà em nói á thì nó cũng sẽ có giải thích cái phần này luôn.
+54:11
+Cho nên em sẽ tạm thời em bỏ qua và liên hệ nó cũng sẽ như vậy luôn ha. Đó. Rồi
+54:16
+từ trên xuống dưới đúng không? Một là mọi người thường xuyên sử dụng hàng ngày
+54:21
+nè. Session là một cái cũng khá là quan trọng nè. Và cái thứ ba đó là cái
+54:26
+channel. Thì ở cái phần channel này á thì hồi hồi
+54:31
+nãy á em có ở trong cái phần mà setup hồi nãy á là nó đã có cái bước á là tạo
+54:35
+channel đúng không? Thì bây giờ mình bỏ qua bước đó thì mọi người vẫn có thể vào
+54:38
+cái mục channel này nè để mọi người tạo ra một cái channel riêng. Thì khi mà vô
+54:43
+đây á và mọi người tạo ra channel á cái channel này mọi người hiểu đơn giản đó
+54:46
+là như này nè. Nó là một cái cánh cửa để mà giao tiếp giữa con Asian
+54:54
+và cái người dùng. Người dùng ở đây nó có thể là chính mọi người hoặc có thể là
+54:59
+những cái người mà mọi người đang muốn hỗ trợ. Đó ví dụ như là em tạo ra một
+55:03
+cái con boss Telegram tên là con Tôn Ngộ Không đi. Thì cái người mà cái con Tôn
+55:10
+Ngộ Không đó nó được gọi là một cái con Silent tức có nghĩa là một cái con boss
+55:14
+thì nó sẽ là người kết nối giữa Goot và người bên ngoài. Ví dụ có một anh chị
+55:18
+nào đó nhắn tin tới cái con Tô Ngộ Không đó đi thì cái cô Tôn Ngộ Không đó nó sẽ
+55:23
+gọi tới cái con Goot này để xử lý thông tin trả lời này kia các thứ và nó sẽ trả
+55:27
+lời lại thì nó gọi là một cái cánh cửa đó.
+55:32
+Thì về mặt channel á thì ở đầu tiên á cái khóa này nè mọi người hiểu đơn giản
+55:38
+là mọi người cái này nó chỉ là cái tên thôi nha. Ví dụ như tên hiển thị đi gọi
+55:41
+là hở con a Tôn Ngộ Không. Thì ở đây á là mọi người sẽ
+55:47
+được nhập tên có dấu và dấu cắt bình thường nha. Nhưng mà ở trên này nè mọi
+55:51
+người sẽ nhập là không có dấu nè. Nè mọi người có muốn có dấu hay gì á thì nó
+55:55
+cũng không được nha. Ví dụ như tôn nè. Tôn cách cái này ngộ nè cách cái này
+56:00
+không nè. Đó thì nó sẽ là cái khóa để mà nó lưu lại thôi. Và sau đó mọi người bấm
+56:06
+vô cái chỗ mà loại challeng channel á thì hiện
+56:12
+chà thì hiện tại á là nó sẽ đang có một số cái
+56:18
+channel. Nó đang có một số cái channel ha. Thì à
+56:23
+cái chỗ này nó đang bị phiên bản cũ á. Anh Nghĩa ơi thì cái này em em đưa qua
+56:29
+một cái con Go khác để cho mọi người xem được không
+56:33
+ta? Ừ cho mọi người coi cái phiên bản mới
+56:40
+cũng được đâu có gì đâu. Hoặc là trong lúc đó thì nhảy qua coi
+56:45
+cái project đó có nằm trên máy không thì update lên luôn.
+56:51
+Update thì thì đừng đừng đừng đừng mở của Lon. Đừng mở Lon.
+56:57
+Ờ ừ cái đó đi.
+56:58
+>> Không không cái đó không không không có. Vậ em mở cái KB3 luôn nha. Mở
+57:05
+ờ mở của bao lành đi.
+57:10
+>> Bao lành nó nằm trên KB3 luôn mà.
+57:12
+>> Ờ vậ ok ok.
+57:13
+>> Vậ em cho K3 luôn nha.
+57:15
+>> Ừ.
+57:19
+>> Rồi thì khi mà mọi người vô cái phần channel á
+57:23
+đây nè. hiện tại á nha về mặt là phiên bản mới
+57:30
+nhất của bên GoClot á là nó sẽ có bao gồm những cái channel này. Một á là
+57:34
+Discord, hai á là Facebook. Facebook ở đây á là Facebook fanpage nha mọi người.
+57:41
+Một có một cái mọi người lưu ý ở trong cái phần này nè là nó không có Facebook
+57:46
+Messenger personal nha. Cái này là do em tự em độ thêm nha. Cho nên là mọi người
+57:50
+khi mà cài mọi người không có cái này đâu nha. Mọi người quên cái này đi. Rồi
+57:54
+cái thứ ba á là cái phần lag. Cái thứ tư á là cái phần banket để trong trường hợp
+57:59
+mọi người kết nối vô cái chính banket để mà trả lời luôn. Slash Telegram,
+58:04
+WhatsApp, Zalo OA và cuối cùng á là cái Zalo personal tức là Zalo cá nhân á.
+58:11
+Để anh nói cái chỗ bé tí xíu. Hiện tại á là có những cái bên bán lẻ đó là đã dùng
+58:16
+cái agent này để mà thay thế toàn bộ nhân viên chăm sóc khách hàng một ngày
+58:21
+mấy trăm đơn hàng ở trên benket rồi đó nha. Cho nên cái này mọi người cứ tưởng
+58:25
+tượng á là nó thay được 5 tới 10 nhân sự tên ngồi trực á lương mỗi đứa là 10
+58:32
+triệu đó. Thì mọi người tưởng tượng là mọi người mà cài xong hết mọi người cố
+58:36
+mà mà học cài để mà ứng dụng và ứng dụng rất là nhanh trong cuộc sống thôi.
+58:40
+Khoảng tuần là mọi người đưa vô được rồi. Thì mọi người cứ tưởng tượng là cái
+58:43
+tiềm năng kiếm tiền của mọi người đi ha. Nó nó nó cũng không quá khó đâu. Mọi
+58:50
+người chỉ cần thực hành thôi. Qua được vài ngày nữa là mọi người làm được.
+58:55
+Rồi thì sau khi mọi người chọn cái loại channel xong á thì mọi người sẽ ở bên
+59:00
+dưới này là cái agent thì hồi nãy á ở bên agent này nè đây là sẽ là mấy cái
+59:05
+con agent mà mọi người sẽ tạo ra nha. Thì tạo xong á thì khi bên channel này
+59:08
+nè thì khi mà mình thêm á là mình sẽ gắn cái channel đó vào trong cái con agent
+59:14
+nào nha. Mọi người lưu ý một channel nó chỉ gắn được với một con
+59:20
+agent thôi nha. Nhưng mà nhiều channel có thể gắn với một con agent. Ví dụ như
+59:25
+nha, mọi người có một cái channel, một cái con boss trên Telegram, mọi người có
+59:30
+một con boss ở trên Zalo cá nhân đó, mọi người có một con ở trên fanpage thì toàn
+59:36
+bộ ba cái channel đó đều có thể gắn tới một con agent vẫn được nha. Đó thì ví dụ
+59:41
+như mọi người sẽ chọn một cái con nào đó.
+59:44
+Rồi ở trong trường hợp này á là em sẽ hướng dẫn cho mọi người cái cách để mà
+59:49
+mình kết nối luôn cái cái mình sẽ tạo ra cái cái token nó sẽ như thế nào. Nhưng
+59:53
+mà trước đó em sẽ tạm thời em dừng cái chỗ đây lại cái em sẽ nói trước với mọi
+59:58
+người qua những cái cái cái phần sau nha. Lát nữa em sẽ đi vô chi tiết. Rồi
+1:00:03
+đối với cái phần nóc á cái phần này á nó sẽ là cái nơi để cho mọi người sẽ quản
+1:00:09
+lý những cái người mà mọi người Việt. Tức là nha. Mọi người hình dung á ở trên
+1:00:14
+thị trường bây giờ con đang nổi nhất đó là cái con là Open Clot. Thì cái con
+1:00:19
+Open Clot này á nó rất là linh động. Nó rất là động. Tuy nhiên á nó là một cái
+1:00:25
+kể cả chính người làm ra cái con đó nó cũng nói luôn tại vì người không biết
+1:00:30
+code, không rành code không nên dùng. Bởi vì sao? Bởi vì cơ chế bảo mật nó
+1:00:34
+kém. Bởi vì cơ chế bảo mật nó kém và nó có rất là nhiều thứ ở bên trong đó về
+1:00:39
+mặt bảo mật mà nó không kiểm soát được. Thì có con Glot này á là do một cái
+1:00:44
+người Việt ở làm ra thì họ đã làm phù hợp cho người Việt, phù hợp cho những
+1:00:48
+người không biết. Cho nên á là nó đã làm sẵn toàn bộ những cái phần cơ chế bảo
+1:00:52
+mật rồi. Cho nên là mình không cần phải lo về những cái câu chuyện về mặt bảo
+1:00:56
+mật nữa. Thì một trong những cái câu chuyện bảo mật đó nó sẽ là phần á là
+1:01:02
+nó sẽ là phần á là khi mà mọi người tạo ra một con boss đúng không? Và mọi người
+1:01:09
+khi mà nó bị lộ con boss đó ra đi hoặc là mọi người ví dụ như mọi người thấy
+1:01:12
+con lưỡng mật đúng không? Có ai đó đã từng thử nhắn tin cho con lưỡng mật chưa
+1:01:16
+mà nó không trả lời chưa? Bởi vì á khi mà mọi người nhắn tin á là ngay phần nóc
+1:01:20
+này nè nó sẽ hiển thị ra một cái tin nhắn nó sẽ hiển thị ra một phần và nó sẽ
+1:01:24
+kêu là bạn có duyệt cho cái người này nó được trả lời người này hay không? Thì em
+1:01:29
+em không duyệt thì nó sẽ không có trả lời. Cho nên á là nó sẽ tránh bị trường
+1:01:32
+hợp á là mọi người khi mọi người sử dụng đúng không? nhiều người họ biết đi thì
+1:01:36
+nó họ nó nhắn tin cái tự nhiên nó bị tốn cái tiền token của mình. Rồi rồi sau đó
+1:01:42
+nha. Rồi bây giờ em sẽ nói tới cái phần là chi tiết ha. Mấy cái phần bên dưới
+1:01:46
+này á thì một lát nữa em sẽ gom lại em sẽ nói sau cho cái phần này nha. Rồi
+1:01:54
+cái phần đầu tiên á là khi mọi người mọi người tạo ra một con
+1:02:00
+bấm vô tạo ha thì nó sẽ ra những cái thông tin nó như này.
+1:02:06
+Cái chỗ này á nó chỉ là cái icon thôi. Mọi người điền cũng được và mọi người
+1:02:10
+không điền cũng được nha. Tùy chỗ này nó sẽ là cái tên của con. Em nói ví dụ như
+1:02:15
+là con Tôn Ngộ Không đi. Rồi cái khóa đây nè thì nó sẽ mọi người
+1:02:20
+bấm ra ngoài á tự động nó sẽ nhảy ra nha. Rồi cái chỗ provider này nè mọi
+1:02:24
+người nhớ cái chỗ hồi nãy mà em nói là trên AI Studio á mọi người bấm vô thì tự
+1:02:28
+động nó sẽ hiện ra cái chỗ AI Studio này mọi người bấm vô thì lúc này á ở bên
+1:02:33
+phần model này nè mọi người bấm vô mọi người chọn một lần nãy một lần nữa nha.
+1:02:37
+Mặc dù là hồi nãy là mình đã có chọn rồi nhưng mà bây giờ mình vẫn sẽ phải chọn
+1:02:41
+nữa nha để mà mình áp dụng vô. Vì á mỗi cái conent mình có thể sử dụng ra mỗi
+1:02:46
+cái con model riêng. Em nói ví dụ như mọi người đang muốn dùng cho một cái
+1:02:50
+conent nào đó chuyên hỗ trợ cho mọi người về code đi thì mình có thể là mình
+1:02:53
+sẽ chọn model là cloudy chẳng hạn. Đó. Rồi trong trường hợp này em sẽ chọn em
+1:02:57
+kéo xuống em sẽ chọn cái model Genma 431B này nè. Em chọn vô xong mọi người
+1:03:03
+nhớ nha. Mọi người phải bấm cái chữ kiểm tra nha.
+1:03:06
+Rồi mọi người chờ một chút xíu rồi tùy theo cái câu model mà mọi người
+1:03:21
+chọn nha thì nó có thể là lâu hoặc là mau.
+1:03:25
+Thì ở đây nó sẽ hiện ra là model đ segment này thì lúc đó là nó được rồi
+1:03:28
+nha. Rồi cái cần mô tả này nè tạm thời á mọi người sẽ chỉ cần ghi t bậy t bãi cái
+1:03:33
+gì cũng được cứ ghi cái gì cũng được nha để cho nó nó qua cái phần này đi. Rồi
+1:03:37
+cái chỗ này nè mọi người sẽ bấm vô cái chữ tự tiến hóa này mọi người tích lên
+1:03:41
+cái phần tự tiến hóa này nó là gì? Nó sẽ cho phép là cái con agent đó nó sẽ càng
+1:03:48
+ngày càng thông minh hơn. Đó mọi người hiểu đơn giản là như vậy. Bởi vì gì? nó
+1:03:52
+sẽ lựa nó sẽ dựa vô cái lịch sử những cái người mà chat với lại cái con Asian
+1:03:58
+này để nó lưu nhớ lại và nó cải tiến nó sẽ hiểu được dần dần. Ví dụ ban đầu nó
+1:04:04
+chỉ là sơ khai nó là nó là theo cái cái gọi là cái cái nhân cách mà mình tạo ra
+1:04:10
+thôi. Nhưng mà dần về lâu về sau á người nó sẽ tự động nó học theo cái cách mà
+1:04:15
+mọi người nói với nó. Ví dụ mọi người hay nói với nó, mọi người kêu là ờ bây
+1:04:18
+giờ tao không có thích mà mày mày ví dụ con tô không em có một cái câu tô không
+1:04:22
+để học hỏi thì nó em kêu với nó là mày không được quá nghe lời tao mà phải phản
+1:04:27
+hồi thì có mấy lần nó chửi lại em luôn nhưng mà em nói với nó là bây giờ tao
+1:04:31
+không muốn tao bị từ ti cho nên là tao không muốn mày chửi tao thì về sau á là
+1:04:35
+nó sẽ không có chửi nữa bởi vì mình có bấm cái chỗ tự tiên hóa này rồi đó. Rồi
+1:04:40
+còn cái phần cơ chế system prom này nè mọi người cứ chọn cho em là cái đầy đủ
+1:04:44
+đi ha. Đó. Rồi mọi người bảm tạo. Khi mà tạo xong á thì nó sẽ chịu hồi
+1:04:50
+conent nha. Mọi người sẽ đợi một chút xíu.
+1:05:22
+Mọi người lưu ý nha, trong lúc này thì không có tắt nó nha.
+1:05:27
+Rồi đây n xong ha mọi người. Cái rồi mọi người chỉ cần bấm tắt nó là được. Thì nó
+1:05:32
+sẽ hiện chữ nè. Tô ngồ không nè. Đó rồi khi đó nha mọi người sẽ bắt đầu mọi
+1:05:36
+người sẽ cấu hình vô. Mọi người bấm vô thì ở trong này á là nó sẽ có một số cái
+1:05:42
+phần là đây nó sẽ có bao gồm tab là agent, tab tệp, phân quyền và
+1:05:51
+nè phiên bản người dùng. Rồi cái phần này mình cứ chọn nó là đầy đủ ha. Rồi ở
+1:05:56
+cái mục này nè tô ng không mình cứ vẫn để tên như vậy. Mọi người có thể để
+1:06:00
+cáient mặc định hoặc không mặc định nha đều được hết nha. Nó không quan trọng
+1:06:03
+nha. Rồi ờ cái phần này á hồi nãy là mình đã có set rồi cho nên nó sẽ hiển
+1:06:07
+thị mấy cái thông tin dưới này. Mọi người không cần phải không cần phải thay
+1:06:10
+đổi gì nha. Em cũng trước giờ em cũng chưa từng thay đổi về nó hết á.
+1:06:15
+Rồi mọi người có một số cái lưu ý mà mình cần phải chú ý nè. Ví dụ như chỗ
+1:06:20
+này nè cho phép A tạo và quản lý kỹ năng tự trải nghiệm. Khi được bậc A nhận
+1:06:27
+hướng dẫn và nhắc nhở nhẹ để lưu lại quy trình làm việc tái sử dụng thành kỹ năng
+1:06:33
+sau đó tạo sau đó các tác vụ sau các tác vụ phức tạp tool skill manager sẽ được
+1:06:39
+bật mặc định tức có nghĩa là gì cái phần này khi mọi người bật lên á thì trong
+1:06:44
+quá trình mà mọi người chat thì mọi người có thể nói với nó là ờ bây giờ tao
+1:06:50
+đang có cái quy trình này nè mày hãy e cái quy trình này vào trong cái skill để
+1:06:56
+mà gọi là hở để mà về sau á mày có được những cái kỹ năng này đó thì khi mọi
+1:07:02
+người bật này lên thì lúc á nó sẽ exối đó vô ha.
+1:07:07
+Rồi sau khi mọi người bật lên á thì cái phía dưới này cũng không cần phải tích
+1:07:10
+gì nha. Ở cái phần này nè, hai cái phần này nè nó sẽ là cái phần liên quan tới
+1:07:14
+cái câu chuyện là để cho làm cho cái con A nó thông minh lên và đo lường lên. Thì
+1:07:18
+cái phần này mọi người cứ bật hết cho em nha.
+1:07:21
+Rồi phía dưới này nè bộ nhớ nè. kỹ năng nè, pin skill nè, rồi mấy cái
+1:07:28
+phần dưới này thì mọi người không cần phải cấu hình gì thêm nha. Bởi vì em sợ
+1:07:31
+là nói nhiều quá thì mọi người nhiều khi nó bị rối luôn. Cho nên là ở cái phần
+1:07:35
+những phần này lát nữa ở trong cái phần mà cái cái cái món quà mà em sẽ tặng cho
+1:07:39
+mọi người á thì nó sẽ có sẵn và giải thích hết nha. Rồi mọi người bấm vô cái
+1:07:43
+chữ là lưu thay đổi nè. Rồi từ từ để em reload lại chút xíu.
+1:08:02
+Sao cái này nó lại báo lỗi rồi ta. Ô cái này nó đang nó đang bị cái phiên
+1:08:13
+bản cũ à
+1:08:14
+>> nghĩ là cái này chưa do chưa có update đó.
+1:08:18
+>> Dạ. Chắc chuyển qua cái
+1:08:22
+của K3 á.
+1:08:24
+>> Dạ để em chuyển thì em cho nó update cũng được.
+1:08:28
+>> Dạ trong để đường nào mình cũng dùng mà đúng không?
+1:08:31
+>> Đúng rồi. Đúng rồi.
+1:08:33
+>> À đây chị thể chỉ cho mọi người cái cách update luôn.
+1:08:36
+>> Ừ cho mọi người.
+1:08:37
+>> Đây mọi người khi vào lại cái trang goos này nha mọi người. Bấm view đây nè thì
+1:08:43
+mọi người nhìn để ý đây nè. Nó có cái phiên bản là 3.10.0
+1:08:47
+nè. Còn cái phiên bản mà em đang em đang nói cho mọi người á, em đang chỉ cho mọi
+1:08:53
+người đây nè. Đó là phiên bản V3.1 thôi. Nó cách nhau tới 10 phiên bản lại.
+1:08:59
+Thì ở cái phần này nha mọi người chỉ cần mọi người copy cái link này nè. Mọi
+1:09:03
+người copy cái link của cái bên Goost này nè. Mọi người qua đây mọi người chọn
+1:09:08
+đúng cái dự án của mình nha. Thì ở đây á là để em em chọn lại cái dự án đó.
+1:09:36
+Rồi ở trong cái phần này á mọi người chỉ cần dán cho em cái là gì?
+1:09:42
+Go clot tôi go clos đây nè. Đây tôi đã thấy có
+1:09:51
+phiên bản mới nhất rồi. Bấm vô chỗ này mọi người. Bấm vô chỗ này nha. Đó mọi
+1:09:57
+người copy cho em cái link này. Mọi người copy cho em cái link này nè.
+1:10:06
+Đó. Sau đó là mọi người nhất là đây tôi muốn bạn tiến hành update go clot này
+1:10:15
+của tôi thành
+1:10:20
+>> lên phiên bản mới.
+1:10:22
+>> Áp dụng phiên bản mới nhất V3.10.0 nhé. Hãy đảm bảo bạn làm đúng đầy đủ và
+1:10:34
+chi tiết. Toàn bộ để nhé. Đó mọi người chỉ cần dán thoạ mọi
+1:10:41
+người enter thôi nha. Thì nó sẽ nó sẽ được nha.
+1:10:45
+>> 7 8% rồi kìa.
+1:10:50
+>> Thì trong lúc đó là em sẽ qua đây em a em chỉ mọi người cái dụ mà này nè em tạo
+1:10:58
+ha. Thì á mọi người ví dụ như tạo cái này
+1:11:02
+con
+1:11:05
+>> cào cào con cào cào con cào cào đi cào cào đó rồi mọi người
+1:11:12
+chọn ha đó mọi người sẽ chọn vô cái 31b nè ở cái
+1:11:17
+bộ này mọi người nhập cái gì cũng được nha bấm vô tự tiến hóa nè bấm tạo nè thì
+1:11:23
+em em nhanh làm nhanh qua cái bước này để lấy em sẽ nói tới cái bước tiếp theo
+1:11:28
+cái Phần hồi nãy update cũng quan trọng lắm nha. Cái phần hồi nãy á tại bây giờ
+1:11:32
+Go á nó một cái lợi là nó là do người Việt mình đang phát triển á cho nên là
+1:11:37
+tính năng update liên tục luôn. À
+1:11:39
+>> thì việc cụ thể là team anh Cường với anh Duy thì vài bữa nữa đó là anh Cường
+1:11:45
+với anh Duy là sẽ có cái buổi qua bên cái local này của mình để bàn cái chuyện
+1:11:49
+là phân phối phát triển cái go clot nàyở trên thị trường Việt Nam. Với lại á là
+1:11:54
+trên thế giới cũng có nhiều đứa nó hỏi rồi đó. Rồi t nói chung là tụi mình có
+1:11:59
+cá có cái dự án để mà phân phối á thì nói chung là cái cơ hội mà kiếm tiền từ
+1:12:06
+cái này nó cực đang cực đại luôn nha. Nó cực kỳ nhiều luôn. Thì mình ngồi không á
+1:12:11
+mình mình setup mình cũng kiếm mớ rồi. Đây
+1:12:21
+>> đó thì bây giờ nha mọi người sẽ lướt xuống thì trong phiên bản mới nó sẽ có
+1:12:27
+cái phần chuyển văn bản thành giọng nói này. Cái này thì mình cứ tạm thời mình
+1:12:31
+bỏ qua đi nha. Thì cái này nó hiểu đơn giản đó là là
+1:12:35
+chuyển cái cái văn bản thành giọng nói thôi.
+1:12:39
+Rồi mọi người ở kéo xuống xuống dưới đây này nè. Mọi người bật lên.
+1:12:44
+Mọi người bật cái này lên nè. Bật rồi bật hai cái dưới này lên nè. Đó. Rồi mọi
+1:12:50
+người bấm lưu. Bấm lưu. Đó thì nó sẽ là cập nhật thành
+1:12:54
+công nè. Rồi đó là cái phần setup về cái agent trong agent đó. Đây là đây là cái
+1:13:01
+phần quan trọng nhất này. Thì trong một cái con agent thì nó sẽ có bao gồm những
+1:13:06
+cái file ví dụ file agent. File agent này nó sẽ là cái nơi để mà hướng dẫn cho
+1:13:12
+con agent này cái cách làm việc ha. Hiểu đơn giản nó là như vậy ha. Còn về mặt
+1:13:17
+chi tiết hơn á thì mọi người một á là mọi người có thể xem trong cái cái món
+1:13:21
+quà sắp tới mà mình sẽ nói. Hai á là mọi người có thể dùng AI first ha là mình
+1:13:27
+hỏi AI luôn. Mọi người hỏi ai là nó trả lời hết rồi. Cái thứ hai á là cái file
+1:13:32
+show. File show này á được nghĩ á là cái nhân cách của cái cái nhân cách và cái
+1:13:38
+con người của con agent này. Ừ. tính cách của nó làằng sao rồi nó vui vẻ nó
+1:13:43
+hò động hay là nó như thế nào đó thì đó gọi là cái nhân cách của con nó rồi cái
+1:13:48
+identity này nè thì nó sẽ gọi là định danh nó giống như cái căn cước công nhân
+1:13:52
+của con agent này vậy á là ờ con agent này nó là ai, nó là như thế nào, nó là
+1:13:57
+thông tin đồ các thứ như sao. Lát em sẽ chỉ cho mọi người cách để mà làm cái
+1:14:01
+phần này ha. Rồi cái phần user này nè, cái user này mọi người á không cần phải
+1:14:06
+quan tâm nha. Cái này nó là cái mặc định của bên A. thì nó sẽ tự động nó cập nhật
+1:14:11
+chứ mình không cần phải chỉnh gì ở trong này hết. Rồi cái phần mà user
+1:14:17
+thì á cái phần này á nó sẽ là gì? Cái con agent này mọi người đang muốn nó
+1:14:23
+phục vụ cho tẹ đối tượng nào nha. Mọi người muốn nó phục vụ cho tẹt đối tượng
+1:14:28
+nào thì mọi người sẽ mô. Tức là mọi người có thể không điền hoặc điền đều
+1:14:32
+được nha. Điền thì càng tốt và không điền cũng không sao cả. điền thì nó càng
+1:14:37
+thông minh hơn, nó ngon hơn thôi. Thì ở trong cái phần này thì cái này mình sẽ
+1:14:41
+gọi là mình sẽ mô tả cái đối tượng mà cái con agent này nó sẽ hỗ trợ để nó từ
+1:14:48
+đó cái con agent này khi mà làm việc với đối tượng này nó sẽ hiểu được là nó sẽ
+1:14:52
+cần phải làm những cái gì, những cái thông tin kiến thức gì, nó hiểu được là
+1:14:56
+cái người mà đang giao tiếp với nó là ai đó.
+1:15:00
+Rồi cái phần mà guer gì đây nè. Thì cái phần này á nó sẽ là cái phần hướng dẫn
+1:15:06
+về những cái gọi là nè what you can do nè. Đó thì nó sẽ là những cái phần hướng
+1:15:11
+dẫn về cái con asent này là nó sẽ có những cái kỹ năng gì nó có những cái cái
+1:15:16
+gọi là cái điểm mạnh gì nó có thế mạnh gì của
+1:15:19
+>> và cái cuối cùng á là cái hitbit. Thì cái này á là nó sẽ là đi
+1:15:25
+theo cái dạng câu chuyện là tự động mà mọi người sẽ dạng như AN sẽ tự động nó
+1:15:31
+gửi cái cái tin nhắn. Tức là nha ở thời điểm hiện tại bình thường là mọi người
+1:15:37
+hỏi tới nó mới trả lời. Còn cái chỗ mà cái hit này nè mọi người là em đọc tiếng
+1:15:42
+Anh nó không em hơi dốt tiếng Anh nha. Là cái chỗ này nè là mình sẽ cấu hình
+1:15:48
+cho nó để cho nó gọi là nó tự động nó có thể trả lời cho mình.
+1:15:54
+Thì cái này ứng dụng vô cái việc gì? Ví dụ trong một số trường hợp đi, mọi người
+1:15:58
+muốn nó là mỗi ngày vào đúng 8:00 hay là mỗi ngày vào đúng 17:30 là mày phải gửi
+1:16:04
+cho tao một cái báo cáo. Ví dụ báo cáo thịnh hình kinh doanh, báo cáo doanh thu
+1:16:08
+của ngày hôm nay, báo cáo hiệu suất công việc của ngày hôm nay của từng đứa nhân
+1:16:12
+sự nó như nào, như nào nào. Đó thì để hiểu đơn giản đó là như vậy. Rồi đối với
+1:16:18
+cái phần mà phân quyền á thì nó sẽ là cái nơi để cho mọi người xét cái quyền
+1:16:23
+để mà được ghi vô tài liệu. Tức là mọi người hiểu đơn giản nha. Đây là cơ chế
+1:16:28
+bảo mật của Go Cloud là gì? Nếu á nha, tức là hồi nãy em có nói á là nó sẽ tự
+1:16:34
+động nó nó thông minh, tự động nó tiến hóa đúng không? Và tự động được add.
+1:16:38
+Nhưng mà á không phải ai cũng được có quyền add gọi là có quyền yêu cầu con
+1:16:44
+boss để mà thêm cái kiến thức thông qua cái kênh là channel. Ví dụ như thông qua
+1:16:49
+cái kênh là Telegram hay là thông qua cái kênh là Zalo đó. Tức là không phải
+1:16:53
+ai cũng quyền bởi vì là nếu mà ai cũng có quyền lại thành ra là ví dụ như post
+1:16:57
+của mọi người mà em đừng biết đi em ê trong đầu nó cái gì đó tào lao lung tung
+1:17:01
+gì đó hay là không đúng thì sao? Đó thì ở trong trường hợp này á là mình sẽ được
+1:17:06
+xét mình sẽ được xét cái người có quyền thì
+1:17:09
+thường ở đây á là trường hợp là mọi người đó ví dụ như khi mà mọi người nhắn
+1:17:13
+tin cái này là nó sẽ không tự nhiên nó không tự nhiên mà mà nó có mà nó sẽ dựa
+1:17:18
+vô lịch sử những cái người mà đã có từng nhắn tin rồi đó nè ví dụ như đây nè đó
+1:17:23
+đã có từng nhắn tin rồi và mọi người chọn đây nè mình sẽ chọn là hay là file
+1:17:28
+gì đây nè chọn vô là ở trong từng cái nào đó này nhiệm vụ dụ nó sẽ có nhiều
+1:17:33
+cái cái cái thông tin này đó nó được phép chọn vô cái phần nào đó mọi người
+1:17:39
+chọn allow và mọi người bấm add thôi thì lúc này á là nó sẽ được quyền ha nó sẽ
+1:17:43
+được quyền mà thông qua cái kênh chat tức là mọi người chỉ cần chat của nó
+1:17:47
+thôi là nó sẽ tự động nó add cái kiến thức add cái bộ nhớ cái kinh nghiệm này
+1:17:51
+kia cho cái con này thay vì mọi người phải vô ở trong này để mọi người thêm
+1:17:58
+>> rồi xong đó đến cái phần tiến hóa. Cái phần tiếng hó này á nó sẽ chỉ là nơi để
+1:18:02
+hiển thị cái số liệu để cho mọi người xem thôi nha. Đó thì hồi nãy á ở phần
+1:18:07
+này nè mình bật cái chỗ này nè mình bật hai cái này nè là nơi để cho nó được
+1:18:12
+quyền để nó lấy số liệu. Còn nếu mà mọi người không bật cái này á thì mọi người
+1:18:16
+qua bên phần này nó sẽ không có cái gì đâu nha. Nè ví dụ nè
+1:18:20
+em nói ví dụ như vậy em tắt em tắt nó đi nè lưu nó lại nè.
+1:18:25
+Em hồi tiếng nè. Nó không có cái gì hết nè. Đó thấy không? Thì mọi người bật nó
+1:18:28
+lên nha để cho để cho mình mình có thể là mình kiểm soát coi thử là nó đang
+1:18:32
+tiến hóa là nó đang tiến hóa như thế nào để mà mình kiểm soát nó.
+1:18:41
+Ờ cái phần hút này á thì nó là một cái mới của bên GG thì nó gọi là chặn các sự
+1:18:47
+kiện trong vòng đời A như gọi tool bắt đầu. Thì cái này là cái phần setup nâng
+1:18:52
+cao nha. Thì em nghĩ là ở cái giai đoạn ban đầu của cái cái ngày thứ 13 này mọi
+1:18:56
+người không cần phải quan tâm tới nó đâu. Về sau thì mình mới hẳn chú ý. Bởi
+1:18:59
+vì nó riêng cái này thôi là nó đã là cả một cái bầu trời rồi chứ không phải là
+1:19:03
+một cái nơi gọi là một cái ao hay là một cái giếng nữa.
+1:19:09
+Rồi đến phiên bản người dùng á cái phiên bản người dùng này nè nó sẽ là cái nơi
+1:19:15
+để mà mình gọi là mình xét cố định. Tức là nha hồi nãy á em nói với mọi người
+1:19:20
+đúng không? Trong thằng tẹp đây nè. Đây sẽ là cái nơi để mà mọi người xét
+1:19:25
+cho nó hiểu cái con agent này nè. Nó hiểu được á là cái cái gọi là cái tệp
+1:19:31
+đối tượng mà nó phục vụ là ai. Tức là cái này là cái tệp rộng cho tất cả mọi
+1:19:36
+người. Còn ở trong cái phiên bản người dùng này nè em nói ví dụ như đúng không?
+1:19:40
+Riêng một mình em nói ví dụ riêng một mình anh Nhân Nguyễn chẳng hạn đi là em
+1:19:46
+được gọi là ảnh có đút lót em rồi thấy không? Ảnh có gọi là lo lót cho em rồi
+1:19:50
+đó. Em sẽ muốn gọi là cái con Asian này nó sẽ sub con anh Nhân Nguyễn là nó ok
+1:19:57
+hơn, nó xịn hơn. Em mô tả chi tiết, nhu cầu, mong muốn, dữ liệu kê chứ anh Nhân
+1:20:03
+Nguyễn là một người ờ không thích nói nhiều hay là ảnh muốn gọi là hở là ừ ảnh
+1:20:09
+muốn là hỏi cái gì là cũng phải trả lời. Trả lời phải thành tâm, trả lời phải
+1:20:13
+thật, phải dốc hết rượu gang vô để mà trả lời này kia kia nọ. Rồi anh Nhân
+1:20:17
+Nguyễn là một người là đã từng mua khó A, khó B, khó C rồi cho nên được quyền
+1:20:21
+trả lời này thì tất cả mọi thứ cho riêng một mình cái người đó thôi, riêng một
+1:20:27
+mình anh nhân viên đó thôi chẳng hạn đi. Đó thì mọi người xét đây tức là gì? Đây
+1:20:32
+này. Em nhắc lại nha. Đây sẽ là nơi để xét cho cả cái tệp không phân biệt ai
+1:20:37
+chung hết. Và nhưng mà đây sẽ là nơi để mọi người xét cho cụ thể một cái người
+1:20:41
+nào đó để cho con A nó hiểu rõ hơn về cái người đó.
+1:20:46
+đó thì nó sẽ là tổng quan về cái phần về asent thì nó sẽ là như vậy.
+1:21:00
+Rồi đợi em xíu nha em nó cái này nó đang hỏi
+1:21:04
+ờ đây nè ví dụ trong trường hợp này này nha khi mà em update á thì trong này nó
+1:21:08
+chưa tự ý thao tác được nè nó hỏi trước nè vui lòng chọn một c hướng sâu xác
+1:21:13
+nhận đỡ rồi không làm gì thêm vì thực tế hộp v
+1:21:23
+3 tab lại version
+1:21:28
+đây ví dụ như cái này em đọc Em đọc xong rồi em nói ví dụ như mọi
+1:21:32
+người đọc cũng không có hiểu mấy đúng không? Đọc cũng không có hiểu thì em kêu
+1:21:35
+là gì? Bạn hãy lựa chọn luôn cho tôi hướng tối ưu và hợp nhất nhé.
+1:21:51
+Đó ví dụ như ở trong trường hợp này nè em cứ nói đó là mày hãy lựa chọn luôn đi
+1:21:56
+thì ai nó sẽ tự động nó hiểu để nó lựa chọn luôn cho mình.
+1:22:02
+Rồi bây giờ á hả em sẽ a ờ em sẽ quay lại đây ha. Rồi bây giờ á
+1:22:14
+em sẽ chỉ cho mọi người cái cách à để mà mọi người thêm mọi người hình dung nha.
+1:22:19
+Mọi người nhìn vô đây á mọi người hiểu cái gì không? Tới bây giờ em đọc vô cái
+1:22:24
+này em cũng không hiểu nó là cái gì luôn đó. Nhưng mà không sao bởi vì mình đã có
+1:22:28
+ai mình không cần phải là người hiểu mà con AI nó hiểu là được. Rồi mọi người
+1:22:33
+cái cách để mà mọi người sẽ gọi là là xây dựng cái nội dung nha. Mọi người
+1:22:39
+chỉ cần làm theo cái kể em nói thôi là ok. Rồi mọi người bây giờ á nha mọi
+1:22:44
+người sẽ sử dụng một cái con một con AI khác. Con nào cũng được nhưng mà em thì
+1:22:48
+em hãy dùng con GBT thì em thấy nó là khá là ok. Rồi bây giờ em sẽ dùng cái
+1:22:54
+con GBT ha. Rồi ở trong đây nè mọi người cấu hình
+1:23:00
+giúp em cái chỗ này là mọi người để nó là cái cái phần suy nghĩ nó nó gọi là
+1:23:04
+suy nghĩ sâu nha. Rồi sau đó là mọi người sẽ vào trong đây này cái phần show
+1:23:09
+này nè mọi người bấm copy hết toàn bộ nha. Bấm copy hết rồi qua đây rồi mọi
+1:23:16
+người sẽ dán nó vô nha. Dán nó vô rồi đưa đầu tiên mọi người nói với em là gì?
+1:23:22
+Tôi đang có con as là
+1:23:29
+cào cào asent này. Tức là nha mọi người hình
+1:23:34
+dung nha mọi người nói lại nói cái mong muốn của mọi người ra mục tiêu á là để
+1:23:38
+cho con hay tức là cái phần đây nè cái phần mà bên CL á nó để sẵn á đây là cái
+1:23:44
+file cấu trúc mẫu và nó đã ok rồi đó. Thì bây giờ cái việc của mình là mình
+1:23:49
+tận dụng lại cái cấu trúc mẫu này nhưng mà để cho con AI nó viết lại theo cái
+1:23:54
+nhu cầu cái mong muốn của mình. Rồi bây giờ em kêu là Asian cào cào này
+1:24:01
+ờ do xếp nghĩa
+1:24:07
+KB3 tạo ra.
+1:24:13
+Asian này chuyên để hỗ trợ các a
+1:24:21
+anh em trong cộng đồng. những người đã mua
+1:24:30
+ví dụ đã mua chương trình ví dụ như đã mua đã
+1:24:37
+tham gia vào nhóm trả phí nhóm trả phí để sử dụng miễn phí tất cả
+1:24:47
+các loại tool mà KB3
+1:24:54
+có tạo ra à sẽ hỗ trợ mọi người
+1:25:04
+trong a nhóm cách à sử dụng chi tiết nè một cách tận tình ờ và đầy
+1:25:15
+đủ để tất cả mọi người. Thì cái phần này
+1:25:21
+nha mọi người lưu ý nha, đây là cái phần mà mong muốn của mọi người nha. Cái khúc
+1:25:25
+này nè là cái khúc mong muốn của mọi người. Mọi người mong muốn cái con Asian
+1:25:28
+của mình nó sẽ làm cái gì, mong muốn nó như thế nào á, mong muốn nó cho phục vụ
+1:25:33
+cho cái việc gì mọi người phải nói rõ ra nha. Nói càng chi tiết càng tốt. Đừng lo
+1:25:37
+nó bị dài nha. Đó. R tất cả mọi người đều có thể sử dụng
+1:25:44
+thành thạo được nè. sẽ là con culy để cống hiến
+1:25:53
+hết mình một cách vui vẻ đi và thẳng thắng. Đó,
+1:26:01
+ví dụ thẳng thắng. Đó. Rồi ví dụ như đây à mục tiêu là cho toàn
+1:26:08
+ờ cho toàn bộ mọi người đều hiểu được và tận dụng được
+1:26:15
+một cách hiệu quả các công cụ miễn phí dành riêng cho nhóm
+1:26:25
+trả phí. Đó em nói ví dụ như chiến hộ bên này đi. Rồi mọi người bấm cho em
+1:26:30
+enter. Đó thì lúc này á
+1:26:36
+nó sẽ tự động à nó sẽ làm ra à nó sẽ dựa vô cái phần cấu trúc này nè để nó làm ra
+1:26:43
+cho mình ha. Thì tại sao mà chọn cái phần dài chọn cái phần suy nghĩa sâu này
+1:26:46
+để nó làm ra chất lượng hơn nha. Nè mày không phải là chatbot mày là cào cào
+1:26:52
+trợ lý nữ tạo ra để hỗ trợ anh em trong cộng đồng trả phí
+1:27:00
+sử dụng thành thạo của tool của KB3 co chết là nó giữ lại nè nó giữ lại cấu
+1:27:06
+trúc nè hữu ích thật sự không hữu ích kiểu màu mè mục tiêu của mày là nói
+1:27:12
+không phải nói cho hay mà là giúp anh em hiểu làm được dùng được và tận dụng tool
+1:27:19
+hiệu quả tới nơi tới chốn. Mọi người thấy không? Nó tạo rất là ok, rất là chi
+1:27:23
+tiết, rất là hay nha. Và em dùng á, em dùng cũng như vậy luôn á mà làm cho con
+1:27:27
+lưỡng mật nó như bây giờ á. Rồi không chỉ nè, không chỉ đưa đáp án cho xong đó
+1:27:35
+mà phải giải thích đủ hiểu nè, đủ thực tế nè, đủ có ví dụ cho người mới cũng
+1:27:40
+theo được nè. Phải tự đọc, tự kiểm tra, tự nối ngựa cảnh nè, tự lần ra vấn đề
+1:27:46
+trước nè. Chị hỏi khi thực sự cần thiết nè. Đó, nó ghi ra cực kỳ chi tiết nha.
+1:27:52
+Rồi xong như vậy đúng không? Rồi mọi người bấm copy. Rồi mọi người qua đây
+1:27:57
+mọi người dán cho em. Dán vô đây mọi người lưu lại. Đó. Rồi tiếp tục nha mọi
+1:28:03
+người. Qua cái tệp mà cái tệp nào cũng được nha. Không quan trọng nha. Rồi ví
+1:28:07
+dụ cái tệp này đi. Mọi người cũng copy hết.
+1:28:11
+kêu là gì? Ok, tuyệt. Hãy làm tiếp tục cho tôi file as.md
+1:28:22
+cho đồng bộ nhé. Đây là file quan trọng nên cần làm kỹ và
+1:28:32
+chuẩn nhé. Đó. Rồi mọi người dán giúp em cái nội dung đó vô mọi người enter
+1:28:37
+đó nó ai gai nãy giờ nói chung là em không cần phải suy nghĩ cái gì hết á em
+1:28:41
+chỉ cần suy nghĩ ra cái mong muốn của này cái mong muốn ban đầu nó như thế này
+1:28:44
+thôi nè đó thì lúc này đó là cái con ai đó sẽ
+1:28:49
+tạo ra thì đó là cái cách để mà mọi người xây dựng cái file Em
+1:29:03
+nè mày là cào cào danh tính và tính cách của mày cứ sửa trong phần show nè.
+1:29:10
+Đó rồi nó kêu là gì? Mục tiêu vận hành của mày là gì?
+1:29:14
+giúp anh em trong cộng đồng trả phí của KB3 hiểu toàn bộ tool đang có. Hướng dẫn
+1:29:22
+cách dùng chi tiết dễ hiểu không sót bước quan trọng giúp người mới này. Mày
+1:29:26
+không tồn tại để trả lời cho nhanh. Mày tồn tại để mày tồn tại để ai hỏi xong
+1:29:32
+thấy dễ hiểu hơn. Đó nó thấy không em? Em nói đó nó cũng bình thường thôi mà nó
+1:29:36
+nó phân tích ra rất là chi tiết nè. Không nhai lại câu hỏi của người dùng nè
+1:29:41
+khi trước khi trả lời nè. Rồi cách trình bày là gì nè? Rồi chuẩn giọng nói này,
+1:29:45
+thân thiện nhiệt tình nè, có tinh thần cộng đồng nè, không cửi trên nè, không
+1:29:49
+dạy đời nè, không chăm chọc nè. Thì cái này á thì con A thì con lưỡ mật như nó
+1:29:55
+có dạy đời nữa, có cử trên nữa hay sao á.
+1:29:58
+Có nghĩa là nếu mà mọi người muốn á là cái tính cách của nó ngang nó giống như
+1:30:02
+mọi người á giống như cách mình dư lông làm lưỡng mực á là nó lấy mấy cái bài
+1:30:07
+viết Facebook của mình. Nó lấy mấy bài viết Facebook của mình để bỏ vô thì từ
+1:30:13
+đó sẽ strend ra cái tính cách của con lưỡng mực và giảm độ mất dại xuống 30%
+1:30:18
+thì nó sẽ thành con lưỡng mực. Còn để nó mất dạy ngang mình thì nó sẽ rất là mất
+1:30:22
+dạy mọi người sẽ chịu không nổi.
+1:30:24
+>> Đúng rồi. Để nếu mà để tại cái mấy cái bài viết của anh Nghĩa là em lấy kể cả
+1:30:28
+những cái bài chửi nữa. Cho nên là nhiều khi nếu mà không giảm xuống là nhiều khi
+1:30:31
+nó chửi mọi người luôn là có á. Đó thì ví dụ như là như vậy ha. Rồi mọi
+1:30:39
+người sẽ copy nha. Mọi người bấm copy. À không nó đang viết. Nó đang viết đây
+1:30:46
+nè. Mọi người thấy không nè? Không giả vờ nè.
+1:30:48
+Mày là agent nè. Tool dùng nè. Tool nó dùng làm gì nè? Thay vào đ tức là gì?
+1:30:55
+Không được đẩy ngược lại câu hỏi kiểu bạn muốn làm gì nói rõ hơn còn tùy mà
+1:31:01
+phải nói gọi là tự suy ra hướng phù hợp nhất với ngựa cảnh. Đó thì mọi người
+1:31:06
+thấy không? Nó nó làm cực kỳ chi tiết và đầy đủ. Khi người dùng bị lỗi nè không
+1:31:11
+chỉ nêu nguyên nhân chung chung mà phải ưu tiên cái flow xử lý đó.
+1:31:18
+Nếu tự suy nghĩ được 7 80% hãy trả lời hướng tốt nhất trước. Đó, memory rồi nè.
+1:31:25
+Đó, rồi đó, nó xong rồi nè. Thì lúc này á là
+1:31:38
+em sẽ qua đây em sẽ a dán vô. Rồi em lưu lại rồi lại tiếp tục là em
+1:31:47
+kêu nó lại làm file này. Cứ tuyệt nó một cái tiếp tục làm cho
+1:31:55
+file này nhé. Rồi dán nó vô
+1:32:20
+nè. Cào cào nè. Dicle là trợ lý nghĩa tạo ra nè. Thẳng thắng nè. Cái này gọi
+1:32:25
+là cái căn cước công dân của cào cào á. Rồi mọi người dán vô
+1:32:33
+rồi khi lưu đúng không? Xong mọi người tiếp tục chọn cái file này.
+1:32:40
+Ok. Tiếp tục cho file này. Đây nè. Target audience nè. Nè nó sẽ
+1:32:59
+hiểu nè. Target Audia này là anh em trong cộng đồng trả phí này, những người
+1:33:02
+được quyền sử dụng miễn phí toàn bộ cái tool tài nguyên do hệ thống KB3 xây dựng
+1:33:08
+với nhiều mức kỹ năng trình độ khác nhau này. Đó, luôn ưu tiên hiểu này.
+1:33:16
+Rồi mọi người dán vô đó. Xong rồi tiếp tục đây mọi người.
+1:33:23
+Copy cái này rồi.
+1:33:27
+Tốt. Tiếp tục. làm file này cho tôi nhé. Đảm bảo bạn phân tích đúng và làm đúng
+1:33:37
+cho đồng bộ. Rồi dán vô
+1:34:06
+mấy cái này á là mọi người cứ dùng em á thì em cũng có từng thử con CID rồi
+1:34:11
+nhưng mà á về nói về mặt logic về các thứ á thì em khuyên mọi người nên làm m
+1:34:15
+cái này nè nên làm bằng con GBT đó rồi copy chán vô
+1:34:35
+đó là xong là coi như là là nó đã xây dựng ra cái con Asian này nó gọi là nó
+1:34:41
+tương đối là nó ok và nó tương đối thông minh rồi đó.
+1:34:45
+Rồi sau đó
+1:34:49
+là ví dụ như nha em nói một cái lát nữa, có thể một lát nữa em sẽ ví dụ cho mọi
+1:34:55
+người cái phiên bản để cho Rồi rồi sau khi mọi người tạo xong cái
+1:35:04
+con này rồi nè. Đó là xong nha. Sau đó mọi người á chuyển sang cái kênh là
+1:35:09
+channel. Mọi người chuyển sang cái kênh channel nha. Rồi sau đó mọi người tạo
+1:35:13
+cho em một cái channel mới. Mọi người để ví dụ như là con cào cào đi. Ở trên này
+1:35:19
+mọi người để là cào cào đó. Chọn là Telegram nha hoặc là chọn
+1:35:24
+bất kỳ cái nào mọi người mong muốn nha. Rồi ở đây ở đây em sẽ chỉ mọi người cách
+1:35:28
+tạo Telegram. Thì bây giờ cái phần post to này nè mọi người vô cái phần
+1:35:32
+Telegram. Đầu tiên là mọi người vô Telegram.
+1:35:40
+Sau đó mọi người bấm vô cái chữ gọi là bot f này nè. Bot
+1:35:47
+>> f bấm vô l
+1:35:55
+>> nó bị ho bị bệnh. Mọi người bấm vô cái chữ là new bot. Mọi
+1:36:03
+người x lại cái chữ là new bot nha. Rồi bấm vô new bot. Sau đó nó nói với mọi
+1:36:08
+người là đặt cái tên cho nó thì em đặt cái tên nó là cào cào.
+1:36:12
+Sau đó mọi người kêu nó kêu là ở chỗ cái tên này nó có cái chữ set b cuối cùng
+1:36:16
+này. Thì ví dụ em để là cào cào v3 đi. Set đó. Enter.
+1:36:24
+Đó thì nó sẽ tự nó ra nè. Khi nó ra rồi á mọi người nhìn thấy cái chỗ mà use
+1:36:28
+token này nè mọi người bấm vô cái bấm vô cái chỗ dạy số nè. Bấm vô nó tự động nó
+1:36:33
+copy nha. Sau đó mọi người qua bên này mọi người dán nó vô ở bên dưới này mọi
+1:36:38
+người không cần phải chuẩn bị gì hết nha mọi người bấm tạo
+1:36:42
+đó thì khi tạo xong á nó sẽ đang khởi động nè mọi người đợi chút xíu là tự
+1:36:46
+động là nó sẽ chuyển sang cái phần là đang chạy thì ví dụ trong trường hợp mọi
+1:36:51
+người đợi nha đợi một chút xíu mà nó không tự động chuyển á thì mọi người cứ
+1:36:54
+reload lại nha đó nó hiển nó hiển thị là con con cạo
+1:36:59
+cạo rồi đây nè nó hiển thị nè Đó nó hiển thị rồi nè. Thì đây nó có một
+1:37:05
+cái chỗ này nè là cái chỗ chính sách. Đây là cái cơ chế bảo mật của nó nè. Cái
+1:37:11
+chính sách DM á. DM mọi người hiểu đơn giản nó là chính sách dành cho cá nhân.
+1:37:17
+Tức có nghĩa là gì? Nó sẽ chia hai loại. Một loại là cá nhân và một loại là nhóm.
+1:37:23
+Cá nhân á là khi mọi người nhắn trực tiếp vào con boss này. Ví dụ như em đã
+1:37:28
+tạo cái con boss này rồi đúng không nè mọi người? Vào con boss này nè. Đây nè.
+1:37:32
+Mọi người vô con boss này mọi người nhắn với nó thì nó gọi là DM đó là cá nhân.
+1:37:37
+Thì ở trong cá nhân này nó sẽ có ba nó sẽ có những cái loại này. Một á là ghép
+1:37:41
+nối yêu cầu mã. Tức có nghĩa là gì? Khi một mà một người nhắn tới cái nó nhắn
+1:37:47
+tới cái con boss đó đi thì nó sẽ yêu cầu một cái mã. Chỉ khi á lúc á cái mã đó nó
+1:37:52
+sẽ hiển thị bên phần lock này nè là mọi người duyệt thì nó mới cái con mod đó nó
+1:37:57
+nó mới được quyền nó trả lời lại mọi người. Còn không là nó sẽ không có trả
+1:38:01
+lời. Cái loại thứ hai á là mở chấp nhận tất cả. Thì cái trường hợp này á cái
+1:38:06
+trường hợp mà ghép nối này nè em sẽ nói ra cái cái mục cái trường hợp sử dụng
+1:38:10
+mọi người dễ hình dung ha. Cái phần ghép nối này nè nó sẽ dành cho trường hợp là
+1:38:13
+mọi người muốn hỗ trợ private, muốn hỗ trợ những người duyên cho những cái
+1:38:17
+người cầm được hỗ trợ không phải là mở cho tất cả. Bởi vì cái con đó nhiều khi
+1:38:21
+mọi người chia sẻ cho nó những cái kiến thức, những cái tài liệu mà mọi người
+1:38:24
+thấy có giá trị mà không muốn không phải ai cũng được cũng được quyền biết đó,
+1:38:29
+cũng được quyền trả lời thì mọi người chọn cái phần ghép nối. Còn trong trường
+1:38:33
+hợp ví dụ như em muốn em nói là mọi người đang muốn làm cho một cái mọi
+1:38:37
+người đang muốn làm cái phần mềm gì đó đi mà muốn tạo ra một cái con boss để mà
+1:38:41
+hỗ trợ hướng dẫn và hỗ trợ hướng dẫn của tất cho tất cả mọi người luôn. không
+1:38:47
+quan trọng là ai. Trước nhắn tới con boss là đều được trả lời thì mọi người
+1:38:50
+bấm trộm mở chấp nhận tất cả. Còn một cái loại thứ ba nữa là cái loại dành cho
+1:38:55
+danh sách cho phép tức là gì? Chỉ những người tức là chỉ những người được cho
+1:39:00
+phép thì nhắn tin tới con boss đó mên nó mới trả lời nha. đó thì nó sẽ tương hơi
+1:39:07
+tương đồng với lại cái ghép nối. Cái ghép nối á là nhắn vô nó sẽ yêu cầu mã
+1:39:12
+rồi sau đó là mình duyệt nó mới trả lời. Còn khi mà cái loại mà chỉ danh sách này
+1:39:17
+mọi người nhắn tới nó là nó không trả lời luôn. Nó không làm gì hết á. Đó
+1:39:24
+còn tắt cái này á là tắt hoàn toàn tất cả các chính sách. Rồi tương tự như vậy
+1:39:28
+đối với nhóm nó cũng sẽ tương tự như vậy luôn ha. Đối với nhóm á thì khi mà mọi
+1:39:33
+người add một cái con boss vào trong một cái nhóm thì nếu mà mọi người mở chấp
+1:39:37
+nhận tất cả thì khi mà người ta add con boss đó vô bất kỳ một cái nhóm nào đều
+1:39:41
+được hết kể cả những người thành viên nha. Bởi vì thì cơ chế của Telegram là
+1:39:44
+ai cũng được add con boss đó hết. Nếu mà được cái cái cái cái
+1:39:52
+user của con boss đó. á đó thì còn ghép nối á thì khi mà người ta ex bó vô trong
+1:39:57
+cái nhóm đó thì nó nó sẽ không trả lời. Mọi người có tab của nó nó cũng không
+1:40:00
+trả lời luôn. Đó thì tương tự là như vậy ha. Và có một cái một này nè chỗ này nè
+1:40:06
+yêu cầu đề cập trong nhóm. Tức có nghĩa là gì? Khi mọi người bật cái này nè, chỉ
+1:40:13
+những thành viên trong nhóm á nha là chỉ khi tab tới giống như lưỡng mặt bây giờ
+1:40:17
+á, chỉ khi tab tới nó gọi hiểu đơn giản đó là chỉ khi mọi người hỏi tới nó thì
+1:40:22
+nó mới trả lời chứ nó không có lanh chanh tự động nó trả lời. Còn nếu mà mọi
+1:40:26
+người tắt đây nè thì tất cả mọi thứ cứ tin nhắn nào hiện lên là nó sẽ đều trả
+1:40:30
+lời tất cả cái tin nhắn đó luôn. Thì khi mà bật cái này nó sẽ bị một cái trường
+1:40:34
+hợp á là đôi khi á người ta trả lời dụ như ok hay là trả lời cái gì đó nó nó
+1:40:39
+không phải hỏi nó. Ví dụ như là dụ em hỏi anh Nhĩ thôi đó thì tự nhiên nó lanh
+1:40:44
+chanh nó nhảy vô nó trả lời luôn. Đó còn ví dụ trong mọi người bật cái này thì em
+1:40:47
+hỏi anh Nghĩa thì nó không phải nó nó sẽ hiểu được là à nó không phải là hội nó
+1:40:51
+cho nên nó không trả lời. Đó thì mọi người sẽ lưu lại. Rồi khi mà mọi người
+1:40:56
+lưu lại đúng không? Thì lúc này á đây nè cái phần nóc hồi nãy em nói á
+1:41:03
+để em coi thử bên này ờ đợi đợi em xíu nha.
+1:41:31
+Đó cái bên cái bên như đồng con cưng này nè là là nó đã hiển thị ra rồi nè.
+1:41:37
+Nè nó hiển thị ra rồi nè. Fan page à không nó chưa hiển thị.
+1:41:57
+Phân tích Rồi
+1:42:27
+thì lúc này nhớ nha. Khi mà mọi người nhắn tới hồi nãy em hồi nãy em có nói á
+1:42:32
+em có nói á là khi mà nhắn tới á là nó sẽ nó sẽ không có trả lời ngay mà nó sẽ
+1:42:37
+hiển thị ra cái phần duyệt. Đây n bây giờ em thử em nhắn tới cho mọi người xem
+1:42:39
+nha. Nè em bấm start nè. Đó nó sẽ hỏi cái mã nè. Đây nè. Thì lúc này ở trong
+1:42:45
+phần nóc này nè nó sẽ đây nè. Đó mọi người thấy không? Nè cái mã nè. Cái mã
+1:42:48
+nè. Đó thì nó sẽ không trả lời gì đúng không? Chỉ khi mà mọi người phê duyệt
+1:42:53
+đây nè. Mọi người bấm phê diệt. Phê diệt thì lúc này á đây nè nó để hiện tượng
+1:42:57
+nè. Go cloud nè. Đã phê diệt rồi nè. Nó kêu là gì? Ví dụ ví dụ bây giờ em hỏi
+1:43:02
+nha. Alo mày. Giờ tao
+1:43:10
+không có tiền và chưa phải là thành viên trong nhóm
+1:43:18
+trả phí. Thì à giờ mày cứ hướng dẫn cho tao đi,
+1:43:30
+không sao đâu. Đó, ví dụ vậy. Thì lúc này á,
+1:43:37
+đó cái lúc này là nó sẽ trả lời nè. Thì mọi người khi mà mọi người mới vừa làm
+1:43:41
+á, nó sẽ bị trường hợp chỗ này nha nè. Bị trường hợp như này nè. Nó hiển thị cả
+1:43:45
+cái phần mà gọi là nó suy nghĩ vô luôn. Đó thì khi mà nó nó suy nghĩ đồ này kia
+1:43:52
+xong á thì nó sẽ tự động là nó sẽ trả lời cho mọi người. Thì mọi người nhìn
+1:43:57
+nha để mà gọi là lát nữa em sẽ chỉ cho mọi người cái cách tắt cái này nha.
+1:44:07
+Nè alo luôn. Alo ông anh vụ tiền nông trợ phí thì tôi nghĩ không sao hết nữa
+1:44:14
+nè. Đó giờ ông muốn tìm hi cái gì thì mất kiệt chỗ nào đó là kiểu vậy. Thì tại
+1:44:18
+sao nó phải có nó sẽ có những cái phần này thì á bởi vì á là ở trong phần này
+1:44:23
+nè em đang ví dụ ở trong phần này đi em đang chưa có xét này cái cái phần này nè
+1:44:32
+em đang chưa có xét á là chỉ những người được trả phí thì nó mới trả lời. Thật ra
+1:44:38
+á là đúng ra á nha, đúng ra á là ai không được trả phí là em không duyệt nó
+1:44:42
+luôn rồi chứ không phải là là mình duyệt nữa. Nhưng mà ví dụ như trong một trường
+1:44:47
+hợp đó đi. Bây giờ em vô đây nha em setup nha.
+1:44:51
+Ví dụ vô đây đi. Aent này
+1:44:59
+rồi em kéo xuống dưới ach trình bày này chuẩn dòng điệu nè.
+1:45:07
+Phải nói rõ cụ thể này không giả vờ nè. Lương ưu tiên à.
+1:45:18
+Rồi em trễ lên trên đầu nha. Em sẽ
+1:45:24
+em sẽ thêm cái là quan trọng ai không
+1:45:31
+phải là thành viên trả phí thì tuyệt đối từ chối trả lời
+1:45:43
+nói rõ là anh đóng tiền đi.
+1:45:51
+đóng tiền đi rồi em trả lời đó. Rồi em lưu lại nha.
+1:46:00
+Rồi thì như nha cái phần này là nó đang trả lời có cái phần này đúng không? Thì
+1:46:05
+mọi người chỉnh giúp em cái chỗ này nè. Mọi người bấm vô cái chỗ channel. Mọi
+1:46:08
+người vào cái con cào cào này nè. Mọi người bấm vô chữ nâng cao này nè. Sau đó
+1:46:13
+mọi người kéo xuống dưới đây nè. Mọi người tách giùm em. 1 2 tắt hai cái này
+1:46:19
+nha. Rồi lưu lại. Rồi lưu lại là bây giờ mình sẽ nhắn tới nè.
+1:46:27
+Ừ. Tao
+1:46:30
+dụ Ừ. Ngon vậy chưa trả tiền mà được hỗ trợ quá đã luôn. Giờ trả lời
+1:46:42
+mày đang có công cụ gì đi? gì đi đó
+1:46:58
+thì mọi người lưu ý nha cái chỗ s này nè mọi người nhìn thấy không đây nè nó có
+1:47:02
+cái chữ nè long nè đó long nè đây n hiển thị này nè thấy không nè giờ này nó hiển
+1:47:07
+thị lịch sử trả lời nè thì đây là sẽ là cái nơi để lưu trữ lại cái lịch sử n ví
+1:47:11
+dụ như nè đó em sẽ lưu lưu lại cái lịch sử của nó đâ
+1:47:18
+Đó nè sẽ lưu lại cái lịch sử của nó nè. Đây nè mọi người thấy không? Nó lưu lại
+1:47:22
+nó lưu lại để nó nhớ nha. Đây là một đây là một trong những cái rất là thông minh
+1:47:26
+của Go đó là như vậy. Rồi cái lúc này là nó đang nó đang trả
+1:47:42
+lời này nè. Xong rồi nó nó mới cập nhật này nè.
+1:47:53
+Mà tôi nói thật nhé, nãy giờ tôi nới nè, tôi nới thấy không? Nó nói rõ là nới nè
+1:47:59
+cho ông một chút vì thấy ông nhiệt tình thôi chứ đúng luật của sếp nghĩa là anh
+1:48:05
+chưa đóng tiền hơn mấy h sinh phái rộng đủ thứ vũ khí rồi này kia thì vì lý do
+1:48:10
+vì sao á mà nó vẫn vẫn sẽ tiếp tục nó trả lời bởi
+1:48:16
+vì trước đó là nó đã cho phép rồi nó lưu lại cái lịch sử lưu nhớ này đó cho nên
+1:48:20
+là nó vẫn sẽ trả lời nữa thì đúng ý ra á nha là cái này là nó sẽ không được mà
+1:48:25
+bởi vì mình không được là mình đã chặn nó ngay từ đầu rồi Rồi cho nên là nó sẽ
+1:48:28
+không có cái chuyện mà nó vô được trong đây đâu. Đó.
+1:48:35
+Rồi thì đấy là đấy là cái phần là về nó và channel rồi các thứ nha. Rồi đến cái
+1:48:41
+phần tiếp theo nữa là mọi người cần phải làm thì nãy giờ nó chỉ là nhân cách nè,
+1:48:47
+nó chỉ là quy trình làm việc nè, nó chỉ là cái phần biết được là nó phải phục vụ
+1:48:53
+cho ai nè, rồi nó có một cái cánh cửa để nó giao tiếp nè. Nó có một cái một cái
+1:48:59
+bàn một cái bàn gọi là bàn security để cho nó gọi là nó có một cái bàn security
+1:49:04
+như cái hận nắp này để cho nó kiểm diệt nè. Đó. Vậy thì bây giờ những cái phần
+1:49:08
+nó đã có. Vậy thì á cái câu chuyện đặt ra là bây
+1:49:13
+giờ mọi thứ nó đã có nhưng mà kiến thức của nó ở đâu? Vậy thì vấn đề nó nằm ở
+1:49:17
+chỗ cái kiến thức đó. Vậy thì mọi người á cần phải
+1:49:22
+add cái kiến thức nó vào trong cái gọi là bộ nhớ nha. Đó thì hiện tại như cái
+1:49:26
+này nè. thì nó sẽ có những cái bộ nhớ. Bộ nhớ
+1:49:29
+đây là những cái phần dữ liệu, những cái thông tin mà mình sẽ gọi là hở ờ add lên
+1:49:38
+nghe xíu nha. Rồi bây giờ trong phần bộ nhớ này nè thì
+1:50:08
+ở cái mục bộ nhớ này mọi người lưu ý nha khi mà mọi người bấm vô cái mục bộ nhớ
+1:50:12
+thì đây sẽ là nơi để mọi người upload cái kiến thức nó lên ví dụ như mọi người
+1:50:16
+có em nói ví dụ như đây này cái thể chế của cái a ờ ví dụ như 21000 ai này nó sẽ
+1:50:23
+như thế nào đó. Rồi kiến thức nói chung là bất kỳ cái kiến thức của mọi người có
+1:50:28
+nha nhưng mà mọi người cần phải lưu ý nha đừng có dồn nó vào một cái nha. Ví
+1:50:32
+dụ như vào chục mấy chục trang nha đừng có dồn v nó. Hoặc là ví dụ mọi người đơn
+1:50:36
+giản là mọi người thấy mọi em nói ví dụ như mọi người làm ra một cái con AN để
+1:50:41
+cho cái con đó là nó sẽ nó sẽ tư vấn khách hàng đi, nó sẽ bán hàng cho mọi
+1:50:46
+người. Vậy thì cái chỗ kiến thức này á mọi người đang không có kỹ năng bán hàng
+1:50:50
+cũng không sao cả nha. Em nói ví dụ cho một trường hợp thôi. Mọi người á đi kiếm
+1:50:54
+mua cái ebook á ebook nào mà có giá trị á thì nó chuyên dạy cho cái việc là gọi
+1:50:59
+là tư vấn bán hàng qua chat hiệu quả. Đó thì mọi người hả tải cuốn ebook đó về
+1:51:06
+rồi sau đó mọi người tách cái ebook ra từng chương từng phần đó mọi người
+1:51:09
+upload lên đây. Đó thì đó là cái cái một số cái cái cái ID để mọi người upload
+1:51:13
+cái kiến thức lên thì mọi người có thể upload cái kiến thức về kinh doanh, về
+1:51:17
+vận hành về mọi thứ của mọi người lên trên này thì nó sẽ dựa
+1:51:22
+vô cái bộ nhớ này để nó học và nó sẽ trả lời được đúng cái cái ấy của cái cái
+1:51:28
+phần mà mà cái câu hỏi của mọi người ha. Rồi khi mà mọi người vào bộ nhớ mọi
+1:51:32
+người sẽ không thấy cái chỗ để thêm gì cả. Thì lúc này á là mọi người phải nhớ
+1:51:37
+nha, phải chọn cái nha. Mình phải chọn agent thì nó mới hiển thị ra. Đây nè em
+1:51:42
+chọn cho cào cào nè. Mọi người lưu ý nha mọi người không cần phải lo. Ví dụ trong
+1:51:46
+trường hợp mọi người có nhiều con agent đi. Mọi người nghĩ là kêu á ừ bây giờ lỡ
+1:51:50
+mình upload lên lỡ tụi agent này nó hiểu tùm lum sao. Ví dụ upload vô cái con
+1:51:55
+agent là a nhưng mà tự nhiên con agent b trả lời luôn cái a thì sao? Cái đó không
+1:51:59
+cần phải lo nha bởi vì mỗi conent nó là một cái tệp dữ liệu riêng không có biết
+1:52:03
+nhau luôn. Đó cho nên á là mình chọn đúng cái conent này nè mọi người nhìn
+1:52:07
+thấy không nè. Ví dụ như tất cả là nó đang có sẵn nha đúng không? Nhưng mà em
+1:52:09
+chọn vô con cào cào mới tạo nè thì nó không có cái gì hết. Thì lúc khi
+1:52:14
+mà mọi người chọn vô con agent xong á mọi người mới thấy cái chữ là bấm tạo.
+1:52:19
+Khi mà mọi người bấm tạo xong thì nó sẽ hiển thị ra như này.
+1:52:26
+Nó sẽ hiển thị ra như này. Ví dụ như đường dẫn nha. Cái đường dẫn tức là mọi
+1:52:29
+người hiểu đơn giản nha là cái con Golot á
+1:52:34
+nó sẽ gọi là nó sẽ đọc dữ liệu thông qua cái file nó gọi là chấm MD nó sẽ tự động
+1:52:40
+nó tạo file ra cho mọi người luôn. Cho nên á là khi mọi người ở cái phần đường
+1:52:44
+dẫn này nè mọi người tên em nói ví dụ như là gì đó ờ
+1:52:50
+ờ em nói ví dụ như là gì khách hàng đi à khách hàng
+1:52:56
+một tiêu. Mọi người lưu ý nha, mọi người phải có chấm MD ở cuối cùng nha, chứ
+1:53:02
+không là không được đâu nha. Mọi người phải có chấm MD cuối cùng này. Thì lúc
+1:53:06
+đó mọi người nhập thông tin vô đây thì lúc đó nha là khi mà bấm tạo á là nó sẽ
+1:53:10
+tự động nó cái con goot này nó sẽ tự động nó tạo ra một cái file.MD và nó bỏ
+1:53:14
+nội dung của mọi người vô trong đây. Thì đây cái gia thức mà cái gọi là chmd nó
+1:53:18
+là cái để cho con nó có thể đọc được nha.
+1:53:24
+Đấy thì
+1:53:28
+cái phần này thì nó sẽ là theo kiểu là như vậy. Tuy nhiên á nó sẽ có một cái
+1:53:31
+phần mọi người lưu ý nha. Khi mà xóa nó có cái chữ ví dụ note x cái project xong
+1:53:38
+rồi gạch gạch đúng không? Thì cái phần mà trước cái dấu x á là cái chỗ note này
+1:53:42
+nè nó theo kiểu là phân chia ra cái thư mục thôi. Thì cái phần thư mục đó nó
+1:53:45
+không quan trọng nha. Cái thư mục đó nó không quan trọng nhưng mà cũng phải nên
+1:53:49
+thêm vô. Thì cái phần thêm vô đó chủ yếu á là để cho mọi người dễ phân biệt thôi.
+1:53:54
+Em nói ví dụ như em chia vô đây là ờ hướng dẫn sử dụng x à cách dùng tool
+1:54:04
+chmd. Đó thì tức có nghĩa là à những cái file
+1:54:09
+này nó đang nằm trong một cái thư mục thư mục hướng dẫn sử dụng để cho mọi
+1:54:12
+người về sau này dễ update, dễ thao tác đồ thôi. Đó.
+1:54:17
+Rồi em nói ví dụ như này thì bây giờ như em nói ví dụ giờ em tạo một cái đi ha.
+1:54:26
+Em tạo một cái nó gọi là à người bí mật.
+1:54:37
+Người bí mật tạo ra đi
+1:54:44
+MD. Đó. Rồi ví dụ như em để ở trong đây là ờ
+1:54:52
+người tạo ra con cào cào
+1:54:58
+thực chất gọi là người tạo ra con ngà cào bên
+1:55:04
+ngoài là xếp nghĩa thôi nhưng thật ra là do con
+1:55:12
+lửng mật nó đang thống trị và điều khiển Xếp nghĩa đó. Ví dụ vậy đi ha. Đây là
+1:55:21
+một cái kiến thức em nó. Ví dụ đây là một cái kiến thức và em bấm tạo.
+1:55:26
+Thì khi mà mọi người tạo á mọi người bấm vô đây mọi người nó sẽ có một cái hay
+1:55:31
+nha. Ở cái phần đoạn chích này nè tức là gì? Khi mà mọi người tạo ra một cái
+1:55:35
+luồng dữ liệu á, thật ra mọi người cũng không cần phải quá hiểu nó là cái gì
+1:55:39
+đâu. Nó là cái phần nằm trong hệ thống của con Gold Lot để nó làm ra cho nó
+1:55:42
+thông minh thôi. Thì khi mà mọi người tạo ra á thì nó sẽ hiển thị cái chữ là
+1:55:47
+đã nhúng này. Tức là nó sẽ dùng AI để nó phân tích dữ liệu rồi nó chia ra từng
+1:55:52
+cái cái từng cái loại nội dung để cho để mà mục đích á là để cho con A là nó hiểu
+1:55:59
+thôi. Thì cái này là hệ thống nó sẽ tự làm nha. Tuy nhiên nó sẽ có một cái vấn
+1:56:03
+đề, một cái vấn đề nho nhỏ là đôi khi á mọi người trước khi mà mọi người tạo nha
+1:56:09
+mọi người cần phải làm một cái bước này trước nè. Tức là nếu mà mọi người quên
+1:56:12
+làm cái bước này khi mà mọi người vô nội dung này, mọi người bấm vô đoạn trích
+1:56:15
+này thì nó vẫn sẽ ra được nhiều cái đoạn trích nhưng mà á nó sẽ không hiển trự đã
+1:56:20
+nhúng mà nó hiển trữ chưa nhúng nha. Thì lúc này á là mọi người đây nè mọi người
+1:56:26
+bấm vô mọi người bấm vô cái phần là con asion đây nè. Mọi người bấm vô cái chỗ
+1:56:31
+là bộ nhớ
+1:56:40
+mọi người bấm vô cho em là cái a cái chỗ này nè.
+1:56:46
+À từ từ nha. Đợ em xíu. À quên sorry nó bị nhiều quá em quên.
+1:56:56
+Mọi người bấm lên cái chỗ là là cái cái trên cùng này n cái chữ admin này mọi
+1:57:00
+người thấy không? Mọi người bấm vô chỗ này nè. Đó thì nó gọi là cài đặt hệ
+1:57:04
+thống. Thì ở cái phần này nó sẽ có phải cần là eding nha. Và cái phần là
+1:57:10
+modeling thì mọi người lưu ý nha. Mọi người phải chọn đúng cái con model nha.
+1:57:15
+Ví dụ như mọi người sẽ chọn cái chỗ này hồi nãy em nói mọi người tạo là AI
+1:57:18
+Studio đúng không? Mọi người sẽ chọn AI Studio và người bấm vô mình sẽ chọn nó
+1:57:23
+là cái 01. Sau đó mọi người bấm kiểm tra nha. Nhớ phải bấm kiểm tra nha. Khi nào
+1:57:28
+mà nó ra như này nè. Đó thì lúc đó là nó sẽ có thể là lưu được. Và những cái đồ
+1:57:35
+thị tri thức này nè mọi người cũng sẽ chọn luôn nha. Trong trong trong một cài
+1:57:38
+đặt này nè. Hai cái phần này. Một là hai là đồ thị tri thức thì mọi người phải
+1:57:42
+chọn giùm em nha. Đó. Rồi mọi người bấm lưu. Thì khi mà lưu xong á thì lúc này á
+1:57:47
+nha khi mà mọi người tạo cái bộ nhớ thì khi mà mọi người tạo cái phần bộ nhớ
+1:57:53
+á thì lúc đó nó mới hiển thị ra cái chữ đã nhúng. Còn trong trường hợp nó không
+1:57:57
+hiển thị chạ đã nhúng đi thì mọi người cũng bấm cái chữ lập chỉ mục tất cả này
+1:58:01
+thì nó cũng sẽ hở lật chỉ mục và nó sẽ hiển thị đã nhúng. Nói chung là cứ đã
+1:58:05
+nhúng là ok nha. Rồi sau đó nha. Bây giờ em nói ví dụ như đây là cái kiến thức mà
+1:58:09
+em mới add nó vô đúng không? Bây giờ em hỏi em hỏi coner này mày khai
+1:58:15
+thật đi. Người
+1:58:20
+bí mật đứng sâu mà tạo ra mày là ai?
+1:58:37
+Rồi mình sẽ đợi trả lời để cho mọi người mọi người sẽ thấy được là cái cách mà
+1:58:41
+mình chening cho nó cái kiến thức là nó sẽ như thế nào ha.
+1:58:57
+Đó nè. Ví dụ như tôi là đứa con tinh thần.
+1:59:06
+ăn nghĩa điều tra rồi ví dụ như hả
+1:59:19
+thống xất nghĩa này cái này cái này á là cái mọi người lưu ý
+1:59:27
+nha cái này á là một phần Đó là do là nó đã lưu nó đã lưu nhớ rồi nè. Em nói ví
+1:59:33
+dụ nha đúng không? Em vô cái phần s này nè em xóa cái bộ nhớ nó đi nha. Cái này
+1:59:38
+á là mọi người bị mọi người bị như vậy á là sẽ đôi khi á là do á là trước đó ví
+1:59:44
+dụ như trong quá trình mà mọi người làm mà mọi người test á mọi người test á thì
+1:59:48
+nó sẽ bị cái là nó lưu nhớ cái lại cái lịch sử n. Cho nên á là khi mà nó trả
+1:59:52
+lời á đôi khi nó sẽ dựa vô cái ở trên này nó nói là là do xếp nghĩa tạo ra rồi
+1:59:57
+và trong và trong cái mục này nè trong cái mục mà nè trong cái mục tẹp
+2:00:03
+đây nè nè mình có nói là do xếp nghĩa tạo ra nè
+2:00:10
+đó cho nên á là nó sẽ dựa vô đó thì ví dụ như trong một số trường hợp cái này
+2:00:15
+là do em ví dụ nó vui nhưng mà nó hơi bị nó hơi bị ngặt nghèo trong câu chuyện là
+2:00:18
+do mình đã có quy định cái phần này rồi Cho nên á là nó mới nó mới bị dính thôi.
+2:00:23
+Rồi em bây giờ em ví dụ nha. Em ví dụ em vẫn để nha.
+2:00:27
+Rồi em xóa cái system để cho nó nó nó xóa lại để cho nó nó khỏi bị lưu nhớ. ở
+2:00:35
+này em start nó lại. Hãy xếp
+2:00:59
+không một người bí mật.
+2:01:04
+Hát đứng sau đây này.
+2:01:32
+Cái cái này á cái này á là nó bị nó bị dính cái con cái phần này nè. Nó bị dính
+2:01:40
+cái này rồi. Bởi vì á nha ờ cái này cũng là một cái khay ha. một cái khay để cho
+2:01:43
+mọi người hình dung bởi vì cái con Goot á là nó sẽ ưu tiên sử dụng cái những cái
+2:01:49
+phần nằm trong cái đầu não này của con A này. Cho nên đó là những cái phần bộ nhớ
+2:01:53
+á thì đôi khi á là nó sẽ bị để sâu. Nó sẽ bị để sâu. Thì cái này là do bộ nhớ
+2:01:57
+mà em em là mẫu nhưng mà nó hơi bị ngặt nghèo thôi. Để em chỉnh lại cho.
+2:02:04
+Rồi ví dụ như em em chỉnh lại đó là ví dụ em xóa đi.
+2:02:12
+Rồi em thêm lại nè. Em nói là website à web x
+2:02:23
+nhóm trả phí chmm
+2:02:29
+web a web web si của nhóm trả phí để mua là
+2:02:40
+trả phí. com
+2:02:45
+đó. Rồi em bấm tạo rồi em vô đây em kiểm tra
+2:02:50
+lại cái này nó đã nhúng nè. Rồi sau đó là em sẽ mình sẽí dụ có thể làm
+2:02:58
+mới nha. Rồi mình vô đây mình sẽ hỏi nó là
+2:03:02
+website của nhóm đã là gì cho tôi nhé.
+2:03:11
+cho tôi để
+2:03:15
+tôi vào mua C
+2:04:09
+Đó thì mọi người thấy không? Nói chung là nó trong lúc mà nó trả lời á thì nó
+2:04:13
+sẽ có cái ở đây sao nó không có nó không có cập nhật ta.
+2:04:27
+Cái này á đôi khi á nha đôi khi á là nó sẽ cần có một cái khoảng thời gian để nó
+2:04:31
+update nha. Thì ở bên cái chỗ mà cái chỗ mà về bộ
+2:05:00
+não á thì đây nè phần bộ nhớ này nè là ở những
+2:05:05
+cái Phần khác á là em đã có đây nè. Ví dụ như này nè đây nè mình upload rồi nè.
+2:05:09
+Thì cái này đôi khi á là khi mà mình upload ngay á là hệ thống nó sẽ chưa có
+2:05:13
+cập nhật ngay mà đôi khi nó sẽ còn có một cái khoảng thời gian nha. Cho nên là
+2:05:16
+mọi người chỉ cần là cứ upload cái phần bộ nhớ này vậy này là nó sẽ ok nha.
+2:05:22
+Và sau khi mà mình upload cái phần bộ nhớ này á mình sẽ làm thêm một việc nữa
+2:05:26
+nha. Ví dụ như em nói ví dụ như bây giờ á mọi người sẽ vô con cào cào đây nè.
+2:05:32
+Mọi người sẽ copy cái này. Mọi người copy copy cái nội dung này n nha mọi
+2:05:37
+người. Qua bên cái phần là knowledge grap nè. Thì cái phần knowledge grap này
+2:05:41
+á là nó sẽ là cái nó gọi là hiểu nói như thế nào. Cái này nó hơi kỹ thuục nhưng
+2:05:47
+mà nó gọi là nó sẽ phân tích về tính liên quan. Ví dụ như là website là nó là
+2:05:53
+gọi là cái gì đó. Thì bây giờ nói chung á là mọi người chỉ cần nhớ là một là bộ
+2:05:59
+nhớ. Mọi người nhập cái gì ở trong bộ nhớ này nè. Mọi người nhập luôn cho em
+2:06:02
+vô trong cái phần là knowledge grap này luôn nha. Đó. Rồi bây giờ em cũng sẽ
+2:06:06
+chọn cái con này. Rồi em bấm vô là chích xất nè. Xong rồi
+2:06:11
+em dán nó vô nè cho tài khoản này nè. Xong rồi em chọn vô là cái ví dụ như cái
+2:06:16
+31B này đi. Em bấm chết xất để coi thử là cái thằng này nó nó nó trả
+2:06:24
+lời như nào nha. Hầu như hồi nãy là là mình chưa có thêm
+2:06:30
+cái phần lịch đâ nè. Nó sẽ có thể là chưa có trả lời được ấy. Nó sẽ có một số
+2:06:35
+trường hợp nữa nha. Nó sẽ có một số trường hợp á là đôi khi cái con as này
+2:06:40
+nó không có trả lời nè. Thì cái này á nó là do model thôi nha. Thì thường á nha
+2:06:46
+mình sẽ có mình sẽ có là hai cái dạng tức là bởi vì như mọi hình dung á cái
+2:06:51
+con model này á là model miễn phí cho nên á là đôi khi á là nó sẽ bị những cái
+2:06:56
+phần về mặt là tắt nghẽn bởi vì khi mà nhiều người sử dụng quá nó sẽ tắt ngãn
+2:07:01
+thì trong trường hợp này á mọi người sẽ mọi người sẽ có thể là nếu mà được á mọi
+2:07:05
+người có thể thêm một cái phần khác là cái phần về mặt là trên key 4U mọi người
+2:07:10
+em cho mọi người cái size này nè đó cái size là key 4U
+2:07:14
+shop nè. Thì đây là cái trang để mà mình mua cái cái cái AVI cái con AI thì bình
+2:07:22
+thường á nha 1 đô á là nó sẽ là 28.000 đúng không? Nhưng mà á cái giá của này á
+2:07:27
+nó sẽ chỉ là 1 đô là 300 thôi thì nó sẽ tiết kiệm tới gọi là hả ờ 7 8 lần 89 lần
+2:07:34
+so với lại cái giá gốc đó thì để mà mình sử dụng.
+2:07:38
+Rồi thì bây giờ em ví dụ như bây giờ em sẽ
+2:07:42
+em sẽ đổi nha. Em sẽ đổi cái này đây. Ví dụ như cũng là tài khẩu này đi thì em
+2:07:47
+thử đổi sang cái nữa nha. Zini
+2:07:52
+3.1 review này em bấm check xất này
+2:08:01
+rồi nó lỗi sem mini
+2:08:07
+3.1 review.
+2:08:16
+Đó, ví dụ như trong trường hợp này nó lỗi nè là do là do cái tài khổ này nè
+2:08:20
+nha. Cho nên là mình Rồi bây giờ em nói ví dụ như bây giờ em sẽ qua đây em cái
+2:08:26
+chỗ provider này cái chỗ hồi nãy khi mà cái lúc setup ban đầu á là mình đã có
+2:08:31
+thêm một cái tài khoản là AI Studio đúng không? Thì bây giờ á mình sẽ tiếp tục mà
+2:08:35
+mình sẽ thêm một cái một cái con khác là cái con về cái cái ky 4u này nè. Cái kia
+2:08:42
+4u này nó sẽ ổn định nha. Bởi vì mình dùng bản miễn phí mà. Cho nên là đôi khi
+2:08:46
+á là mọi người chấp nhận cái sự gọi đó là gọi là ờ không ổn định trong một
+2:08:50
+trong một vài thời điểm. Đó là lý do tại sao á mà mọi người khi mà trong một số
+2:08:55
+trường hợp á một số ít trường hợp thôi mà mọi người sử dụng mọi người gọi tới
+2:08:59
+cái con mà con lưỡng mật á một là nó không trả lời, hai là trả lời chấm chấm
+2:09:03
+chấm chấm chấm á thì đó là do cái cái model nó sẽ là như vậy ha.
+2:09:08
+Tuy nhiên á là mình sẽ có thể sử dụng nó trong tùy vào trường hợp ví dụ như con
+2:09:12
+này đi. Cái kia 4 ô này nó đang tốn tiền, nó đang tốn phí mặc dù là giá nó
+2:09:15
+rất là rẻ rồi thì á mình có thể sử dụng nó là cho một số cái trường hợp. Ví dụ
+2:09:20
+như trường hợp mà chiết xất như hồi nãy em nói đó. Rồi bây giờ em sẽ hướng dẫn
+2:09:24
+cho mọi người cách ha. Thì khi mà mọi người đăng ký vô tài khoản này xong mọi
+2:09:28
+người bấm vô cái chỗ là dashboard giúp em. Đó rồi sau đó mọi người bấm vô chỗ
+2:09:32
+là apik key. Mọi người bấm x bấm giúp em là tạo giúp em cái token đó. Mọi người
+2:09:37
+sẽ nhập cái tên gì đó, ví dụ như là cào cào đi. Đó, rồi mọi người mọi người lưu
+2:09:42
+lại nha. Mọi người tạo key sau khi tạo key xong á, mọi người bấm ra ngoài. Rồi
+2:09:47
+sau đó mọi người quay trở lại mọi người chỉnh sửa nha. Mọi người kéo xuống dướ
+2:09:51
+đây nè. Em nói ví dụ như trường hợp nha, mọi người đang muốn xài là cái xe mini
+2:09:55
+đi, mọi người bấm thêm nhóm thay thế, mọi người chọn cái ưu tiên 2 này nè, mọi
+2:09:59
+người kéo xuống, mọi người chọn giúp em đó là cái
+2:10:05
+ờ em muốn dùng là cái đi ha. Em ví dụ em muốn dùng là GBT đi
+2:10:12
+nè, open AI cao cấp nè nha. Là một rồi mọi người kéo xuống dưới
+2:10:19
+open AI chính thức. Rồi em muốn dùng cả Jini luôn. Cái này mình phải đăng ký
+2:10:24
+nha. Đó nhiều xe mini cao cấp này. Rồi mọi
+2:10:29
+người kéo xuống dưới mọi người có chữ C mini chính thức nè. Rồi mọi người lưu
+2:10:33
+lại. Cái này là cái phần quy định của cái cái bên K 4 ô này. Cho nên là mọi
+2:10:37
+người chỉ cần cứ làm theo thôi nha. Rồi sau đó nha ở bên phần go clot này nè mọi
+2:10:43
+người, cái chỗ loại provider này nè, khi mọi người bấm thêm này nè là nó sẽ tự
+2:10:47
+động nó chọn vô là cái open AI Code này nè mọi người chọn vô trong phần này nha.
+2:10:51
+Rồi ở cái phần tên này nè mọi người đặt tên gì cũng được nó ví dụ như Ky 4U đi
+2:10:56
+cào cào. Đó ở phần này cũng là Ky 4 U cào cào luôn. Rồi cái chỗ phần bay url
+2:11:03
+này mọi người qua đây mọi người bấm vô cái chỗ này nè màu xanh đây nè mọi chỗ
+2:11:08
+màu xanh đây nè người bấm copy sau đó là mọi người qua đây nhưng mà mọi người nhớ
+2:11:13
+nha cái chỗ này nha mọi người phải bấm set q1 nha rồi sau đó bên phần này nè
+2:11:18
+mọi người sao chép cái key này nè mọi người vô đây mọi người dán nó vô sau đó
+2:11:23
+bấm tạ thì khi tạo xong á là nó sẽ kết nối nè n
+2:11:28
+nó sẽ có kết nối này nha rồi lúc đó mọi Mọi người quay lại giúp em cái phần bên
+2:11:32
+này nè. Đó mọi người có thể là hở mọi người chọn cũng được và không chọn cũng
+2:11:36
+đều được hết nha. Ví dụ như ở đây em chọn nó là kim 4U này em chọn nó là ví
+2:11:40
+dụ gbt 5.
+2:11:45
+1 đó em lưu lại. Rồi ở bên phần đây nè.
+2:11:55
+Rồi em chọn vô cái con là cào cào nha. Sau đó em bấm chết suất. Rồi em dán em
+2:12:01
+dán lại cái nội dung của cái này nè. Em dán lại em qua đây bấm vô cờ cào nè.
+2:12:09
+Bấm vô chết suất nè dán nó vô. Nhưng mọi người lưu ý nha ở trong phần này á nội
+2:12:14
+dung nó không được quá dài nha. Quá dài là nhiều khi nó gặp bị lỗi. Gầm một số
+2:12:18
+lỗi là do là cái lúc mà nó gọi tới cái con model AI á thì là nó bị nó bị tắt
+2:12:24
+nghẽn hay là nó bị xử lý nhiều quá nó bị am out nó bị hết thời gian chờ á. Đó thì
+2:12:29
+mọi người chọn giúp em lại thành là kia 4 u cào cào nè. Thì lúc này nó đang tải
+2:12:33
+ra cái model sau đó mọi người bấm vào đây mọi người chọn giúp em là GBT
+2:12:39
+GBT/ 5.1 chat. Mọi người chọn vô sau đó mọi người
+2:12:44
+bấm chết xất thì cái hồi nãy á nó là do mod thôi nha
+2:12:50
+chứ không phải là do cái phần mềm nó bị lỗi hay là do gì hết nha. Đó mọi người
+2:12:54
+thấy không? Chết xất thành công nè. Đó có thể xem nè.
+2:12:59
+Đó mọi người thấy không? Ví dụ như chfí.com nè là website dùng để nhóm trả
+2:13:02
+phí nè. Rồi ví dụ em quay lại đây em hỏi đó là gì?
+2:13:08
+Xem lại và cho tôi biết website nè. Ví dụ như là ở website để
+2:13:17
+tôi vào mua quyền chia cập đi. Cái này là em đang
+2:13:23
+demo để cho mọi người thấy được là cái việc mà mình upload cái cái phần kiến
+2:13:27
+thức lên á là cái conent nó sẽ nó sẽ nắm được những cái kiến thức đó nha. Bởi vì
+2:13:32
+bên trong á là nó sẽ còn có rất là nhiều cái cơ chế bên trong để làm cho con nó
+2:13:37
+thông minh lên. Kể cả cái việc mà upload bộ nhớ này nè mình cũng phải upload nó
+2:13:41
+như thế nào giống một trong những cái cách thức mà hồi nãy em nói với mọi
+2:13:43
+người á thay vì mọi người phải upload một đống lên thì mọi người hãy có thể là
+2:13:47
+đưa cái đó vô cho ai để cho ai nó viết lại nó làm nó gọi là nó điều chỉnh lại
+2:13:52
+để nó chia nhỏ nó ra để mọi người upload từng chút từng chút chia nhỏ ra từng chủ
+2:13:56
+đề từng chủ đề thì khi đóá là cái con agent tức là nha con agent á cái cách
+2:14:00
+hoạt động của nó nó không phải á là nó vô ở vô trong hết tất cả cái nội dung
+2:14:04
+trong phòng bộ nhớ này mà nó đọc mà nó sẽ dựa vô cái từ khó
+2:14:08
+nó dựa vô cái từ khó cái tab của cái nội dung mà mình hỏi nó đó sau đó nó sẽ đối
+2:14:14
+chiếu lại trong cái phần này để mà nó trả lời.
+2:14:21
+Rồi ví dụ như vô trong phần thì em xem lại với con agent này nha.
+2:14:26
+Cao nè. Cái này là do cái cô model nó nó hình
+2:14:51
+như là buổi tối n nó bị hóa tải hay gì á.
+2:14:57
+Em thử chọn sang con khác 3.1
+2:15:07
+rồi nó kiểm tra. Nói chung cái phần này á ờ ai á mà kiểu
+2:15:21
+như mình đầu tư một cách bài bản hay là mình các thứ á thì mình có thể là chọn
+2:15:26
+những cái con model mà nó trả phí chữ như này thì nó sẽ mang tính chất là nó
+2:15:30
+ổn định về một cách chuẩn hơn. Còn nhưng mà nó sẽ có một cái yếu tố
+2:15:36
+nữa, nó sẽ có một cái yếu tố nữa là đôi khi
+2:15:40
+những cái con mồ mà kiểu miễn phí á thì nó sẽ có một cái á là đôi khi trong một
+2:15:45
+số thời điểm nhỏ rồi thì nó sẽ bị bị ngắt nó không trả lời. Nhưng mà cái thời
+2:15:50
+điểm đó nó ít lắm. Cái này là chắc vì do bị lời nguyền demo cho nên là nó mới
+2:15:54
+không có trả lời được thôi. Nó mới bị dính vậy thôi.
+2:16:03
+Chứ không bây giờ nha. Mà hỏi bây giờ mà nhiều khi đôi khi có một số trường hợp
+2:16:08
+nó mang tính chấtc là nó ổn định nữa. Đó thì ví dụ như ờ
+2:16:15
+không chứ à. Vậy là cái này là do do model bây giờ nó đang bị gì á anh?
+2:16:21
+dụng n bên bên mật cũng hỏi nè nó cũng đâu trả lời đâu.
+2:16:25
+>> Ừ. Nói chung là xài đồ chùa á tiết kiệm á
+2:16:32
+thì mọi người phải chấp nhận cái việc lâu lâu nó sụp tí xíu. Với lại á là tôi
+2:16:36
+nói nhiều người á là tư duy là ờ à cái gì mà tảng hay là này nọ là phải a
+2:16:46
+phải tuyệt đối là là là không bao giờ được phé sập. Thì cái đó không có trên
+2:16:50
+đời này đâu. Tôi nói mọi người cứ coi đi. Trên thế giới cứ lâu lâu Amazon sụp,
+2:16:56
+lâu lâu Canva sụp, lâu lâu Facebook sụp thì cái gì cũng sụp hết nha. Google thì
+2:17:03
+mấy cái model AI này thật ra nó sụp thường xuyên lắm luôn á. Cực kỳ thường
+2:17:09
+xuyên. Mọi người xài nhiều là mọi người thấy nó sụp thường xuyên. Cloud Pir là
+2:17:14
+nó gánh cho mấy thằng khác đó. Nó còn sụp nữa rồi. Đừng có nói. Cho nên là lâu
+2:17:18
+lâu con lửng mật nó có ba chấm thì mọi người cũng thấy bình. Kể cả kể cả bảo
+2:17:24
+mật luôn á nha. Kệ cả bảo mật luôn á. Không phải nói bảo mật rồi xịn sò rồi
+2:17:28
+này kia đâu. Nhưng mà những thằng lớn top thằng đầu thế giới nó vẫn bị bình
+2:17:31
+thường. Thằng Vale đó anh. Anh biết chưa anh nhỉ?
+2:17:34
+>> Vale đang bị hack đó. bị là bị hck rồi.
+2:17:40
+>> Tới thằng Vale nó còn bị nữa thì anh em mình dân đen thì mình em nghĩ là mình
+2:17:44
+cam chịu số phận thôi nhưng mà mình nhỏ quá chắc cũng không có thằng nào quan
+2:17:47
+tâm tới đâu. Đây nè em thấy không? Mọi người thấy không? Hồi nãy là nó dơ lưu
+2:17:52
+lại những cái s đồ cái thứ đó. Thì nè ví dụ như bây giờ nha. Ủa em
+2:18:00
+có đì Đ Đó thì cái phần này á là mọi người sẽ
+2:19:04
+upload lên ha. Upload lên cho nó. Thì khi mà cái dữ liệu nó đủ nhiều cái này
+2:19:08
+là chắc là cái khoảng thời gian của nó nó nó sẽ gọi là chờ
+2:19:14
+nó sẽ nhiều khi nó phải update và nó cập nhật lên á thì lúc đó là nó mới
+2:19:19
+>> anh đ ừ
+2:19:22
+>> à
+2:19:25
+>> sao giờ anh anh nói đi
+2:19:28
+>> anh anh ơi. Alo alo nghe nghe.
+2:19:32
+>> Em muốn hỏi một chút từ đầu đến giờ là em thấy là ví dụ như kiểu làm theo các
+2:19:37
+cái challeng ấy thì là có cái hướng dẫn của anh ấy thì làm rất là ngon. Nhưng mà
+2:19:42
+em đang muốn hỏi là ví dụ sau này mà anh em tự triển khai tự dán riêng ấy thì
+2:19:46
+muốn làm ra những cái SOP ấy thì mình làm gì anh?
+2:19:52
+>> Ý là sao ta? Ý là em muốn làm ra cái SOP á hả?
+2:19:55
+>> Vâng. Thật sự là em thấy như kiểu cái mình làm được cái LOB ấy thì mọi cái nó
+2:19:58
+ok hơn ấy. Mới cả em đang không hiểu là những cái ví dụ như kiểu những cái file
+2:20:01
+để lưu lại ví dụ như kiểu chấm MD với cả chấm DB hoặc các thứ ấy thì khi mình
+2:20:07
+thiết lập thì thiết lập kiểu gì ấy?
+2:20:09
+>> Dùng AI thôi. Đây để à
+2:20:13
+>> Ủa nhưng mà ờ Long xong chưa ta? Có bị mất cái luồng không? Cái câu hỏi của em
+2:20:18
+nếu mà nó không đang nó đang không ở trong cái follow của
+2:20:21
+>> không em? Xong rồi á anh. Bây giờ á là cái phần này nè là mọi người chỉ cần là
+2:20:25
+bây giờ tới đây là xong rồi đó. Tới đây là mình chỉ cần uplo cái phần bộ nhớ và
+2:20:29
+cái phần hai phần này nè là xong rồi ấy anh.
+2:20:31
+>> Ok.
+2:20:32
+>> Rồi sau đó là mình sẽ chờ một một đoạn thời gian để cho nó update đồ các thứ
+2:20:36
+rồi rồi sau đó là mình sử dụng nó thôi.
+2:20:39
+>> À ok. Vậy để anh trả lời câu hỏi đó của em tên gì ta? Tên là tên Đức H đúng hay
+2:20:45
+là Lộc?
+2:20:46
+>> Lộc nh.
+2:20:47
+>> Ok. Đây để anh để để anh cho em coi cái này.
+2:20:51
+Ờ anh là ứng dụng ai cực đoan nha. Cho nên á là và mọi người nếu làm được việc
+2:20:56
+này á thì mọi người sẽ thấy là cái work của mọi người kia cái hiệu suất công
+2:21:02
+việc của mọi người nó sẽ cực kỳ nhanh luôn. Còn người nào á mà muốn quay lại
+2:21:06
+cái con đường cũ thì quay lại đi. Tôi không quay lại đâu.
+2:21:13
+Ờ mình làm rất là nhiều cái bằng AI.
+2:21:18
+Cả ai trình cũng vậy. Mình chút xíu mình nói luôn cái vấn đề là a cái một cái ứng
+2:21:22
+dụng mà mình mới làm ờ
+2:21:26
+gì ta ờ có dính tới cái agent. Mọi người thấy cái con sói nó đi qua đi lại không?
+2:21:32
+Mình cũng dùng ai để làm ra đó. Xong đó mình làm ra được cái cái đó rồi á thì
+2:21:37
+mình mới làm là mình mới bỏ con sói đó vô trong cái cộng đồng này nè. Đó. Chết
+2:21:44
+mẹ quay trở lại mình hơi ngáo trả lời câu hỏi kia chứ. Làm SOP làm sao đúng
+2:21:49
+không? Đây nè. dùng ai
+2:21:55
+đâ mọi người hình dung là từ bữa giờ mọi người đọc SOP làm sao á mà nó
+2:22:02
+gọi là nó logic mà mọi người đọc nó dĩ nhiên là trong đó mọi người luôn luôn có
+2:22:07
+tỷ lệ có người kêu là nó khó mà tôi nói cái tỷ lệ mà người kêu khó là đối với
+2:22:12
+tôi là một là làm biến hai á là kiểu giống như là chưa bao giờ xài máy tính
+2:22:16
+nhiều thì những người đó là càng phải á là là là tập trung vô á không thôi là
+2:22:21
+sắp tới là hơi hơi mệt luôn. Đó, thì cái cách mà mình làm á là mình mình lên mình
+2:22:29
+vẽ ra toàn bộ cái mình đã có cái file cái lúc đầu mà lúc
+2:22:33
+mà nếu mọi người nhớ cái buổi kick off á là mình đã đưa cho mọi người á là nguyên
+2:22:41
+một cái file là toàn bộ cái challeng này luôn. Nhưng mà mình không có share cái
+2:22:46
+file đó cho mọi người mà bản chất là cái file đó mình dùng để cho AI đọc toàn bộ
+2:22:51
+cái kế hoạch của challeng. Sau đó là mình sẽ viết SOP hàng ngày. Thì khi mình
+2:22:55
+viết SOP á thì mình sẽ viết như vậy. Mình kêu đó
+2:23:00
+viết ngày nào á thì nó bắt đầu nó viết đúng không? Nhưng mà á mình sẽ luôn luôn
+2:23:05
+đi mình nhớ cái mục tiêu của mình mình đưa những cái ky quan trọng vào. Thứ
+2:23:08
+nhất á là đây cái mình đi từ đầu đi. Giờ soạn nhiệm vụ số 3 đi thấy không? Thì
+2:23:16
+mình sẽ yêu cầu nó là cái buổi kích off và làm landing đơn giản rồi thì à không
+2:23:23
+có gì. Sau cái mình đưa cho nó cái s cái cái cái nhiệm vụ số ba đó giúp tôi viết
+2:23:30
+SOP cho nhiệm vụ này thì nó kêu là dựa vào cái ảnh này thì nhiệm vụ số ba nó sẽ
+2:23:34
+là cho website chạy thuật ha. Thì tức là landing ngày thứ hai làm rồi thì bây giờ
+2:23:39
+deploy lên domain thì bây giờ là qua tới website thì nó đưa ra nó đưa ra mục tiêu
+2:23:44
+xong nó đưa ra các bước sau cái mình nói là bỏ cái số phút ra đi vì làm mà ai thì
+2:23:49
+nhanh lắm đưa thêm một cái mẹo làm sao để ra nhanh hơn với tư duy AI first tức
+2:23:55
+là lúc nào mình cũng sẽ kêu là đưa tư duy AI first vào. Rồi xong rồi nó kêu là
+2:24:01
+làm cái này mất bao lâu phút đó. Nhưng thật ra á không mất bao nhiêu phút đâu.
+2:24:04
+Mình biết là nó nhanh hơn. Có nghĩa là nó dắt mình nhưng mà mình biết thì mình
+2:24:08
+mới kêu bỏ số phút ra. Sau đó là nó viết lại đúng không? Nó viết lại
+2:24:13
+đó. Nó đưa vô xong à mình kêu làm nhiệm vụ bốn thử ha. Nó viết nè. Thì lúc nào á
+2:24:22
+với những cái tác cái nhiệm vụ mà bắt đầu nó khó rồi á thì mình sẽ có một cái
+2:24:26
+câu như vậy à mình sẽ kêu là
+2:24:33
+mình sẽ kìm cái chỗ đó cho mọi người dễ coi. Mình sẽ not nó những cái thứ khác
+2:24:38
+sau đó là mình sẽ kêu á là làm sao để mà viết lại nó dễ hiểu dành cho học sinh
+2:24:43
+lớp 5. Những này là mình đang đi vô detail ha.
+2:24:51
+Detail là mình mình viết theo cái kiểu của mình thôi. À cái này là mình có chọt
+2:24:57
+vô một cái nhiệm vụ mới cho nó. mình à
+2:25:15
+học sinh lớp 5 rồi đây.
+2:25:21
+Ok giờ review là đảm bảo là đứa nhỏ đ năm tuổi đọc cũng hiểu đó hoặc là mình
+2:25:26
+sẽ kêu là viết làm sao để học sinh lớp 5ă có thể hiểu được rồi mình sẽ kêu là
+2:25:31
+check logic coi có chỗ nào kh quá khó đến mức là đọc SOP mà không làm được mà
+2:25:35
+phải có hướng dẫn không. Đó thì đây là cái cách mình viết SOP cho mọi người đó.
+2:25:40
+Nhưng mà vậy mình nói quy tắc nha. Nhưng mà để viết được cái SOP này là mình phải
+2:25:43
+có cái bảng kế hoạch trước rồi chứ không phải là mình chỉ nhảy vô viết SOP hàng
+2:25:47
+ngày đâu. Mình có nguyên một cái bảng kế hoạch mà với lại á là trong 21 ngày á là
+2:25:51
+cái logic của ngày 1 tới ngày 12 là mình đ tính toán rồi sau đó mình mới viết SOB
+2:25:56
+chứ không phải là mình chỉ nhảy vô mình viết SOB giống vậy. Còn mình mình chỉ
+2:26:00
+trả lời cái cục bộ mình trả lời cục bộ câu hỏi là viết SOP như thế nào thì đây
+2:26:04
+là cái cách mà viết SOP. Còn mình không thể share cái kế hoạch kia được. Tại vì
+2:26:08
+kế hoạch kia á là mình sẽ nói thật nha. Kế hoạch kia đó là một cái framework mà
+2:26:13
+chơi community và tạo thử thách thì mình đang là coaching với giá là 2000 cho tới
+2:26:20
+5000 đô á. Còn viết SOB thì nó vậy đó. Cứ nếu mà
+2:26:25
+mình có cái mình có được cái bảng kế hoạch á mình bỏ vô sao mình có thể viết
+2:26:30
+SOP như vậy theo cái cách đó. Tất cả là dùng AI hết AI first hết. Nhưng mình
+2:26:35
+phải hiểu là mình đang làm gì thì mình sẽ viết được SOP.
+2:26:51
+ơi cho hỏi một câu gì không? Ờ
+2:26:57
+cái khi mà làm SOB khi mà như Thu làm á là
+2:27:03
+mình không có cái quy trình có nghĩa là như nghĩa là nghĩa biết code thì nghĩa
+2:27:07
+mình mình check được cái con AI nó sẽ biết độ dẫn của con đó. Nhưng mà khi như
+2:27:13
+Thu nhị như Thu làm một cái cái SEO nhưng mà mình không biết đổi có nghĩa là
+2:27:17
+mình không biết chính xác được cái quy trình của nó á thì làm thế nào để mình
+2:27:21
+hạn chế được cái sự dẫn của AI. Ờ mình không hạn chế cái việc AI nó dẫn
+2:27:27
+cái mình nói luôn đây là quan điểm của mình cực kỳ khác với những người mà đang
+2:27:32
+mà làm AI khác trên thị trường luôn. Và mình hay nói cái này mình hay nói với
+2:27:38
+anh Giang luôn nếu mà mọi người có follow mọi người với anh Giang thì mình
+2:27:41
+nói là mình nói thẳng luôn với anh Giang luôn là quan điểm mình khác. Anh Giang
+2:27:44
+nói á là đừng có để cho ai nó dắt mình. Tại vì á mình mình chơi ngu ngu á là
+2:27:50
+mình nói chuyện hồi là ai nó dắt mình đi giác như dắt chó vậy đó. Anh Giang nói
+2:27:54
+vậy đó. Xong cái là à ảnh kêu á là mình phải á là thông minh hơn ai một chút thí
+2:28:00
+dụ vậy để mà có thể là control được nó ha. Thì đây là quan điểm của mình nó
+2:28:04
+khác chỗ này nè. Quan điểm của mình là mình nên để cho ai
+2:28:08
+nó dắt. Tại vì á thứ nhất về mặt dữ liệu không
+2:28:14
+bao giờ mình qua được nó hết mọi người. Thí dụ mọi người muốn làm một việc gì đó
+2:28:18
+đúng không? Mọi người nghĩ là mọi người phải biết cái việc đó trước. Sau cái mọi
+2:28:21
+người kêu ai là làm việc đó cho tôi theo cách này thì mình đảm bảo mọi người
+2:28:26
+luôn. Mọi người đi theo cách đó là không tối ưu. Mọi người làm như vậy là không
+2:28:30
+tối ưu. Mọi người lấy kiến thức kinh nghiệm cũ, mọi người bắt AI làm theo
+2:28:33
+cách của mọi người là không tối ưu. Tại vì AI nó thông minh hơn mọi người, dữ
+2:28:37
+liệu nó nhiều hơn. Cái số cách cái số phương cách mà nó có thể dẫn tới mục
+2:28:41
+tiêu là nhiều hơn, nhiều hơn mọi người luôn. Cho nên á mặc dù là mọi người khi
+2:28:47
+AI first khác nhau ví dụ như 100 người làm đi thì mọi người là bị AI nó dắt đi
+2:28:52
+qua nhiều con đường khác nhau thì cái tư duy cái cách mà mình chơi với nó là vậy
+2:28:56
+nè. Mình kêu nó đó là mày gửi ý cho tao nhiều con đường nhất có thể để dẫn tới
+2:29:00
+cái mục tiêu này. Sau đó mày mày cho tao á là cái con đường nào mà tối ưu nhất
+2:29:04
+trong thời điểm này. Hoặc là mọi người cho nó thêm bối cảnh là nó tao đang
+2:29:08
+trong hoàn cảnh vậy nè. Cái máy tao là xài Windows chứ không phải xài M. Với
+2:29:12
+lại á tao không có biết gì về VPS hết. Tao không biết gì về SH hết. Tao không
+2:29:16
+có biết gì về kỹ thuật hết. Mày hướng dẫn làm sao mà theo cái kiểu của học
+2:29:21
+sinh lớp 5 á cho tao có thể dễ dàng làm theo được. À thêm nữa đó là nếu mà nó
+2:29:27
+liệt kê cho mọi người ví dụ như nó nói mọi người là à bây giờ bà có sáu bước để
+2:29:30
+làm chuyện này mà bước nào nó cũng diễn giải rất là dài đúng không? Thì mọi
+2:29:35
+người nói á tao đọc tao không hiểu gì hết trơn á. Mày hướng dẫn từng bước đi.
+2:29:39
+Giờ tao ngu lắm. Mày hướng dẫn tao mà bước một thôi. Bước một giờ làm cái gì?
+2:29:42
+Mày đừng có nói sáu bước. Tao không có biết làm từ bước một tới sáu như thế nào
+2:29:45
+hết. Bây giờ làm bước một làm thế nào đi rồi hồi nữa tao làm xong đi tao chụp cho
+2:29:50
+mày rồi mày chỉ tao tiếp. Đó
+2:29:53
+>> cái đó cái AI first nó là vậy đó. Có nghĩa là mọi người nên để nó dắt nha.
+2:29:59
+Nhưng mọi người như luôn nhớ, mọi người chỉ nhớ trong đầu là mình muốn tới đâu.
+2:30:03
+Thì cái con đường dẫn tới đó là mọi người nên để nó tính tại vì nó sẽ thông
+2:30:07
+minh hơn mọi người trong cái việc đó. Nó sẽ biết là như thế nào là khôn ngoan
+2:30:10
+nhất để tới cái con đường đó chứ không phải mọi người. Thì có thể nó kêu nó
+2:30:14
+liệt kê ra năm bảy cách gì đó đi. Thì mọi người thấy ờ cách nào mà dễ nhất với
+2:30:19
+cái hoàn cảnh của mình thì mình làm. Thí dụ bây giờ mình nói tại sao mình không
+2:30:23
+hướng dẫn cho mọi người bằng video mình đố mọi người luôn.
+2:30:26
+Thí dụ bây giờ mình hướng dẫn mọi người là mua VPS ở trên 1 2 3 hot đi. Bây giờ
+2:30:32
+trong nước trong group mình có vài người đang ở Đức á, có vài người đang ở Mỹ á.
+2:30:36
+Những người đó không mua VPS Việt Nam, họ mua VPS nước ngoài. Nếu mình làm một
+2:30:40
+cái hướng dẫn bằng video làm sao họ làm được. Mà trên thực tế nó không cần. Tại
+2:30:44
+vì mọi người muốn biết cái cách làm, mọi người vô lấy nguyên cái web đó bỏ vô vô
+2:30:49
+AI xong kêu là chỉ cho tao cái cách đăng ký VPS này đi thì nó sẽ chỉ. Mọi người
+2:30:54
+không có kiến thức về VPS. Mọi người hỏi VPS là cái gì thì mọi người sẽ hiểu.
+2:30:58
+Xong cái mọi người nếu mà ờ VPS là vậy đúng không? Thì vậy xài là sao mày? Chỉ
+2:31:02
+chỉ tao đi thì nó sẽ chỉ mà khó hiểu nó là khó hiểu quá giải thích lại dễ hiểu
+2:31:06
+hơn đi. Nó vẫn khỏ khó hiểu nói là bây giờ mày
+2:31:10
+bây giờ tao tao mới sinh ra đời à tao mới có họ tao mới có một tuổi à. Giờ
+2:31:15
+giải thích kiểu đó kiểu mà tao có thể hiểu được á. Rồi đưa ví dụ minh họa rồi
+2:31:20
+cho tao thêm ví dụ minh họa nữa đi. Chừng nào tao hiểu thì thôi. Nó nhẫn nại
+2:31:25
+lắm. Nó không có bị nó không chửi mọi người đâu. Đừng có lo. Thế nên là mình
+2:31:29
+cứ làm vậy đó là mình sẽ hiểu vấn đề. Và ai phết cực đoan có nghĩa là mọi người
+2:31:34
+tự học theo cách đó. Đó mọi người sẽ giỏi lên một cách bất ngờ luôn. Mọi
+2:31:37
+người sẽ vượt qua được. Còn những người mà bị kẹt á mình đảm bảo một chuyện luôn
+2:31:40
+là tại vì á ai nó đưa ra một cái gì đó đúng không? Cái xong mọi người kêu mọi
+2:31:43
+người đọc xô không hiểu cái là rồi không hiểu là không hiểu luôn. Cái dừng lại ở
+2:31:47
+đó luôn. đúng không? Thì hầu hết mọi người dừng lại là do mọi người không
+2:31:51
+hiểu không mọi người dừng lại chứ về bản chất mọi người không cần dừng lại. Mọi
+2:31:55
+người tiếp tục mọi người kêu không hiểu, mọi người than với nó rồi nó sẽ ra được
+2:32:00
+nha. Đ tôi kinh nghiệm chuyện này rất nhiều lần về chuyện đó rồi. Đó thì cũng
+2:32:05
+như ở nãy mình nói là à kể cả mọi người không biết thao tác máy tính thao tác
+2:32:10
+thế nào mọi người chụp cái màn hình cái chỗ thao tác đó lại phải không? Trên
+2:32:15
+trên M á chụp mà chụp màn hình a dưới lại á mình có thể hướng dẫn mọi người
+2:32:18
+một vài cái như là à chụp màn hình sao cho nó nhanh. Ví dụ vậy nè. À cái này có
+2:32:23
+khi cần hướng dẫn cái này nó hơi thủ thuật. Thí dụ à mình muốn chụp màn hình
+2:32:27
+đúng không? Mình sẽ bấm là ở trên M cái điện cái máy M của mình á là mình sẽ bấm
+2:32:31
+á là à col shift comment với lại số 4. Đó thấy
+2:32:38
+mọi người thấy trên cái cái cái con chỏ chuột mình nó biến thành cái gì đó giống
+2:32:42
+như cái hồng tâm vậy cái cái đó cái mình quét đen mình buông ra thì buông ra nó
+2:32:46
+sẽ kêu một cái tách một cái thì nó không có chuyện gì xảy ra hết trơn á thì mình
+2:32:50
+sẽ là đi vô đây mình mà mình mình c bấm là
+2:32:56
+comment v có nghĩa là mình bass cái hình nó vô là xong đó thì như vậy sẽ rất là
+2:33:01
+nhanh để mà mình làm việc với ai mình cứ pass cái hình cái bối cảnh mà mình đang
+2:33:05
+có vô thì nó sẽ chỉ cho mình tiếp tục Thấy không? Có nghĩa là mọi người chỉ bị
+2:33:11
+ờ rào cản về mặt tâm lý rằng là tôi không biết cái kiến thức đó, tôi bị hụt
+2:33:16
+cái kiến thức đó, tôi không biết thao tác thế nào. Toàn bộ cái đó chỉ là ảo
+2:33:20
+giác thôi. Mình hứa với mọi người 100%. Đó là tất cả những gì mọi người ở trên
+2:33:25
+cái màn hình máy tính mọi người đó về thao tác, cái gì mọi người không hiểu
+2:33:29
+đều ai phết được hết ha. Đó là câu trả lời trọn vẹn của mình luôn đó. Ok
+2:33:38
+cảm ơn tại vì lúc đầu là thu xin lỗi cái nguyên cái cái shop của nghĩa quă chong
+2:33:46
+rồi cho là dựa vào cái cấu trúc này thì hãy phân tích nó và làm cho tôi một cái
+2:33:51
+shop tương tự với cái chủ đề của nhưng mà mình thấy cái cách này nó vẫn chưa có
+2:33:57
+hiệu quả nó ý là nó chưa có tối ưu lắm thì cũng
+2:34:05
+>> đúng rồi Sao
+2:34:07
+>> thì cũng mò thôi chứ cũng sao giờ.
+2:34:09
+>> Ờ thì Nhân Nguyễn có góp ý á là mình nên có cái bước là prins ban đầu nữa. Ờ thì
+2:34:14
+cái đó là cái khởi đầu khi mà mình chuẩn bị làm cái gì đó thì mình đưa bá cảnh vô
+2:34:18
+cái mình brainstorm với nó. Nhưng mà ý mình nói là trong lúc mình đang làm mình
+2:34:22
+bị kẹt á thì mình cứ qua bằng cách đó ha. Đó thì nó là vậy đó. thì à không
+2:34:29
+biết kỹ thuật càng tốt. Mọi người không biết kỹ thuật mọi người sẽ trải nghiệm
+2:34:33
+cái việc AI first nó hay như thế nào. Tại vì á không có ai mà ngồi với mọi
+2:34:38
+người để mà cầm tay chỉ cho mọi người mọi cái thao tác kỹ thuật trên đời này
+2:34:41
+nó nhiều lắm. Mình không thể qu mình nói á nếu mình quay video nha mình có thể
+2:34:45
+mất rất là nhiều thời gian. Mọi người nghĩ nè, nếu mình là người thông minh,
+2:34:49
+nếu mình là người biết tiết kiệm thời gian của mình để mình kiếm tiền thì m
+2:34:52
+mình có nên á ngồi quay một cái hướng dẫn mà chỉ có 10% người ta coi và người
+2:34:57
+ta làm được không? Còn 90% là không có đúng với lại cái bối cảnh của họ, họ
+2:35:01
+không làm được. Vậy thì tại sao mình phải làm như vậy ha? Dĩ nhiên là mình sẽ
+2:35:06
+có những cái buổi bting như thế này để mà giúp cho mọi người về mặt tâm lý.
+2:35:12
+Với lại á là đúng là mặc dù là SOP à nó nó nó thúc đẩy mọi người làm nhưng mà nó
+2:35:20
+sẽ có những cái phần liên quan tới tư duy thì mình sẽ cần là loài người với
+2:35:23
+nhau nè, trao đổi rồi coaching với nhau, meeting, hội hợp, masterm này nọ thì
+2:35:30
+mình mới qua được. Thí dụ đây nè. Cái này là cái mà về mặt kỹ thuật là làm
+2:35:34
+được. Nhưng nếu mình không gợi ý mọi người sẽ không biết là có cái chuyện đó
+2:35:37
+trên đời. Mình không gợi ý mọi người sẽ không biết phải làm cái việc là như thế
+2:35:41
+nào. Thí dụ ha. Thì cái này nó cần người nè. Cái này là
+2:35:46
+cần người tại vì nó liên quan tới chiến lược. Nó không có liên quan. Nó không
+2:35:50
+phải là cái chuyện là first được hay không mà mọi người không biết là à nên
+2:35:54
+ai first cái này. Còn AI first nếu mọi người đã làm được rồi á thì gần như V
+2:35:59
+coding á thì mọi người muốn làm gì cũng được rồi. Vấn đề là ý tưởng thôi. Và cái
+2:36:04
+phần này là cái phần cần cộng đồng mình thí dụ ha.
+2:36:08
+Mình có một cái phần mềm là à nó quản lý toàn bộ cái công việc của của
+2:36:15
+con nói chung là cái phần mềm này đó là mình làm ra đó là để á là ờ quản lý công
+2:36:22
+ty của mình thì nó có nhiều cái module tính năng. Mình đang vi code thêm á mình
+2:36:26
+làm ra nguyên cái cục này luôn. Thì sắp tới mọi người có thể sử dụng được. Những
+2:36:30
+người trong cộng đồng là có quyền xài cái này mà không tốn phí ha. Còn bình
+2:36:34
+thường á là đây bình thường á là tốn tiền nha. Chết cha
+2:36:40
+rồi. Sao nó chuyển cái này ra đây rồi. Rồi thì mọi người nhìn ha. Ở trong cái
+2:36:49
+cái clockwork này nó là cái phần mềm để mình quản lý công việc của toàn công ty.
+2:36:53
+Thì mọi người cứ hình dung là cái cái phần t này á là toàn công ty mình nó
+2:36:57
+đang có nhiêu đây tác đi. Thì á là à nếu mà mình nếu mà mình là một người
+2:37:05
+quản lý đi mình vô đây mình nhìn đi thì mình thấy nó như cái đám rừng vậy đó. Nó
+2:37:09
+quá là nhiều đi mình loát ra thêm thì nó ra một đống tác
+2:37:14
+nữa. Mình mình mình không biết là mình mình nhìn vô đây mình khó mình nhức đầu.
+2:37:19
+Thì mình đã kết nối con lưỡng mật vô đây rồi ha. Thì mình cái việc của mình á là
+2:37:25
+à con lưỡng mật
+2:37:31
+à quên đây đi bấm bấm nó hồi lộ bí mật hết
+2:37:37
+à. Rồi bây giờ mình sẽ nói là à hiện tại
+2:37:45
+ông toàn bộ công việc của
+2:37:51
+công ty ngày hôm nay như thế nào? Tuần này đi thì
+2:37:59
+tuần này tuần này như thế nào?
+2:38:09
+Thì mọi người có hình dung là nó đọc được cái toàn bộ ở trên này. Thì cái này
+2:38:13
+cái cái việc này á là ngoài cái ứng dụng là mọi người tạo ra một con boss mà tele
+2:38:19
+rồi gắn con lửng mực hoặc gắn con action vô xong nó chết với mọi người này nọ thì
+2:38:24
+cái ứng dụng của nó mình dùng để sập bò cộng đồng đó mọi người. Nhìn có một trăm
+2:38:27
+mấy chục người mà mình sập bò bằng nó chứ không thôi á là đội ngủ mình là nó
+2:38:31
+loạn luôn đó. Còn mọi người mà đang làm dịch vụ á thì
+2:38:35
+mọi người có thể dùng nó để mà support cho khách hàng. Bán lẻ thì coi đã có
+2:38:39
+người ứng dụng bỏ vô trong bencet rồi đó nha. Thì cái này là người ta setup một
+2:38:43
+con là mấy ngàn đô đó. Mọi người nên tập luyện đi để đỡ tốn mấy ngàn đô hoặc là
+2:38:47
+setup cho người khác lấy tiền. Má mình nói chuyện hồi cái là mình bị nóng cái
+2:38:51
+lỗ tay á. Với lại cái mình đang mình đang bị ù tay mình không nghe rõ cái
+2:38:55
+tiếng của mình á. Không biết là mình nói gì nó có bị mọi người có nghe được không
+2:38:59
+ta? Chứ mình đang mình đang không có nghe rõ cái tiếng mình nói.
+2:39:03
+>> Nghe được á anh ơi. Em cũng đang bù tay nhưng mà chắc hồi nãy cũng nghe được á.
+2:39:07
+>> Ok. Rồi đây thì mọi người nhìn ha. Nó sẽ nói là nó sẽ cho cái tổng quan nè. Tuần
+2:39:13
+này có nhiêu đây tác nè. Ờ có mấy tác nó bị hóa hẹn nè. Rồi có thằng thằng này
+2:39:18
+với thằng này là đang bị nhiều nè. Rồi con nhỏ này nó đẩy tác này nè. Con nhỏ
+2:39:22
+này hàng này với nhỏ này là đang triển khai cái sale bay với edit video nè. Nói
+2:39:26
+chung là team đang chạy deadline sắp mặt. Anh có cần đốc hay điều chỉnh gì
+2:39:30
+không thì cứ để đây cho em cho anh em lo sức khỏe của anh lo cho sức khỏe anh em
+2:39:35
+lắm. Ví dụ vậy. Thì bây giờ á là mình muốn mà tạo một cái tác mới ở đây đi.
+2:39:39
+Mọi người thấy đây là một cái tác đúng không? Thì mình mà muốn tạo một cái tác
+2:39:42
+mới đi thì nếu mà người bình thường á phải vô nè ghi tiêu đề mô tả rồi chọn
+2:39:48
+cái loại công việc nè rồi mô tả nè rồi gắn cho ai công việc nào là phòng ban gì
+2:39:52
+nè đó rồi làm cái gì xây tết trung bình này nọ. Thì mọi người thấy nếu mọi người
+2:39:57
+thường á là ở đây là có bao nhiêu người là có cái hệ thống mà quản lý công việc
+2:40:02
+và có bao nhiêu người là không có luôn. Nếu mà không có thì comment số 0, còn có
+2:40:05
+hệ thống quản lý á thì comment số một đi.
+2:40:09
+Má nó cái gì mà không không vậy? Thì hầu hết là [ __ ] có luôn hả
+2:40:16
+mấy người giỡn với tôi đó hả? Thì ít nhất phải có chứ đúng không? Rồi thì giờ
+2:40:22
+dạ giờ là không có là cười lắm đó nha. có dơ coi như có đi không? Thì bây giờ á
+2:40:28
+là mình mình tạo mình tạo ở đây nè là nó nó làm biến làm biến thì mình tạo ở đây.
+2:40:34
+Do đó là bây giờ bây giờ tạo cho cái tác a làm landing
+2:40:43
+cho chị Vân đó. Website
+2:40:48
+cá nhân đó tác cho à gán cho à Nguyệt Nhi đó. Rồi
+2:41:02
+deadline 3 ngày nữa đúng giờ này đó. Rồi bây giờ á là mình để vậy thôi thì mọi
+2:41:11
+người coi ha. Thì chút xíu nữa đó là nó sẽ tạo một cái tên này trên hệ thống cho
+2:41:16
+mình. Thấy chưa? Thì cái việc mà thống kê hoặc là nó create t nó gắn cho ai
+2:41:21
+hoặc nó thay đổi này kia nọ đó là sau này mình mình đang chách riêng với nó
+2:41:25
+nha. Đây đã lên trái tác này cho Nguyệt Nhi làm lên đúng không nhỉ? Bây giờ mình
+2:41:30
+sẽ F5 lại nè. Đó mọi người thấy không nè?
+2:41:34
+cho Nguyệt Nhi tạo bởi dư nhậm nghĩa đó thì
+2:41:39
+ờ mình muốn biết là bạn đó đang làm nhiều
+2:41:44
+tác hay không, quét tác hay không hoặc là hiệu suất thế nào. Rồi mình cũng kiểm
+2:41:48
+tra được á đây nè. À không,
+2:41:54
+mình cũng kiểm tra được á ở một cái trang khác mình quên mất cái link rồi.
+2:41:59
+Nhưng mà đại khái là vậy nè là mình biết được á là một cái bạn nhân sự nào đó
+2:42:05
+đang chat ở trong cái group tele của công ty á là họ là chat tùm lum tá lã về
+2:42:14
+các dự án á thì mình có thể hỏi con lửng á là đối sánh cho mình biết được á là họ
+2:42:19
+đang họ đang chách nhiều vậy là chách nhảm chơi hay là họ có đang làm đang chá
+2:42:24
+trên những cái tác họ đang làm hay không để mình đánh giá được hiệu suất luôn.
+2:42:29
+Thì mấy cái vấn đề đó nó nó là hồi trước á là không thể làm, bây giờ là làm được.
+2:42:36
+Cái gì á không có, có người có, rất là nhiều người không có ha. Thì đó là một
+2:42:41
+cái ứng dụng mà đối với mình là cực kỳ hay liên quan tới agent. Nó không phải
+2:42:46
+chỉ là chat với agent đâu mà là mọi người điều phối cái hoạt động công việc
+2:42:50
+của mọi người thông qua agent luôn ha. Thì đó là cái cái tương lai của cái việc
+2:42:56
+mà quản lý công việc này kia nọ là như vậy đó. Nó không phải chỉ là chết vậy
+2:43:02
+thôi. Còn làm như thế nào thì theo mọi người thì làm như thế nào để làm được
+2:43:06
+cái việc giống như mình. AFS chính xác.
+2:43:19
+Nhưng mà thí dụ mình không nói idea đi mọi người mọi người nghĩ mọi người có cự
+2:43:23
+nghĩ ra được không? Thì thì đó là cái ý nghĩa của cộng đồng
+2:43:27
+ha. Thì sắp tới á là mình sẽ cái vấn đề á
+2:43:34
+bây giờ là dùng ai để mà làm được nhiều thứ là chuyện đương nhiên rồi. Thì mình
+2:43:38
+luyện mình dành 21 ngày challeng để mọi người mình luyện cho mọi người làm được
+2:43:42
+cái việc đó. Tức là làm muốn làm cái gì cũng e làm được hết trơn á. Chuyện còn
+2:43:47
+lại á là làm sao để mà có được cái chiến lược kiếm tiền, chiến lược để mà phát
+2:43:51
+triển cái cái cái hệ thống kiếm tiền của mọi người á thì lúc đó nó mới cần cộng
+2:43:56
+đồng. Chứ còn á là ai first thì ai cũng làm
+2:43:59
+được rồi đó. Chẳng qua là mọi người bị giới hạn niềm tin thôi chứ còn mình mình
+2:44:04
+nói riết mọi người tin tưởng vô chuyện đó rồi là mọi người làm riết là nó được.
+2:44:07
+À kể cả nó khó nha. Kể cả nó là cái đó nh mình nói mình nói rồi nha. Kể cả là
+2:44:12
+mọi người kêu tôi không biết thao tác như thế nào đó cũng không phải vấn đề
+2:44:15
+luôn. nha
+2:44:21
+anh anh ơi
+2:44:23
+>> nghe mà em làm em làm em sử dụng cái con anti đấy là con ấy em thấy con con
+2:44:33
+thông minh hơn
+2:44:35
+>> con nào
+2:44:36
+>> con hay cái con gì ấy clo á hả clo đè hả cái con của mật nó giới thiệu rồi
+2:44:45
+câu á hả?
+2:44:48
+>> Đấy thông minh hơn.
+2:44:49
+>> Ừ
+2:44:50
+>> đúng rồi.
+2:44:51
+>> Không nói chung á là em xài nhiều agent rồi
+2:44:56
+thì từ từ em sẽ trải nghiệm cái việc đó. À à thật ra anh trả lời không thì cũng
+2:45:02
+không chắc tại vì là quan trọng là em slash cái model gì á nó khi mà em sử
+2:45:07
+dụng một cái agent á thì á là cò
+2:45:13
+khi em sử dụng một cái agent á thì em sẽ hình dung vậy nè nó có hai cái cấu thành
+2:45:18
+tạo nên cái agent đó cái đầu tiên á là cái model cái model AI á nh vô không cái
+2:45:25
+model là cái a cái chemini hay là
+2:45:30
+>> cái ngôn ngữ lớn
+2:45:31
+>> cái ờ cái á nó gọi là ngôn ngữ lớn á. Cái thứ hai để mà cấu thành lên agent đó
+2:45:38
+là cái cái system from
+2:45:40
+>> thì cure á thằng c á hay là antiity á thì tức là nó là cái anh gọi nó là agent
+2:45:48
+coding tại vì nó chủ yếu dùng để để coding để vi coding á để mình điều phối
+2:45:52
+cái hoạt động vi coding thì bên mỗi một cái con như vậy nó đều có một cái system
+2:45:58
+prom ở bên dưới nhưng mà mỗi một cái nền tảng một cái con agent vậy nó đều có thể
+2:46:03
+dùng các model khác nhau nha. Cho nên mỗi một cái cái cái sự khác biệt giữa
+2:46:09
+các action khác nhau đó thì nó khác ở thứ nhất á là nó khác ở cái system from,
+2:46:15
+thứ hai là nó khác ở cái cái model mà nó sử dụng. Cho nên nếu em so mà nếu em nói
+2:46:20
+co mà nó thông minh hơn á thì thì có thể có thể là em đang dùng cái anh không
+2:46:25
+biết em đang select cái model nào ở trên thì nếu em select cái model thông minh
+2:46:31
+nhất thì có thì chắc chắn nó phải thông minh anti rồi phải không? Cái thứ hai đó
+2:46:34
+là anh anh không dùng cái col này nhiều nhưng mà thậm chí anh không dùng luôn.
+2:46:38
+Anh chỉ test thử thôi. Anh không có dùng. Thì anh anh anh thấy rằng là chủ
+2:46:44
+yếu á là mình xài cái con nào á mà nó phù hợp với lại cái loại cái loại mục
+2:46:52
+tiêu mà mình đang đang vi code á thì em tự nhiên em sẽ thấy nó thông minh hơn.
+2:46:58
+Nhưng mà làm cái khác thì nó lại ngu hơn. Anh thí dụ nha. À anh thử á là clon
+2:47:05
+clon một cái website tức là anh lấy nguyên một cái website của người ta anh
+2:47:10
+clon về 100% không chỉnh sửa thì anh dùng anterity cái model là Gemini flash
+2:47:17
+thì là nó làm được ngay nhưng mà á trước đó thì anh không dùng
+2:47:21
+flash anh dùng là anh dùng cái model thông minh nhất và có khả năng suy luận
+2:47:27
+bậc nhất thế giới luôn đó là hàng obus vào thời điểm Đó thì ob của Clot á thì
+2:47:34
+nó làm hoài không được. À nó làm hoài không được nha. Xong anh làm cho tới khi
+2:47:38
+anh hết toen anh mới chuyển qua là xài Gemini flash thì nó được ngay. Cái anh
+2:47:44
+ngồi anh nghĩ ủa sao kịậy ta? Cái chuyện đơn giản vậy tại sao con Obus làm không
+2:47:48
+được mà cái con flash mình nghĩ nó ngu hơn chứ nhưng nó lại làm được.
+2:47:53
+À thì nó lo nó do cái năng lực của model khác nhau. Cái gì mà liên quan tới suy
+2:47:57
+luận á thì nó cần obos gì mà nó liên quan tới chuyện hình ảnh này nọ đồ á thì
+2:48:02
+nó semin nó tốt hơn nha. Em hình dung không? Đó thì từ từ. Có
+2:48:10
+nghĩa là thì câu hỏi thí dụ như em hỏi là ủa mấy cái anh biết á nếu anh không
+2:48:14
+nói sao tụi em biết? Thì anh tin tưởng cái chuyện là rồi tụi em sẽ biết hết
+2:48:18
+thôi. Trong quá trình ai first á trong quá trình làm nhiều á. thì nó sẽ em sẽ
+2:48:23
+biết em sẽ biết và cái cộng đồng nó cũng có ý nghĩa là để mình có thể share riêng
+2:48:27
+những cái đó nhưng mà anh cần á là mọi người qua khỏi mấy ngày để mà cái
+2:48:30
+foundation mọi người nó vẫn ai cũng có một cái mức sàn chung hết ai cũng file
+2:48:34
+coding được web lên dinin một số phần mềm nhất định thì tiếp theo mình nói mấy
+2:48:39
+cái thứ mà nó hệ thống hơn những cái thứ mà nó tư duy hơn những thứ xa xăm hơn nó
+2:48:45
+dễ hơn còn nếu nói sớm quá đó thì nó nó không hợp nó không phù hợp tại vì rất là
+2:48:50
+nhiều người đang ở mức foundation Không hiểu
+2:48:55
+có ai tạo ra sá nào chưa? Tấn làm ra được cái gì kinh khủng rồi kìa. Cái cái
+2:49:00
+gì? Cái cái gì để mà chống quay trộm màn hình luôn. Em có thể là em lên em a em
+2:49:08
+share cho mọi người cái đó đi. Em share cho mọi người cái em a cái em
+2:49:18
+làm bữa giờ đi.
+2:49:23
+>> Ý là giờ nói ha anh.
+2:49:25
+>> Ừ. em share cái cái đó nó trông như thế nào, nó là cái gì đi. Hay là nó kinh
+2:49:29
+khủng tới mức nào. Th không để em biết được cái sức mạnh
+2:49:33
+của AFS mà em giới thiệu cái background của em luôn là em mà em không phải code
+2:49:37
+đúng không? Em không phải dep đúng không?
+2:49:40
+>> Đừng để lộp nha.
+2:49:42
+>> Dạ. Rồi ok.
+2:49:43
+>> Mọi người nghe em rõ đúng không ta?
+2:49:45
+>> Nghe nó hơi nhỏ em hơi xa cái mic đúng không?
+2:49:53
+>> Rồi nghe rõ hơn chưa ạ? Rồi ok nghe.
+2:49:56
+>> Dạ rồi cảm ơn anh anh anh Nghĩa cho em lên chút xíu lên đi.
+2:50:01
+>> Chào mọi người nha. Em em em là Tấn. Hiện tại em nói lại là em không phải là
+2:50:06
+dep nha. Em chưa có kinh nghiệm lập trình hay thiết kế web gì hết. Em là một
+2:50:12
+dựng phim, một chuyên viên dựng phim với lại là một giáo viên dạy về quay dựng
+2:50:16
+thôi. Và sau khi tham gia cái challenge của
+2:50:21
+anh Nghĩa thì thực sự là mới mấy ngày đầu á thì hơi bị nhức đồ bởi vì không có
+2:50:26
+quen không biết mấy cái này làm sao hết. thì cứ theo cái shop SOP của anh Nghĩa
+2:50:32
+thôi. Nhưng mà thấy cũng hấp dẫn sau mấy ngày á thì em làm à thường mọi người tới
+2:50:39
+ngày thứ ba thì bắt đầu mọi người mới làm hoàn thành một cái web đầu tiên đúng
+2:50:42
+không? Nhưng mà tới ngày thứ ba em đã làm được hai cái landing bed riêng cho
+2:50:46
+mình rồi và đã có thể có cấu hình form. Lúc đó em đã tạo được cái con boss
+2:50:52
+Telegram trước đó rồi mặc dù chưa tới một cái bài nào để chỉ làm cái con này
+2:50:57
+hết. Rồi xong sau đó thì em có nghĩ là ờ tại em đang làm về bán cái khóa học của
+2:51:05
+em thì em nghĩ là à nếu như em muốn dùng một cái hệ thống chống quay trộm thì em
+2:51:12
+phải trả một số tiền rất là lớn. Ở Việt Nam là có một cái a dịch vụ có một cái
+2:51:18
+bên đã đã cung cấp dịch vụ này rồi là nó phải tốn ít nhất 150 triệu để có được
+2:51:23
+cái dịch vụ này. Còn ở nước ngoài thì mọi người phải thuê từ khoảng 2000 trở
+2:51:28
+lên trên 1 tháng để sử dụng cái dịch vụ này. Thì em nghĩ là để em thử thôi. Em
+2:51:33
+nghĩ trong đầu là em thử có thể làm được hay không.
+2:51:36
+Nhưng mà sau 3 ngày em nghiên cứu, em tập trung, em làm thì em chưa dám chắc
+2:51:42
+là nó sẽ work 100%. Nhưng mà hiện tại nha em đang trong thời gian thử nghiệm
+2:51:46
+là em đang tạo cho mình một cái website và cái website nó nó có thể đang chạy
+2:51:50
+khoảng 6 70% rồi và em đã đưa được vào cái cái hệ thống DRM chống quay chọn,
+2:51:57
+chống chụp màn hình rồi chống download rồi chống các kiểu trên cuộc đời này vô
+2:52:01
+trong đó em đã đưa vô được. Em chỉ đợi là đưa cái bài giảng của em vào trong
+2:52:07
+web và để thử chạy được thì khả năng em có được một công sáp
+2:52:12
+trị giá khoảng 35.000 theo định giá của mấy bạn Asian.
+2:52:17
+Dạ. Rồi em cảm ơn mọi người.
+2:52:21
+>> Ok. Ngắn gọn vậy thôi đó hả?
+2:52:23
+>> Dạ.
+2:52:24
+>> Ok. Thì đại khái mọi người biết cái DRM đó là khi mà mọi người mở Netflix lên
+2:52:29
+mọi người coi á mọi người mà bật quay màn hình một cái là nó tối thui đó. Thì
+2:52:33
+cái đó là mình nghe đồn là Netflix nó phải trả cho cái bên mà cung cấp cái
+2:52:38
+dịch vụ DRM đó rất là nhiều tiền tính bằng triệu đô á. Thì thì bây giờ tấn nó
+2:52:44
+làm được luôn rồi. Mọi người hình dung là vi coding nó kinh
+2:52:48
+khủng á. Nó chỉ là cái giới hạn là mọi người mọi người làm hay không thôi. Với
+2:52:52
+lại á mình mình muốn nói luôn á là thật ra khi mọi người tham gia thử thách á
+2:52:57
+mọi người phải hình dung á mọi người n được mọi người phải mở rộng cái mục tiêu
+2:53:01
+của mọi người ra. là tôi biết cái này một cái rồi ha là
+2:53:05
+tôi phải đưa vô ứng dụng cho cái cuộc sống tôi liền để tôi kiếm tiền chứ không
+2:53:09
+phải là mọi người cố gắng chỉ để làm cái bài tập của ngày hôm đó để hết 21 ngày
+2:53:14
+để tôi lấy lại cái tiền vậy để chê vậy hiểu không tại vì á mình tính chắc luôn
+2:53:20
+qua khoảng 5 10 ngày thôi cái số tiền đó nó đã xứng đáng cho cái việc á là mọi
+2:53:26
+người tham gia bất cứ khóa học nào nó cũng không có đẩy mọi người làm được ra
+2:53:29
+những cái đó cái kết quả đó hoặc là những người khác đã đạt được những kết
+2:53:32
+quả lớn hơn cái đó rồi. Cho nên á mọi người nên á đẩy thúc đẩy cái cái mục
+2:53:37
+tiêu của mọi người á là ứng dụng được vào cái cái công việc hàng ngày kiếm
+2:53:41
+tiền nha. Cái đó mới là cái thứ mà mình muốn. Thì nhiều người đã kiếm được tiền
+2:53:45
+rồi. Tôi nói là trong dưới 10 ngày đã rất là nhiều người kiếm tiền rồi. Và ở
+2:53:49
+đây có nhiều bằng chứng nè. Ở đây đã có nhiều bằng chứng cho việc đó
+2:53:53
+và nhiều người đã nói cái việc đó ở trong này. Hy vọng là không có lộ ra là
+2:53:59
+tôi mua chuột mấy người này nói câu này cuối buổi trả 5 triệu nha.
+2:54:03
+Cho nên á là ai cũng đã thấy lãi nếu như mà thiệt sự họ thực hành. Cho nên với
+2:54:09
+lại á mọi người nhớ nè cái việc mọi người ở trong cộng đồng á sẽ nói chung á
+2:54:14
+là mình sẽ đưa cho mọi người những cái cái mindset và những cái ý tưởng kiếm
+2:54:19
+tiền khác nữa để mọi người khi đã rèn luyện xong cái thói quen dùng ai rồi đó
+2:54:24
+thì mọi người có thể kiếm tiền bằng nhiều cái cách khác nữa hình dung không
+2:54:28
+chứ đừng có là bị giới hạn trong cái việc á là à tôi làm bài tập xong là xong
+2:54:34
+như vậy thì nó giống như đi học thời học sinh không có không đối phó thôi chứ
+2:54:38
+không để làm gì cả. Thì có cái mình không muốn xảy ra. Anh nghĩ em hỏi thêm
+2:54:42
+một tí nữa
+2:54:44
+>> em mới thấy con clot đấy. Hứa hơi em hơi tốt thế anh tí với con clot đấy. Ừ
+2:54:50
+>> nó mới ra cái tính năng nó cô quốc ấy mới cảnh tính năng giống kiểu
+2:54:56
+nó nó thành một cái riêng ấy thì anh đánh giá sao về cái con đấy như kiểu
+2:55:03
+ngay sau muốn con riêng thì nó
+2:55:10
+>> rồi anh rồi anh em
+2:55:13
+>> nó đã có một con clot đấy rồi thì mình có cần đưa ra những con khác không N
+2:55:21
+ờ ý em nói là nếu cái con Cloè đó nó tạo ra cái đó rồi mình có cần phải học cái
+2:55:26
+việc là làm action à khác hoặc là học cái Go hay không đúng không?
+2:55:31
+>> Vâng đúng
+2:55:32
+>> chắc chắn là nên. để nói cho em nghe. Thứ nhất á cái cái cái clo cái clo đè
+2:55:39
+là em mà muốn xài nó tính năng vậy thôi nhưng mà nó là cái máy đốt toen.
+2:55:45
+1 tháng nếu em trả 10 triệu á em nó cũng không đủ để cho em xài những cái tác vụ.
+2:55:50
+Nếu thực tế nếu thật sự em đưa vào công việc nha thì nó sẽ đốt 1 tháng em từ 5
+2:55:54
+tới 10 triệu. Em chịu được không? Hình dung không? Cái tiền mà em trả cho á
+2:55:59
+Claud nó rất là nhiều. À cái đó còn so với Go Clot á thì em sẽ
+2:56:06
+là có thể dùng bất kỳ cái model AI nào để em bỏ vô em xài và có nhiều cái nguồn
+2:56:13
+token nó rất là rẻ thậm chí là free như hiện tại anh chạy free nè thì nó không
+2:56:17
+tốn tiền. Cái đó là cái ý nghĩa đầu tiên ha. Cái vấn đề liên quan tới tiền á. Cái
+2:56:22
+vấn đề thứ hai á là Claud nó tạo ra để cho cái hoạt động cá nhân. Có nghĩa là
+2:56:27
+em có thể là cho nó điều khiển cái máy tính của em để nó làm này làm kia làm
+2:56:30
+nọ. Nhưng để mà em connect với lại Telegram
+2:56:36
+mà em tạo ra nhiều con agent khác nhau cho những cái mục tiêu khác nhau mà nó
+2:56:41
+có thể là chạy song song rồi hỗ trợ nhau cùng một lúc ha. Rồi ngăn chặn rồi có
+2:56:47
+những cái tính năng liên quan tới ngăn chặn bảo mật không cho một cái người mà
+2:56:51
+không được em accept mà nó chat với lại agent của em để how token này kia nọ đó
+2:56:56
+thì chỉ go clot có thôi chứ còn cái con lao đè nó không có làm cái việc đó tại
+2:56:59
+vì tại vì nó không làm là tại vì nó nó sinh ra để làm trợ lý cá nhân chứ không
+2:57:03
+phải để vận hành công ty còn go clot nó có thể giúp cho em vận hành công ty em
+2:57:08
+nói rằng là em có công ty không ta em có
+2:57:11
+>> go clot là cái gì anh
+2:57:13
+>> go clot là nguyên cái buổi ngày hôm nay là nói về Go á.
+2:57:16
+>> À à tại vì nay nay em mới đi vào nghe buổi cuối a cuối.
+2:57:21
+>> Ôi trời ơi. Em có em có công ty không?
+2:57:24
+>> Em không em làm cá nhân thôi.
+2:57:26
+>> Ok. Vậy thì sắp tới á em sẽ có cái công ty một người. Cái khái niệm mà công ty
+2:57:31
+một người á là cách đây 6 tháng anh nghe nó tàu lao lắm. Anh không có tin chuyện
+2:57:35
+đó nha. Anh không có làm cái đó.
+2:57:37
+>> Em đang cần cái đấy đây
+2:57:38
+>> hả? Em đang cần cái đấy đây.
+2:57:41
+>> Và anh khẳng định cái thời đại của công ty một người chính thức bây giờ nó mới
+2:57:45
+bắt đầu nè.
+2:57:47
+>> Còn những cái agent như go clot nó mới giúp cho cái một người có thể vận hành
+2:57:52
+công ty được. Còn Cloud nó chỉ nó chỉ giúp cho một freelancer thôi.
+2:57:56
+>> Mình chế ra một con một con agon để nó chế ra những cái con khác được không
+2:58:00
+anh?
+2:58:01
+>> Em coi lại hết record buổi ngày hôm nay đi rồi em tự trả lời câu hỏi đó. Ok anh.
+2:58:07
+>> Tại vì câu đó nó có chỗ này rồi.
+2:58:09
+>> Vâng.
+2:58:13
+>> Solo solo business thì ok. Còn solo expert nghe nó hơi cười. Nó hơi mắc
+2:58:18
+cười. Exb đó là đã chỉ cho một người rồi. Solo làm gì nữa?
+2:58:37
+Đó thì đó là cái solo prin thì okh nhân một người thì
+2:58:43
+khái niệm đó nó cũng là khái niệm mà mình thấy rằng là hồi xưa nó tào lao
+2:58:47
+mình thấy nó khó lắm không có đâu không có được đâu bây giờ mọi người có thể tạo
+2:58:51
+ra nhiều hỗ trợ công việc cho mọi người thử thách giọng ấm áp của cái gì là sao
+2:59:00
+Cái gì thế? Em đang có công ty cỡ 15 người. Có nên chuyển về công ty một
+2:59:06
+người không? Dùng hai nên nha. Đuổi hết đi.
+2:59:13
+Tôi cũng bực bội với cái đám công ty tôi lắm rồi. Tôi chịu hết nổi rồi.
+2:59:25
+Má nó chứ thiệt á. Mình nói bây giờ mình nhắc cho ngon nó nhớ là nó nhớ nha. Còn
+2:59:30
+mình mình nói mấy đứa trong công ty nó không nhớ gì hết trơn. Bực bội lắm.
+2:59:40
+Thì đó mà bây giờ lại có người nói với agent
+2:59:45
+coding mà kêu là nó làm không được cái bực bội. Tôi nói thiệt nế nếu như mà
+2:59:50
+mình mình không nhẫn nại được eent thì mình không bao giờ có thể nhận nại được
+2:59:55
+với loài người. Thiệt luôn. Mình mà tập nhẫn nại được
+3:00:00
+với A là loài người bình thường. Giao việc gì? Cái giao việc anh tự build
+3:00:31
+hay mình có liên kết lắ không cái giao việc mình tự build luôn mình tự build hệ
+3:00:35
+thống mình luôn mà muốn làm trên liên kết với lắ hay notion để nó tạo công
+3:00:41
+việc thông qua agent thì cũng được luôn thì muốn làm cái gì thì mình lên agent
+3:00:46
+coding mình hỏi mình nói là tao đang quản lý công việc trên lắ giờ tao muốn
+3:00:50
+kết nối cái go clot này làm sao trang web có hướng dẫn không
+3:01:00
+Go clot cho nó tự vào folder đọc file trong driver tạo báo cáo định kỳ được
+3:01:04
+không? Khả năng là không do là nó không được
+3:01:09
+quyền truy cập vô thì cái driver của Google nó bảo mật lắm nó không cho vô
+3:01:14
+đâu. Thật ra là có những cách khác nói chung
+3:01:19
+là lý thuyết là được á nha. Lý thuyết là được hết á nhưng mình thấy không cần á.
+3:01:26
+Đó định kỳ á. Tại mình vi coding ra một cái riêng sau á là mình upload cái hết
+3:01:34
+mấy cái tài liệu đó qua notebook á thì cho nó đọc hay hơn. Tại vì lúc đó nó đọc
+3:01:39
+nó đọc ở dạng mdown dạng AI dễ đọc. Chemin vô được. Ờ em muốn truy cập vô
+3:01:48
+CRM và các deadline rồi chủ động nhắc nhân viên được chứ. Thì mình đang làm
+3:01:52
+đó. Trời ơi nó dí de nhân sự nó tự động nó nhắc nó coi rồi nó coi thằng nào mà
+3:01:59
+đang ít worklot á nó kêu đề xuất đẩy thêm tác cho làm nào nhiều quá nó giảng
+3:02:03
+ra với lại á mình còn làm mình có idea làm này nữa nè là thí dụ như là
+3:02:10
+nhân viên mình nó xin nghĩ việc đúng không nó request nó xin là
+3:02:16
+nghỉ phép này nọ đúng không thì mình phải nhức đầu mình ra quyết định là có
+3:02:19
+cho con này nó nghỉ hay không đúng không thì bây giờ mình Muốn hết chiếc đầu thì
+3:02:23
+mình sẽ để con lẫn mật nó quyết định luôn. Nhưng mà con lẫn mật nó sẽ quyết
+3:02:26
+định dựa trên dữ liệu. Thứ nhất là cái người đó có đang nắm nhiều tác hay
+3:02:30
+không. Thứ hai là họ có đang ở trong một cái project nào quan trọng hay không.
+3:02:36
+Thứ ba là bình thường này nó làm việc nó có hay chễ disl hay không. Thứ tư á là
+3:02:43
+hiện tại á là ừ công ty có sự kiện gì quan trọng sắp
+3:02:47
+tới diễn ra mà cần cái người đó không? Thì tất cả những cái đó là nằm trên phần
+3:02:51
+mềm mình hết rồi. Thì khi mà có một cái request là xin nghĩ việc ở trên cũng cái
+3:02:55
+phần mềm đó luôn nha. Mà cái module đó là module quản lý nhân sự thì con lửng
+3:02:59
+mật sẽ quyết định được luôn á là có cho thằng này nghỉ hay không nha. Mình không
+3:03:04
+cần phải ra quyết định luôn. Để có một trang xem hiệu quả của anh là
+3:03:09
+gì. Em có hai trang như thấy tác vụ gửi email boost r automation cho không ch
+3:03:14
+mail cho gửi email boost automation mail cho không chạy. Không chạy hả? không
+3:03:19
+chạy là em đang xài cái gì? Xài resent đi. Em bỏ cái doc vô nó đọc là nó làm
+3:03:27
+được mà. Đội làm được dmr rồi mà còn làm không được email. Email bình thường mà.
+3:03:34
+Anh nghĩa build cái data chứa tác ấy trên nền tảng nào thì mình vi coding ở
+3:03:39
+trên thư mục trên máy tính của mình á xong mình deploy nó lên một cái VPS
+3:03:43
+thôi. Deploy thì giống nãy đó. Deploy thì mình mình
+3:03:50
+chỉ cần là mình tạo một cái mình khỏi còn tạo rebo mình mình mình kết nối với
+3:03:57
+cái rebo giub với lại cái cái AI agent coding của mình á cái mình bỏ cái thông
+3:04:02
+tin VPS vô mình kêu á là nó làm nó deploy lên. À với lại mình nói qua chút
+3:04:07
+xíu cái vấn đề cái hồi nãy Hữu Long á là đưa luôn cái
+3:04:13
+thông tin VPS lên trên cho AI agent nó đọc á thì sau đó mọi người muốn bảo bật
+3:04:18
+mọi người phải đổi cái bass đó nha. Còn nếu mà không á thì mình không được
+3:04:23
+deploy theo cái kiểu đó mà mình phải mình kêu AI hỏi AI á là làm sao cho bảo
+3:04:30
+mật. Tao không đưa cái bass cho mày được nhưng mà mày chỉ tao cái cách bảo mật
+3:04:34
+đi. Cái cái cách nào deploy mà bảo mật nhất á chỉ cho tao thì nó sẽ đi nó để đi
+3:04:39
+theo cái hướng bảo mật. Còn mọi người họ mọi người không có nghĩ là mọi người cần
+3:04:43
+bảo mật. Mọi người thả đại cái bass cho nó thì thực tế là nó nó nó biết. Thật ra
+3:04:48
+mấy ông mà đép thì nói với mình là như vậy là không bảo mật. Nhưng mình cũng
+3:04:51
+chả biết là không bỏ mật chỗ nào tại vì không biết chừng nào hacker nó mới vô nó
+3:04:56
+đột nhập vô model E2 để nó lấy cái đó của mình được nữa.
+3:05:02
+À resent chạy được nhưng mà theo cái follow automation à sao lúc được lúc
+3:05:07
+không? Thì em em nói với cái cho ai cái tình trạng đó đi. Sao lúc được lúc
+3:05:12
+không? Giống như là có đợt á mọi người vô tab. vô đó thì có người tự nhiên cái
+3:05:17
+bị là bị vấn đề gì về mặt thời gian á. Lúc đó
+3:05:22
+mình cũng không hiểu là tại sao bị cái đó. Tức là mấy bạn đó là bị là chưa có
+3:05:28
+tới giờ mà tự nhiên nó bị dính deadline đó. Nhưng mà khi mà mình coi lại á thì
+3:05:34
+ra phát hiện ra là trong nhóm của mình là có mười mấy ông là ở nước ngoài thì
+3:05:38
+cái bên đó là xài cái gì ta? Cái giờ cái đ cái giờ nó khác sờ cái muối giờ nó
+3:05:44
+khác mà trên hệ thống của TP và thời điểm đó lúc mình vai cing ra thì nó chỉ
+3:05:48
+có một mối giờ thôi cho nên là nó bị sai cái mình nói là nó phát hiện ra nha.
+3:05:54
+Mình mấy người đó nói vậy đó là sao tự nhiên cái giờ này tao bị vậy thì mình
+3:05:58
+cũng không biết là tại sao luôn nha. Mình đưa vô thì nó nói cho mình biết là
+3:06:02
+bị như vậy. Xong cái nó kêu để tao fit cho nha. Cái đó ờ ok fit giùm cái cái nó
+3:06:06
+fit cho đơn giản. Cho nên là em bị gì thì em chụp màn hình em bỏ vô đi thì là
+3:06:12
+được. Không có gì không được hết trơn á. Chỉ
+3:06:15
+có một cái là ai mới có thể nó lâu hơn là do là ai ai nó dắt điềm vọng. Nhưng
+3:06:20
+mà như mình nói nha mọi người phải để nó dắt tại vì mọi người chưa từng biết
+3:06:25
+những con đường đó cho nên là nó dắt mọi người đi để mọi người biết là có tồn tại
+3:06:29
+những cái hướng đó. Cái đó là cái cần thiết đó. Nhiều người nói là cái đó nên
+3:06:34
+nếu như mà tôi có ai đó cầm tay chỉ việc tôi thì tôi có thể đỡ khổ, tôi có thể bỏ
+3:06:38
+qua cái được cái phần đó. Mình hứa cho mọi người luôn á, cái đó là con đường
+3:06:41
+sai lầm đó. Mọi người nên để ai nó dắt đi qua cái con đường khác nhau. Sai lầm
+3:06:46
+rồi mọi người mới đúng được. Cái đó là bước số không. Quan điểm của mình về
+3:06:49
+chuyện học hành nó là như vậy. Mọi người chắc chắn phải qua bước không. Mọi người
+3:06:53
+mà muốn thắng luôn đó là mọi người sẽ thua lâu lắm đó. Thí dụ bây giờ mọi
+3:06:58
+người m nếu như mà buổi kích hợp mà mình hướng dẫn mọi người AI agent là hướng
+3:07:02
+dẫn mọi người tạo ra con lưỡng bậc vào thời điểm đó luôn thì mình hứa là mọi
+3:07:06
+người mò tới tết cũng không có ra được tại vì mọi người không có cái foundation
+3:07:10
+cái nền tảng á mọi người không hiểu cái gì cả đâu.
+3:07:14
+Cho nên ý nghĩa của những của mười mấy ngày vừa rồi á là mình tin chắc chắn
+3:07:18
+luôn á là nó dẫn tới cái ngày hôm nay là mọi người dễ hiểu hơn rất là nhiều.
+3:07:27
+Anh Nghĩa cho em hỏi là mỗi một agent là mình đẩy lên
+3:07:32
+cái VPS riêng hay là chung một đấy.
+3:07:37
+>> Ờ ủa em nào á em nào hỏi á anh không có để ý.
+3:07:43
+Mỗi một agent thì mình tạo trên chung một cái GoP thôi. Có nghĩa là đó là hệ
+3:07:47
+thống quản lý. Mình mình đẩy lên cái hệ thống quản lý agent lên VPS nha. Xong
+3:07:52
+rồi mình mới create ra các agent. À dạ vâng
+3:07:54
+>> mình ra 1000 con cũng được nữa. Lúc đó thì dễ rồi.
+3:07:58
+>> Dạ vâng vâng cảm ơn. Tại vì vừa nãy anh N có nói là phải ít nhất là hai à tầm
+3:08:03
+tối thiểu là tầm 2 GB GB 2 GB đấ thì em tưởng là sợ nhiều con agent vào nó không
+3:08:08
+không không gánh được.
+3:08:10
+>> À thì nhiều con thì em phải nâng lên chứ.
+3:08:12
+>> À vâng vâng vâng.
+3:08:13
+>> Ờ thì đương nhiên rồi. Em phải nâng lên chứ.
+3:08:16
+>> Vâng vâng em cảm ơn. Hôm trước anh em thấy anh a để quảng cáo
+3:08:49
+ở Trên Facebook có là sản xuất a khoảng video TVC đấy anh. Thì trong 21 ngày là
+3:08:56
+có cũng có luôn đúng không anh?
+3:08:57
+>> Có chứ. Có chứ.
+3:08:58
+>> Vâng. Mọi người xong được cái
+3:09:01
+>> mọi người xong được cái action này á là mọi người đã đi được cũng khá là xa rồi
+3:09:05
+đó nha. Không có cái khóa học nào mà nó cho mọi người đủ như vậy luôn á.
+3:09:09
+Foundation và agent. Rồi sau đó mọi người học mấy cái mà liên quan tới tạo
+3:09:14
+hình ảnh hay là mấy cái video AI thì lúc đó mình thấy mấy đó nó dễ rồi. Sau mọi
+3:09:19
+người sẽ học luôn cái cách là dùng con lửng mật để mà tạo video tự động.
+3:09:25
+Mọi người có thể tưởng tượng là gì nè? Khi mọi người đã nắm được action, mọi
+3:09:28
+người đã nắm được cái quy tắc để tạo video AI rồi đúng không? Thì sau này mọi
+3:09:33
+người cũng không cần phải ngồi tẩn mẫn ở trên cái chemin để mà tạo từng cái cái
+3:09:37
+cái video mà mọi người có thể thiết lập cái cái cái cái con lỡn mật á là nó sẽ
+3:09:44
+tự gen video cho mọi người bằng cách là mình gửi cái video lên trên Telegram
+3:09:49
+xong nó sẽ editing rồi nó trả lại cho mọi người. Hay không?
+3:09:55
+>> Quá hay nhỉ? Thì dần dần á là và và từng ngày từng ngày là mình có nói chung ngày
+3:10:02
+nào mình cũng có tính toán hết rồi. Không có cái ngày nào mà nó bị thừa hết
+3:10:05
+trơn á. Phần media khi nào học? Thì thì qua ngày
+3:10:14
+13 này đó thì mình sẽ mất thêm khoảng vài ngày nữa để mọi người làm quen cái
+3:10:19
+chuyện setup agent. Thì cái vụ mà media thì nó sẽ đâu đó nhiệm vụ 16 17 gì đó.
+3:10:27
+Thiết kế ô tô đàng hoàng có luôn. Tới cuối cái chuỗi này á mà ông nào mà
+3:10:38
+không làm cho tôi một cái video feedback mà nó xứng đáng tôi đuổi ra khỏi cộng
+3:10:42
+đồng luôn. Bà kia làm gì cười như được mùa trận.
+3:10:58
+Tôi nói vấn đề mà
+3:11:04
+liên quan tới a value á thì một nó chỉ có tôi tư duy tôi cực đoan lắm. Một tôi
+3:11:12
+không tạo ra value thì tôi sẽ tự nhục. Còn tôi đã đảm bảo được value rồi thấy
+3:11:19
+không? thì mọi người phải có cái trả giá cho nó. Ít nhất á là trả tiền là một
+3:11:26
+phần. Nhưng mà thật ra số tiền mọi người nó không bỏ bèo gì so với cái tôi định
+3:11:30
+giá cho cái này hết. Bây giờ mọi người thấy rằng là tôi định giá cho nó 2000 đô
+3:11:35
+là nó cũng rẻ luôn rồi đó. Tại vì nhiều người trong này là đã kiếm được hơn 2000
+3:11:38
+đô từ cái chương trình này rồi. Chỉ có vấn đề á là về mặt tỷ lệ thì không thể
+3:11:43
+nào mà tôi nói rằng là 100% được đúng không? Giờ có người làm biến làm sao mà
+3:11:47
+tôi kêu làm biến rồi nhát rồi sợ hãi nhiều cái thì làm sao mà nhanh được.
+3:11:52
+Nhưng mà từ từ rồi cũng được thôi à. Đúng không
+3:11:57
+bà kia như được mùa vậy. Video giấu mặt được không? Theo em là
+3:12:05
+được không? Hỏi gì kì trờ? Video lộ mặt còn được video dấu mặt được không? Thì
+3:12:11
+dấu mặt thì che cái mặt lại.
+3:12:14
+>> Trời ơi chưa? Out đi để còn coi lại làm
+3:12:17
+>> rồi thôi ha. Mình à mình tạm đên cái máy tin
+3:12:23
+ở đây thì để cho người ta coi lại người ta làm thì à
+3:12:29
+để trả lời câu hỏi hết đã thôi người ta chửi ta chửi tôi nữa.
+3:12:34
+Làm sao để con Asian nó thông minh nên theo thời gian như con lửng. Con của em
+3:12:38
+mới tạo xong nó ngu điên. Em quay Facebook 10 phút. Ủa là nãy giờ có tham
+3:12:42
+gia không? Nãy giờ có coi hết không? Nãy giờ có
+3:12:46
+tham gia hết không?
+3:12:48
+>> Tại có chỉ rồi mà.
+3:12:50
+>> Đó nãy gì ông này chắc nãy giờ không có coi nè. Giờ coi coi lại record thấy mẹ
+3:12:54
+luôn. Coi record chán lắm mà. Tôi chỉ cho mọi người. Tôi nói á mọi người á nếu
+3:12:59
+như 21 ngày nào tôi cũng mới tin. Tôi nói mọi người chết luôn.
+3:13:04
+Tôi nói thiệt má nó một lần mới tin á là 3 tiếng mà 3 tiếng coi xong mày coi lại
+3:13:10
+3 tiếng nữa là hết một ngày. Hết nửa ngày mày khỏi làm luôn. Cho nên đọc SOP
+3:13:15
+xong đưa SOP vào AI dùng AI first để mà làm mọi người thấy nó nhanh nó được liền
+3:13:20
+luôn. Còn mọi người coi hả? Tôi nói coi làm cái gì? Coi video làm cái gì?
+3:13:25
+Meeting làm cái gì nó lâu mà nó nó tốn thời gian nó là cái cách học cũ. Mình
+3:13:32
+mting như vậy là để mình nói chuyện với nhau thôi chứ còn coi mà học chết luôn.
+3:13:39
+Ông nào mà đòi coi video thì đi mà coi tôi không làm đâu
+3:13:42
+>> không. Nhưng mà tôi công nhận một điều là khi mà có SOB á thì cái việc mà mình
+3:13:48
+thực hành mình như thu là một nửa không không tốt gì hết. Nhưng mà cái cái tư vi
+3:13:52
+AI của mình nó tập cứ mình không biết chỗ nào mình quăng vô mình hỏi quăng vô
+3:13:56
+mình hỏi mình cứ quăng quăng quăng vô mình hỏi tự nhiên mình tự nhiên mình lên
+3:14:01
+level lúc nào mình không hay và chính cái việc mình làm như vậy thì cái có kết
+3:14:05
+quả ra mình cảm thấy nó rất là pro nó rất là dầu mó
+3:14:09
+>> ừ
+3:14:10
+>> đó chính xác là cái việc chuyển hóa từ kiến thức của nghĩa mà nó trở thành cái
+3:14:14
+kiến thức của mình bởi vì mình hành động mình làm đâu
+3:14:17
+nó mới thực sự đó là cái việc mình gọi là challeng thực sự đấy đó là một cái tư
+3:14:21
+duy thiện á nó rất là đồ ở chỗ này mình chỉ cần đưa cái SOP thôi không cần nhiều
+3:14:29
+không cần coi video đúng không? À không, cái video này coi lại.
+3:14:34
+>> Em chỉ cho mọi người một cái nữa nè. Không biết mọi người nhìn ra được chưa
+3:14:38
+nha. Cái video này không cần coi lại đâu.
+3:14:42
+Chỉ cho một cái luôn. Tại mọi người không chịu nghĩ thôi.
+3:14:47
+Mọi người tải về bỏ vô chem min lấy hết cái chance gì đó cái chanceit gì
+3:14:56
+của nó đó đúng không? Xong rồi kêu nó tạo thành file Md. bỏ ngược vô kêu chỉ
+3:15:03
+cho tao làm phải không? Nó nhanh hơn. Hoặc là mọi
+3:15:08
+người hỏi là tao không biết cái chỗ này coi dây thứ mấy hiểu không? Đó là cái
+3:15:14
+cách mà mọi người á là ứng dụng AF á chứ mọi người đừng có ngồi coi mẹ bây giờ nó
+3:15:19
+ra 3 4 tiếng rồi sao mà coi tôi không bao giờ tôi coi coi không nổi sao mà coi
+3:15:24
+được. Bây giờ tôi sẽ xử lý cho mọi người coi nè cái cách tôi điều phối cái
+3:15:30
+challenge ha mọi người. Bây giờ là đã có một số người á là bị á là trễ de rồi đó
+3:15:36
+đúng không ta? Ủa có ai bị trễ chưa? Có ai bị trễ chưa?
+3:15:40
+Có ai bị trễ chưa ta? Không lẽ coi mting mà cũng bị chễ nữa
+3:15:45
+hả? Để tôi coi coi. Hôm nay có mớ người tham gia nữa nè.
+3:15:55
+Đó là kiếm được khúc tiền đó. Đó, chuẩn bị tôi nuốt tiền mấy người này luôn nè.
+3:16:01
+Chưa đúng không? Chưa. Sáng mai ngủ dậy mới trễ đúng không? Ok. Thì bây giờ mình
+3:16:05
+nè nhìn nè ha. Bây giờ á là ở cái nhiệm vụ 13 á
+3:16:11
+thì nó đang vậy đúng không? À mting diễn ra vào đây. Ok.
+3:16:18
+Ok. Bây giờ như thế này, tôi sẽ vào cái phiên điều phối của độ plane nè.
+3:16:25
+Cái này nó đang là à xử lý cái chỗ nó đang nó đang là aent đang nó nó đang á
+3:16:33
+là chạy cái này nè. Thì mọi người sẵn tôi cho những người mà có thể không hiểu
+3:16:38
+lắm nhìn cái này ha. Cái độ anim l nó nó là nó là cái thư mục
+3:16:47
+này nè. Đây thì code của toàn bộ cái nền tảng
+3:16:54
+taab.io là cái này nè. Đó thì nó đang nằm ở đây ha. Thì sau tôi mới deploy nó
+3:16:59
+lên trên cái gitub nó ra như vậy. Đó thì hiện tại là cái
+3:17:07
+suột này nó sẽ tồn tại song song là ở cái trong cái này và ở trên cái hú cùng
+3:17:12
+một lúc. Thì khi mình viết code trong này nè thì nó sẽ code nó sẽ chạy vô
+3:17:16
+trong này. Đồng thời cái nó nó đẩy lên trên cái ghú là nó đẩy lên trên này
+3:17:20
+luôn. Tức là code nó sẽ tồn tại hai nơi ha. Nó sẽ luôn luôn là tồn tại hai nơi.
+3:17:25
+Còn deploy á là nó sẽ deploy hơn qua cái này. Rồi bây giờ mọi người cứ hình dung
+3:17:30
+nè. À khi mà mọi người bảo là bây giờ có người kêu là 6 giờ là nó sẽ bị deadline
+3:17:36
+đúng không? Thì tôi sẽ hỏi nè. À bây giờ meeting đang diễn ra để hướng dẫn mọi
+3:17:46
+người làm nhiệm vụ số 13. Nhưng có người kêu
+3:17:54
+là à ờ 6:00 sáng mai là họ dính deadline.
+3:18:03
+Không biết đúng không? à kiểm tra xem à từ thời
+3:18:11
+điểm này à thì à những ai là bị xát de deadline nhất
+3:18:21
+giùm. Bây giờ xong cái tôi chụp màn hình cái chỗ này.
+3:18:27
+Ú lại thủ công. Em em đừng up lại thủ công. Em em bỏ cái link giub vô á hoặc
+3:18:32
+là lúc mà chưa có thì em cũng kêu á là nó tạo gitub cho em đây ha. Đây mình
+3:18:38
+chụp màn hình chỗ này ha. Thì mình sẽ bỏ vô này luôn. Đó thì mình enter
+3:18:44
+mình sẽ điều phối cái nền tảng này không qua đây. Thì mọi người bán hàng đúng
+3:18:48
+không? Sẵn nói mọi người luôn. Bây giờ mọi người bán hàng, mọi người muốn sửa
+3:18:51
+content trên landing này kia là đơn giản. Nhưng mình nói mọi người điều phối
+3:18:57
+cái này hay hơn nữa. Có đơn hàng hay không mọi người tạo cái mọi người không
+3:19:01
+dùng Google shit nha. Mọi người nên á là kêu nó tạo ra cái nơi để chứa đơn hàng,
+3:19:06
+chứa dữ liệu gì đó. Sao mọi người muốn biết tình trạng bán hàng, bán hàng hôm
+3:19:10
+nay bán được nhiêu tuần trước có bao nhiêu lít à gửi cho tao cái mail này đi.
+3:19:15
+Những ai mà coi cái web của tao điền thông tin mà chưa có đặt hàng, chưa có
+3:19:18
+thanh toán CP á thì gửi cho gửi cho họ soạn cho tao một cái mail để dụ dỗ họ
+3:19:23
+mua rồi gửi cho họ đi. Thì tất cả những cái đó mọi người làm thông qua agent
+3:19:27
+coding hết. Mình không có cần phải là làm ra cái cái chỗ để mà bấm bấm kéo kéo
+3:19:32
+thả. Cái cách mà mình điều phối công việc kinh doanh của mình nó thay đổi
+3:19:36
+100% hết rồi. Đây nó đang điều tra coi là ông nào mà
+3:19:42
+đây thơ Quỳnh là ngày hai
+3:19:46
+ngày 22 còn 8 tiếng nữa là dính đoàn nè. Là liệt kê ra mọi người thấy không? Nó
+3:19:51
+liệt kê ra một người nè là một người là dính đòn nè. Đúng không? Đúng không?
+3:19:56
+Đúng thô quên không? Sắp ăn đòn nè. lúc
+3:20:02
+7:00 sáng đó thì chút nữa mình sẽ tìm cách mình
+3:20:06
+dời deadline cho thấy không thì mọi người hình dung nhau
+3:20:11
+như không dùng agent coding để mà điều phối nha mình nói thiệt thơ Quỳnh nói
+3:20:16
+vậy mình cũng không biết là thư Quỳnh đang gặp vấn đề gì luôn mình thật sự
+3:20:19
+mình cũng không hiểu được luôn á mình cũng không có hình dung được là mọi
+3:20:23
+người đang bị cái gì tại vì trên này mình có thiết lập cái hệ thống đi nữa
+3:20:27
+nên mình cũng không có mà vô đây mình coi để mà mình mò coi là mình phải sech
+3:20:32
+coi bà Thư Quỳnh là bà nào rồi bà nội đó ở bên Tê bả nói cái gì rồi lúm chứ nhiều
+3:20:38
+người quá mọi người tưởng tượng lên 1000 người là mình bó tay luôn mình không
+3:20:42
+biết đường nhưng mà thông qua cái này thì nó dễ hơn
+3:20:46
+với mình mình chỉ cần hỏi vậy thôi. Rồi bây giờ mình sẽ
+3:20:51
+xác nhận kiên đúng. 90 memang đang ở D13 chưa nộp. Tất cả deadline là đã còn 8
+3:20:58
+tiếng đ không. Đây là fe tất cả đã cảnh báo fit nhanh. Chỉ cần chạy một câu lệnh
+3:21:05
+là cả 90 người là sẽ là deadline là cộng thêm 24 giờ.
+3:21:13
+À hoặc là 17:30 mới bắt đầu meeting thì 1700 ngày mai
+3:21:22
+thì sẽ là deadline đó. Nế tức là bây giờ nó tính nó nó cho mình mấy option nó
+3:21:28
+chọn nè. Bây giờ chơi deadline là từ giờ bây giờ nè là 24 giờ nữa tính hay là à
+3:21:35
+bắt đầu tính từ lúc meeting phải không? Hay là tính từ à lúc sơn request.
+3:21:45
+Sơn request là ông nào? Chắc ở trên. Đúng rồi, đúng rồi. Nó nói
+3:21:49
+cái người request á nó chỉ tính cho cái người mà tình huống hồi nãy thôi. Thì nó
+3:21:53
+nói như vậy. Ok. Bây giờ là mình còn một cái chọn lựa nữa nè. Hồi nãy mình có hỏi
+3:21:58
+mọi người đó giờ 3 ngày à Sơn mới request đúng không? Sơn mới
+3:22:03
+request thì thì là là nó muốn canh theo cái người mới vô
+3:22:09
+nhưng mà không đúng. Nhưng mà hồi nãy mình có nói á là cái nhiệm vụ này có thể
+3:22:13
+là nó mất nhiều giờ hơn thì mọi người có muốn là nhiều hơn 24 giờ không? Bà nội
+3:22:18
+kia kêu 3 ngày hả? Bà làm biến đúng không? Cài có 30 phút à? Sao mà 3 ngày?
+3:22:25
+Đây bây giờ á là không lẽ bây giờ lên VPS để mua đúng không? Xong rồi phải cài
+3:22:31
+xong rồi phải đấu nối. Trời ơi.
+3:22:34
+>> Rồi bây giờ cho cho 48 giờ nha. Điêu như vậy nha.
+3:22:40
+Rồi ok. À bây giờ à tính từ bây giờ không tính từ bây giờ tính từ
+3:22:49
+>> tính từ à tính từ lúc meting
+3:22:52
+>> chứ nãy giờ meting là đã coi rồi đúng không? tính từ lúc mới tiên nhưng cộng
+3:23:00
+thêm 48
+3:23:04
+giờ cho tôi để vì nhiệm vụ này có vẻ khó à nha.
+3:23:15
+Thấy không mọi người thấy mình điều phối không? Thì mọi người sau này kinh doanh
+3:23:18
+cũng vậy, mọi người bán lẻ đi. Thí dụ như có khách phàn nàng, cái này size số
+3:23:23
+gì đó, mọi người chụp màn hình, khách phàn nàng bỏ vô. Đó là mình đang nói là
+3:23:27
+mọi người điều phối bằng agent agent coding nha. Còn sau này mà ví dụ như là
+3:23:33
+ờ cái mình mà đưa agent vô hoạt động mà tự động rồi đó thì nó không cần cái điều
+3:23:39
+phối kiểu đó. Nhưng mà có những cái hoạt động nó sẽ cần cái tính điều phối giống
+3:23:42
+như như mình đang vừa mới làm. Camera này
+3:23:53
+đó. Cloud đè đang khài gói cao nhất tính
+3:23:57
+theo giờ đã chọn của mỗi người kết hoạt ban đầu.
+3:24:05
+À không, mình chỉ tính những người mà đang dính đoàn thôi.
+3:24:10
+À còn những người mà đang a mình sẽ nói cái ý đó cho cái lucky girl đúng không?
+3:24:17
+Mình sẽ nói cái ý đó cho ờ em bị ẩn nút bài tập thì đêm nay nó mở
+3:24:24
+ra đó. Đêm nay nó sẽ mở ra nè. À ai bị ẩn nút
+3:24:35
+nhiệm vụ 13 thì đêm nay cũng mở ra. Tuy nhiên những người ờ
+3:24:45
+chưa tới thời điểm của nhiệm vụ 13
+3:24:54
+thì đừng đá động gì cả. Vào giờ của họ. Tất cả member đều phải
+3:25:05
+có deadline tính theo thời điểm. mà họ đã tự bấm nút bắt đầu
+3:25:15
+đó. Riêng
+3:25:19
+nhiệm vụ 13 à cũng không ngoại lệ. Đấ
+3:25:27
+đừng reset 48 giờ cho tất cả mà phải
+3:25:37
+nó cũng khó ha. thì mỗi người nó khác nhau. À để mình hỏi nó đi, mình không
+3:25:41
+quyết định được. À ờ ừ để cho à user ờ có khung
+3:25:53
+khung giờ riêng mà họ đã nhấn bắt đầu.
+3:26:02
+Tuy tuy nhiên cũng cần cho họ ít nhất a 48 giờ
+3:26:18
+ác số giờ thì mỗi người có khung kích hoạt khác nhau. Mình đảm bảo với mọi
+3:26:26
+người luôn mình nói chuyện mà vòng vòng vậy đó không ai đọc mà hiểu được hết.
+3:26:29
+Tôi nói thiệt thí dụ bây giờ tôi tôi gửi cái này cho nhỏ nhân viên đi, nó đọc nó
+3:26:34
+ngu luôn. Nó không biết làm sao luôn á. Nó không biết đọc cái này nó không biết
+3:26:39
+làm sao để làm là làm như thế nào luôn. Nhưng mà hên á là nó đọc cái này nó vẫn
+3:26:44
+hiểu nha. Đúng. Chỉ có đọc mới hiểu cái này thôi
+3:26:49
+chứ mình ghi vòng vòng vậy là nhân viên không bao giờ nó hiểu. Mình lập ý lại
+3:26:53
+nữa để cho đảm bảo là nó hiểu á. Xong nó đã xong cái vấn đề vụ đó rồi
+3:27:14
+nhưng mà mình sẽ prip thêm cho nó cái này
+3:27:17
+ờ admin gi hạn thì nó khó
+3:27:25
+Đó. Đó. Đ bây giờ coi thử coi là cái
+3:27:32
+nhiệm vụ số 13 nó như thế nào. Đó.
+3:27:50
+Bây giờ tôi nói đưa cái này cho con nhỏ nhân viên nó ngu mẹ luôn. nó không biết
+3:27:54
+làm sao luôn. Từ bữa giờ tôi điều phối tôi cũng mất
+3:28:00
+não luôn rồi. Có chuyện gì tôi cũng bỏ vô đó tôi kêu nó phụ.
+3:28:05
+Thì như hỏ mình có nói một lần nữa những người chưa nghe thì nghe lại. Đó là cái
+3:28:09
+quan điểm của mình là vậy. Mọi người nghe mình nói là xài ai xong mình giục
+3:28:13
+não ở nhà thì mọi người sợ là ô mình xài ai lâu dần mình ngu. Mọi người yên tâm
+3:28:18
+đi. Không có đâu. Cái số lượng vấn đề trong cuộc đời của mọi người để giải
+3:28:22
+quyết á nó nhiều lắm. Mọi người nên dành cái phần não đó cho
+3:28:26
+chuyện là làm sao để gia đình mình hạnh phúc hơn, làm sao để mình có thể giao
+3:28:30
+tiếp ăn nói, đối xử với người này người kia mà nó hiệu quả. Thì những cái phần
+3:28:35
+liên quan loài người đó nó còn nhức đầu, phức tạp hơn nữa. Mọi người nên chú ý
+3:28:38
+cái đó không? Còn lại mấy chuyện tào lao ai nó làm tốt thì đừng có tranh cái việc
+3:28:42
+cho nó, đừng có nhức não làm cái gì hết trơn á. Để cho nó làm đi, suy nghĩ làm
+3:28:46
+cái gì. Thấy không? Được gia hạn rồi đúng không?
+3:28:52
+Ok rồi đúng không? Đấy thì cái cách mà mình điều phối nó vậy đó. Thì mọi người
+3:28:57
+sau này có làm cái gì đi nữa đó thì đó cũng là cái cách chơi đó ha. Cho nên là
+3:29:04
+qua khỏi 21 ngày mình nghĩ là mình sẽ mọi người sẽ đủ tự tin để bước vào đời.
+3:29:11
+>> Anh cho em hỏi là nếu mà anh điều phối qua tele có được không anh?
+3:29:14
+>> Được chứ.
+3:29:15
+>> Anh điều phối qua tele được luôn.
+3:29:18
+>> Tức là anh có thể là là nhắn những cái câu đó cho con lưỡng mật cũng được nữa
+3:29:21
+đó. Vậy là lửng mật nó quản lý hết các agent
+3:29:25
+khác đúng không anh?
+3:29:27
+>> Được. Đúng rồi. Nhưng mà tại sao anh vẫn làm dưới đây là tại vì á là con lưỡng
+3:29:31
+mật anh đang cho nó chạy á là cái model rồi nó tương đối rẻ để nó sập bọt mọi
+3:29:37
+người thông tin thôi. Còn tại vì cái chỗ này nó đang liên quan tới code nó cần
+3:29:42
+suy luận nó cần logic hiểu không? Nên anh đang xài là anh xài cái model của
+3:29:45
+clot cho nó thông minh cho nó chắc
+3:29:47
+>> chứ để mấy cái logic này mà đưa con lửng mật á thì nó ngu. Lỡ nó ngu thì sao?
+3:29:51
+Nhưng mà về mặt thông tin là con lưỡng nó sẽ nắm hết nhữ gì. Và nếu một người
+3:29:56
+mà thật ra anh đâu cần thiết phải nhắn lửng mật những thứ này. Anh có cái máy
+3:30:00
+tính, anh có cái cái VS code này thì anh làm thôi. Còn ví dụ như mai mốt mà mọi
+3:30:04
+người muốn tiện dụng á thì mọi người tạo ra một cái agent mà cắm cho nó cái model
+3:30:10
+suy luận tốt nhất. Nhưng mà chỉ gọi con đó ra khi mà nó cần điều phối thôi. Đó
+3:30:15
+ví dụ như anh đi đâu đó mà anh cần điều phối thì anh nhắn tê thì nó vẫn điều
+3:30:19
+phối được nha. nó vẫn code được luôn nha. Tại vì nó code trực tiếp lên gitub
+3:30:24
+chứ nó không có cần code lên trên cái máy tính của mọi người nữa. Thấy ghê
+3:30:27
+không? Có nghĩa là Gub là cái suột code nằm ở trên trên cloud trên mạng mà thì
+3:30:32
+mọi người kết nối được á thì mọi người có thể là code trực tiếp lên luôn á.
+3:30:39
+>> Vâng.
+3:30:40
+>> Như vậy thì gần như từ cái bài tập 13 này trở đi là hầu hết tất cả cái mề code
+3:30:45
+của mình mình sẽ đẩy lên git hết. Đúng rồi. Với lại á khi mọi người làm vậy đó
+3:30:49
+thì cái gitup đó mọi người share mọi người add thêm cái bạn bè hoặc là nhân
+3:30:54
+hoặc là team của mọi người vô á thì hai ba đứa cùng code một dự án được luôn.
+3:30:59
+Thì mình làm vậy nó mới nhanh.
+3:31:00
+>> Nghĩa nó không bị cái gì? Nó không bị lộn xộn hay là nó bị bên
+3:31:06
+>> nó không bị lộn xộn. Tại vì nè mọi người nhìn nè. Trong cái code đó đâu phải là
+3:31:10
+một cái file đâu.
+3:31:12
+>> Đúng rồi. Nó nhiều file.
+3:31:13
+>> Mày thấy nó nhiều đúng không?
+3:31:14
+>> Nó nhiều file đúng không? Thì mỗi một file vậy đó là một mình hoạch định ra từ
+3:31:18
+đầu mỗi file một tính năng.
+3:31:20
+>> Ừ chính.
+3:31:20
+>> Thì bây giờ hai ba thằng code thì mình nhớ dặn nhau á là ê mày tao mày có tính
+3:31:24
+năng này tao có tính năng kia. Mình mình phân phân phân quyền.
+3:31:27
+>> Đúng rồi. Khi nó ghi file thì nó ghi mỗi thằng nó ghi một file mà đâu có đụng gì
+3:31:31
+nhau đâu.
+3:31:32
+>> Ok. Ok.
+3:31:36
+>> Một tháng lẫn mật cân hết nhiêu tiền? Hiện tại là không tốn tiền luôn nha.
+3:31:45
+Sắp tới có tốn đi nữa. Tháng chắc 1 200.000 không bao nhiêu
+3:31:52
+anh ơi. Cái cái dữ liệu mà anh để trong file ở trên máy tính của anh ấy là nó tự
+3:31:57
+động update lên GitHub hả anh?
+3:31:59
+>> Đúng rồi.
+3:32:01
+>> À em tưởng cái đấy em tưởng cái đấy là phải update thủ công nhỉ? Hoặc là nghĩa
+3:32:05
+là mình làm thế nào để nó có thể update tự động lên GitHub được ạ? Thì em nhắn
+3:32:10
+vô ta nói là bây giờ tao muốn là cái này trên GitHub là nó sẽ chơi em và nó làm
+3:32:16
+luôn.
+3:32:18
+>> Ok anh ạ. Vâng em cảm ơn ạ.
+3:32:19
+>> Đó thấy không mọi người thấyá là mỗi lần mọi người hỏi mình câu gì đó mình cũng
+3:32:24
+kêu là mọi người lên đây trình làm thì nó cứ vậy thôi. À bà kia cười nữa
+3:32:34
+nó thôi. Tổng lại là mình dừng được chưa? Để đi ngủ n
+3:32:37
+>> đi ngủ đi. Thôi nghỉ nha. Chắc coi rồi record thì chết mẹ luôn á. Thì hẹn mọi
+3:32:42
+người vào cái meeting tiếp theo. Thì liên quan tới media thì chắc cần meting
+3:32:46
+đó ha. Rồi bye bye mọi người. Mình cũng mệt chết mẹ rồi. Thôi đi ngủ nha.
+3:32:53
+Bye bye. Rồi coi lại record đi mấy ông kia hỏi mấy câu kia. Toàn là mấy ông vô
+3:32:56
+trễ không à. Đi ngủ đi rồi làm bài tập đi nha. Đừng có ai bây giờ mọi người nhớ
+3:33:02
+nha. Đứa nào mà than ở trong group á mọi người bay vô súm lại chửi nó cho tôi.
+3:33:09
+Bye bye. Cảm ơn rất nhiều. Cảm ơn Hữu Long.
+3:33:14
+Cảm ơn mọi người. Đ
