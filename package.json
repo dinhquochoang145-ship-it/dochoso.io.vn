@@ -9,5 +9,9 @@
   "engines": {
     "node": ">=22.5.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "express": "^5.2.1",
+    "ssh2": "^1.17.0"
+  }
 }
