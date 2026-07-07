@@ -433,29 +433,32 @@ server.tool(
       const { spawnSync } = require("child_process");
       console.log(`[MCP - generate_creative] Topic: ${topic}`);
       const scriptsDir = path.join(__dirname, "..", "skill-hoang", "tao-creative-fb", "scripts");
+      const pyCmd = process.platform === "win32" ? "python" : "python3";
       
       // Run gen_caption.py
-      console.log(`[MCP - generate_creative] Running gen_caption.py...`);
+      console.log(`[MCP - generate_creative] Running gen_caption.py with command ${pyCmd}...`);
       const captionResult = spawnSync(
-        "python", 
+        pyCmd, 
         ["gen_caption.py", topic, "organic"], 
         { cwd: scriptsDir, encoding: "utf8" }
       );
       
       if (captionResult.error || captionResult.status !== 0) {
-        throw new Error(captionResult.stderr || "Lỗi chạy gen_caption.py");
+        const errorMsg = captionResult.stderr || (captionResult.error ? captionResult.error.message : "Lỗi chạy gen_caption.py");
+        throw new Error(errorMsg);
       }
       
       // Run gen_image.py
-      console.log(`[MCP - generate_creative] Running gen_image.py...`);
+      console.log(`[MCP - generate_creative] Running gen_image.py with command ${pyCmd}...`);
       const imageResult = spawnSync(
-        "python", 
+        pyCmd, 
         ["gen_image.py", image_prompt, "live_post_image.png"], 
         { cwd: scriptsDir, encoding: "utf8" }
       );
       
       if (imageResult.error || imageResult.status !== 0) {
-        throw new Error(imageResult.stderr || "Lỗi chạy gen_image.py");
+        const errorMsg = imageResult.stderr || (imageResult.error ? imageResult.error.message : "Lỗi chạy gen_image.py");
+        throw new Error(errorMsg);
       }
       
       // Read generated caption
@@ -497,15 +500,17 @@ server.tool(
       const scriptsDir = path.join(__dirname, "..", "skill-hoang", "tao-creative-fb", "scripts");
       const imagePath = path.join(__dirname, "..", "skill-hoang", "tao-creative-fb", "output", "live_post_image.png");
       const captionPath = path.join(__dirname, "..", "skill-hoang", "tao-creative-fb", "output", "generated_caption_organic.txt");
+      const pyCmd = process.platform === "win32" ? "python" : "python3";
       
       const postResult = spawnSync(
-        "python", 
+        pyCmd, 
         ["post_facebook.py", imagePath, captionPath], 
         { cwd: scriptsDir, encoding: "utf8" }
       );
       
       if (postResult.error || postResult.status !== 0) {
-        throw new Error(postResult.stderr || "Lỗi chạy post_facebook.py");
+        const errorMsg = postResult.stderr || (postResult.error ? postResult.error.message : "Lỗi chạy post_facebook.py");
+        throw new Error(errorMsg);
       }
       
       return {
