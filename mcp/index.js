@@ -356,6 +356,171 @@ server.tool(
   }
 );
 
+// 5. Tool: get_new_leads
+server.tool(
+  "get_new_leads",
+  "Lấy danh sách các khách hàng/lead mới đăng ký từ waitlist chưa được thông báo và tự động đánh dấu đã thông báo.",
+  {
+    limit: z.number().optional().describe("Số lượng khách hàng muốn lấy tối đa. Mặc định là 5.")
+  },
+  async ({ limit }) => {
+    try {
+      const limitVal = limit || 5;
+      console.log(`[MCP - get_new_leads] Fetching up to ${limitVal} new leads...`);
+
+      // 1. Get new leads (notified = 0)
+      const fetchStmt = db.prepare(`
+        SELECT id, name, phone, zalo, email, datetime(register_date, 'localtime') as register_date
+        FROM customers
+        WHERE notified = 0
+        ORDER BY id ASC
+        LIMIT ?
+      `);
+      const newLeads = fetchStmt.all(limitVal);
+
+      if (newLeads.length === 0) {
+        return {
+          content: [{ type: "text", text: "Không có khách hàng mới nào." }]
+        };
+      }
+
+      // 2. Mark them as notified (notified = 1)
+      const updateStmt = db.prepare(`
+        UPDATE customers
+        SET notified = 1
+        WHERE id = ?
+      `);
+
+      const updatedIds = [];
+      newLeads.forEach(lead => {
+        updateStmt.run(lead.id);
+        updatedIds.push(lead.id);
+      });
+      console.log(`[MCP - get_new_leads] Marked leads as notified: ${updatedIds.join(', ')}`);
+
+      let text = `Tìm thấy **${newLeads.length}** khách hàng mới đăng ký:\n`;
+      newLeads.forEach((c, idx) => {
+        text += `${idx + 1}. **${c.name}**\n` +
+          `   - SĐT: \`${c.phone}\`\n` +
+          `   - Email: \`${c.email || "Trống"}\`\n` +
+          `   - Zalo: \`${c.zalo || "Trống"}\`\n` +
+          `   - Ngày đăng ký: ${c.register_date}\n\n`;
+      });
+
+      return {
+        content: [{ type: "text", text: text }]
+      };
+    } catch (err) {
+      console.error("[MCP Error - get_new_leads]:", err.message);
+      return {
+        isError: true,
+        content: [{ type: "text", text: `Lỗi lấy danh sách khách hàng mới: ${err.message}` }]
+      };
+    }
+  }
+);
+
+// 8. Tool: generate_creative
+server.tool(
+  "generate_creative",
+  "Tạo cả bài viết (caption) và ảnh minh họa DALL-E thực tế cho bài đăng Facebook. Kết quả được lưu cục bộ.",
+  {
+    topic: z.string().describe("Chủ đề hoặc ý tưởng của bài đăng."),
+    image_prompt: z.string().describe("Mô tả chi tiết bằng tiếng Anh để sinh ảnh DALL-E (Phong cách chụp ảnh thực tế của người Việt).")
+  },
+  async ({ topic, image_prompt }) => {
+    try {
+      const { spawnSync } = require("child_process");
+      console.log(`[MCP - generate_creative] Topic: ${topic}`);
+      const scriptsDir = path.join(__dirname, "..", "skill-hoang", "tao-creative-fb", "scripts");
+      
+      // Run gen_caption.py
+      console.log(`[MCP - generate_creative] Running gen_caption.py...`);
+      const captionResult = spawnSync(
+        "python", 
+        ["gen_caption.py", topic, "organic"], 
+        { cwd: scriptsDir, encoding: "utf8" }
+      );
+      
+      if (captionResult.error || captionResult.status !== 0) {
+        throw new Error(captionResult.stderr || "Lỗi chạy gen_caption.py");
+      }
+      
+      // Run gen_image.py
+      console.log(`[MCP - generate_creative] Running gen_image.py...`);
+      const imageResult = spawnSync(
+        "python", 
+        ["gen_image.py", image_prompt, "live_post_image.png"], 
+        { cwd: scriptsDir, encoding: "utf8" }
+      );
+      
+      if (imageResult.error || imageResult.status !== 0) {
+        throw new Error(imageResult.stderr || "Lỗi chạy gen_image.py");
+      }
+      
+      // Read generated caption
+      const captionPath = path.join(__dirname, "..", "skill-hoang", "tao-creative-fb", "output", "generated_caption_organic.txt");
+      let caption = "";
+      if (fs.existsSync(captionPath)) {
+        caption = fs.readFileSync(captionPath, "utf8");
+      } else {
+        throw new Error("Không tìm thấy file caption được tạo ra.");
+      }
+      
+      return {
+        content: [
+          {
+            type: "text",
+            text: `Tạo bài viết và ảnh thành công!\n\n**Nội dung bài viết (Caption Preview):**\n${caption}\n\n**Ảnh minh họa:** Đã vẽ xong và lưu tại thư mục \`output/live_post_image.png\`. Vui lòng gửi preview caption này cho sếp Hoàng duyệt.`
+          }
+        ]
+      };
+    } catch (err) {
+      console.error("[MCP Error - generate_creative]:", err.message);
+      return {
+        isError: true,
+        content: [{ type: "text", text: `Lỗi sinh nội dung: ${err.message}` }]
+      };
+    }
+  }
+);
+
+// 9. Tool: post_to_facebook
+server.tool(
+  "post_to_facebook",
+  "Đăng bài viết kèm ảnh đã được duyệt lên trang Facebook của sếp Hoàng.",
+  {},
+  async () => {
+    try {
+      const { spawnSync } = require("child_process");
+      console.log(`[MCP - post_to_facebook] Posting to Facebook Page...`);
+      const scriptsDir = path.join(__dirname, "..", "skill-hoang", "tao-creative-fb", "scripts");
+      const imagePath = path.join(__dirname, "..", "skill-hoang", "tao-creative-fb", "output", "live_post_image.png");
+      const captionPath = path.join(__dirname, "..", "skill-hoang", "tao-creative-fb", "output", "generated_caption_organic.txt");
+      
+      const postResult = spawnSync(
+        "python", 
+        ["post_facebook.py", imagePath, captionPath], 
+        { cwd: scriptsDir, encoding: "utf8" }
+      );
+      
+      if (postResult.error || postResult.status !== 0) {
+        throw new Error(postResult.stderr || "Lỗi chạy post_facebook.py");
+      }
+      
+      return {
+        content: [{ type: "text", text: `Đăng lên Facebook thành công!\nChi tiết kết quả:\n${postResult.stdout}` }]
+      };
+    } catch (err) {
+      console.error("[MCP Error - post_to_facebook]:", err.message);
+      return {
+        isError: true,
+        content: [{ type: "text", text: `Lỗi đăng bài lên Facebook: ${err.message}` }]
+      };
+    }
+  }
+);
+
 // ------------------- SERVER SETUP -------------------
 const app = express();
 app.use(express.json());
