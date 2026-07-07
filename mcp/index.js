@@ -444,7 +444,7 @@ server.tool(
       );
       
       if (captionResult.error || captionResult.status !== 0) {
-        const errorMsg = captionResult.stderr || (captionResult.error ? captionResult.error.message : "Lỗi chạy gen_caption.py");
+        const errorMsg = captionResult.stderr || captionResult.stdout || (captionResult.error ? captionResult.error.message : "Lỗi chạy gen_caption.py");
         throw new Error(errorMsg);
       }
       
@@ -457,7 +457,7 @@ server.tool(
       );
       
       if (imageResult.error || imageResult.status !== 0) {
-        const errorMsg = imageResult.stderr || (imageResult.error ? imageResult.error.message : "Lỗi chạy gen_image.py");
+        const errorMsg = imageResult.stderr || imageResult.stdout || (imageResult.error ? imageResult.error.message : "Lỗi chạy gen_image.py");
         throw new Error(errorMsg);
       }
       
@@ -509,7 +509,7 @@ server.tool(
       );
       
       if (postResult.error || postResult.status !== 0) {
-        const errorMsg = postResult.stderr || (postResult.error ? postResult.error.message : "Lỗi chạy post_facebook.py");
+        const errorMsg = postResult.stderr || postResult.stdout || (postResult.error ? postResult.error.message : "Lỗi chạy post_facebook.py");
         throw new Error(errorMsg);
       }
       
