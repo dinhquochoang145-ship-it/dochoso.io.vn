@@ -10,7 +10,10 @@ if hasattr(sys.stdout, 'reconfigure'):
 # Load env variables
 script_dir = os.path.dirname(os.path.abspath(__file__))
 skill_dir = os.path.dirname(script_dir)
+# Load from skill directory (local test)
 load_dotenv(os.path.join(skill_dir, '.env'))
+# Load from repository root directory (VPS)
+load_dotenv(os.path.join(skill_dir, '..', '..', '.env'))
 
 def post_to_facebook(image_source, caption_text):
     page_id = os.getenv("FB_PAGE_ID")

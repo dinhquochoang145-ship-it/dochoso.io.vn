@@ -10,10 +10,12 @@ if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
 # Load env variables
-# Load from the script's parent folder (.env is in tao-creative-fb/)
 script_dir = os.path.dirname(os.path.abspath(__file__))
 skill_dir = os.path.dirname(script_dir)
+# Load from skill directory (local test)
 load_dotenv(os.path.join(skill_dir, '.env'))
+# Load from repository root directory (VPS)
+load_dotenv(os.path.join(skill_dir, '..', '..', '.env'))
 
 def generate_image(prompt, output_name="dall_e_image.png"):
     api_key = os.getenv("OPENAI_API_KEY")

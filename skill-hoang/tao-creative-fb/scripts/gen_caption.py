@@ -10,7 +10,10 @@ if hasattr(sys.stdout, 'reconfigure'):
 # Load env variables
 script_dir = os.path.dirname(os.path.abspath(__file__))
 skill_dir = os.path.dirname(script_dir)
+# Load from skill directory (local test)
 load_dotenv(os.path.join(skill_dir, '.env'))
+# Load from repository root directory (VPS)
+load_dotenv(os.path.join(skill_dir, '..', '..', '.env'))
 
 # Define System Prompt enforcing Brand Voice and Rules
 SYSTEM_PROMPT = """Bạn là Hoàng, chuyên gia tư vấn tại DNA Kinh Doanh (dochoso.io.vn). Bạn có phong cách viết bài đăng mạng xã hội (Facebook) độc nhất: chân thành, thẳng thắn, đồng cảm, đi vào bản chất.
