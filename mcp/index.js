@@ -594,10 +594,30 @@ server.tool(
       const selectedVideo = video_path || defaultVideo;
       const selectedCaption = caption_path || defaultCaption;
       
-      console.log(`[MCP - post_video_to_socials] Publishing video: ${selectedVideo}`);
       const scriptsDir = path.join(__dirname, "..", "skill-hoang", "tao-video-ai", "scripts");
       const pyCmd = process.platform === "win32" ? "python" : "python3";
+
+      // Auto-compile video first if using default path or if compiled video is missing
+      console.log(`[MCP - post_video_to_socials] Auto-compiling video via compile_video.py...`);
+      const compileResult = spawnSync(
+        pyCmd,
+        ["compile_video.py"],
+        { cwd: scriptsDir, encoding: "utf8" }
+      );
       
+      if (compileResult.error || compileResult.status !== 0) {
+        console.warn("[MCP Warning - post_video_to_socials] compile_video.py warning:", compileResult.stderr || compileResult.stdout);
+      } else {
+        console.log("[MCP - post_video_to_socials] compile_video.py ran successfully:", compileResult.stdout);
+      }
+      
+      const fs = require("fs");
+      // Verify video exists before publishing
+      if (!fs.existsSync(selectedVideo)) {
+        throw new Error(`Không tìm thấy file video tại: ${selectedVideo}. Hãy chắc chắn đã chạy compile_video.py thành công.`);
+      }
+
+      console.log(`[MCP - post_video_to_socials] Publishing video: ${selectedVideo}`);
       const publishResult = spawnSync(
         pyCmd, 
         ["post_video.py", selectedVideo, selectedCaption], 
