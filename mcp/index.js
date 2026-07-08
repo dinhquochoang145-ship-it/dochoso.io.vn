@@ -526,6 +526,107 @@ server.tool(
   }
 );
 
+// 10. Tool: generate_video_creative
+server.tool(
+  "generate_video_creative",
+  "Tạo kịch bản video AI và bộ prompt chi tiết cho Higgsfield (Soul 2.0/Stream 4.5) và Kling/Wan 2.2 từ một chủ đề/topic.",
+  {
+    topic: z.string().describe("Chủ đề hoặc nội dung cốt lõi của video muốn làm.")
+  },
+  async ({ topic }) => {
+    try {
+      const { spawnSync } = require("child_process");
+      console.log(`[MCP - generate_video_creative] Topic: ${topic}`);
+      const scriptsDir = path.join(__dirname, "..", "skill-hoang", "tao-video-ai", "scripts");
+      const pyCmd = process.platform === "win32" ? "python" : "python3";
+      
+      const genResult = spawnSync(
+        pyCmd, 
+        ["gen-prompt.py", topic], 
+        { cwd: scriptsDir, encoding: "utf8" }
+      );
+      
+      if (genResult.error || genResult.status !== 0) {
+        const errorMsg = genResult.stderr || genResult.stdout || (genResult.error ? genResult.error.message : "Lỗi chạy gen-prompt.py");
+        throw new Error(errorMsg);
+      }
+      
+      const planPath = path.join(__dirname, "..", "skill-hoang", "tao-video-ai", "output", "generated_video_plan.txt");
+      let planText = "";
+      if (fs.existsSync(planPath)) {
+        planText = fs.readFileSync(planPath, "utf8");
+      } else {
+        throw new Error("Không tìm thấy file kịch bản video được tạo ra.");
+      }
+      
+      return {
+        content: [
+          {
+            type: "text",
+            text: `Tạo kịch bản video AI thành công!\n\n**Chi Tiết Kịch Bản & Prompts:**\n\n${planText}`
+          }
+        ]
+      };
+    } catch (err) {
+      console.error("[MCP Error - generate_video_creative]:", err.message);
+      return {
+        isError: true,
+        content: [{ type: "text", text: `Lỗi sinh kịch bản video: ${err.message}` }]
+      };
+    }
+  }
+);
+
+// 11. Tool: post_video_to_socials
+server.tool(
+  "post_video_to_socials",
+  "Đăng video Reels/Shorts hoàn chỉnh lên Facebook Reels, YouTube Shorts, và TikTok.",
+  {
+    video_path: z.string().optional().describe("Đường dẫn file video MP4. Mặc định là 'skill-hoang/tao-video-ai/output/final_video.mp4'"),
+    caption_path: z.string().optional().describe("Đường dẫn file chứa caption bài viết. Mặc định là 'skill-hoang/tao-video-ai/output/generated_video_plan.txt'")
+  },
+  async ({ video_path, caption_path }) => {
+    try {
+      const { spawnSync } = require("child_process");
+      const defaultVideo = path.join(__dirname, "..", "skill-hoang", "tao-video-ai", "output", "final_video.mp4");
+      const defaultCaption = path.join(__dirname, "..", "skill-hoang", "tao-video-ai", "output", "generated_video_plan.txt");
+      
+      const selectedVideo = video_path || defaultVideo;
+      const selectedCaption = caption_path || defaultCaption;
+      
+      console.log(`[MCP - post_video_to_socials] Publishing video: ${selectedVideo}`);
+      const scriptsDir = path.join(__dirname, "..", "skill-hoang", "tao-video-ai", "scripts");
+      const pyCmd = process.platform === "win32" ? "python" : "python3";
+      
+      const publishResult = spawnSync(
+        pyCmd, 
+        ["post_video.py", selectedVideo, selectedCaption], 
+        { cwd: scriptsDir, encoding: "utf8" }
+      );
+      
+      if (publishResult.error || publishResult.status !== 0) {
+        const errorMsg = publishResult.stderr || publishResult.stdout || (publishResult.error ? publishResult.error.message : "Lỗi chạy post_video.py");
+        throw new Error(errorMsg);
+      }
+      
+      return {
+        content: [
+          {
+            type: "text",
+            text: `Publish video hoàn tất!\n\n**Chi tiết kết quả:**\n${publishResult.stdout}`
+          }
+        ]
+      };
+    } catch (err) {
+      console.error("[MCP Error - post_video_to_socials]:", err.message);
+      return {
+        isError: true,
+        content: [{ type: "text", text: `Lỗi publish video: ${err.message}` }]
+      };
+    }
+  }
+);
+
 // ------------------- SERVER SETUP -------------------
 const app = express();
 app.use(express.json());

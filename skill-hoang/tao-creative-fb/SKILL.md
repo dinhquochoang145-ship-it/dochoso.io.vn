@@ -1,17 +1,17 @@
 ---
 name: tao-creative-fb
-description: Tạo cả HÌNH ẢNH và VĂN BẢN bài viết Facebook chuẩn Brand Voice của sếp Hoàng. Mode 1 (Content Free): Tự động hóa tạo 3 ý tưởng -> sếp chọn 1 -> viết caption + gen ảnh -> duyệt -> đăng lên Facebook Page Tử Vi Xem. Mode 2 (Creative Ads): Tạo 3 bộ ảnh + ad copy theo 3 angle (pain point, solution, social proof) để sếp copy-paste chạy quảng cáo.
+description: Tạo cả HÌNH ẢNH, VĂN BẢN và VIDEO bài viết chuẩn Brand Voice của sếp Hoàng. Mode 1 (Content Free): Tự động tạo 3 ý tưởng -> sếp chọn 1 -> viết caption + gen ảnh -> đăng. Mode 2 (Creative Ads): Tạo 3 bộ ảnh + ad copy theo 3 angle. Mode 3 (Video Creator): Lên kịch bản video AI -> sếp gen ảnh/video trên Higgsfield/Kling -> lưu file video -> tự động đăng chéo Reels/Shorts/TikTok.
 ---
 
 # Skill: tao-creative-fb
 
-Skill này giúp sếp Hoàng sản xuất hàng loạt hoặc tự động hóa đăng bài viết (bao gồm cả **Hình ảnh** và **Văn bản**) lên Facebook Business Page hoặc xuất các bộ Creative Ads để sếp chạy chiến dịch.
+Skill này giúp sếp Hoàng sản xuất hàng loạt hoặc tự động hóa đăng bài viết (bao gồm cả **Hình ảnh**, **Văn bản**, và **Video**) lên Facebook Business Page, Reels, YouTube Shorts, và TikTok.
 
 ---
 
 ## ⚠️ QUY TẮC THỰC THI BẮT BUỘC CHO AGENT:
 - Bạn **KHÔNG ĐƯỢC PHÉP** tự ý đọc file `.env` hoặc tự gọi API để sinh nội dung.
-- Bạn **BẮT BUỘC** phải sử dụng các công cụ MCP chuyên dụng (`mcp_biz__generate_creative` và `mcp_biz__post_to_facebook`) để thực hiện sinh nội dung và đăng bài. Tuyệt đối không dùng công cụ `mcp_biz__save_post` trừ khi được yêu cầu lưu kiến thức vào database.
+- Bạn **BẮT BUỘC** phải sử dụng các công cụ MCP chuyên dụng (`mcp_biz__generate_creative`, `mcp_biz__generate_video_creative`, `mcp_biz__post_to_facebook`, và `mcp_biz__post_video_to_socials`) để thực hiện sinh nội dung và đăng bài. Tuyệt đối không dùng công cụ `mcp_biz__save_post` trừ khi được yêu cầu lưu kiến thức vào database.
 
 ---
 
@@ -29,9 +29,17 @@ Skill này giúp sếp Hoàng sản xuất hàng loạt hoặc tự động hóa
 ### 🎯 Hướng dẫn chạy Mode 2 (Creative Ads):
 1. Nhận thông tin sản phẩm và gọi công cụ **`mcp_biz__generate_creative`** cho từng bộ Creative Ads để lưu ảnh và lấy bài viết tương ứng.
 
+### 🎥 Hướng dẫn chạy Mode 3 (Video Creator):
+1. **Bước A (Lên kịch bản & Prompts):** Khi sếp yêu cầu "video" hoặc "tạo video", gọi công cụ MCP **`mcp_biz__generate_video_creative`** với đối số:
+   - `topic`: Chủ đề của video (ví dụ: Bản Đồ DNA Kinh Doanh, Đêm mất ngủ...).
+2. **Bước B (Duyệt kịch bản):** Hiển thị kịch bản 5 cảnh và bộ prompts cho Higgsfield/Kling vừa tạo ra để sếp duyệt.
+3. **Bước C (Hướng dẫn sếp gen):** Hướng dẫn sếp copy-paste prompts để tự sinh ảnh trên Higgsfield (Soul 2.0) và quay video trên Kling/Wan 2.2.
+4. **Bước D (Đăng chéo video):** Khi sếp đã tạo xong video hoàn chỉnh và lưu vào thư mục `skill-hoang/tao-video-ai/output/final_video.mp4`, sếp gõ `OK` hoặc `Đăng video`. Gọi công cụ MCP **`mcp_biz__post_video_to_socials`** để tự động đăng lên Reels, TikTok, và YouTube Shorts.
+
+
 ---
 
-## 🌀 Chế Độ Hoạt Động (2 Modes)
+## 🌀 Chế Độ Hoạt Động (3 Modes)
 
 ### MODE 1: CONTENT FREE (Auto-post Organic Page mỗi sáng)
 - **Triggers**: "tạo content cho ngày mai", "gen bài Page", "content free", "content organic", "viết bài page".
@@ -57,6 +65,20 @@ Skill này giúp sếp Hoàng sản xuất hàng loạt hoặc tự động hóa
      - 1 hình ảnh ads chất lượng cao.
      - 1 đoạn ad copy chuẩn Brand Voice kèm lời kêu gọi hành động (CTA) hướng về Landing Page/Inbox.
   4. Tải và lưu các ảnh vào thư mục `output/`, in nội dung copy ra màn hình chat Telegram để sếp copy-paste vào Ads Manager.
+
+---
+
+### MODE 3: VIDEO CREATOR (Gen kịch bản & publish video)
+- **Triggers**: "video", "tạo video", "quay video", "làm video", "gen video".
+- **Quy trình hoạt động**:
+  1. Agent hỏi sếp chủ đề hoặc tự động chọn 1 chủ đề từ Content Plan tuần này.
+  2. Agent gọi công cụ MCP `generate_video_creative` $\rightarrow$ sinh kịch bản và prompts chi tiết (lưu tại `skill-hoang/tao-video-ai/output/generated_video_plan.txt`).
+  3. Gửi bản preview kịch bản cho sếp Hoàng duyệt qua Telegram và hướng dẫn sếp cách gen ảnh/video trên Higgsfield/Kling.
+  4. Khi sếp gõ `OK` hoặc `Đăng video` (sau khi sếp đã ghép và xuất video hoàn chỉnh lưu vào `skill-hoang/tao-video-ai/output/final_video.mp4`):
+     - Agent gọi công cụ MCP `post_video_to_socials`.
+     - Tải video lên Facebook Reels Page, đăng lên YouTube Shorts, và hướng dẫn đăng TikTok.
+     - Trả lại liên kết hoặc kết quả xuất bản.
+
 
 ---
 

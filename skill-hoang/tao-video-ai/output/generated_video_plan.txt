@@ -1,0 +1,59 @@
+### Kịch bản Video AI: Bản Đồ DNA Kinh Doanh
+
+#### Phân cảnh 1: Giới thiệu Bản Đồ DNA Kinh Doanh
+- **Tên phân cảnh**: Giới thiệu khái niệm
+- **Mô tả hình ảnh**: Nhà sáng lập đứng trước một bảng trắng hoặc màn hình lớn, trình bày một biểu đồ chất lượng cao về Bản Đồ DNA Kinh Doanh. Ánh sáng ấm áp chiếu sáng không gian.
+- **Text overlay**: "Khám phá Bản Đồ DNA Kinh Doanh"
+- **Prompt sinh ảnh**: "A Vietnamese entrepreneur in their 30s presenting a high-quality business DNA map on a whiteboard, warm ambient light, cinematic style."
+- **Prompt tạo chuyển động**: "Slow dolly in towards the entrepreneur as they point to the business DNA map."
+- **Ghi chú kỹ thuật**: Khóa nhân vật từ Cảnh 1 để giữ sự tập trung.
+
+---
+
+#### Phân cảnh 2: Các yếu tố chính của Bản Đồ
+- **Tên phân cảnh**: Các yếu tố quan trọng
+- **Mô tả hình ảnh**: Cận cảnh trên bảng biểu đồ, chỉ ra các yếu tố như thị trường, sản phẩm, khách hàng. Màu sắc ấm áp như vàng gold và xanh navy.
+- **Text overlay**: "Thị trường, sản phẩm, khách hàng"
+- **Prompt sinh ảnh**: "Close-up shot of a business DNA map highlighting key elements: market, product, customer, warm gold and navy blue colors."
+- **Prompt tạo chuyển động**: "Key zoom on the highlighted elements of the business DNA map."
+- **Ghi chú kỹ thuật**: Sử dụng Key Zoom để nhấn mạnh.
+
+---
+
+#### Phân cảnh 3: Tầm quan trọng của Bản Đồ
+- **Tên phân cảnh**: Tầm quan trọng
+- **Mô tả hình ảnh**: Nhà sáng lập nói chuyện trực diện với camera, hình ảnh nền là biểu đồ với ánh sáng ấm áp.
+- **Text overlay**: "Tối ưu hóa chiến lược kinh doanh"
+- **Prompt sinh ảnh**: "The entrepreneur speaking directly to the camera, business DNA map in the background, warm lighting, cinematic style."
+- **Prompt tạo chuyển động**: "Slow pan towards the entrepreneur's face as they emphasize the importance of optimizing business strategy."
+- **Ghi chú kỹ thuật**: Chuyển động chậm để tạo cảm giác gần gũi.
+
+---
+
+#### Phân cảnh 4: Kết nối và ứng dụng thực tế
+- **Tên phân cảnh**: Kết nối và ứng dụng
+- **Mô tả hình ảnh**: Nhà sáng lập đang tư vấn cho một nhóm nhỏ, mọi người lắng nghe chăm chú, không gian tối giản sang trọng.
+- **Text overlay**: "Kết nối các yếu tố, tạo giá trị"
+- **Prompt sinh ảnh**: "The entrepreneur consulting a small group, everyone listening attentively, minimalist luxury space."
+- **Prompt tạo chuyển động**: "Orbiting shot around the group to capture engagement."
+- **Ghi chú kỹ thuật**: Sử dụng cú máy orbit chậm.
+
+---
+
+#### Phân cảnh 5: Kết luận
+- **Tên phân cảnh**: Kết luận và gọi hành động
+- **Mô tả hình ảnh**: Nhà sáng lập với nụ cười tự tin, biểu đồ ở phía sau, ánh sáng vàng nhẹ nhàng.
+- **Text overlay**: "Bắt đầu hành trình của bạn ngay hôm nay!"
+- **Prompt sinh ảnh**: "The entrepreneur smiling confidently with the business DNA map in the background, warm golden lighting."
+- **Prompt tạo chuyển động**: "Slow dolly out to reveal the entire scene with the entrepreneur and the map."
+- **Ghi chú kỹ thuật**: Sử dụng dolly out nhẹ nhàng.
+
+---
+
+### Hook Chính
+"Cùng khám phá Bản Đồ DNA Kinh Doanh, chìa khóa thành công cho doanh nghiệp của bạn!"
+
+### Caption Đăng Reels/TikTok
+"Mình là người sáng lập của bạn, hôm nay mình muốn chia sẻ một công cụ quan trọng: Bản Đồ DNA Kinh Doanh. 
+Nó giúp bạn tối ưu hóa chiến lược, kết nối các yếu tố và tạo ra giá trị thực sự cho doanh nghiệp. 
+Bắt đầu hành trình của bạn ngay hôm nay và chinh phục thị trường! #DNADoanhNghiep #KinhDoanhChinhThuc"

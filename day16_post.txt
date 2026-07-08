@@ -1,0 +1,26 @@
+Trước hôm nay, tôi vẫn thường dùng AI theo cách đi nhận và cài các skill có sẵn từ người khác.
+
+Nhưng hôm nay thì khác.
+
+Tôi tự tay build và hoàn thiện 3 skill riêng cho chính business của mình.
+Ba skill phục vụ trực tiếp cho việc vận hành:
+- Tự động viết bài Facebook chuẩn giọng văn cá nhân và lưu nháp.
+- Trả lời nhanh các câu hỏi thường gặp của khách hàng một cách trực diện, dưới 4 câu.
+- Đóng vai chuyên gia khai vấn để trò chuyện, đào sâu bối cảnh và tìm insight thực tế của khách trước khi giới thiệu sản phẩm.
+
+Lần đầu tiên, tôi thật sự hiểu thế nào là một skill AI cấp cao.
+Nó không chỉ là những câu prompt chung chung. 
+Nó có thể thay thế hiệu quả cho một copywriter viết bài, một nhân viên CSKH trả lời thắc mắc, hay thậm chí là một trợ lý tư vấn khai vấn trực tiếp.
+
+Cảm giác tự tay làm được rất khác biệt.
+Từ nay, mình không còn phải phụ thuộc vào ai để có một công cụ AI riêng nữa. Business cần cái gì, kẹt ở đâu, mình tự thiết kế và build được đến đó.
+
+Sự chuyển dịch từ một người đi dùng (user) sang một người tự tạo ra công cụ (creator) — thật ra, đó mới là giá trị lớn nhất ngày hôm nay mang lại.
+
+Cuối cùng...
+
+Công nghệ chỉ có giá trị khi nó được may đo vừa vặn với thực tế kinh doanh của chính bạn.
+
+Và người hiểu rõ nhất thực tế đó...
+
+Không ai khác ngoài bạn.

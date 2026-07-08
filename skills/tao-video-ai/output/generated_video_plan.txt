@@ -1,0 +1,42 @@
+**Kịch bản Video AI - "Vì sao làm kinh doanh bằng cảm tính dễ mất tiền tỷ?"**
+
+### Cảnh 1: "Khởi đầu không chắc chắn"
+- **Mô tả hình ảnh**: Nhà sáng lập đứng trước bảng trắng, vẽ ra ý tưởng kinh doanh với nét mặt hơi lo lắng. Ánh sáng ấm áp vàng gold chiếu sáng không gian, tạo cảm giác thân thiện nhưng nghiêm túc.
+- **Text overlay**: "Kinh doanh không chỉ là cảm xúc!"
+- **Prompt sinh ảnh**: "A young Vietnamese entrepreneur stands in front of a whiteboard, sketching business ideas with a worried expression. Warm golden light illuminates the space, creating a friendly but serious atmosphere."
+- **Prompt tạo chuyển động**: "Slow dolly in towards the entrepreneur as they sketch ideas, capturing the tension and uncertainty in their expression."
+- **Ghi chú kỹ thuật**: Khóa nhân vật từ Cảnh 1 để tạo sự liên kết.
+
+### Cảnh 2: "Cảm tính vs. Dữ liệu"
+- **Mô tả hình ảnh**: Cận cảnh bảng số liệu và biểu đồ, nhà sáng lập chỉ vào những số liệu quan trọng. Màu xanh navy sẫm làm nổi bật độ chính xác và tính khoa học.
+- **Text overlay**: "Dữ liệu là vua trong kinh doanh."
+- **Prompt sinh ảnh**: "Close-up of data charts and graphs on a screen, with the entrepreneur pointing at important figures. Dark navy blue color highlights the accuracy and scientific nature of the data."
+- **Prompt tạo chuyển động**: "Slow pan across the charts, emphasizing the data points and the entrepreneur's focus."
+- **Ghi chú kỹ thuật**: Sử dụng Key Zoom để làm nổi bật các số liệu quan trọng.
+
+### Cảnh 3: "Rủi ro từ cảm tính"
+- **Mô tả hình ảnh**: Nhà sáng lập nhìn ra ngoài cửa sổ, vẻ mặt trầm tư, hình ảnh phản chiếu những thất bại trong quá khứ. Ánh sáng vàng ấm tạo cảm giác nặng nề.
+- **Text overlay**: "Cảm tính có thể dẫn đến thất bại."
+- **Prompt sinh ảnh**: "The entrepreneur gazes out the window, a contemplative expression reflecting past failures. Warm golden light creates a heavy atmosphere."
+- **Prompt tạo chuyển động**: "Slow orbit around the entrepreneur, capturing their thoughtful demeanor."
+- **Ghi chú kỹ thuật**: Không cần khóa nhân vật trong cảnh này.
+
+### Cảnh 4: "Giải pháp thực chiến"
+- **Mô tả hình ảnh**: Nhà sáng lập đang thảo luận với đội ngũ, cùng nhau phân tích dữ liệu và lập kế hoạch. Màu sắc tươi sáng, thể hiện sự hợp tác và quyết tâm.
+- **Text overlay**: "Hợp tác và phân tích để thành công."
+- **Prompt sinh ảnh**: "The entrepreneur discusses with the team, analyzing data and planning together. Bright colors convey a sense of collaboration and determination."
+- **Prompt tạo chuyển động**: "Slow dolly in on the team as they engage in discussion, capturing their energy and focus."
+- **Ghi chú kỹ thuật**: Sử dụng mẹo CapCut zoom để làm nổi bật sự tương tác giữa các thành viên.
+
+### Cảnh 5: "Kết luận"
+- **Mô tả hình ảnh**: Nhà sáng lập đứng một mình, tự tin với một bảng kế hoạch rõ ràng trong tay. Hình ảnh thể hiện sự quyết tâm, ánh sáng vàng gold chiếu sáng.
+- **Text overlay**: "Chọn dữ liệu, không cảm tính!"
+- **Prompt sinh ảnh**: "The entrepreneur stands confidently alone, holding a clear plan. The image conveys determination with warm golden light shining."
+- **Prompt tạo chuyển động**: "Key Zoom on the entrepreneur as they hold the plan, emphasizing their confidence."
+- **Ghi chú kỹ thuật**: Khóa nhân vật từ Cảnh 5 để tạo điểm nhấn cho kết thúc.
+
+### Hook chính
+"Bạn có biết? Kinh doanh bằng cảm tính dễ mất tiền tỷ!"
+
+### Caption đăng Reels/TikTok
+"Mình đã từng nghĩ rằng cảm xúc sẽ dẫn dắt mình trong kinh doanh. Nhưng thực tế, dữ liệu mới là chìa khóa thành công. Khi cảm tính gặp rủi ro, mọi thứ có thể sụp đổ. Hãy cùng nhau phân tích, hợp tác và xây dựng một kế hoạch vững chắc. Bạn đã sẵn sàng để thay đổi cách làm kinh doanh của mình chưa?"

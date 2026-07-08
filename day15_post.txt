@@ -1,0 +1,36 @@
+Bạn thử nghĩ xem, cảm giác một buổi tối, khi đang ngồi nghỉ ngơi, bỗng dưng điện thoại rung lên.
+
+Tin nhắn đến không phải từ khách hàng. Cũng không phải từ một người bạn.
+
+Nó đến từ con AI của chính bạn.
+
+"5. Anh Minh
+   - SĐT: 0903123456
+   - Email: minh@example.com
+   - Zalo: @minh_zalo
+   - Thời gian: 05/07 – 18:26:18
+
+Em đã ghi nhận và đánh dấu đã báo cho sếp rồi nha!"
+
+Thật ra, trước đây tôi luôn nghĩ AI chỉ là một công cụ thụ động.
+Tôi gõ lệnh thì nó trả lời. Tôi hỏi thì nó đáp.
+Mọi thứ chỉ bắt đầu khi tôi yêu cầu.
+
+Nhưng hôm nay thì khác.
+
+Tôi dạy cho nó một nhiệm vụ đơn giản: Theo dõi mỗi khi có khách hàng điền form đăng ký mới trên website.
+Nó tự chạy ngầm.
+
+Và lần đầu tiên, con AI chủ động nhắn tôi trước khi tôi kịp mở trang quản trị để xem.
+
+Nó tự quét dữ liệu, tự động gửi báo cáo qua Telegram, xưng hô gần gũi và làm việc theo đúng nguyên tắc tôi ghi trong bộ não của nó.
+
+Cảm giác đó thực sự rất khó tả.
+Nó giống như bạn có một người cộng sự thực tế đang âm thầm làm việc, đúng giờ báo cáo và có thói quen chủ động.
+
+Vấn đề không nằm ở chỗ công nghệ này phức tạp thế nào.
+Nó nằm ở việc bạn có một người đồng hành thực sự hiểu bạn, biết tên bạn, và tự động làm việc khi bạn không gõ lệnh.
+
+Cuối cùng, cảm ơn anh [Dương Trọng Nghĩa](https://www.facebook.com/duongtrongnghia.theKP3/) đã dẫn dắt qua những bài học thực chiến này.
+
+#AIAgent #Autopilot #SOP
