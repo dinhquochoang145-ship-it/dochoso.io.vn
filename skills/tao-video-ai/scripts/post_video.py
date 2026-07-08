@@ -54,7 +54,7 @@ def post_video_to_all(video_path, caption_path):
                     "upload_phase": "start",
                     "access_token": page_token
                 }
-                response = requests.post(init_url, data=payload)
+                response = requests.post(init_url, data=payload, timeout=5)
                 init_result = response.json()
                 
                 if "video_id" in init_result:
@@ -68,7 +68,7 @@ def post_video_to_all(video_path, caption_path):
                     headers = {
                         "Authorization": f"OAuth {page_token}"
                     }
-                    upload_response = requests.post(upload_url, headers=headers, files={"video_file": video_file})
+                    upload_response = requests.post(upload_url, headers=headers, files={"video_file": video_file}, timeout=5)
                     upload_result = upload_response.json()
                     
                     # Step 3: Publish the reel
@@ -81,7 +81,7 @@ def post_video_to_all(video_path, caption_path):
                         "video_state": "PUBLISHED",
                         "access_token": page_token
                     }
-                    publish_response = requests.post(publish_url, data=publish_payload)
+                    publish_response = requests.post(publish_url, data=publish_payload, timeout=5)
                     publish_result = publish_response.json()
                     
                     if publish_result.get("success") or "id" in publish_result:
@@ -90,6 +90,7 @@ def post_video_to_all(video_path, caption_path):
                     else:
                         print(f"[-] Publish failed: {publish_result}")
                         results["facebook"] = "Publish failed (check API response)"
+                    video_file.close()
                 else:
                     print(f"[-] Init failed: {init_result}")
                     results["facebook"] = "Initialization failed"
