@@ -587,7 +587,7 @@ server.tool(
   },
   async ({ video_path, caption_path }) => {
     try {
-      const { spawn } = require("child_process");
+      const { spawnSync } = require("child_process");
       const defaultVideo = path.join(__dirname, "..", "skill-hoang", "tao-video-ai", "output", "final_video.mp4");
       const defaultCaption = path.join(__dirname, "..", "skill-hoang", "tao-video-ai", "output", "generated_video_plan.txt");
       
@@ -597,28 +597,23 @@ server.tool(
       const scriptsDir = path.join(__dirname, "..", "skill-hoang", "tao-video-ai", "scripts");
       const pyCmd = process.platform === "win32" ? "python" : "python3";
 
-      console.log(`[MCP - post_video_to_socials] Starting background compile & publish pipeline...`);
-      
-      // Build the sequential shell command to compile and publish in the background
-      const cmdString = `${pyCmd} compile_video.py && ${pyCmd} post_video.py "${selectedVideo}" "${selectedCaption}"`;
-      
-      const child = spawn(
-        cmdString,
-        [],
-        {
-          cwd: scriptsDir,
-          shell: true,
-          detached: true,
-          stdio: 'ignore'
-        }
+      console.log(`[MCP - post_video_to_socials] Publishing video: ${selectedVideo}`);
+      const publishResult = spawnSync(
+        pyCmd, 
+        ["post_video.py", selectedVideo, selectedCaption], 
+        { cwd: scriptsDir, encoding: "utf8" }
       );
-      child.unref(); // Allow the parent Node process to exit/continue independently
-
+      
+      if (publishResult.error || publishResult.status !== 0) {
+        const errorMsg = publishResult.stderr || publishResult.stdout || (publishResult.error ? publishResult.error.message : "Lỗi chạy post_video.py");
+        throw new Error(errorMsg);
+      }
+      
       return {
         content: [
           {
             type: "text",
-            text: `Hệ thống đã kích hoạt tiến trình dựng phim & đăng bài đa kênh tự động CHẠY NGẦM thành công! Tiến trình này sẽ tự hoàn tất trong khoảng 1 phút trên máy chủ. Sếp hãy yên tâm đi nghỉ ngơi nhé! 🦊`
+            text: `Publish video hoàn tất!\n\n**Chi tiết kết quả:**\n${publishResult.stdout}`
           }
         ]
       };
@@ -626,7 +621,7 @@ server.tool(
       console.error("[MCP Error - post_video_to_socials]:", err.message);
       return {
         isError: true,
-        content: [{ type: "text", text: `Lỗi kích hoạt tiến trình publish: ${err.message}` }]
+        content: [{ type: "text", text: `Lỗi publish video: ${err.message}` }]
       };
     }
   }
