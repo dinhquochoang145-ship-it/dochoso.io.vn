@@ -32,3 +32,15 @@
 * **Vấn đề**: Người duyệt bài sẽ trực tiếp nhấp vào link Reels/Shorts do Bot trả về trên Telegram để chấm điểm. Nếu chỉ trả về tin nhắn hướng dẫn đăng tay hoặc link lỗi, bài nộp sẽ bị từ chối (Rejected).
 * **Bài học & Khắc phục**:
   * **Luôn chuẩn bị phương án dự phòng (Mock/Fallback)**: Trong trường hợp API Facebook bị khóa checkpoint hoặc lỗi token không thể sửa kịp trước deadline, ta có thể cấu hình Bot tự động lấy link bài Reels đã đăng tay thủ công để trả về Telegram cho người chấm duyệt, đảm bảo tiến độ nộp bài không bị gián đoạn.
+
+---
+
+## 🚀 5. Quy Trình Đồng Bộ VPS Bắt Buộc (Deployment Checklist)
+* **Vấn đề**: Mọi chỉnh sửa code, file cấu hình, hay cập nhật kịch bản từ Agent thực tế mới chỉ nằm trên **máy cục bộ** hoặc **GitHub**. Nếu không đồng bộ lên VPS và khởi động lại dịch vụ, VPS sẽ tiếp tục chạy phiên bản code cũ và gây lỗi không nhất quán.
+* **Bài học & Khắc phục**: Mỗi khi có bất kỳ thay đổi nào về mã nguồn, bắt buộc phải thực hiện đủ 3 bước sau trên VPS:
+  1. **Kéo code mới**: `git pull origin main`
+  2. **Khởi động lại dịch vụ liên quan**:
+     * `systemctl restart mcpserver` (Nếu sửa các công cụ đăng bài/MCP)
+     * `systemctl restart mywebsite` (Nếu sửa chatbot/website)
+  3. **Kiểm tra trạng thái**: `systemctl status mcpserver` hoặc `journalctl -u mcpserver -n 20` để đảm bảo dịch vụ khởi động thành công và không bị crash.
+
