@@ -575,9 +575,62 @@ server.tool(
       };
     }
   }
+// 11. Tool: compile_video
+server.tool(
+  "compile_video",
+  "Biên dịch video tự động: Sinh 5 cảnh ảnh dọc bằng DALL-E 3 dựa trên kịch bản sẵn có, rồi dựng phim với hiệu ứng zoom, nhạc nền và phụ đề hoàn chỉnh.",
+  {},
+  async () => {
+    try {
+      const { spawnSync } = require("child_process");
+      const scriptsDir = path.join(__dirname, "..", "skill-hoang", "tao-video-ai", "scripts");
+      const pyCmd = process.platform === "win32" ? "python" : "python3";
+      
+      console.log("[MCP - compile_video] Running gen_video_scenes.py to generate images...");
+      const genResult = spawnSync(
+        pyCmd,
+        ["gen_video_scenes.py"],
+        { cwd: scriptsDir, encoding: "utf8" }
+      );
+      
+      if (genResult.error || genResult.status !== 0) {
+        const errorMsg = genResult.stderr || genResult.stdout || (genResult.error ? genResult.error.message : "Lỗi chạy gen_video_scenes.py");
+        throw new Error(errorMsg);
+      }
+      
+      console.log("[MCP - compile_video] Running compile_video.py to render final video...");
+      const compileResult = spawnSync(
+        pyCmd,
+        ["compile_video.py"],
+        { cwd: scriptsDir, encoding: "utf8" }
+      );
+      
+      if (compileResult.error || compileResult.status !== 0) {
+        const errorMsg = compileResult.stderr || compileResult.stdout || (compileResult.error ? compileResult.error.message : "Lỗi chạy compile_video.py");
+        throw new Error(errorMsg);
+      }
+      
+      const finalVideoPath = path.join(__dirname, "..", "skill-hoang", "tao-video-ai", "output", "final_video.mp4");
+      
+      return {
+        content: [
+          {
+            type: "text",
+            text: `Biên dịch video thành công! Dưới đây là video preview để sếp Hoàng duyệt:\n\n[Nhấp vào đây để xem Preview Video (final_video.mp4)](file://${finalVideoPath})`
+          }
+        ]
+      };
+    } catch (err) {
+      console.error("[MCP Error - compile_video]:", err.message);
+      return {
+        isError: true,
+        content: [{ type: "text", text: `Lỗi biên dịch video: ${err.message}` }]
+      };
+    }
+  }
 );
 
-// 11. Tool: post_video_to_socials
+// 12. Tool: post_video_to_socials
 server.tool(
   "post_video_to_socials",
   "Đăng video Reels/Shorts hoàn chỉnh lên Facebook Reels, YouTube Shorts, và TikTok.",
