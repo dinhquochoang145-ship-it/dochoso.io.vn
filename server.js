@@ -401,6 +401,9 @@ function renderMarkdownToHtml(md, filename) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${filename} — Kế hoạch kinh doanh</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     :root {
       --bg: #0f0c08;
       --bg-2: #17110c;
@@ -418,6 +421,7 @@ function renderMarkdownToHtml(md, filename) {
       line-height: 1.7;
       margin: 0;
       padding: 40px 20px;
+      overflow-x: hidden;
     }
     .container {
       max-width: 800px;
@@ -427,6 +431,11 @@ function renderMarkdownToHtml(md, filename) {
       border-radius: var(--radius-xl);
       padding: 40px;
       box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+    }
+    p, div, li, h1, h2, h3, span {
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      word-break: break-word;
     }
     .header-bar {
       display: flex;
@@ -493,6 +502,26 @@ function renderMarkdownToHtml(md, filename) {
       padding: 2px 6px;
       border-radius: 4px;
       font-size: 0.9em;
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 16px 8px;
+      }
+      .container {
+        padding: 20px 15px;
+        border-radius: 12px;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+      .header-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
     }
   </style>
 </head>
