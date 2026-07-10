@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{PRODUCT_NAME}} — DNA Kinh Doanh</title>
+  <meta name="description" content="{{PRODUCT_TAGLINE}}" />
+  
+  <style>
+    :root {
+      --bg: #0f0c08;
+      --bg-2: #17110c;
+      --panel: #211810;
+      --panel-2: #2d2117;
+      --text: #fff8ee;
+      --muted: #d8c8b1;
+      --soft: #a99477;
+      --line: rgba(255, 232, 190, .16);
+      --gold: #e9b85d;
+      --gold-2: #f7d58d;
+      --danger: #ff8d72;
+      --success: #94dda3;
+      --shadow: 0 24px 70px rgba(0, 0, 0, .35);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --max: 1000px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(233, 184, 93, .15), transparent 40%),
+        radial-gradient(circle at 85% 15%, rgba(255, 141, 114, .08), transparent 35%),
+        linear-gradient(180deg, #0f0c08 0%, #17110c 50%, #0f0c08 100%);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      padding-bottom: 80px;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      backdrop-filter: blur(18px);
+      background: rgba(15, 12, 8, .75);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -.02em;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      color: #21150a;
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      box-shadow: 0 12px 40px rgba(233, 184, 93, .25);
+      font-weight: 900;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: var(--radius-md);
+      transition: all .2s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      color: #21150a;
+      box-shadow: 0 16px 40px rgba(233, 184, 93, .2);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 45px rgba(233, 184, 93, .35);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, .03);
+      border: 1px solid var(--line);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, .08);
+      border-color: var(--soft);
+    }
+
+    /* Landing Specific Styles */
+    .landing-header {
+      padding-top: 60px;
+      padding-bottom: 40px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--gold);
+      background: rgba(233, 184, 93, .08);
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(233, 184, 93, .16);
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 800;
+      line-height: 1.25;
+      margin: 0 0 20px 0;
+      letter-spacing: -.02em;
+      background: linear-gradient(to right, #fff, var(--muted));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .tagline {
+      font-size: clamp(16px, 2.5vw, 20px);
+      color: var(--muted);
+      max-width: 720px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Layout Split */
+    .grid-layout {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 40px;
+      align-items: start;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 850px) {
+      .grid-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .content-box {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      margin-bottom: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-top: 0;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 12px;
+    }
+
+    .list-items {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    .list-item-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(148, 221, 163, .1);
+      color: var(--success);
+      display: grid;
+      place-items: center;
+      font-size: 12px;
+      font-weight: bold;
+      margin-top: 2px;
+    }
+
+    .list-item-icon.target {
+      background: rgba(255, 141, 114, .1);
+      color: var(--danger);
+    }
+
+    /* Price Panel */
+    .price-card {
+      background: linear-gradient(145deg, var(--panel-2), var(--panel));
+      border: 2px solid var(--gold);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      text-align: center;
+      position: sticky;
+      top: 100px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    }
+
+    .price-title {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--soft);
+      margin-bottom: 8px;
+    }
+
+    .price-value {
+      font-size: 40px;
+      font-weight: 800;
+      color: var(--gold-2);
+      margin: 0 0 8px 0;
+    }
+
+    .price-original {
+      font-size: 15px;
+      color: var(--soft);
+      text-decoration: line-through;
+      margin-bottom: 24px;
+    }
+
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--soft);
+      margin-top: 18px;
+    }
+
+    .trust-badge svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--success);
+    }
+
+    /* Author section */
+    .author-card {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    @media (max-width: 550px) {
+      .author-card {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    .author-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--panel-2);
+      border: 2px solid var(--soft);
+      display: grid;
+      place-items: center;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .author-info h4 {
+      margin: 0 0 6px 0;
+      font-size: 16px;
+      color: var(--gold-2);
+    }
+
+    .author-info p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      margin-top: 80px;
+      padding-top: 30px;
+      color: var(--soft);
+      font-size: 13px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/" aria-label="DNA Kinh Doanh">
+        <span class="brand-mark">DNA</span>
+        <span>DNA Kinh Doanh</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header class="landing-header">
+      <div class="eyebrow">
+        <span class="dot"></span>
+        Sản Phẩm Số Đặc Biệt
+      </div>
+      <h1>{{PRODUCT_NAME}}</h1>
+      <p class="tagline">{{PRODUCT_TAGLINE}}</p>
+    </header>
+
+    <div class="grid-layout">
+      <!-- Left column: Details -->
+      <div>
+        <section class="content-box">
+          <h2>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--success);"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Khách Hàng Nhận Được Gì?
+          </h2>
+          <ul class="list-items">
+            {{WHAT_YOU_GET_HTML}}
+          </ul>
+        </section>
+
+        <section class="content-box">
+          <h2>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--danger);"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            Sản Phẩm Này Dành Cho Ai?
+          </h2>
+          <ul class="list-items">
+            {{WHO_IS_IT_FOR_HTML}}
+          </ul>
+        </section>
+
+        <section class="content-box">
+          <h2>Tác giả</h2>
+          <div class="author-card">
+            <div class="author-avatar">H</div>
+            <div class="author-info">
+              <h4>{{AUTHOR_NAME}}</h4>
+              <p>{{AUTHOR_BIO}}</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Right column: Pricing Card -->
+      <aside>
+        <div class="price-card">
+          <span class="price-title">Giá ưu đãi hôm nay</span>
+          <div class="price-value">{{PRODUCT_PRICE}}đ</div>
+          <div class="price-original">Giá gốc: {{PRODUCT_ORIGINAL_PRICE}}đ</div>
+          
+          <a href="/san-pham/{{SLUG}}/checkout" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center; min-height: 52px;">
+            Mua ngay với giá ưu đãi
+          </a>
+          
+          <div class="trust-badge">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            <span>Thanh toán VietQR · File giao ngay</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="container">
+    <div class="footer-inner">
+      <div>© <span id="year"></span> DNA Kinh Doanh.</div>
+      <div>AI Skill Builder – Đóng gói năng lực của bạn thành tài sản số.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

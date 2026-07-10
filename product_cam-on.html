@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cảm Ơn Bạn — DNA Kinh Doanh</title>
+  
+  <style>
+    :root {
+      --bg: #0f0c08;
+      --bg-2: #17110c;
+      --panel: #211810;
+      --panel-2: #2d2117;
+      --text: #fff8ee;
+      --muted: #d8c8b1;
+      --soft: #a99477;
+      --line: rgba(255, 232, 190, .16);
+      --gold: #e9b85d;
+      --gold-2: #f7d58d;
+      --danger: #ff8d72;
+      --success: #94dda3;
+      --shadow: 0 24px 70px rgba(0, 0, 0, .35);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --max: 600px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(233, 184, 93, .12), transparent 40%),
+        radial-gradient(circle at 85% 15%, rgba(255, 141, 114, .06), transparent 35%),
+        linear-gradient(180deg, #0f0c08 0%, #17110c 50%, #0f0c08 100%);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      padding-bottom: 80px;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin-inline: auto;
+      padding-top: 60px;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      backdrop-filter: blur(18px);
+      background: rgba(15, 12, 8, .75);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -.02em;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      color: #21150a;
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      box-shadow: 0 12px 40px rgba(233, 184, 93, .25);
+      font-weight: 900;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    .icon-wrapper {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 24px auto;
+    }
+
+    .icon-success {
+      background: rgba(148, 221, 163, .1);
+      color: var(--success);
+    }
+
+    .icon-pending {
+      background: rgba(233, 184, 93, .1);
+      color: var(--gold);
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    h1.success-title {
+      background: linear-gradient(to right, #fff, var(--success));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h1.pending-title {
+      background: linear-gradient(to right, #fff, var(--gold-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .message {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 16px;
+      padding: 16px 32px;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      border: none;
+      transition: all .2s cubic-bezier(0.16, 1, 0.3, 1);
+      width: 100%;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      color: #21150a;
+      box-shadow: 0 16px 40px rgba(233, 184, 93, .2);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 45px rgba(233, 184, 93, .35);
+    }
+
+    /* Details Table */
+    .order-info {
+      background: rgba(255, 255, 255, .02);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      text-align: left;
+      margin-bottom: 30px;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px dashed var(--line);
+      font-size: 14px;
+    }
+
+    .info-row:last-child {
+      border-bottom: none;
+    }
+
+    .info-label {
+      color: var(--soft);
+    }
+
+    .info-val {
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    /* Spinner */
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(233, 184, 93, 0.1);
+      border-radius: 50%;
+      border-top-color: var(--gold);
+      animation: spin 1s ease-in-out infinite;
+      margin: 0 auto 20px auto;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/" aria-label="DNA Kinh Doanh">
+        <span class="brand-mark">DNA</span>
+        <span>DNA Kinh Doanh</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="card" id="main-card">
+      <!-- Content will be injected dynamically via JavaScript -->
+      <div class="spinner"></div>
+      <p>Đang tải thông tin đơn hàng...</p>
+    </div>
+  </main>
+
+  <script>
+    const orderId = new URLSearchParams(window.location.search).get("orderId");
+    const productSlug = "{{SLUG}}";
+    let statusCheckInterval = null;
+
+    if (!orderId) {
+      document.getElementById("main-card").innerHTML = `
+        <div class="icon-wrapper icon-pending">✕</div>
+        <h1>Lỗi Đơn Hàng</h1>
+        <p class="message">Không tìm thấy mã đơn hàng hợp lệ. Vui lòng kiểm tra lại.</p>
+        <a href="/san-pham/${productSlug}" class="btn btn-primary">Quay lại trang sản phẩm</a>
+      `;
+    } else {
+      fetchOrderStatus();
+    }
+
+    async function fetchOrderStatus() {
+      try {
+        const res = await fetch(`/api/check-order-status?orderId=${orderId}`);
+        if (!res.ok) throw new Error();
+        const data = await res.json();
+        
+        renderPage(data.status);
+
+        if (data.status === 'pending') {
+          startPolling();
+        }
+      } catch (err) {
+        document.getElementById("main-card").innerHTML = `
+          <div class="icon-wrapper icon-pending">✕</div>
+          <h1>Lỗi Kết Nối</h1>
+          <p class="message">Không thể tải thông tin đơn hàng từ máy chủ. Vui lòng tải lại trang.</p>
+        `;
+      }
+    }
+
+    function renderPage(status) {
+      const card = document.getElementById("main-card");
+      if (status === 'completed') {
+        if (statusCheckInterval) clearInterval(statusCheckInterval);
+        
+        card.innerHTML = `
+          <div class="icon-wrapper icon-success">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <h1 class="success-title">Thanh toán thành công!</h1>
+          <p class="message">Cảm ơn bạn đã mua hàng. Đơn hàng của bạn đã được xác nhận hoàn tất. Hệ thống cũng đã gửi một email chứa link tải tài liệu tới hòm thư của bạn để lưu trữ lâu dài.</p>
+          
+          <div class="order-info">
+            <div class="info-row">
+              <span class="info-label">Mã đơn hàng</span>
+              <span class="info-val">#${orderId}</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Sản phẩm</span>
+              <span class="info-val">{{PRODUCT_NAME}}</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Trạng thái</span>
+              <span class="info-val" style="color: var(--success);">Đã hoàn thành</span>
+            </div>
+          </div>
+
+          <a href="/assets/downloads/${productSlug}.zip" class="btn btn-primary" download style="min-height: 54px; font-size: 16px; letter-spacing: 0.5px;">
+            TẢI FILE TÀI LIỆU NGAY
+          </a>
+        `;
+      } else {
+        card.innerHTML = `
+          <div class="spinner"></div>
+          <h1 class="pending-title">Đang kiểm tra giao dịch...</h1>
+          <p class="message">Hệ thống đang đối soát khoản chuyển của bạn. Vui lòng giữ nguyên trang này, nút tải xuống sẽ hiển thị ngay khi nhận được tín hiệu thành công.</p>
+          
+          <div class="order-info">
+            <div class="info-row">
+              <span class="info-label">Mã đơn hàng</span>
+              <span class="info-val">#${orderId}</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Sản phẩm</span>
+              <span class="info-val">{{PRODUCT_NAME}}</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Trạng thái</span>
+              <span class="info-val" style="color: var(--gold-2);">Đang xử lý (Pending)</span>
+            </div>
+          </div>
+          
+          <p style="font-size: 12px; color: var(--soft);">Hệ thống tự động quét mỗi 3 giây...</p>
+        `;
+      }
+    }
+
+    function startPolling() {
+      if (statusCheckInterval) clearInterval(statusCheckInterval);
+      statusCheckInterval = setInterval(async () => {
+        try {
+          const res = await fetch(`/api/check-order-status?orderId=${orderId}`);
+          if (res.ok) {
+            const data = await res.json();
+            if (data.status === 'completed') {
+              renderPage('completed');
+            }
+          }
+        } catch (err) {
+          console.error("Lỗi polling:", err);
+        }
+      }, 3000);
+    }
+  </script>
+</body>
+</html>

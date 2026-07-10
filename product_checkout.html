@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thanh Toán — {{PRODUCT_NAME}}</title>
+  
+  <style>
+    :root {
+      --bg: #0f0c08;
+      --bg-2: #17110c;
+      --panel: #211810;
+      --panel-2: #2d2117;
+      --text: #fff8ee;
+      --muted: #d8c8b1;
+      --soft: #a99477;
+      --line: rgba(255, 232, 190, .16);
+      --gold: #e9b85d;
+      --gold-2: #f7d58d;
+      --danger: #ff8d72;
+      --success: #94dda3;
+      --shadow: 0 24px 70px rgba(0, 0, 0, .35);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --max: 650px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(233, 184, 93, .12), transparent 40%),
+        radial-gradient(circle at 85% 15%, rgba(255, 141, 114, .06), transparent 35%),
+        linear-gradient(180deg, #0f0c08 0%, #17110c 50%, #0f0c08 100%);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      padding-bottom: 80px;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin-inline: auto;
+      padding-top: 40px;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      backdrop-filter: blur(18px);
+      background: rgba(15, 12, 8, .75);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -.02em;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      color: #21150a;
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      box-shadow: 0 12px 40px rgba(233, 184, 93, .25);
+      font-weight: 900;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--shadow);
+      margin-top: 24px;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--gold-2);
+      margin-top: 0;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: var(--muted);
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* Form Fields */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"] {
+      width: 100%;
+      background: rgba(255, 255, 255, .03);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      color: var(--text);
+      font-size: 15px;
+      transition: all .2s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--gold);
+      background: rgba(255, 255, 255, .06);
+    }
+
+    .price-option-container {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .price-option {
+      flex: 1;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .02);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      cursor: pointer;
+      text-align: center;
+      transition: all .2s;
+    }
+
+    .price-option.active {
+      border-color: var(--gold);
+      background: rgba(233, 184, 93, 0.05);
+    }
+
+    .price-option-title {
+      font-size: 13px;
+      color: var(--soft);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin-bottom: 4px;
+    }
+
+    .price-option-val {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--gold-2);
+    }
+
+    .btn {
+      width: 100%;
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      border: none;
+      transition: all .2s;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      color: #21150a;
+      box-shadow: 0 16px 40px rgba(233, 184, 93, .15);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 45px rgba(233, 184, 93, .3);
+    }
+
+    .error-msg {
+      color: var(--danger);
+      font-size: 13px;
+      margin-top: 10px;
+      text-align: center;
+      display: none;
+    }
+
+    /* VietQR Area */
+    .payment-area {
+      display: none;
+      animation: fadeIn .4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .qr-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .qr-wrapper {
+      background: white;
+      padding: 14px;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+      margin-bottom: 12px;
+    }
+
+    .qr-image {
+      width: 220px;
+      height: 220px;
+      display: block;
+    }
+
+    .fine-print {
+      font-size: 12px;
+      color: var(--soft);
+    }
+
+    .payment-details {
+      background: rgba(255, 255, 255, .02);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px dashed var(--line);
+    }
+
+    .detail-row:last-child {
+      border-bottom: none;
+    }
+
+    .detail-label {
+      font-size: 13px;
+      color: var(--soft);
+    }
+
+    .detail-value {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .copy-badge {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--line);
+      font-size: 10px;
+      color: var(--gold);
+      padding: 3px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      user-select: none;
+      font-weight: 600;
+    }
+
+    .copy-badge:hover {
+      background: rgba(233, 184, 93, 0.15);
+    }
+
+    /* Polling Status */
+    .status-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 14px;
+      background: rgba(233, 184, 93, .08);
+      border: 1px solid rgba(233, 184, 93, .16);
+      border-radius: var(--radius-md);
+      margin-bottom: 20px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: pulse 1.5s infinite;
+    }
+
+    .status-text {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gold-2);
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(233, 184, 93, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(233, 184, 93, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(233, 184, 93, 0); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/" aria-label="DNA Kinh Doanh">
+        <span class="brand-mark">DNA</span>
+        <span>DNA Kinh Doanh</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="card">
+      <div id="checkout-form-area">
+        <h1>Xác Nhận Đăng Ký</h1>
+        <p class="subtitle">{{PRODUCT_NAME}}</p>
+        
+        <form id="checkout-form">
+          <div class="form-group">
+            <label for="customer-name">Họ và tên của bạn</label>
+            <input type="text" id="customer-name" required placeholder="Ví dụ: Nguyễn Văn A" />
+          </div>
+          
+          <div class="form-group">
+            <label for="customer-email">Email nhận link tải tài liệu</label>
+            <input type="email" id="customer-email" required placeholder="Ví dụ: name@domain.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="customer-phone">Số điện thoại (Zalo nhận hỗ trợ)</label>
+            <input type="tel" id="customer-phone" required placeholder="Ví dụ: 0986549414" />
+          </div>
+
+          <label>Chọn chế độ thanh toán</label>
+          <div class="price-option-container">
+            <div class="price-option active" onclick="selectPrice(490000, this)">
+              <div class="price-option-title">Chính thức</div>
+              <div class="price-option-val">490.000đ</div>
+            </div>
+            <div class="price-option" onclick="selectPrice(2000, this)">
+              <div class="price-option-title">Thử nghiệm (Test)</div>
+              <div class="price-option-val">2.000đ</div>
+            </div>
+          </div>
+
+          <button type="submit" id="submit-btn" class="btn btn-primary">
+            Tiến hành thanh toán
+          </button>
+          
+          <div id="form-error" class="error-msg"></div>
+        </form>
+      </div>
+
+      <!-- Payment details with QR -->
+      <div id="payment-area" class="payment-area">
+        <h1>Thanh toán qua VietQR</h1>
+        <p class="subtitle">Mở ứng dụng Ngân hàng để quét mã VietQR tự động điền nội dung</p>
+        
+        <div class="qr-container">
+          <div class="qr-wrapper">
+            <img id="qr-image" class="qr-image" src="" alt="VietQR" />
+          </div>
+          <span class="fine-print">Hệ thống tự động duyệt sau 10-30 giây</span>
+        </div>
+
+        <div class="status-box">
+          <div class="status-dot"></div>
+          <span class="status-text" id="status-text">Đang chờ bạn chuyển khoản...</span>
+        </div>
+
+        <div class="payment-details">
+          <div class="detail-row">
+            <span class="detail-label">Ngân hàng</span>
+            <span class="detail-value" id="bank-name">ACB</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Số tài khoản</span>
+            <span class="detail-value">
+              <span id="bank-acc">16997077</span>
+              <span class="copy-badge" onclick="copyValue('bank-acc')">Sao chép</span>
+            </span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Chủ tài khoản</span>
+            <span class="detail-value" id="bank-holder">DINH QUOC HOANG</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Số tiền</span>
+            <span class="detail-value">
+              <span id="pay-amount">490.000đ</span>
+              <span class="copy-badge" onclick="copyValue('pay-amount', true)">Sao chép</span>
+            </span>
+          </div>
+          <div class="detail-row" style="border: 2px solid rgba(233, 184, 93, .3); padding: 12px; margin-top: 10px; border-radius: 8px; background: rgba(233,184,93,0.04);">
+            <span class="detail-label" style="color: var(--gold-2); font-weight: 700;">Nội dung chuyển khoản (Bắt buộc)</span>
+            <span class="detail-value" style="color: var(--gold-2); font-size: 16px;">
+              <strong id="pay-memo">SKB1234</strong>
+              <span class="copy-badge" onclick="copyValue('pay-memo')">Sao chép</span>
+            </span>
+          </div>
+        </div>
+
+        <button class="btn btn-secondary" onclick="resetCheckout()">
+          Quay lại form đăng ký
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const SEPAY_CONFIG = {
+      bank: "ACB",
+      accountNo: "16997077",
+      accountName: "DINH QUOC HOANG"
+    };
+
+    let selectedAmount = 490000;
+    const productId = 4; // AI Skill Builder ID is 4 (inserted in migrations)
+    const productSlug = "{{SLUG}}";
+    let paymentCheckInterval = null;
+
+    function selectPrice(amount, element) {
+      selectedAmount = amount;
+      document.querySelectorAll('.price-option').forEach(opt => opt.classList.remove('active'));
+      element.classList.add('active');
+    }
+
+    function generateMemo() {
+      const randomNum = Math.floor(1000 + Math.random() * 9000);
+      return `SKB${randomNum}`;
+    }
+
+    document.getElementById("checkout-form").addEventListener("submit", async function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById("customer-name").value.trim();
+      const email = document.getElementById("customer-email").value.trim();
+      const phone = document.getElementById("customer-phone").value.trim();
+      const submitBtn = document.getElementById("submit-btn");
+      const errorDiv = document.getElementById("form-error");
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Đang xử lý đăng ký...";
+      errorDiv.style.display = "none";
+
+      try {
+        // 1. Tạo hoặc lấy thông tin khách hàng
+        const customerRes = await fetch("/api/customers", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, phone, email })
+        });
+        
+        const customerData = await customerRes.json();
+        if (!customerRes.ok) {
+          throw new Error(customerData.error || "Không thể tạo khách hàng.");
+        }
+        
+        const customerId = customerData.id;
+        const memo = generateMemo();
+
+        // 2. Tạo đơn hàng với sepay_memo
+        const orderRes = await fetch("/api/orders", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            customer_id: customerId,
+            product_id: productId,
+            amount: selectedAmount,
+            status: "pending",
+            sepay_memo: memo
+          })
+        });
+
+        const orderData = await orderRes.json();
+        if (!orderRes.ok) {
+          throw new Error(orderData.error || "Không thể tạo đơn hàng.");
+        }
+
+        const orderId = orderData.id;
+
+        // 3. Hiển thị thông tin chuyển khoản & VietQR
+        showPaymentArea(memo, selectedAmount, orderId);
+
+      } catch (err) {
+        errorDiv.textContent = err.message;
+        errorDiv.style.display = "block";
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Tiến hành thanh toán";
+      }
+    });
+
+    function showPaymentArea(memo, amount, orderId) {
+      document.getElementById("checkout-form-area").style.display = "none";
+      document.getElementById("payment-area").style.display = "block";
+
+      document.getElementById("pay-amount").textContent = amount.toLocaleString('vi-VN') + "đ";
+      document.getElementById("pay-memo").textContent = memo;
+
+      // Tạo QR
+      const qrUrl = `https://vietqr.app/img?acc=${SEPAY_CONFIG.accountNo}&bank=${SEPAY_CONFIG.bank}&amount=${amount}&des=${encodeURIComponent(memo)}&template=compact&showinfo=true&holder=${encodeURIComponent(SEPAY_CONFIG.accountName)}`;
+      document.getElementById("qr-image").src = qrUrl;
+
+      // Bắt đầu kiểm tra thanh toán
+      startCheckingOrderStatus(orderId);
+    }
+
+    function startCheckingOrderStatus(orderId) {
+      if (paymentCheckInterval) clearInterval(paymentCheckInterval);
+
+      paymentCheckInterval = setInterval(async () => {
+        try {
+          const res = await fetch(`/api/check-order-status?orderId=${orderId}`);
+          if (res.ok) {
+            const data = await res.json();
+            if (data.status === 'completed') {
+              clearInterval(paymentCheckInterval);
+              // Chuyển hướng sang trang cảm ơn
+              window.location.href = `/san-pham/${productSlug}/cam-on?orderId=${orderId}`;
+            }
+          }
+        } catch (err) {
+          console.error("Lỗi kiểm tra trạng thái đơn hàng:", err);
+        }
+      }, 3000); // Polling mỗi 3 giây
+    }
+
+    function resetCheckout() {
+      if (paymentCheckInterval) {
+        clearInterval(paymentCheckInterval);
+        paymentCheckInterval = null;
+      }
+      document.getElementById("checkout-form-area").style.display = "block";
+      document.getElementById("payment-area").style.display = "none";
+      document.getElementById("submit-btn").disabled = false;
+      document.getElementById("submit-btn").textContent = "Tiến hành thanh toán";
+    }
+
+    function copyValue(elementId, isNumberOnly = false) {
+      const el = document.getElementById(elementId);
+      let val = el.textContent;
+      if (isNumberOnly) {
+        val = selectedAmount.toString();
+      }
+      navigator.clipboard.writeText(val).then(() => {
+        const badge = el.nextElementSibling || el.parentElement.querySelector('.copy-badge');
+        const originalText = badge.textContent;
+        badge.textContent = "Đã sao chép";
+        setTimeout(() => { badge.textContent = originalText; }, 1200);
+      }).catch(err => {
+        console.error("Lỗi sao chép:", err);
+      });
+    }
+  </script>
+</body>
+</html>

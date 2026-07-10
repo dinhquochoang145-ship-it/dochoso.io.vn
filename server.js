@@ -36,6 +36,31 @@ const SEPAY_CONFIG = {
   apiToken: process.env.SEPAY_API_TOKEN || "" // Đọc từ .env hoặc môi trường hosting
 };
 
+// Metadata chi tiết cho các sản phẩm số phục vụ trang Landing động
+const PRODUCTS_METADATA = {
+  "ai-skill-builder": {
+    tagline: "Hệ thống hướng dẫn đóng gói kiến thức và quy trình thành AI Skills, sau đó kết hợp thành AI Agent có thể tái sử dụng và tự vận hành.",
+    originalPrice: 990000,
+    extendedPrice: 1490000,
+    whatYouGet: [
+      "Framework AI Skill Builder giúp chuyển đổi mọi Prompt thông thường thành cấu trúc Skill chuẩn.",
+      "Hướng dẫn chi tiết từng bước chuyển Prompt của bạn thành Skill hoạt động chính xác.",
+      "10–12 AI Skills mẫu thực chiến có sẵn để bạn sử dụng ngay lập tức.",
+      "Template tiêu chuẩn để tạo nhanh các AI Skills mới cho quy trình của riêng bạn.",
+      "Checklist kiểm tra, tinh chỉnh và tối ưu hóa hiệu suất hoạt động của Skill.",
+      "Tài liệu README hướng dẫn tích hợp và ghép các Skill thành một AI Agent tự vận hành."
+    ],
+    whoIsItFor: [
+      "Solopreneur, Freelancer muốn tự động hóa quy trình làm việc để giải phóng thời gian và tăng năng suất.",
+      "Chủ doanh nghiệp, Quản lý muốn chuẩn hóa quy trình và kiến thức nội bộ thành các 'AI nhân viên' thực chiến.",
+      "Người làm công nghệ, nhà sáng tạo muốn làm chủ kỹ năng đóng gói Prompt chuyên nghiệp theo chuẩn Agentic."
+    ],
+    authorName: "Hoàng | DNA Kinh Doanh",
+    authorBio: "Chuyên gia nghiên cứu và luận giải bản đồ quyết định kinh doanh cá nhân hóa, đồng hành cùng hơn 500+ học viên khởi nghiệp thực chiến bằng AI Agent."
+  }
+};
+
+
 // Đọc API Key của Resend
 let RESEND_API_KEY = process.env.RESEND_API_KEY || "";
 if (!RESEND_API_KEY) {
@@ -137,6 +162,53 @@ async function sendOrderConfirmationEmail({ orderId, customerName, customerEmail
   });
 }
 
+// Helper gửi email bàn giao sản phẩm số qua Resend REST API
+async function sendDigitalProductDeliveryEmail({ orderId, customerName, customerEmail, productName, amount, downloadLink }) {
+  const amountFormatted = parseFloat(amount).toLocaleString('vi-VN');
+  const subject = `[Tải File] Đơn hàng #${orderId} - ${productName} đã hoàn tất!`;
+  const html = `
+    <div style="font-family: sans-serif; padding: 20px; max-width: 600px; border: 1px solid #eee; border-radius: 8px; line-height: 1.6; color: #2a1b10;">
+      <h2 style="color: #e9b85d; margin-top: 0; border-bottom: 2px solid #fff8ee; padding-bottom: 10px;">Thanh toán thành công & Nhận tài liệu</h2>
+      <p>Chào bạn <strong>${customerName}</strong>,</p>
+      <p>Cảm ơn bạn đã hoàn tất thanh toán cho sản phẩm <strong>${productName}</strong>.</p>
+      
+      <div style="background: #fff8ee; border: 1px solid rgba(233,184,93,0.3); border-radius: 8px; padding: 20px; margin: 20px 0; text-align: center;">
+        <h3 style="margin-top: 0; color: #8b6332;">ĐƯỜNG DẪN TẢI FILE TÀI LIỆU</h3>
+        <p style="font-size: 14px; color: #555; margin-bottom: 20px;">Bạn có thể tải tài liệu về máy bất cứ lúc nào qua liên kết bảo mật dưới đây:</p>
+        <a href="${downloadLink}" style="display: inline-block; padding: 14px 28px; background: #e9b85d; color: #24170b; font-weight: bold; text-decoration: none; border-radius: 8px; font-size: 16px; box-shadow: 0 4px 12px rgba(233,184,93,0.25);">
+          TẢI XUỐNG FILE SẢN PHẨM
+        </a>
+      </div>
+
+      <div style="font-size: 14px; color: #555;">
+        <h4 style="margin: 0 0 10px 0; color: #8b6332; font-size: 14px; letter-spacing: 0.5px;">THÔNG TIN ĐƠN HÀNG</h4>
+        <table style="width: 100%; border-collapse: collapse;">
+          <tr>
+            <td style="padding: 6px 0; color: #666; width: 120px;">Mã đơn hàng:</td>
+            <td style="padding: 6px 0; font-weight: bold;">#${orderId}</td>
+          </tr>
+          <tr>
+            <td style="padding: 6px 0; color: #666;">Số tiền:</td>
+            <td style="padding: 6px 0; font-weight: bold; color: #8b6332;">${amountFormatted}đ</td>
+          </tr>
+        </table>
+      </div>
+
+      <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;" />
+      <p style="font-style: italic; color: #666; font-size: 13px;">
+        Nếu gặp bất kỳ khó khăn nào trong quá trình tải xuống hoặc sử dụng, vui lòng phản hồi email này hoặc nhắn tin qua Zalo hỗ trợ để được trợ giúp ngay lập tức.
+      </p>
+      <p style="margin-top: 20px; font-size: 14px;">Thân mến,<br/><strong>Hoàng | DNA Kinh Doanh</strong></p>
+    </div>
+  `;
+
+  return sendEmail({
+    to: customerEmail,
+    subject: subject,
+    html: html
+  });
+}
+
 // Khởi tạo kết nối database SQLite (sử dụng thư viện native của Node.js)
 let db;
 try {
@@ -152,6 +224,42 @@ try {
     if (!alterErr.message.includes("duplicate column name")) {
       console.warn("-> Cảnh báo khi cấu trúc bảng customers:", alterErr.message);
     }
+  }
+
+  // Tự động thêm cột slug vào products nếu chưa có
+  try {
+    db.exec("ALTER TABLE products ADD COLUMN slug TEXT;");
+    db.exec("CREATE UNIQUE INDEX IF NOT EXISTS idx_products_slug ON products(slug);");
+    console.log("-> Đã bổ sung cột 'slug' vào bảng 'products' và tạo index thành công.");
+  } catch (alterErr) {
+    if (!alterErr.message.includes("duplicate column name")) {
+      console.warn("-> Cảnh báo khi cấu trúc bảng products:", alterErr.message);
+    }
+  }
+
+  // Tự động thêm cột sepay_memo vào orders nếu chưa có
+  try {
+    db.exec("ALTER TABLE orders ADD COLUMN sepay_memo TEXT;");
+    db.exec("CREATE UNIQUE INDEX IF NOT EXISTS idx_orders_sepay_memo ON orders(sepay_memo);");
+    console.log("-> Đã bổ sung cột 'sepay_memo' vào bảng 'orders' và tạo index thành công.");
+  } catch (alterErr) {
+    if (!alterErr.message.includes("duplicate column name")) {
+      console.warn("-> Cảnh báo khi cấu trúc bảng orders:", alterErr.message);
+    }
+  }
+
+  // Tự động chèn sản phẩm mới AI Skill Builder nếu chưa tồn tại
+  try {
+    const checkProduct = db.prepare("SELECT COUNT(*) as count FROM products WHERE slug = 'ai-skill-builder'").get();
+    if (checkProduct.count === 0) {
+      db.prepare(`
+        INSERT INTO products (name, type, price, description, stock, slug)
+        VALUES ('AI Skill Builder – Biến Prompt thành AI Agent biết làm việc', 'digital', 490000.0, 'Hệ thống hướng dẫn đóng gói kiến thức và quy trình thành AI Skills', NULL, 'ai-skill-builder')
+      `).run();
+      console.log("-> Đã chèn sản phẩm 'AI Skill Builder' thành công.");
+    }
+  } catch (productErr) {
+    console.error("-> Lỗi chèn sản phẩm mẫu:", productErr.message);
   }
 
   // Tự động tạo bảng scheduled_emails nếu chưa tồn tại
@@ -246,6 +354,25 @@ const server = http.createServer(async (req, res) => {
     }
   }
 
+  // --- API CHECK ORDER STATUS FOR DIGITAL SALES ---
+  if (pathname === '/api/check-order-status' && method === 'GET') {
+    try {
+      const orderId = url.searchParams.get('orderId');
+      if (!orderId) {
+        return sendError(res, 400, "Thiếu tham số orderId.");
+      }
+      const stmt = db.prepare("SELECT status FROM orders WHERE id = ?");
+      const order = stmt.get(parseInt(orderId));
+      if (!order) {
+        return sendError(res, 404, "Không tìm thấy đơn hàng.");
+      }
+      return sendJson(res, 200, { status: order.status });
+    } catch (err) {
+      console.error(err);
+      return sendError(res, 500, err.message);
+    }
+  }
+
   // --- API CHECK PAYMENT (PROXY AN TOÀN PHÍA BACKEND) ---
   if (pathname === '/api/check-payment' && method === 'GET') {
     try {
@@ -309,6 +436,82 @@ const server = http.createServer(async (req, res) => {
       return sendJson(res, 200, { success: !!matchedTx, transaction: matchedTx });
     } catch (err) {
       console.error("Lỗi API check-payment:", err);
+      return sendError(res, 500, err.message);
+    }
+  }
+
+  // --- API SEPAY WEBHOOK (XÁC THỰC THANH TOÁN TỰ ĐỘNG CHUYỂN KHOẢN) ---
+  if (pathname === '/api/sepay-webhook' && method === 'POST') {
+    try {
+      const authHeader = req.headers['authorization'];
+      if (SEPAY_CONFIG.apiToken && authHeader !== `Bearer ${SEPAY_CONFIG.apiToken}`) {
+        console.warn("[SePay Webhook] Cảnh báo: Webhook gọi không hợp lệ (Unauthorized). Token gửi lên:", authHeader);
+        return sendError(res, 401, "Unauthorized webhook call");
+      }
+
+      const body = await getJsonBody(req);
+      const memo = body.transaction_content || "";
+      const amountIn = parseFloat(body.amount_in || 0);
+
+      console.log(`[SePay Webhook] Nhận biến động số dư: Nội dung chuyển="${memo}", Số tiền=${amountIn}đ`);
+
+      if (!memo) {
+        return sendJson(res, 200, { success: false, message: "Không tìm thấy nội dung chuyển khoản" });
+      }
+
+      // Tìm đơn hàng pending khớp với sepay_memo
+      const orderStmt = db.prepare("SELECT * FROM orders WHERE sepay_memo = ? AND status = 'pending'");
+      const order = orderStmt.get(memo);
+
+      if (!order) {
+        console.log(`[SePay Webhook] Không tìm thấy đơn hàng pending nào khớp với memo: "${memo}"`);
+        return sendJson(res, 200, { success: false, message: "Không tìm thấy đơn hàng khớp với nội dung" });
+      }
+
+      // Xác minh số tiền thanh toán (chấp nhận nếu khách chuyển đủ hoặc thừa tiền)
+      if (amountIn < order.amount) {
+        console.warn(`[SePay Webhook] Cảnh báo: Số tiền chuyển (${amountIn}đ) nhỏ hơn giá trị đơn hàng (${order.amount}đ)`);
+        return sendJson(res, 200, { success: false, message: "Số tiền không khớp" });
+      }
+
+      // Cập nhật trạng thái đơn hàng thành completed
+      const updateStmt = db.prepare("UPDATE orders SET status = 'completed' WHERE id = ?");
+      updateStmt.run(order.id);
+      console.log(`[SePay Webhook] Đơn hàng #${order.id} đã chuyển trạng thái sang COMPLETED.`);
+
+      // Gửi email bàn giao tài liệu bằng Resend bất đồng bộ
+      try {
+        const customer = db.prepare("SELECT name, email FROM customers WHERE id = ?").get(order.customer_id);
+        const product = db.prepare("SELECT name, slug FROM products WHERE id = ?").get(order.product_id);
+        
+        if (customer && customer.email && product) {
+          const downloadUrl = `${WEBSITE_URL}/assets/downloads/${product.slug}.zip`;
+          
+          sendDigitalProductDeliveryEmail({
+            orderId: order.id,
+            customerName: customer.name,
+            customerEmail: customer.email,
+            productName: product.name,
+            amount: order.amount,
+            downloadLink: downloadUrl
+          }).then(emailResult => {
+            if (emailResult.success) {
+              console.log(`[SePay Webhook] Đã gửi email bàn giao sản phẩm tới ${customer.email}`);
+            } else {
+              console.error(`[SePay Webhook] Lỗi gửi email bàn giao:`, emailResult.error);
+            }
+          }).catch(emailErr => {
+            console.error(`[SePay Webhook] Exception khi gửi email bàn giao:`, emailErr);
+          });
+        }
+      } catch (errQuery) {
+        console.error("[SePay Webhook] Lỗi truy vấn thông tin gửi email bàn giao:", errQuery);
+      }
+
+      return sendJson(res, 200, { success: true, message: "Duyệt đơn hàng thành công" });
+
+    } catch (err) {
+      console.error("[SePay Webhook] Lỗi xử lý webhook:", err);
       return sendError(res, 500, err.message);
     }
   }
@@ -529,7 +732,7 @@ const server = http.createServer(async (req, res) => {
       
       else if (method === 'POST') {
         const body = await getJsonBody(req);
-        const { customer_id, product_id, amount, status } = body;
+        const { customer_id, product_id, amount, status, sepay_memo } = body;
 
         if (!customer_id || !product_id || amount === undefined) {
           return sendError(res, 400, "Thiếu thông tin đơn hàng bắt buộc.");
@@ -561,10 +764,10 @@ const server = http.createServer(async (req, res) => {
           }
           // 3. Thêm đơn hàng mới
           const insertOrderStmt = db.prepare(`
-            INSERT INTO orders (customer_id, product_id, amount, status)
-            VALUES (?, ?, ?, COALESCE(?, 'pending'))
+            INSERT INTO orders (customer_id, product_id, amount, status, sepay_memo)
+            VALUES (?, ?, ?, COALESCE(?, 'pending'), ?)
           `);
-          const info = insertOrderStmt.run(parseInt(customer_id), parseInt(product_id), parseFloat(amount), status || 'pending');
+          const info = insertOrderStmt.run(parseInt(customer_id), parseInt(product_id), parseFloat(amount), status || 'pending', sepay_memo || null);
           db.exec("COMMIT;");
           
           // Gửi email xác nhận đơn hàng bất đồng bộ (async)
@@ -648,6 +851,125 @@ const server = http.createServer(async (req, res) => {
     } catch (err) {
       console.error(err);
       return sendError(res, 500, `Lỗi xử lý Đơn hàng: ${err.message}`);
+    }
+  }
+
+  // --- TRANG SẢN PHẨM SỐ (DYNAMIC LANDING, CHECKOUT, CAM-ON) ---
+  if (pathname.startsWith('/san-pham/')) {
+    const parts = pathname.split('/').filter(Boolean);
+    const slug = parts[1];
+    const subRoute = parts[2];
+
+    if (slug) {
+      const productStmt = db.prepare("SELECT * FROM products WHERE slug = ?");
+      const product = productStmt.get(slug);
+
+      if (!product) {
+        res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
+        return res.end("404 Not Found - Không tìm thấy sản phẩm yêu cầu.");
+      }
+
+      // TRANG 1: Landing page (/san-pham/[slug])
+      if (!subRoute) {
+        try {
+          const templatePath = path.join(__dirname, 'product_landing.html');
+          fs.readFile(templatePath, 'utf8', (err, html) => {
+            if (err) {
+              res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
+              return res.end("500 Internal Server Error - Không thể đọc giao diện.");
+            }
+
+            const meta = PRODUCTS_METADATA[slug] || {
+              tagline: product.description,
+              originalPrice: product.price * 2,
+              whatYouGet: ["Bộ tài liệu hướng dẫn sử dụng sản phẩm"],
+              whoIsItFor: ["Người mua muốn sử dụng sản phẩm số"],
+              authorName: "Đội ngũ DNA Kinh Doanh",
+              authorBio: "Đơn vị cung cấp giải pháp chuyển đổi số."
+            };
+
+            const whatYouGetHtml = meta.whatYouGet.map(item => 
+              `<li class="list-item"><span class="list-item-icon">✓</span><span>${item}</span></li>`
+            ).join('\n');
+
+            const whoIsItForHtml = meta.whoIsItFor.map(item => 
+              `<li class="list-item"><span class="list-item-icon target">→</span><span>${item}</span></li>`
+            ).join('\n');
+
+            const formattedPrice = product.price.toLocaleString('vi-VN');
+            const formattedOriginal = meta.originalPrice.toLocaleString('vi-VN');
+
+            let renderedHtml = html
+              .replace(/{{PRODUCT_NAME}}/g, product.name)
+              .replace(/{{PRODUCT_TAGLINE}}/g, meta.tagline)
+              .replace(/{{WHAT_YOU_GET_HTML}}/g, whatYouGetHtml)
+              .replace(/{{WHO_IS_IT_FOR_HTML}}/g, whoIsItForHtml)
+              .replace(/{{AUTHOR_NAME}}/g, meta.authorName)
+              .replace(/{{AUTHOR_BIO}}/g, meta.authorBio)
+              .replace(/{{PRODUCT_PRICE}}/g, formattedPrice)
+              .replace(/{{PRODUCT_ORIGINAL_PRICE}}/g, formattedOriginal)
+              .replace(/{{SLUG}}/g, slug);
+
+            res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+            return res.end(renderedHtml);
+          });
+          return;
+        } catch (err) {
+          console.error("Lỗi phục vụ trang Landing:", err);
+          res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
+          return res.end("500 Internal Server Error.");
+        }
+      }
+
+      // TRANG 2: Checkout page (/san-pham/[slug]/checkout)
+      else if (subRoute === 'checkout') {
+        try {
+          const templatePath = path.join(__dirname, 'product_checkout.html');
+          fs.readFile(templatePath, 'utf8', (err, html) => {
+            if (err) {
+              res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
+              return res.end("500 Internal Server Error - Không thể đọc giao diện.");
+            }
+
+            let renderedHtml = html
+              .replace(/{{PRODUCT_NAME}}/g, product.name)
+              .replace(/{{SLUG}}/g, slug);
+
+            res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+            return res.end(renderedHtml);
+          });
+          return;
+        } catch (err) {
+          console.error("Lỗi phục vụ trang Checkout:", err);
+          res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
+          return res.end("500 Internal Server Error.");
+        }
+      }
+
+      // TRANG 3: Thank You / Download page (/san-pham/[slug]/cam-on)
+      else if (subRoute === 'cam-on') {
+        try {
+          const templatePath = path.join(__dirname, 'product_cam-on.html');
+          fs.readFile(templatePath, 'utf8', (err, html) => {
+            if (err) {
+              res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
+              return res.end("500 Internal Server Error - Không thể đọc giao diện.");
+            }
+
+            let renderedHtml = html
+              .replace(/{{PRODUCT_NAME}}/g, product.name)
+              .replace(/{{SLUG}}/g, slug);
+
+            res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+            return res.end(renderedHtml);
+          });
+          return;
+        } catch (err) {
+          console.error("Lỗi phục vụ trang Cảm ơn/Tải:", err);
+          res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
+          return res.end("500 Internal Server Error.");
+        }
+      }
     }
   }
 
