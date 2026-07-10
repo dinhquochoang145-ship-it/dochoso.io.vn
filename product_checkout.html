@@ -481,7 +481,7 @@
         const customerRes = await fetch("/api/customers", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, phone, email })
+          body: JSON.stringify({ name, phone, email, skipWelcome: true })
         });
         
         const customerData = await customerRes.json();

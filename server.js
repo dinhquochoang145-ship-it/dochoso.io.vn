@@ -877,7 +877,7 @@ const server = http.createServer(async (req, res) => {
       
       else if (method === 'POST') {
         const body = await getJsonBody(req);
-        const { name, phone, email, zalo, register_date } = body;
+        const { name, phone, email, zalo, register_date, skipWelcome } = body;
 
         if (!name || !phone) {
           return sendError(res, 400, "Tên và Số điện thoại là bắt buộc.");
@@ -905,8 +905,8 @@ const server = http.createServer(async (req, res) => {
           const info = stmt.run(name, phone, email || '', zalo || '', register_date || null);
           const customerId = info.lastInsertRowid;
           
-          // Lên lịch gửi 3 email chào mừng
-          if (email) {
+          // Lên lịch gửi 3 email chào mừng (chỉ chạy nếu không yêu cầu skip)
+          if (email && !skipWelcome) {
             scheduleWelcomeEmails(customerId, email);
           }
           
@@ -920,8 +920,8 @@ const server = http.createServer(async (req, res) => {
             const findStmt = db.prepare("SELECT id FROM customers WHERE phone = ?");
             const customer = findStmt.get(phone);
             
-            // Lên lịch gửi email nếu chưa từng có lịch
-            if (email) {
+            // Lên lịch gửi email nếu chưa từng có lịch và không yêu cầu skip
+            if (email && !skipWelcome) {
               const checkStmt = db.prepare("SELECT COUNT(*) as count FROM scheduled_emails WHERE customer_id = ?");
               const hasEmails = checkStmt.get(customer.id).count > 0;
               if (!hasEmails) {
