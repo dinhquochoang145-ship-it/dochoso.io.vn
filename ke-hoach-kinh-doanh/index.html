@@ -4,26 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Skill OS — Executive Dashboard</title>
-    <meta name="description" content="AI Skill OS - Executive Dashboard. Quản lý toàn bộ tài sản hệ điều hành AI doanh nghiệp.">
-    <meta property="og:title" content="AI Skill OS — Executive Dashboard">
-    <meta property="og:description" content="Quản lý toàn bộ tài sản hệ điều hành AI doanh nghiệp.">
-    <!-- placeholder check for UX Audit compliance -->
+    <title>AI Skill OS — Executive Pitch Deck</title>
+    <meta name="description" content="AI Skill OS - Executive Pitch Deck. Bản kế hoạch kinh doanh thực chiến cho Demo Day Ngày 21.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-deep: #050505;
-            --bg-sidebar: #0a0a0a;
-            --bg-card: rgba(20, 20, 20, 0.8);
-            --border-color: #1a1a1a;
-            --text-main: #f3f4f6;
-            --text-muted: #8e9296;
-            --accent-gold: #c9a84c;
-            --accent-gold-glow: rgba(201, 168, 76, 0.15);
+            --bg-deep: #0f0c08;
+            --bg-card: #17110c;
+            --bg-card-light: #211810;
+            --border-color: rgba(255, 232, 190, 0.15);
+            --text-main: #fff8ee;
+            --text-muted: #d8c8b1;
+            --text-dark: #a99477;
+            --accent-gold: #e9b85d;
+            --accent-gold-glow: rgba(233, 184, 93, 0.15);
+            --accent-gold-hover: #f7d58d;
             --font-serif: 'Playfair Display', serif;
             --font-sans: 'Outfit', sans-serif;
+            --radius-xl: 16px;
+            --radius-md: 10px;
         }
 
         * {
@@ -32,521 +33,585 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: var(--bg-deep);
             color: var(--text-main);
             font-family: var(--font-sans);
-            display: flex;
-            height: 100vh;
-            overflow: hidden;
+            line-height: 1.7;
+            background-image:
+              radial-gradient(circle at 10% 20%, rgba(233, 184, 93, 0.03) 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(169, 148, 119, 0.04) 0%, transparent 40%);
         }
 
-        /* Sidebar Style */
-        aside {
-            width: 320px;
-            background-color: var(--bg-sidebar);
-            border-right: 1px solid var(--border-color);
-            display: flex;
-            flex-direction: column;
-            flex-shrink: 0;
-        }
-
-        .sidebar-header {
-            padding: 30px 24px;
+        /* Topbar Anchors */
+        .topbar {
+            position: sticky;
+            top: 0;
+            background: rgba(15, 12, 8, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border-color);
+            z-index: 100;
+            padding: 15px 0;
         }
 
-        .sidebar-header h1 {
-            font-size: 1.4rem;
+        .topbar-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topbar-brand {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
             font-weight: 700;
             color: var(--accent-gold);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .sidebar-header p {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-top: 4px;
-        }
-
-        .sidebar-menu {
-            overflow-y: auto;
-            flex: 1;
-            padding: 20px 16px;
-        }
-
-        .menu-group {
-            margin-bottom: 24px;
-        }
-
-        .group-title {
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-muted);
-            margin-bottom: 10px;
-            padding-left: 8px;
-        }
-
-        .menu-item {
+            text-decoration: none;
             display: flex;
             align-items: center;
-            padding: 12px 16px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 0.92rem;
-            color: var(--text-main);
-            transition: all 0.2s ease;
-            margin-bottom: 4px;
-            border: 1px solid transparent;
+            gap: 10px;
         }
 
-        .menu-item:hover {
-            background: rgba(255, 255, 255, 0.02);
-            color: var(--accent-gold);
+        .topbar-nav {
+            display: flex;
+            gap: 4px;
+            overflow-x: auto;
         }
 
-        .menu-item.active {
+        .topbar-nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 99px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .topbar-nav a:hover, .topbar-nav a.active {
             background: var(--accent-gold-glow);
             color: var(--accent-gold);
-            border-color: rgba(201, 168, 76, 0.2);
-            font-weight: 500;
         }
 
-        .menu-item-num {
-            font-size: 0.75rem;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 2px 6px;
-            border-radius: 4px;
-            margin-right: 10px;
-            color: var(--text-muted);
-        }
-
-        .menu-item.active .menu-item-num {
-            background: var(--accent-gold);
-            color: #000000;
-        }
-
-        /* Main Workspace */
-        main {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            background: radial-gradient(circle at 80% 20%, rgba(201, 168, 76, 0.03) 0%, transparent 60%);
-        }
-
-        .top-bar {
-            height: 80px;
+        /* Container Section Layout */
+        .section-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 24px;
             border-bottom: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 40px;
         }
 
-        .top-bar-title {
-            font-size: 1.25rem;
-            font-weight: 500;
+        .section-container:last-of-type {
+            border-bottom: none;
         }
 
-        .top-bar-actions {
-            display: flex;
-            gap: 16px;
+        .section-tag {
+            font-family: monospace;
+            font-size: 0.75rem;
+            color: var(--accent-gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            font-weight: 700;
         }
 
-        .btn {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
             color: var(--text-main);
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-size: 0.88rem;
-            font-weight: 500;
-            cursor: pointer;
-            text-decoration: none;
-            transition: all 0.2s ease;
+            margin-bottom: 24px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
+
+        strong {
+            color: var(--text-main);
+        }
+
+        /* Interactive Buttons */
+        .btn {
             display: inline-flex;
             align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.2s;
+            border: 1px solid var(--border-color);
+            background: rgba(255, 248, 238, 0.05);
+            color: var(--text-main);
         }
 
         .btn:hover {
             border-color: var(--accent-gold);
             color: var(--accent-gold);
+            transform: translateY(-1px);
         }
 
         .btn-gold {
-            background: var(--accent-gold);
-            color: #000000;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-hover));
+            color: #17110c;
             border: none;
         }
 
         .btn-gold:hover {
             background: var(--accent-gold-hover);
-            color: #000000;
+            color: #17110c;
+            box-shadow: 0 8px 24px rgba(233, 184, 93, 0.2);
         }
 
-        /* Viewer Area */
-        .content-area {
-            flex: 1;
-            overflow-y: auto;
-            padding: 40px;
+        /* HERO SECTION */
+        #hero {
+            min-height: calc(100vh - 80px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 24px;
+            border-bottom: 1px solid var(--border-color);
         }
 
-        .content-card {
-            background: var(--bg-sidebar);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 48px;
-            max-width: 900px;
-            margin: 0 auto;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        #hero h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            line-height: 1.1;
+            color: var(--text-main);
+            margin-bottom: 20px;
+            font-weight: 700;
         }
 
-        .doc-title {
+        #hero .tagline {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            color: var(--accent-gold);
+            max-width: 700px;
+            margin-bottom: 30px;
             font-family: var(--font-serif);
             font-style: italic;
-            font-size: 2.2rem;
-            color: var(--accent-gold);
-            margin-bottom: 30px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 20px;
         }
 
-        /* Embedded Raw Text Format styling */
-        .doc-body {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            color: #d1d5db;
-            white-space: pre-wrap;
-            font-family: var(--font-sans);
+        #hero .meta-info {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            margin-bottom: 40px;
         }
 
-        .doc-body h1, .doc-body h2, .doc-body h3 {
-            color: #ffffff;
+        /* GRID ASSETS */
+        .assets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
             margin-top: 30px;
-            margin-bottom: 15px;
-            font-family: var(--font-sans);
         }
 
-        .doc-body h1 { font-size: 1.8rem; border-left: 3px solid var(--accent-gold); padding-left: 12px; }
-        .doc-body h2 { font-size: 1.4rem; }
-        .doc-body h3 { font-size: 1.15rem; color: var(--accent-gold); }
+        .asset-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
-        .doc-body ul, .doc-body ol {
-            margin-left: 24px;
+        .asset-card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-2px);
+            background: var(--bg-card-light);
+        }
+
+        .asset-card-title {
+            color: var(--accent-gold-hover);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .asset-card-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        /* ROADMAP TIMELINE */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 30px;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            background: var(--border-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .timeline-badge {
+            position: absolute;
+            left: 10px;
+            top: 4px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--accent-gold);
+            border: 4px solid var(--bg-deep);
+        }
+
+        .timeline-month {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            color: var(--accent-gold-hover);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .timeline-milestones {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 20px;
+        }
+
+        .timeline-milestones ul {
+            padding-left: 16px;
+        }
+
+        .timeline-milestones li {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        /* ASKS CARDS */
+        .asks-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .ask-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-gold);
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            padding: 24px;
+        }
+
+        .ask-title {
+            font-size: 1.15rem;
+            color: var(--accent-gold-hover);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .ask-weakness {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            padding-left: 10px;
+            border-left: 2px solid rgba(255,255,255,0.05);
+        }
+
+        /* REFLECTION */
+        .reflection-box {
+            background: rgba(92, 107, 77, 0.1);
+            border: 1px solid rgba(92, 107, 77, 0.2);
+            border-radius: var(--radius-xl);
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .reflection-title {
+            font-family: var(--font-serif);
+            color: #94dda3;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .reflection-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        /* CTA SECTION */
+        .cta-box {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .cta-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: var(--text-main);
             margin-bottom: 20px;
         }
 
-        .doc-body li {
-            margin-bottom: 8px;
-        }
-
-        .doc-body table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        .doc-body th, .doc-body td {
-            border: 1px solid var(--border-color);
-            padding: 12px;
-            text-align: left;
-        }
-
-        .doc-body th {
-            background: rgba(255, 255, 255, 0.02);
-            color: #ffffff;
+        /* Responsive */
+        @media (max-width: 768px) {
+            .topbar-nav { display: none; }
+            .section-title { font-size: 1.8rem; }
+            .section-container { padding: 50px 20px; }
+            .timeline::before { left: 10px; }
+            .timeline-item { padding-left: 30px; }
+            .timeline-badge { left: 0; }
         }
     </style>
 </head>
 <body>
 
-    <!-- SIDEBAR -->
-    <aside>
-        <div class="sidebar-header">
-            <h1>AI Skill OS</h1>
-            <p>ASSP Framework Dashboard</p>
+<!-- TOPBAR NAV WITH 9 ANCHORS -->
+<div class="topbar">
+    <div class="topbar-inner">
+        <a href="#hero" class="topbar-brand">
+            <span>AI Skill OS</span>
+        </a>
+        <nav class="topbar-nav">
+            <a href="#hero">0 · Hero</a>
+            <a href="#avatar">1 · Avatar</a>
+            <a href="#brand-voice">2 · Voice</a>
+            <a href="#hero-mechanism">3 · Cơ chế</a>
+            <a href="#money-offer">4 · Offer</a>
+            <a href="#funnel">5 · Phễu</a>
+            <a href="#assets">6 · Assets</a>
+            <a href="#roadmap">7 · Lộ trình</a>
+            <a href="#asks">8 · ASKS</a>
+        </nav>
+    </div>
+</div>
+
+<!-- SECTION 1: HERO -->
+<section id="hero">
+    <div class="section-tag">Executive Summary</div>
+    <h1>AI Skill OS</h1>
+    <p class="tagline">Đóng gói kinh nghiệm vận hành thành các AI Skills có cấu trúc — xây dựng hệ điều hành AI bền vững cho doanh nghiệp của bạn.</p>
+    <div class="meta-info">
+        Tác giả: <strong>Hoàng DQ</strong> &nbsp;|&nbsp; Phiên bản: <strong>v1.0 (Demo Day 21)</strong>
+    </div>
+    <a href="#avatar" class="btn btn-gold">Bắt đầu thuyết trình ↓</a>
+</section>
+
+<!-- SECTION 2: AVATAR -->
+<section id="avatar" class="section-container">
+    <div class="section-tag">Chặng 1 · Nền tảng</div>
+    <h2 class="section-title">Chân dung khách hàng (Avatar)</h2>
+    <p>Khách hàng mục tiêu là các <strong>Founder, Freelancer, Consultant (28-45 tuổi)</strong> đang trực tiếp gánh vác mọi việc trong doanh nghiệp. Họ đã biết sử dụng ChatGPT cơ bản nhưng đang bế tắc vì AI hoạt động hên xui, lúc đúng lúc sai và không thể bàn giao cho nhân viên cấp dưới.</p>
+    <p>Họ sẵn sàng đầu tư để chuyển đổi từ việc "chat hên xui với AI" sang "sở hữu AI làm việc" theo đúng quy trình chuẩn hóa của riêng mình.</p>
+    <a href="01-avatar.md" target="_blank" class="btn">Xem tài liệu chi tiết (01-avatar.md) ↗</a>
+</section>
+
+<!-- SECTION 3: BRAND VOICE -->
+<section id="brand-voice" class="section-container">
+    <div class="section-tag">Chặng 1 · Nền tảng</div>
+    <h2 class="section-title">Giọng văn thương hiệu (Brand Voice)</h2>
+    <p>Được thiết kế dựa trên phong cách cá nhân của sếp Hoàng: <strong>"Thẳng thắn, không rào đón, kéo người đọc về bản chất và thực tế"</strong>. Viết như đang nói chuyện, không giảng bài, không dùng từ ngữ marketing sáo rỗng.</p>
+    <p>Cấu trúc câu ngắn gọn, xuống dòng thường xuyên để tạo nhịp điệu đọc mạnh mẽ và mang tính thuyết phục tự nhiên.</p>
+    <a href="02-brand-voice.md" target="_blank" class="btn">Xem tài liệu chi tiết (02-brand-voice.md) ↗</a>
+</section>
+
+<!-- SECTION 4: HERO MECHANISM -->
+<section id="hero-mechanism" class="section-container">
+    <div class="section-tag">Chặng 1 · Nền tảng</div>
+    <h2 class="section-title">Cơ chế độc quyền (Hero Mechanism)</h2>
+    <p>Trọng tâm cốt lõi là **SKILL Framework™** (Scan - Keep - Inspect - Link - Launch). Đây là phương pháp giúp chủ doanh nghiệp quét tìm các tác vụ lặp lại hàng ngày, đóng gói kiến thức thành AI Skill 6 phần có cấu trúc ổn định, kiểm thử bằng checklist rủi ro, và ghép nối thành các Workflow tự động thay thế con người.</p>
+    <p>Cơ chế này định vị giải pháp của chúng ta tách biệt hoàn toàn khỏi các khóa học dạy viết prompt tự do trên thị trường.</p>
+    <a href="03-hero-mechanism.md" target="_blank" class="btn">Xem tài liệu chi tiết (03-hero-mechanism.md) ↗</a>
+</section>
+
+<!-- SECTION 5: MONEY MODEL + OFFER STACK -->
+<section id="money-offer" class="section-container">
+    <div class="section-tag">Chặng 2 · Lời chào hàng</div>
+    <h2 class="section-title">Money Model & Lời đề nghị chi tiết</h2>
+    <p>Thiết lập phễu sản phẩm có thang giá trị tăng dần để tối ưu hóa biên lợi nhuận ròng:</p>
+    <p>
+        - **Lead Magnet (Free):** Bộ đôi AI Readiness Audit & 3 Starter Skills để thu lead.<br>
+        - **Main Offer (490k):** AI Skill Builder — Founder Edition (Cẩm nang đúc AI Skill).<br>
+        - **High-Ticket Offer (30M - 80M):** Done-With-You (Triển khai hệ thống AI OS toàn diện cho doanh nghiệp).
+    </p>
+    <div style="display: flex; gap: 12px; margin-top: 10px;">
+        <a href="04-money-model.md" target="_blank" class="btn">Bản đồ doanh thu (04-money-model.md) ↗</a>
+        <a href="05-offer.md" target="_blank" class="btn">Chi tiết Offer (05-offer.md) ↗</a>
+    </div>
+</section>
+
+<!-- SECTION 6: FUNNEL BLUEPRINT -->
+<section id="funnel" class="section-container">
+    <div class="section-tag">Chặng 3 · Thiết kế phễu</div>
+    <h2 class="section-title">Bản thiết kế phễu bán hàng (Funnel Blueprint)</h2>
+    <p>Áp dụng mô hình <strong>Application Funnel</strong> để lọc data khách hàng chất lượng cao trước khi bán dịch vụ giá cao:</p>
+    <p>👉 Quảng cáo Ads/YouTube Demo $\rightarrow$ Tải mồi nhử miễn phí (Opt-in) $\rightarrow$ Đăng ký mua sản phẩm 490k (VietQR SePay tự động) $\rightarrow$ Khách hoàn thành biểu mẫu chẩn đoán doanh nghiệp $\rightarrow$ Hẹn lịch tư vấn Zoom 1-1 $\rightarrow$ Gọi điện chốt gói DWY.</p>
+    <div style="display: flex; gap: 12px; margin-top: 20px;">
+        <a href="visual.html" target="_blank" class="btn btn-gold">Xem Sơ đồ Phễu Trực Quan (visual.html) ↗</a>
+        <a href="07-funnel-blueprint.md" target="_blank" class="btn">Xem Blueprint chi tiết (07-funnel-blueprint.md) ↗</a>
+        <a href="06-hvco-leadmagnet.md" target="_blank" class="btn">Xem Mồi nhử Lead Magnet ↗</a>
+    </div>
+</section>
+
+<!-- SECTION 7: FULL FUNNEL ASSETS -->
+<section id="assets" class="section-container">
+    <div class="section-tag">Chặng 4 & 5 · Tài nguyên Phễu</div>
+    <h2 class="section-title">Hệ thống tài nguyên Copywriting</h2>
+    <p>Toàn bộ các linh kiện, bài viết, kịch bản của phễu đã được các AI Agents sản xuất hoàn chỉnh:</p>
+    
+    <div class="assets-grid">
+        <div class="asset-card">
+            <div class="asset-card-title">1. Ad Copy Stack</div>
+            <div class="asset-card-desc">Bộ kịch bản quảng cáo đa kênh Facebook/Google Ads thúc đẩy hành động thu lead.</div>
+            <a href="08-ads-copy.md" target="_blank" class="btn">Xem Ads Copy ↗</a>
         </div>
-        <div class="sidebar-menu">
-            
-            <div class="menu-group">
-                <div class="group-title">Tổng quan chiến lược</div>
-                <div class="menu-item active" onclick="loadDoc('roadmap')">
-                    <span class="menu-item-num">13</span> Lộ trình & 3 Câu hỏi ASKS
-                </div>
-                <div class="menu-item" onclick="loadDoc('context')">
-                    <span class="menu-item-num">--</span> Bối cảnh kinh doanh
-                </div>
-            </div>
-
-            <div class="menu-group">
-                <div class="group-title">Chặng 1: Nền tảng</div>
-                <div class="menu-item" onclick="loadDoc('avatar')">
-                    <span class="menu-item-num">01</span> Avatar Khách hàng
-                </div>
-                <div class="menu-item" onclick="loadDoc('voice')">
-                    <span class="menu-item-num">02</span> Giọng văn thương hiệu
-                </div>
-                <div class="menu-item" onclick="loadDoc('mechanism')">
-                    <span class="menu-item-num">03</span> Cơ chế độc quyền (S-K-I-L-L)
-                </div>
-            </div>
-
-            <div class="menu-group">
-                <div class="group-title">Chặng 2 & 3: Phễu & Lời chào</div>
-                <div class="menu-item" onclick="loadDoc('money')">
-                    <span class="menu-item-num">04</span> Bản đồ doanh thu
-                </div>
-                <div class="menu-item" onclick="loadDoc('offer')">
-                    <span class="menu-item-num">05</span> Lời đề nghị chi tiết
-                </div>
-                <div class="menu-item" onclick="loadDoc('hvco')">
-                    <span class="menu-item-num">06</span> Quà tặng mồi nhử (HVCO)
-                </div>
-                <div class="menu-item" onclick="loadDoc('funnel')">
-                    <span class="menu-item-num">07</span> Bản thiết kế phễu
-                </div>
-            </div>
-
-            <div class="menu-group">
-                <div class="group-title">Chặng 4 & 5: Kịch bản Copy</div>
-                <div class="menu-item" onclick="loadDoc('ads')">
-                    <span class="menu-item-num">08</span> Góc quảng cáo (Ads Copy)
-                </div>
-                <div class="menu-item" onclick="loadDoc('vsl')">
-                    <span class="menu-item-num">09</span> Kịch bản Video VSL
-                </div>
-                <div class="menu-item" onclick="loadDoc('email')">
-                    <span class="menu-item-num">10</span> Chuỗi 5 email nurture
-                </div>
-                <div class="menu-item" onclick="loadDoc('follow')">
-                    <span class="menu-item-num">11</span> Email follow-up & chia tay
-                </div>
-                <div class="menu-item" onclick="loadDoc('sales')">
-                    <span class="menu-item-num">12</span> Kịch bản Sales Call (Telesale)
-                </div>
-                <div class="menu-item" onclick="loadDoc('reflection')">
-                    <span class="menu-item-num">14</span> Thu hoạch Demo Day (Reflection)
-                </div>
-            </div>
-
+        <div class="asset-card">
+            <div class="asset-card-title">2. Landing Page</div>
+            <div class="asset-card-desc">Trang bán hàng trực tuyến thiết kế tinh tế, tối ưu tỷ lệ chuyển đổi cho sản phẩm.</div>
+            <a href="landing.html" target="_blank" class="btn">Xem Landing Page ↗</a>
         </div>
-    </aside>
+        <div class="asset-card">
+            <div class="asset-card-title">3. Kịch bản Video VSL</div>
+            <div class="asset-card-desc">Kịch bản video thuyết trình dài 5 phút trên nền slide đen tối giản chốt sale.</div>
+            <a href="09-vsl-script.md" target="_blank" class="btn">Xem VSL Script ↗</a>
+        </div>
+        <div class="asset-card">
+            <div class="asset-card-title">4. Chuỗi 5 Email Nurture</div>
+            <div class="asset-card-desc">Chuỗi email bám đuổi tự động chăm sóc và gia tăng lòng tin của khách hàng sau khi nhận quà.</div>
+            <a href="10-email-sequence.md" target="_blank" class="btn">Xem Email Sequence ↗</a>
+        </div>
+        <div class="asset-card">
+            <div class="asset-card-title">5. Email Follow-up</div>
+            <div class="asset-card-desc">Chuỗi email kích hoạt lại tệp lead nguội và nói lời tạm biệt văn minh để tạo FOMO.</div>
+            <a href="11-follow-up.md" target="_blank" class="btn">Xem Follow-up ↗</a>
+        </div>
+        <div class="asset-card">
+            <div class="asset-card-title">6. Kịch bản Sales Call</div>
+            <div class="asset-card-desc">Kịch bản đàm phán 6 pha chốt dịch vụ cao cấp trực tiếp qua điện thoại.</div>
+            <a href="12-sales-script.md" target="_blank" class="btn">Xem Sales Script ↗</a>
+        </div>
+    </div>
+</section>
 
-    <!-- MAIN WORKSPACE -->
-    <main>
-        <div class="top-bar">
-            <div class="top-bar-title" id="bar-title">Lộ trình & 3 Câu hỏi ASKS</div>
-            <div class="top-bar-actions">
-                <a href="visual.html" target="_blank" class="btn">Visual Sơ đồ Phễu ↗</a>
-                <a href="landing.html" target="_blank" class="btn btn-gold">Xem trang Landing Page ↗</a>
+<!-- SECTION 8: ROADMAP 90 NGÀY -->
+<section id="roadmap" class="section-container">
+    <div class="section-tag">Chiến dịch launch</div>
+    <h2 class="section-title">Lộ trình triển khai 90 ngày tới</h2>
+    <p>Kế hoạch hành động cụ thể chia thành 3 giai đoạn để kiểm soát tiến độ và tối ưu hiệu quả doanh số:</p>
+    
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-badge"></div>
+            <div class="timeline-month">Tháng 1: Hoàn thiện MVP & Launch phễu chuyển đổi</div>
+            <div class="timeline-milestones">
+                <ul>
+                    <li>**Milestone 1.1:** Khởi chạy Backend Express.js trên VPS + SQLite database. Tích hợp SePay Auto-banking và Resend API thành công.</li>
+                    <li>**Milestone 1.2:** Hoàn thiện Landing Page (`landing.html`) + checkout VietQR + Trang Cảm ơn bảo mật (email delivery).</li>
+                    <li>**Milestone 1.3:** Tự test giao dịch mua thật trị giá 2.000đ thành công. Đảm bảo giao hàng qua Drive trong 5 giây.</li>
+                </ul>
             </div>
         </div>
-
-        <div class="content-area">
-            <div class="content-card">
-                <h2 class="doc-title" id="doc-title">Lộ trình triển khai & ASKS</h2>
-                <div class="doc-body" id="doc-content">Loading...</div>
+        
+        <div class="timeline-item">
+            <div class="timeline-badge"></div>
+            <div class="timeline-month">Tháng 2: Đo lường chỉ số Ads & Lọc Lead B2B</div>
+            <div class="timeline-milestones">
+                <ul>
+                    <li>**Milestone 2.1:** Chạy Facebook/Google Ads bằng copy từ file `08-ads-copy.md`. Đạt CPL &lt; 40k và tỷ lệ Opt-in &gt; 25%.</li>
+                    <li>**Milestone 2.2:** Nhúng form khảo sát AI Readiness Audit (15 câu hỏi chẩn đoán) để phân loại lead nóng cho gói DWY.</li>
+                    <li>**Milestone 2.3:** Xây dựng kênh Organic Traffic bằng cách sản xuất 4 video demo thực tế đăng YouTube.</li>
+                </ul>
             </div>
         </div>
-    </main>
+        
+        <div class="timeline-item">
+            <div class="timeline-badge"></div>
+            <div class="timeline-month">Tháng 3: Scale doanh thu & Chuyển giao quy trình Sales</div>
+            <div class="timeline-milestones">
+                <ul>
+                    <li>**Milestone 3.1:** Chốt thành công 2 hợp đồng Done-With-You trị giá từ 30M - 80M qua cuộc gọi tư vấn 6 pha.</li>
+                    <li>**Milestone 3.2:** Đóng gói quy trình tư vấn thành SOP và đào tạo 1 nhân sự Sales chiến lược trực cuộc gọi chốt thay thế Founder.</li>
+                    <li>**Milestone 3.3:** Đạt mốc doanh số tháng 250 triệu VNĐ và duy trì tối ưu biên lợi nhuận ròng trên 45%.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div style="margin-top: 30px;">
+        <a href="13-roadmap-asks.md" target="_blank" class="btn">Xem chi tiết Roadmap & ASKS (13-roadmap-asks.md) ↗</a>
+    </div>
+</section>
 
-    <script>
-        // Database of all agent documents embedded directly to ensure direct offline loading
-        const documents = {
-            roadmap: `### 🗺️ LỘ TRÌNH 4 GIAI ĐOẠN TRIỂN KHAI
+<!-- SECTION 9: ASKS -->
+<section id="asks" class="section-container">
+    <div class="section-tag">Thảo luận Demo Day</div>
+    <h2 class="section-title">Câu hỏi chiến lược (ASKS) & Hỗ trợ</h2>
+    <p>Ba bài toán điểm nghẽn sếp Hoàng cần giải quyết cùng hội đồng tư vấn để tăng tốc phát triển doanh nghiệp:</p>
+    
+    <div class="asks-container">
+        <div class="ask-box">
+            <div class="ask-title">ASK 1: Quy trình cập nhật chất lượng của 3 Starter Skills khi API thay đổi?</div>
+            <div class="ask-weakness">**Điểm yếu:** 3 Starter Skills là mồi nhử cốt lõi, nếu OpenAI/Claude update API khiến prompt bị lỗi thời, tỷ lệ hoàn tiền sẽ tăng cao. Cần thiết lập QA Checklist kiểm thử định kỳ hàng tháng để tránh rủi ro kỹ thuật.</div>
+        </div>
+        
+        <div class="ask-box">
+            <div class="ask-title">ASK 2: Làm sao để duy trì tệp 1.000 Leads ấm/tháng bằng Organic Traffic?</div>
+            <div class="ask-weakness">**Điểm yếu:** Lệ thuộc 100% vào quảng cáo trả phí (Paid Ads) sẽ gây rủi ro lớn khi Facebook tăng giá hoặc khóa tài khoản. Cần xây dựng động cơ YouTube Demo tự nhiên để đóng góp 40% lượng lead bền vững.</div>
+        </div>
+        
+        <div class="ask-box">
+            <div class="ask-title">ASK 3: Quy trình chuyển giao cuộc gọi tư vấn DWY trị giá 30M-80M cho Sales?</div>
+            <div class="ask-weakness">**Điểm yếu:** Gói dịch vụ giá cao bắt buộc phải tư vấn sâu về tư duy quy trình hệ thống. Cần đóng gói 5 bản ghi cuộc gọi của Founder thành bộ cẩm nang xử lý từ chối (Objection Handling) để đào tạo nhân sự sales chốt thay.</div>
+        </div>
+    </div>
 
-#### GIAI ĐOẠN 1: THIẾT LẬP HẠ TẦNG KỸ THUẬT (Tuần 1)
-- **Database & Server:** Khởi chạy Backend Express.js trên VPS. Cấu hình SQLite (\`brain.db\`) lưu Leads.
-- **Tích hợp SePay Webhook:** Cấu hình Webhook thanh toán tự động MB Bank \`1450119888888\` nhận nội dung \`AISKILL\`.
-- **Tích hợp Resend API:** Kích hoạt gửi Email 1 ngay sau khi nhận Leads.
+    <!-- DAY 21 DEMO DAY REFLECTION -->
+    <div class="reflection-box">
+        <div class="reflection-title">✓ Thu hoạch Demo Day Ngày 21 (Reflection)</div>
+        <div class="reflection-content">
+            <p><strong>Bài học lớn nhất:</strong> Sức mạnh của sự đóng gói mô-đun hóa (Modularization). Chia nhỏ quy trình thành 12 agents chuyên biệt giúp tối ưu hóa chiều sâu tư duy của AI vượt trội so với các câu lệnh đơn lẻ thông thường.</p>
+            <p><strong>Agent ấn tượng nhất:</strong> Agent thiết kế Lời đề nghị (Offer Architect) nhờ khả năng chuyển đổi ý tưởng thô thành phễu lời chào hàng có thang giá trị định giá vô cùng hợp lý.</p>
+            <p><strong>Agent cần tinh chỉnh thêm:</strong> Agent viết kịch bản Ads & VSL Copy do cần con người tinh chỉnh từ ngữ và giọng điệu thực tế (15-20%) để đúng phong thái Founder nhất.</p>
+            <p><strong>3 Milestone đầu tiên tuần tới:</strong> (1) Deploy mã nguồn lên VPS và trỏ domain chính thức; (2) Tích hợp cổng Live SePay đối soát thực tế với tài khoản MB Bank; (3) Khởi động chiến dịch Marketing tự nhiên để thu leads.</p>
+        </div>
+        <a href="14-reflection.md" target="_blank" class="btn">Xem file Reflection gốc (14-reflection.md) ↗</a>
+    </div>
 
-#### GIAI ĐOẠN 2: HOÀN THIỆN TRANG GIAO DIỆN (Tuần 2)
-- **Pages:** Xuất bản Opt-in Page, Sales Page (\`08-landing.html\`), và VSL Video.
-- **Thanh toán:** Tích hợp mã VietQR động tự động điền tiền.
+    <!-- FINAL CTA -->
+    <div class="cta-box">
+        <h3 class="cta-title">Hệ thống đã sẵn sàng thuyết trình</h3>
+        <a href="https://t.me/NghiaDQ" target="_blank" class="btn btn-gold" style="font-size: 1.1rem; padding: 16px 36px;">Tôi sẵn sàng pitch ở Demo Day Ngày 21! 🚀</a>
+    </div>
+</section>
 
-#### GIAI ĐOẠN 3: CẤU HÌNH MARKETING AUTOMATION (Tuần 3)
-- **Email:** Thiết lập tự động gửi chuỗi 5 Email Nurture và 3 Email Follow-up trên Resend.
-- **Phễu lọc:** Cài đặt form Audit 15 câu hỏi để qualify tệp DWY.
-
-#### GIAI ĐOẠN 4: KÍCH HOẠT NGUỒN TRAFFIC & ĐO LƯỜNG (Tuần 4)
-- **Traffic:** Chạy FB/Google Ads, bài blog SEO, và YouTube demo.
-
----
-
-### 🧠 3 CÂU HỎI CHIẾN LƯỢC (ASKS) DÀNH CHO BẠN
-
-#### ❓ ASK 1: Quy trình duy trì chất lượng của 3 Starter Skills là gì để tỷ lệ hoàn tiền dưới 2%?
-AI thay đổi liên tục (GPT-4o, Claude 3.5...). Làm sao để đảm bảo file mẫu Starter Kit không lỗi thời và luôn chạy đúng? Ai sẽ support kỹ thuật khi khách hàng thực hành gặp lỗi?
-
-#### ❓ ASK 2: Làm sao để duy trì 1.000 Leads/tháng bằng Organic Traffic để tránh phụ thuộc hoàn toàn vào Ads?
-Nếu chi phí quảng cáo tăng cao, phễu sẽ giảm lãi gộp. Bạn đã có nhân sự chuyên viết SEO và sản xuất video demo 7 phút đăng YouTube hàng tuần chưa?
-
-#### ❓ ASK 3: Ai sẽ trực tiếp gọi điện tư vấn và chốt sale cho gói DWY (30M-80M)?
-Gói cao cấp yêu cầu gọi điện 1-1 theo kịch bản \`12-sales-script.md\`. Giai đoạn đầu bạn có trực tiếp trực tổng đài không? Khi quy mô lớn hơn, kế hoạch tuyển dụng sales thế nào?`,
-
-            context: `### 🎯 Bối Cảnh Kinh Doanh — AI Skill OS
-
-- **Sản phẩm:** AI Skill Builder (Đóng gói quy trình thành AI Skill).
-- **Mô hình kinh doanh:** Hybrid (Sản phẩm số đầu phễu + Doanh thu định kỳ + Setup trọn gói).
-- **Mục tiêu doanh thu:** 3 tỷ VNĐ / 12 tháng (trung bình 250M/tháng).
-- **Phân khúc khách hàng:** Founder, Freelancer, Consultant (28-45 tuổi) muốn tự động hóa công việc.
-- **Định vị:** Đơn vị đi đầu cung cấp chuẩn hóa quy trình AI cho doanh nghiệp SME tại Việt Nam.`,
-
-            avatar: `### 👥 Chân dung Khách hàng Mục tiêu (Avatar)
-
-#### 🥇 NỖI SỢ SỐ 1: "Nếu mình đầu tư thời gian và tiền bạc nữa mà cuối cùng vẫn không tạo ra được hệ thống chạy thật thì sao?"
-Họ đã từng mua nhiều khóa học ChatGPT, prompt, Make... nhưng quay về công ty không biết bắt đầu từ đâu vì ví dụ trên mạng quá đơn giản.
-
-#### 🥈 NỖI SỢ SỐ 2: "Bên bàn giao xong, nhân sự nghỉ là mình không biết sửa và vận hành thế nào."
-Họ sợ phụ thuộc vào bên thứ ba. Họ muốn tự làm chủ công nghệ của mình.
-
-#### 🎯 Điểm Sướng Lớn Nhất (Dopamine): "Sáng mở máy, việc đã được làm đúng cách mình vẫn làm."
-Không cần họ đứng giữa duyệt việc nữa, mọi thứ tự chạy ổn định.`,
-
-            voice: `### 🎙️ Giọng văn Thương hiệu (Brand Voice)
-
-- **Một câu mô tả:** "Thẳng thắn, logic rõ ràng, luôn kéo người đọc về bản chất vấn đề và thực tế — viết như đang nói chuyện, câu ngắn, xuống dòng nhiều."
-- **Từ cấm dùng:** synergy, leverage, tối ưu hóa trải nghiệm, giải pháp đột phá toàn diện, nâng tầm thương hiệu.
-- **Nên dùng:** "thật ra...", "đơn giản thôi", "bạn thử nghĩ xem", "vấn đề không nằm ở A, nó nằm ở B".`,
-
-            mechanism: `### ⚙️ Cơ chế độc quyền: SKILL Framework™
-
-Một phương pháp duy nhất giúp doanh nghiệp đóng gói quy trình thành AI Skill ổn định:
-
-- **S — Scan:** Xác định quy trình lặp lại cần AI hóa trước.
-- **K — Keep:** Đóng gói kinh nghiệm thành AI Skill có cấu trúc 6 phần (Vai trò, Mục tiêu, Đầu vào, Quy tắc, Đầu ra, Tiêu chuẩn).
-- **I — Inspect:** Kiểm thử rủi ro qua checklist để AI không chạy lệch ý.
-- **L — Link:** Kết nối các Skill thành Workflow tự động hóa.
-- **L — Launch:** Vận hành thực tế trên VPS/hệ thống của công ty.`,
-
-            money: `### 📊 Bản đồ Doanh thu (Money Model)
-
-- **Attraction (Miễn phí):** AI Readiness Audit + 3 AI Starter Skills.
-- **Main Offer:** AI Skill Builder (490k mở bán / 990k chính thức).
-- **Upsell 1:** AI Workflow Builder (2.99M).
-- **Upsell 2:** AI Business OS Workshop (9.9M) -> Downsell: Trả góp 3 tháng.
-- **Upsell 3:** Dịch vụ Done With You (30M - 80M).
-- **Continuity (Định kỳ):** AI Skill Vault (490k/tháng) & AI Builder Pro (990k/tháng).`,
-
-            offer: `### 🚀 Lời đề nghị: Founder Edition (490.000 VNĐ)
-
-- **Main product:** Bộ kit đúc AI Skill đầu tiên bằng SKILL Framework™.
-- **Quà tặng kèm:**
-  - Bộ 3 AI Starter Skills đúc sẵn (SOP, Content, Insight).
-  - Checklist tự đánh giá AI Readiness Audit.
-  - Template Notion/PDF điền quy trình.
-- **Cam kết hành động:** Làm đúng 3 bước S-K-I mà không đúc được Skill, hoàn tiền 100%.
-- **Thúc giục:** Kết thúc ưu đãi giá 490k khi hoàn thiện bản cập nhật tiếp theo (giá tăng lên 990k).`,
-
-            hvco: `### 🎁 Quà tặng mồi nhử: AI OS Starter Kit
-
-- **Nội dung:** Bài trắc nghiệm 15 câu hỏi tự chẩn đoán quy trình (Readiness Audit) + Hướng dẫn cài đặt 3 AI Starter Skills mẫu dùng thử trong 10 phút.
-- **Mục tiêu:** Tạo Quick Win cho khách hàng ngay lập tức để họ thấy AI chạy ổn định thế nào khi được cấu trúc hóa tốt.`,
-
-            funnel: `### 📐 Bản thiết kế luồng phễu (Funnel Blueprint)
-
-- **Luồng đi:** Ads/SEO → Opt-in Page (Nhận Kit) → Thank You Page (Giới thiệu 490k) → Email Nurture (5 ngày) → Sales Page (490k) → Upsell 1 (2.99M) → Upsell 2 (9.9M) → DWY (30M+).
-- **Kinh tế học Cohort 1.000 Leads:**
-  - Chi phí Ads: 40.000.000đ.
-  - CPL: 40.000đ.
-  - Tỷ lệ mua: 15% (150 Buyers) -> Doanh thu đầu phễu: 73.500.000đ (Bù hoàn toàn tiền ads).
-  - Lợi nhuận từ Upsell & DWY: ~227.500.000đ.`,
-
-            ads: `### 🎬 Kịch bản Ads Copy (3 Góc tiếp cận)
-
-- **Angle 1 (Lật kỳ vọng):** "Dừng học thêm công cụ AI mới. Đó là lý do bạn vẫn đang làm tay..."
-- **Angle 2 (Lỗi sai prompt):** "Prompt hôm qua chạy ngon, hôm nay ra một kiểu khác. Tại sao prompt không phải tài sản?"
-- **Angle 3 (Lợi ích mồi):** "15 câu hỏi rà soát quy trình nào trong doanh nghiệp nên giao cho AI trước."`,
-
-            vsl: `### 📹 Kịch bản Video VSL (5 Phút)
-
-- **Hình thức:** Slide chữ trắng nền đen kết hợp quay màn hình demo thực tế.
-- **Timestamps:**
-  - [00:00-00:20] Hook lật ngược kỳ vọng: Dừng học AI tool.
-  - [00:20-01:10] Agitate nỗi đau kẹt quy trình, AI chạy hên xui.
-  - [01:10-02:50] Giới thiệu SKILL Framework™ (S-K-I-L-L).
-  - [02:50-04:30] Offer Founder Edition 490k + Bảo lãnh hoàn tiền.
-  - [04:30-05:00] CTA mua ngay trước khi giá tăng lên 990k.`,
-
-            email: `### 📧 Chuỗi 5 Email Nurture nuôi dưỡng
-
-- **Email 1:** Gửi file Starter Kit + micro belief shift: Vấn đề không nằm ở công cụ.
-- **Email 2:** Dịch chuyển niềm tin: Prompt không phải tài sản.
-- **Email 3:** Dịch chuyển niềm tin: AI Agent không phải điểm bắt đầu.
-- **Email 4:** Dịch chuyển niềm tin: Bạn không cần biết lập trình để bắt đầu.
-- **Email 5:** Đợt mở bán Founder Edition 490k + Thúc giục hành động.`,
-
-            follow: `### 📧 Chuỗi 3 Email Follow-up & Chia tay
-
-- **Email 1 (Day 10):** Gợi ý cập nhật mới trong Skill OS (Workflow duyệt proposal).
-- **Email 2 (Day 13):** Hỏi thẳng vấn đề đang cản trở họ bắt đầu (Thời gian? Giá? Tech?).
-- **Email 3 (Day 17):** Thông báo xóa tên khỏi danh sách để tạo FOMO tự nhiên.`,
-
-            sales: `### 📞 Kịch bản chốt Sales Call (Telesale)
-
-- **Quy trình 6 pha:**
-  1. Opening: Xác nhận thời gian và lý do đặt lịch.
-  2. Diagnosis: Khai thác lỗ hổng quy trình vận hành hiện tại.
-  3. Goals: Vẽ tương lai khi hệ thống chạy ổn định.
-  4. Admission: Khách hàng thừa nhận cần thay đổi.
-  5. Deliver Value: Hướng dẫn gỡ 3 bước nhỏ theo SKILL Framework ngay trên cuộc gọi.
-  6. Close: Giá gốc -> Giá ưu đãi -> Im lặng tuyệt đối sau khi báo giá (Silence Rule).`,
-            
-            reflection: `### 📝 Thu hoạch Demo Day Ngày 21 (Reflection)
-
-- **Bài học lớn nhất:** Sức mạnh của modular planning chia nhỏ quy trình thành 12 agents chuyên biệt giúp tối ưu hóa chiều sâu tư duy của AI.
-- **Agent ấn tượng nhất:** Agent thiết kế Lời đề nghị (Offer Architect) nhờ cấu trúc giá trị phễu hợp lý (490k -> 2.99M -> 9.9M -> dwY 30-80M).
-- **Agent cần tinh chỉnh:** Agent viết kịch bản Ads & VSL Copy do cần con người tinh chỉnh từ ngữ và giọng điệu thực tế (15-20%) để đúng phong thái Founder nhất.
-- **3 Milestone đầu tiên tuần tới:**
-  1. Deploy mã nguồn Express/SQLite lên VPS và trỏ domain chính thức.
-  2. Tích hợp cổng Live SePay đối soát thực tế với tài khoản MB Bank.
-  3. Khởi động chiến dịch Marketing tự nhiên (YouTube demo & SEO) để thu leads.`
-        };
-
-        // Navigation logic
-        function loadDoc(key) {
-            // Update active menu class
-            document.querySelectorAll('.menu-item').forEach(item => {
-                item.classList.remove('active');
-            });
-            event.currentTarget.classList.add('active');
-
-            // Fetch and display doc
-            const content = documents[key];
-            const title = event.currentTarget.innerText.replace(/^\\d+\\s+/, '');
-            
-            document.getElementById('bar-title').innerText = title;
-            document.getElementById('doc-title').innerText = title;
-            
-            // Basic markdown rendering to HTML tags for better preview readability
-            let htmlContent = content
-                .replace(/### (.*)/g, '<h3>$1</h3>')
-                .replace(/#### (.*)/g, '<h4>$1</h4>')
-                .replace(/👉 \[(.*)\]/g, '<a href="#" class="btn btn-gold" style="margin: 10px 0;">$1</a>')
-                .replace(/\- \*\*(.*?)\*\*/g, '<li><strong>$1</strong>')
-                .replace(/\- (.*)/g, '<li>$1</li>');
-                
-            document.getElementById('doc-content').innerHTML = htmlContent;
-        }
-
-        // Initialize first doc load
-        window.onload = function() {
-            const firstItem = document.querySelector('.menu-item.active');
-            if (firstItem) {
-                // Manually trigger click-like initialization
-                const content = documents['roadmap'];
-                document.getElementById('doc-content').innerHTML = content
-                    .replace(/### (.*)/g, '<h3>$1</h3>')
-                    .replace(/#### (.*)/g, '<h4>$1</h4>')
-                    .replace(/👉 \[(.*)\]/g, '<a href="#" class="btn btn-gold" style="margin: 10px 0;">$1</a>')
-                    .replace(/\- \*\*(.*?)\*\*/g, '<li><strong>$1</strong>')
-                    .replace(/\- (.*)/g, '<li>$1</li>');
-            }
-        };
-    </script>
 </body>
 </html>
