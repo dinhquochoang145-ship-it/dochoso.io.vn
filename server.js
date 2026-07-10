@@ -56,7 +56,8 @@ const PRODUCTS_METADATA = {
       "Người làm công nghệ, nhà sáng tạo muốn làm chủ kỹ năng đóng gói Prompt chuyên nghiệp theo chuẩn Agentic."
     ],
     authorName: "Hoàng | DNA Kinh Doanh",
-    authorBio: "Chuyên gia nghiên cứu và luận giải bản đồ quyết định kinh doanh cá nhân hóa, đồng hành cùng hơn 500+ học viên khởi nghiệp thực chiến bằng AI Agent."
+    authorBio: "Chuyên gia nghiên cứu và luận giải bản đồ quyết định kinh doanh cá nhân hóa, đồng hành cùng hơn 500+ học viên khởi nghiệp thực chiến bằng AI Agent.",
+    downloadUrl: process.env.AI_SKILL_BUILDER_DOWNLOAD_URL || "https://drive.google.com/file/d/1vC1H3d-PLACEHOLDER-GOOGLE-DRIVE-ID/view?usp=sharing"
   }
 };
 
@@ -361,12 +362,21 @@ const server = http.createServer(async (req, res) => {
       if (!orderId) {
         return sendError(res, 400, "Thiếu tham số orderId.");
       }
-      const stmt = db.prepare("SELECT status FROM orders WHERE id = ?");
+      const stmt = db.prepare("SELECT o.status, p.slug FROM orders o JOIN products p ON o.product_id = p.id WHERE o.id = ?");
       const order = stmt.get(parseInt(orderId));
       if (!order) {
         return sendError(res, 404, "Không tìm thấy đơn hàng.");
       }
-      return sendJson(res, 200, { status: order.status });
+
+      let downloadUrl = null;
+      if (order.status === 'completed' && order.slug) {
+        const meta = PRODUCTS_METADATA[order.slug];
+        if (meta && meta.downloadUrl) {
+          downloadUrl = meta.downloadUrl;
+        }
+      }
+
+      return sendJson(res, 200, { status: order.status, downloadUrl: downloadUrl });
     } catch (err) {
       console.error(err);
       return sendError(res, 500, err.message);
@@ -485,7 +495,11 @@ const server = http.createServer(async (req, res) => {
         const product = db.prepare("SELECT name, slug FROM products WHERE id = ?").get(order.product_id);
         
         if (customer && customer.email && product) {
-          const downloadUrl = `${WEBSITE_URL}/assets/downloads/${product.slug}.zip`;
+          let downloadUrl = "";
+          const meta = PRODUCTS_METADATA[product.slug];
+          if (meta && meta.downloadUrl) {
+            downloadUrl = meta.downloadUrl;
+          }
           
           sendDigitalProductDeliveryEmail({
             orderId: order.id,

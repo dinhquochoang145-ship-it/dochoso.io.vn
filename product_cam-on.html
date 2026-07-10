@@ -253,7 +253,7 @@
         if (!res.ok) throw new Error();
         const data = await res.json();
         
-        renderPage(data.status);
+        renderPage(data.status, data.downloadUrl);
 
         if (data.status === 'pending') {
           startPolling();
@@ -267,7 +267,7 @@
       }
     }
 
-    function renderPage(status) {
+    function renderPage(status, downloadUrl) {
       const card = document.getElementById("main-card");
       if (status === 'completed') {
         if (statusCheckInterval) clearInterval(statusCheckInterval);
@@ -294,7 +294,7 @@
             </div>
           </div>
 
-          <a href="/assets/downloads/${productSlug}.zip" class="btn btn-primary" download style="min-height: 54px; font-size: 16px; letter-spacing: 0.5px;">
+          <a href="${downloadUrl || '#'}" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="min-height: 54px; font-size: 16px; letter-spacing: 0.5px;">
             TẢI FILE TÀI LIỆU NGAY
           </a>
         `;
@@ -332,7 +332,7 @@
           if (res.ok) {
             const data = await res.json();
             if (data.status === 'completed') {
-              renderPage('completed');
+              renderPage('completed', data.downloadUrl);
             }
           }
         } catch (err) {
