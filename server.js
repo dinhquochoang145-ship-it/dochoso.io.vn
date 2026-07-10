@@ -709,8 +709,10 @@ const server = http.createServer(async (req, res) => {
   // --- API SEPAY WEBHOOK (XÁC THỰC THANH TOÁN TỰ ĐỘNG CHUYỂN KHOẢN) ---
   if (pathname === '/api/sepay-webhook' && method === 'POST') {
     try {
-      const authHeader = req.headers['authorization'];
-      if (SEPAY_CONFIG.apiToken && authHeader !== `Bearer ${SEPAY_CONFIG.apiToken}`) {
+      const authHeader = req.headers['authorization'] || "";
+      const cleanToken = authHeader.replace(/^(Bearer|Apikey)\s+/i, "").trim();
+
+      if (SEPAY_CONFIG.apiToken && cleanToken !== SEPAY_CONFIG.apiToken) {
         console.warn("[SePay Webhook] Cảnh báo: Webhook gọi không hợp lệ (Unauthorized). Token gửi lên:", authHeader);
         return sendError(res, 401, "Unauthorized webhook call");
       }
