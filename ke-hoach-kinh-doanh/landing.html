@@ -1,0 +1,573 @@
+<!-- 08-landing.html — Agent: assp-ad-copy-machine -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Skill OS — Chuẩn Hóa Quy Trình Vận Hành Doanh Nghiệp Bằng AI</title>
+    <meta name="description" content="AI Skill OS - Chuẩn hóa quy trình vận hành doanh nghiệp bằng AI. Tải Starter Kit miễn phí và tìm hiểu SKILL Framework.">
+    <meta property="og:title" content="AI Skill OS — Chuẩn Hóa Quy Trình Vận Hành Doanh Nghiệp Bằng AI">
+    <meta property="og:description" content="Chuẩn hóa quy trình vận hành doanh nghiệp bằng AI. Tự đúc AI Skill đầu tiên của riêng bạn.">
+    <!-- placeholder check for UX Audit compliance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #050505;
+            --card-bg: rgba(20, 20, 20, 0.6);
+            --border-color: #1a1a1a;
+            --text-color: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent-gold: #c9a84c;
+            --accent-gold-hover: #b0913b;
+            --gradient-gold: linear-gradient(135deg, #c9a84c 0%, #ecd38a 100%);
+            --red-border: #E24B4A;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Outfit', sans-serif;
+            line-height: 1.7;
+            padding-bottom: 80px;
+        }
+
+        /* Container & Grid Layout */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .serif {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        /* Header / Navigation */
+        header {
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 60px;
+        }
+
+        .brand-logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(201, 168, 76, 0.1);
+            color: var(--accent-gold);
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            padding: 6px 16px;
+            border-radius: 99px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            background: linear-gradient(180deg, #ffffff 0%, #d1d5db 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p.lead {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--gradient-gold);
+            color: #000000;
+            font-weight: 700;
+            padding: 16px 36px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 20px rgba(201, 168, 76, 0.3);
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(201, 168, 76, 0.4);
+        }
+
+        /* Agitate Section */
+        .section-padding {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .agitate-title {
+            font-size: 2rem;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .text-block {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .text-block p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            color: #d1d5db;
+        }
+
+        .text-block p.highlight {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            font-weight: 500;
+            border-left: 3px solid var(--accent-gold);
+            padding-left: 16px;
+            margin: 30px 0;
+        }
+
+        /* Framework Section */
+        .framework-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .framework-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 32px;
+            transition: border-color 0.2s ease;
+        }
+
+        .framework-card:hover {
+            border-color: rgba(201, 168, 76, 0.4);
+        }
+
+        .card-num {
+            font-size: 1.75rem;
+            color: var(--accent-gold);
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        .card-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Value Stack Section */
+        .value-stack-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+        }
+
+        .item-left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item-title {
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
+        .item-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .item-value {
+            color: var(--accent-gold);
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        /* Guarantee Section */
+        .guarantee-box {
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-gold);
+            background: rgba(201, 168, 76, 0.03);
+            border-radius: 8px;
+            padding: 32px;
+            margin-top: 40px;
+        }
+
+        .guarantee-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--accent-gold);
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(201, 168, 76, 0.05) 0%, transparent 70%);
+        }
+
+        .price-box {
+            background: var(--card-bg);
+            border: 1px solid var(--accent-gold);
+            border-radius: 16px;
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 48px 32px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .price-tag {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin: 20px 0;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .price-tag span {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            text-decoration: line-through;
+            margin-left: 10px;
+        }
+
+        /* Payment Form & Details */
+        .payment-details {
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border-color);
+            text-align: left;
+        }
+
+        .payment-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .bank-info {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+
+        .bank-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .bank-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .bank-label {
+            color: var(--text-muted);
+        }
+
+        .bank-value {
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        .qr-placeholder {
+            width: 200px;
+            height: 200px;
+            background: #ffffff;
+            margin: 20px auto;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000000;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            margin-bottom: 32px;
+        }
+
+        .faq-q {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--accent-gold);
+        }
+
+        .faq-a {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 60px 0;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero p.lead { font-size: 1.1rem; }
+            .agitate-title { font-size: 1.6rem; }
+            .price-tag { font-size: 2.8rem; }
+            .value-stack-item { flex-direction: column; align-items: flex-start; gap: 8px; }
+            .item-value { align-self: flex-end; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="brand-logo">AI Skill OS</div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <span class="hero-badge">Đóng gói quy trình doanh nghiệp</span>
+            <h1>Bạn không thiếu Prompt.<br>Bạn đang thiếu <span class="serif">SKILL Framework™</span>.</h1>
+            <p class="lead">Phương pháp đóng gói quy trình làm việc thành các AI Skill ổn định để công việc tiếp tục chạy tự động, ngay cả khi bạn không trực tiếp ngồi làm.</p>
+            <a href="#buy" class="cta-button">Nhận Bản Founder Edition</a>
+        </section>
+
+        <!-- AGITATE SECTION (The Hard Truth) -->
+        <section class="section-padding">
+            <h2 class="agitate-title">Tại sao 97% người học AI xong vẫn quay về làm tay?</h2>
+            <div class="text-block">
+                <p>Kịch bản này xảy ra rất thường xuyên với các chủ doanh nghiệp và founder:</p>
+                <p>Bạn nhận ra AI là làn sóng bắt buộc phải theo. Bạn bỏ vài triệu mua các bộ thư viện hàng nghìn câu lệnh. Bạn đăng ký các khóa học kéo node n8n hoặc kết nối API trên Make.com.</p>
+                <p>Bạn tự tay build được một bản chạy thử (demo) rất đẹp.</p>
+                <p>Nhưng khi quay về doanh nghiệp của mình và đưa dữ liệu thật vào vận hành...</p>
+                <p class="highlight">Hệ thống bắt đầu lỗi. AI trả về kết quả lúc đúng lúc sai. Nhân viên không biết dùng thế nào. Muốn sửa một bước nhỏ bạn lại phải mò lại từ đầu. Cuối cùng, mọi sự cố lại quay về bạn cứu.</p>
+                <p>Vấn đề không phải là bạn thiếu công cụ. Nước ngoài hay Việt Nam cũng vậy, công cụ chỉ là phần kết nối.</p>
+                <p><strong>Khoảng trống thật sự nằm ở trước đó:</strong> Bạn chưa chuyển được cách mình đang suy nghĩ, ra quyết định và quy chuẩn chất lượng trong đầu — thành một cấu trúc quy trình mà AI có thể làm theo ổn định.</p>
+                <p>Khi bạn viết prompt tự do, AI sẽ trả lời theo cảm tính.</p>
+                <p>Khi bạn không kiểm soát rủi ro trước khi deploy, luồng chạy chắc chắn sẽ đứng.</p>
+                <p>Để AI làm việc thay người, bạn cần đóng gói quy trình thành <strong>AI Skill</strong>.</p>
+            </div>
+        </section>
+
+        <!-- THE SOLUTION SECTION -->
+        <section class="section-padding">
+            <h2 class="agitate-title" style="margin-bottom: 16px;">Giải pháp: SKILL Framework™</h2>
+            <p style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto 48px auto;">Phương pháp chuẩn hóa tư duy vận hành của bạn thành các module AI hoạt động nhất quán, có thể kiểm thử và bàn giao.</p>
+            
+            <div class="framework-grid">
+                <div class="framework-card">
+                    <div class="card-num">S</div>
+                    <h3 class="card-title">Scan (Xác định)</h3>
+                    <p class="card-desc">Bóc tách các công việc lặp lại trong ngày để biết chính xác quy trình nào của bạn sẵn sàng bàn giao cho AI trước.</p>
+                </div>
+                <div class="framework-card">
+                    <div class="card-num">K</div>
+                    <h3 class="card-title">Keep (Đóng gói)</h3>
+                    <p class="card-desc">Chuyển kinh nghiệm trong đầu thành AI Skill có cấu trúc 6 phần (Vai trò, Mục tiêu, Đầu vào, Quy tắc, Đầu ra, Tiêu chuẩn).</p>
+                </div>
+                <div class="framework-card">
+                    <div class="card-num">I</div>
+                    <h3 class="card-title">Inspect (Kiểm thử)</h3>
+                    <p class="card-desc">Chạy thử qua Checklist chẩn đoán rủi ro để đảm bảo AI hoạt động ổn định và chính xác 80-90% trước khi deploy.</p>
+                </div>
+                <div class="framework-card">
+                    <div class="card-num">L</div>
+                    <h3 class="card-title">Link (Kết nối)</h3>
+                    <p class="card-desc">Ghép các AI Skill đơn lẻ đã hoàn thiện thành một chuỗi Workflow tự chạy giải quyết bài toán đầu cuối.</p>
+                </div>
+                <div class="framework-card">
+                    <div class="card-num">L</div>
+                    <h3 class="card-title">Launch (Vận hành)</h3>
+                    <p class="card-desc">Deploy hệ thống vào hoạt động kinh doanh thật, giảm thời gian giám sát trực tiếp của bạn xuống tối thiểu.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- VALUE STACK SECTION -->
+        <section class="section-padding">
+            <h2 class="agitate-title">Chi tiết bộ tài liệu AI Skill Builder</h2>
+            <p style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto 40px auto;">Không bán video lý thuyết dài dòng. Bạn nhận toàn bộ công thức và bộ kit hành động:</p>
+
+            <div class="value-stack-item">
+                <div class="item-left">
+                    <span class="item-title">1. Tài liệu hướng dẫn thực hành SKILL Framework™ (S-K-I)</span>
+                    <span class="item-desc">Cách bóc tách và tự đúc AI Skill đầu tiên của bạn trong 2 giờ.</span>
+                </div>
+                <span class="item-value">Trị giá: 490k</span>
+            </div>
+
+            <div class="value-stack-item">
+                <div class="item-left">
+                    <span class="item-title">2. Bộ 3 AI Starter Skills đúc sẵn dùng được ngay</span>
+                    <span class="item-desc">SOP Skill, Content Skill và Insight Skill đã được cấu trúc và kiểm thử ổn định.</span>
+                </div>
+                <span class="item-value">Trị giá: 290k</span>
+            </div>
+
+            <div class="value-stack-item">
+                <div class="item-left">
+                    <span class="item-title">3. Checklist chẩn đoán "AI Readiness Audit"</span>
+                    <span class="item-desc">15 câu hỏi rà soát hệ thống để chọn đúng việc cần AI hóa trước.</span>
+                </div>
+                <span class="item-value">Trị giá: 190k</span>
+            </div>
+
+            <div class="value-stack-item">
+                <div class="item-left">
+                    <span class="item-title">4. Template đóng gói quy trình Notion/PDF</span>
+                    <span class="item-desc">Biểu mẫu điền thông tin để dịch chuyển kinh nghiệm thành cấu trúc AI Skill.</span>
+                </div>
+                <span class="item-value">Trị giá: 190k</span>
+            </div>
+
+            <div class="value-stack-item" style="border-color: rgba(201, 168, 76, 0.3);">
+                <div class="item-left">
+                    <span class="item-title" style="color: var(--accent-gold);">5. Quyền lợi nhận cập nhật Founder Edition trọn đời</span>
+                    <span class="item-desc">Miễn phí toàn bộ thư viện Skills mới và các Workflow mẫu được bổ sung trong tương lai.</span>
+                </div>
+                <span class="item-value" style="color: var(--accent-gold);">Vô giá</span>
+            </div>
+
+            <div class="guarantee-box">
+                <div class="guarantee-title">Chính sách cam kết dựa trên hành động</div>
+                <p style="font-size: 0.95rem; color: #d1d5db;">Nếu bạn chỉ mua tài liệu về để lưu trữ và không định thực hành, sản phẩm này không phù hợp với bạn.</p>
+                <p style="font-size: 0.95rem; color: #d1d5db; margin-top: 10px;">Tuy nhiên, nếu bạn đã dành ra 2 giờ làm đúng theo hướng dẫn, điền đầy đủ file template mẫu mà vẫn không đúc được AI Skill đầu tiên cho công việc của mình, tôi sẽ thực hiện hoàn tiền 100% không hỏi thêm.</p>
+            </div>
+        </section>
+
+        <!-- PRICING SECTION -->
+        <section id="buy" class="section-padding pricing-section">
+            <h2 class="agitate-title">Sở hữu AI Skill Builder</h2>
+            <p style="color: var(--text-muted); max-width: 500px; margin: 0 auto;">Cơ hội nhận phiên bản mở bán đầu tiên với mức chiết khấu tốt nhất.</p>
+            
+            <div class="price-box">
+                <h3 class="serif" style="font-size: 1.8rem; color: #ffffff;">Founder Edition</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 8px;">Áp dụng cho đến khi phiên bản cập nhật tiếp theo được hoàn thiện</p>
+                <div class="price-tag">490.000đ <span>990.000đ</span></div>
+                
+                <div class="payment-details">
+                    <div class="payment-title">Thông tin chuyển khoản quét QR tự động</div>
+                    
+                    <div class="bank-info">
+                        <div class="bank-row">
+                            <span class="bank-label">Ngân hàng:</span>
+                            <span class="bank-value">MB Bank (Ngân hàng Quân Đội)</span>
+                        </div>
+                        <div class="bank-row">
+                            <span class="bank-label">Chủ tài khoản:</span>
+                            <span class="bank-value">DINH QUOC HOANG</span>
+                        </div>
+                        <div class="bank-row">
+                            <span class="bank-label">Số tài khoản:</span>
+                            <span class="bank-value">1450119888888</span>
+                        </div>
+                        <div class="bank-row">
+                            <span class="bank-label">Số tiền:</span>
+                            <span class="bank-value" style="color: var(--accent-gold); font-weight: 700;">490.000 VNĐ</span>
+                        </div>
+                        <div class="bank-row">
+                            <span class="bank-label">Nội dung CK:</span>
+                            <span class="bank-value" style="background: rgba(201, 168, 76, 0.2); padding: 2px 6px; border-radius: 4px;">AISKILL</span>
+                        </div>
+                    </div>
+
+                    <div class="qr-placeholder">
+                        [ VietQR Code 490,000đ ]
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 15px;">Hệ thống tự động kích hoạt tài khoản trong vòng 1-3 phút sau khi nhận được tiền.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section class="section-padding">
+            <h2 class="agitate-title">Câu hỏi thường gặp</h2>
+            <div class="text-block">
+                <div class="faq-item">
+                    <div class="faq-q">Sản phẩm này khác gì với các khóa học n8n/Make khác?</div>
+                    <div class="faq-a">Các khóa học trên thị trường tập trung dạy cách kết nối công cụ. AI Skill Builder tập trung vào bước quan trọng hơn ở phía trước: làm sao bóc tách kiến thức và quy trình trong đầu của bạn để chuyển thành cấu trúc AI làm theo đúng chuẩn. Khi có Skill rồi, bạn đưa vào bất kỳ công cụ nào cũng chạy ổn định.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Tôi không biết lập trình có học được không?</div>
+                    <div class="faq-a">SKILL Framework™ được thiết kế hoàn toàn bằng ngôn ngữ tự nhiên và tư duy logic kinh doanh. Bạn không cần viết bất kỳ dòng code nào để đúc được AI Skill đầu tiên của mình.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Tôi đã có rất nhiều prompt, bộ tài liệu này giúp được gì?</div>
+                    <div class="faq-a">Hỗ trợ bạn phân loại và tái cấu trúc lại toàn bộ các prompt rời rạc đó thành các module chuyên biệt (Skill) có cơ chế quản lý, nâng cấp và kiểm thử rủi ro rõ ràng.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Sau khi mua tôi sẽ nhận tài liệu ở đâu?</div>
+                    <div class="faq-a">Ngay sau khi hệ thống chuyển khoản tự động xác nhận giao dịch thành công, link tải bộ tài liệu và các file template Notion/PDF sẽ được hiển thị ngay trên màn hình và gửi qua email của bạn.</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AI Skill OS. All rights reserved.</p>
+            <p style="margin-top: 5px; font-size: 0.75rem; color: #555555;">Được thiết kế dựa trên tiêu chuẩn vận hành của ASSP Framework.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

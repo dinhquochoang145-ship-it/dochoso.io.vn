@@ -4,7 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Thanh Toán — {{PRODUCT_NAME}}</title>
-  
+  <meta name="description" content="Trang thanh toán của hệ thống.">
+  <meta property="og:title" content="Thanh Toán">
+  <meta property="og:description" content="Trang thanh toán bảo mật.">
   <style>
     :root {
       --bg: #0f0c08;
@@ -333,9 +335,9 @@
 
   <nav class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="/" aria-label="DNA Kinh Doanh">
-        <span class="brand-mark">DNA</span>
-        <span>DNA Kinh Doanh</span>
+      <a class="brand" href="/" aria-label="{{BRAND_NAME}}">
+        <span class="brand-mark">{{BRAND_MARK}}</span>
+        <span>{{BRAND_NAME}}</span>
       </a>
     </div>
   </nav>
@@ -384,7 +386,7 @@
 
       <!-- Payment details with QR -->
       <div id="payment-area" class="payment-area">
-        <h1>Thanh toán qua VietQR</h1>
+        <h2>Thanh toán qua VietQR</h2>
         <p class="subtitle">Mở ứng dụng Ngân hàng để quét mã VietQR tự động điền nội dung</p>
         
         <div class="qr-container">
@@ -446,7 +448,7 @@
     };
 
     let selectedAmount = 490000;
-    const productId = 4; // AI Skill Builder ID is 4 (inserted in migrations)
+    const productId = {{PRODUCT_ID}};
     const productSlug = "{{SLUG}}";
     let paymentCheckInterval = null;
 

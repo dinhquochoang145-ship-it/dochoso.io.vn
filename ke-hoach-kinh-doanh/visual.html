@@ -1,0 +1,300 @@
+<!-- 07-funnel-visual.html — Agent: assp-funnel-strategist -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Skill OS — Funnel Blueprint Visualizer</title>
+    <meta name="description" content="AI Skill OS - Sơ đồ luồng phễu chiến lược">
+    <meta property="og:title" content="AI Skill OS — Funnel Blueprint Visualizer">
+    <meta property="og:description" content="Sơ đồ luồng phễu chiến lược cho hệ điều hành AI">
+    <!-- placeholder check for UX Audit compliance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg-deep: #0a0a0a;
+            --color-bg-card: #141414;
+            --color-border: #2a2a2a;
+            --color-text-main: #f0f0f0;
+            --color-text-muted: #888888;
+            
+            /* Funnel Page Type Colors */
+            --color-ads: #ffb703;
+            --color-capture: #219ebc;
+            --color-nurture: #8ecae6;
+            --color-sales: #8338ec;
+            --color-deliver: #06d6a0;
+            --color-upsell: #ffb703;
+            --color-gold: #c9a84c;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--color-bg-deep);
+            color: var(--color-text-main);
+            font-family: 'DM Sans', sans-serif;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px auto;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 2.5rem;
+            color: var(--color-gold);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: var(--color-text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Funnel Grid Layout */
+        .funnel-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .funnel-step {
+            width: 100%;
+            max-width: 700px;
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 24px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .funnel-step:hover {
+            border-color: var(--color-gold);
+            transform: translateY(-2px);
+        }
+
+        /* Badge Styles */
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-ads { background: rgba(255, 183, 3, 0.1); color: var(--color-ads); border: 1px solid var(--color-ads); }
+        .badge-capture { background: rgba(33, 158, 188, 0.1); color: var(--color-capture); border: 1px solid var(--color-capture); }
+        .badge-nurture { background: rgba(142, 202, 230, 0.1); color: var(--color-nurture); border: 1px solid var(--color-nurture); }
+        .badge-sales { background: rgba(131, 56, 236, 0.1); color: var(--color-sales); border: 1px solid var(--color-sales); }
+        .badge-upsell { background: rgba(201, 168, 76, 0.1); color: var(--color-gold); border: 1px solid var(--color-gold); }
+
+        .step-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--color-text-main);
+        }
+
+        .step-desc {
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .step-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 0.85rem;
+            border-top: 1px solid var(--color-border);
+            padding-top: 12px;
+            color: var(--color-text-muted);
+        }
+
+        .meta-item strong {
+            color: var(--color-text-main);
+        }
+
+        /* Connecting Arrows */
+        .arrow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gold);
+            font-weight: 700;
+            font-size: 0.9rem;
+            padding: 10px 0;
+        }
+
+        .arrow-text {
+            background: rgba(201, 168, 76, 0.1);
+            padding: 2px 10px;
+            border-radius: 12px;
+            border: 1px dashed var(--color-gold);
+            margin-bottom: 5px;
+        }
+
+        .arrow-symbol {
+            font-size: 1.5rem;
+        }
+
+        .split-container {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            max-width: 900px;
+            justify-content: center;
+        }
+
+        .split-container .funnel-step {
+            max-width: 440px;
+            flex: 1;
+        }
+
+        @media (max-width: 768px) {
+            .split-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .split-container .funnel-step {
+                max-width: 700px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>AI Skill OS</h1>
+        <p class="subtitle">Bản thiết kế luồng phễu chuyển đổi chuẩn hóa quy trình tự động</p>
+    </header>
+
+    <div class="funnel-container">
+
+        <!-- BƯỚC 1: TRAFFIC -->
+        <div class="funnel-step">
+            <span class="badge badge-ads">Bước 1: Traffic</span>
+            <div class="step-title">Nguồn Cận Tiếp Cận (Ads / SEO / Video)</div>
+            <p class="step-desc">Facebook Ads nhắm đúng từ khóa điểm đau, bài viết SEO so sánh và video demo thực tế 7 phút trên YouTube.</p>
+            <div class="step-meta">
+                <div class="meta-item">Kênh chính: <strong>Google/FB Ads, YouTube, Website</strong></div>
+                <div class="meta-item">Mục tiêu: <strong>Đưa người dùng về Landing Page</strong></div>
+            </div>
+        </div>
+
+        <div class="arrow">
+            <span class="arrow-text">Click CTR: 2.5%</span>
+            <span class="arrow-symbol">▼</span>
+        </div>
+
+        <!-- BƯỚC 2: LEAD MAGNET -->
+        <div class="funnel-step">
+            <span class="badge badge-capture">Bước 2: Lead Magnet</span>
+            <div class="step-title">AI Readiness Audit & 3 Starter Skills</div>
+            <p class="step-desc">Khách hàng điền 15 câu hỏi tự đánh giá doanh nghiệp và nhận ngay 3 Skills đúc sẵn dùng thử miễn phí.</p>
+            <div class="step-meta">
+                <div class="meta-item">Định dạng: <strong>Checklist + Prompt Mẫu</strong></div>
+                <div class="meta-item">Tỷ lệ Opt-in: <strong>25%</strong></div>
+                <div class="meta-item">Mục tiêu: <strong>Thu lead email/Telegram</strong></div>
+            </div>
+        </div>
+
+        <div class="arrow">
+            <span class="arrow-text">Tỷ lệ mua ngay: 15%</span>
+            <span class="arrow-symbol">▼</span>
+        </div>
+
+        <!-- BƯỚC 3: MAIN OFFER -->
+        <div class="funnel-step">
+            <span class="badge badge-sales">Bước 3: Main Offer</span>
+            <div class="step-title">AI Skill Builder (Founder Edition) — 490k</div>
+            <p class="step-desc">Khóa học cốt lõi hướng dẫn đóng gói quy trình làm việc thành cấu trúc AI Skill bằng SKILL Framework™.</p>
+            <div class="step-meta">
+                <div class="meta-item">Giá: <strong>490.000 VNĐ</strong></div>
+                <div class="meta-item">Trạng thái: <strong>Founder Edition</strong></div>
+                <div class="meta-item">Mục tiêu: <strong>Tự hoàn chi phí Ads (CPA)</strong></div>
+            </div>
+        </div>
+
+        <div class="arrow">
+            <span class="arrow-text">Tỷ lệ Upsell: 20%</span>
+            <span class="arrow-symbol">▼</span>
+        </div>
+
+        <!-- BƯỚC 4: UPSELL 1 & DOWNSELL -->
+        <div class="split-container">
+            <div class="funnel-step">
+                <span class="badge badge-upsell">Bước 4: Upsell 1</span>
+                <div class="step-title">AI Workflow Builder — 2.99M</div>
+                <p class="step-desc">Nâng cấp kỹ năng để kết nối các Skill đơn lẻ thành Workflow tự động hóa hoàn chỉnh bằng n8n/Make.</p>
+                <div class="step-meta">
+                    <div class="meta-item">Giá: <strong>2.990.000 VNĐ</strong></div>
+                    <div class="meta-item">Tỷ lệ mua: <strong>20%</strong></div>
+                </div>
+            </div>
+
+            <div class="funnel-step" style="border-style: dashed;">
+                <span class="badge badge-nurture" style="color: var(--color-text-muted); border-color: var(--color-border);">Bước 4: Downsell 2</span>
+                <div class="step-title" style="color: var(--color-text-muted);">Gói Tự Học Không Hỗ Trợ</div>
+                <p class="step-desc">Phiên bản rút gọn tính năng cho những người chưa sẵn sàng đầu tư mức giá 2.99M.</p>
+                <div class="step-meta">
+                    <div class="meta-item">Giá: <strong>1.490.000 VNĐ</strong></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow">
+            <span class="arrow-text">Tỷ lệ mua qua phễu: 15%</span>
+            <span class="arrow-symbol">▼</span>
+        </div>
+
+        <!-- BƯỚC 5: UPSELL 2 -->
+        <div class="funnel-step">
+            <span class="badge badge-upsell">Bước 5: Upsell 2</span>
+            <div class="step-title">AI Business OS — 9.9M</div>
+            <p class="step-desc">Workshop nhóm nhỏ thực chiến cùng xây dựng và chuẩn hóa hệ điều hành AI tùy biến cho doanh nghiệp.</p>
+            <div class="step-meta">
+                <div class="meta-item">Giá: <strong>9.900.000 VNĐ</strong></div>
+                <div class="meta-item">Hình thức: <strong>Workshop nhóm nhỏ</strong></div>
+            </div>
+        </div>
+
+        <div class="arrow">
+            <span class="arrow-text">Lọc qua tư vấn 1-1</span>
+            <span class="arrow-symbol">▼</span>
+        </div>
+
+        <!-- BƯỚC 6: DONE WITH YOU -->
+        <div class="funnel-step" style="border-color: var(--color-gold);">
+            <span class="badge badge-sales" style="background: rgba(201, 168, 76, 0.1); color: var(--color-gold); border: 1px solid var(--color-gold);">Bước 6: VIP Offer</span>
+            <div class="step-title" style="color: var(--color-gold);">Done With You (DWY) — 30M - 80M</div>
+            <p class="step-desc">Dịch vụ đồng hành thiết kế, xây dựng, tích hợp hệ thống tự động hóa AI và đào tạo nhân sự trực tiếp.</p>
+            <div class="step-meta">
+                <div class="meta-item">Giá: <strong>30M - 80M VNĐ</strong></div>
+                <div class="meta-item">Đối tượng: <strong>Doanh nghiệp SME</strong></div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

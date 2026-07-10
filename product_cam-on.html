@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cảm Ơn Bạn — DNA Kinh Doanh</title>
-  
+  <title>Cảm Ơn Bạn — {{BRAND_NAME}}</title>
+  <meta name="description" content="Trang cảm ơn và hướng dẫn nhận tài liệu của bạn.">
+  <meta property="og:title" content="Cảm Ơn Bạn — {{BRAND_NAME}}">
+  <meta property="og:description" content="Trang cảm ơn và hướng dẫn nhận tài liệu của bạn.">
   <style>
     :root {
       --bg: #0f0c08;
@@ -216,9 +218,9 @@
 
   <nav class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="/" aria-label="DNA Kinh Doanh">
-        <span class="brand-mark">DNA</span>
-        <span>DNA Kinh Doanh</span>
+      <a class="brand" href="/" aria-label="{{BRAND_NAME}}">
+        <span class="brand-mark">{{BRAND_MARK}}</span>
+        <span>{{BRAND_NAME}}</span>
       </a>
     </div>
   </nav>
@@ -239,7 +241,7 @@
     if (!orderId) {
       document.getElementById("main-card").innerHTML = `
         <div class="icon-wrapper icon-pending">✕</div>
-        <h1>Lỗi Đơn Hàng</h1>
+        <h2>Lỗi Đơn Hàng</h2>
         <p class="message">Không tìm thấy mã đơn hàng hợp lệ. Vui lòng kiểm tra lại.</p>
         <a href="/san-pham/${productSlug}" class="btn btn-primary">Quay lại trang sản phẩm</a>
       `;
@@ -253,7 +255,7 @@
         if (!res.ok) throw new Error();
         const data = await res.json();
         
-        renderPage(data.status, data.downloadUrl);
+        renderPage(data.status);
 
         if (data.status === 'pending') {
           startPolling();
@@ -261,13 +263,13 @@
       } catch (err) {
         document.getElementById("main-card").innerHTML = `
           <div class="icon-wrapper icon-pending">✕</div>
-          <h1>Lỗi Kết Nối</h1>
+          <h2>Lỗi Kết Nối</h2>
           <p class="message">Không thể tải thông tin đơn hàng từ máy chủ. Vui lòng tải lại trang.</p>
         `;
       }
     }
 
-    function renderPage(status, downloadUrl) {
+    function renderPage(status) {
       const card = document.getElementById("main-card");
       if (status === 'completed') {
         if (statusCheckInterval) clearInterval(statusCheckInterval);
@@ -277,9 +279,9 @@
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <h1 class="success-title">Thanh toán thành công!</h1>
-          <p class="message">Cảm ơn bạn đã mua hàng. Đơn hàng của bạn đã được xác nhận hoàn tất. Hệ thống cũng đã gửi một email chứa link tải tài liệu tới hòm thư của bạn để lưu trữ lâu dài.</p>
+          <p class="message" style="margin-bottom: 24px;">Cảm ơn bạn đã lựa chọn bộ tài nguyên của chúng tôi. Đơn hàng đã hoàn tất và hệ thống đã gửi email chứa <strong>đường liên kết tải tài liệu</strong> trực tiếp đến hòm thư của bạn. Vui lòng kiểm tra hộp thư đến (và mục thư rác/spam nếu chưa nhận được).</p>
           
-          <div class="order-info">
+          <div class="order-info" style="margin-bottom: 24px;">
             <div class="info-row">
               <span class="info-label">Mã đơn hàng</span>
               <span class="info-val">#${orderId}</span>
@@ -294,15 +296,15 @@
             </div>
           </div>
 
-          <a href="${downloadUrl || '#'}" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="min-height: 54px; font-size: 16px; letter-spacing: 0.5px;">
-            TẢI FILE TÀI LIỆU NGAY
-          </a>
+          <div style="padding: 14px; background: rgba(105, 209, 138, 0.08); border: 1px solid rgba(105, 209, 138, 0.3); border-radius: 12px; color: var(--success); font-weight: 800; font-size: 15px;">
+            ✓ ĐÃ GỬI EMAIL BÀN GIAO FILE TÀI LIỆU
+          </div>
         `;
       } else {
         card.innerHTML = `
           <div class="spinner"></div>
-          <h1 class="pending-title">Đang kiểm tra giao dịch...</h1>
-          <p class="message">Hệ thống đang đối soát khoản chuyển của bạn. Vui lòng giữ nguyên trang này, nút tải xuống sẽ hiển thị ngay khi nhận được tín hiệu thành công.</p>
+          <h2 class="pending-title">Đang kiểm tra giao dịch...</h2>
+          <p class="message">Hệ thống đang đối soát khoản chuyển của bạn. Vui lòng giữ nguyên trang này, trạng thái sẽ tự động cập nhật ngay khi nhận được tín hiệu thanh toán thành công.</p>
           
           <div class="order-info">
             <div class="info-row">
@@ -332,7 +334,7 @@
           if (res.ok) {
             const data = await res.json();
             if (data.status === 'completed') {
-              renderPage('completed', data.downloadUrl);
+              renderPage('completed');
             }
           }
         } catch (err) {

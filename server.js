@@ -57,7 +57,7 @@ const PRODUCTS_METADATA = {
     ],
     authorName: "Hoàng | DNA Kinh Doanh",
     authorBio: "Chuyên gia nghiên cứu và luận giải bản đồ quyết định kinh doanh cá nhân hóa, đồng hành cùng hơn 500+ học viên khởi nghiệp thực chiến bằng AI Agent.",
-    downloadUrl: process.env.AI_SKILL_BUILDER_DOWNLOAD_URL || "https://drive.google.com/file/d/1vC1H3d-PLACEHOLDER-GOOGLE-DRIVE-ID/view?usp=sharing"
+    downloadUrl: process.env.AI_SKILL_BUILDER_DOWNLOAD_URL || "http://localhost:3000/assets/downloads/ai-skill-builder.zip"
   }
 };
 
@@ -74,7 +74,7 @@ if (!RESEND_API_KEY) {
 }
 
 // Helper gửi email qua Resend REST API
-async function sendEmail({ to, subject, html }) {
+async function sendEmail({ to, subject, html, fromName = "DNA Kinh Doanh" }) {
   if (!RESEND_API_KEY) {
     console.error("Lỗi gửi email: Thiếu API Key Resend.");
     return { success: false, error: "Thiếu API Key" };
@@ -87,7 +87,7 @@ async function sendEmail({ to, subject, html }) {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        from: "DNA Kinh Doanh <hi@dochoso.io.vn>",
+        from: `${fromName} <hi@dochoso.io.vn>`,
         to: Array.isArray(to) ? to : [to],
         subject: subject,
         html: html
@@ -115,15 +115,37 @@ async function sendOrderConfirmationEmail({ orderId, customerName, customerEmail
   if (status === 'completed') statusText = "Thành công (Completed)";
   if (status === 'cancelled') statusText = "Đã hủy (Cancelled)";
 
-  const subject = `Xác nhận đơn hàng #${orderId} - DNA Kinh Doanh`;
+  const isAiSkillBuilder = productName.toLowerCase().includes("ai skill");
+  const brandName = isAiSkillBuilder ? "AI Skill OS" : "DNA Kinh Doanh";
+  const subject = `Xác nhận đơn hàng #${orderId} - ${brandName}`;
+
+  let instructionHtml = "";
+  let signatureHtml = "";
+
+  if (isAiSkillBuilder) {
+    instructionHtml = `
+      <h4 style="color: #c9a84c; margin-top: 20px; font-size: 15px;">HƯỚNG DẪN BÀN GIAO SẢN PHẨM</h4>
+      <p>Đơn hàng của bạn đang ở trạng thái <strong>Chờ thanh toán (Pending)</strong>.</p>
+      <p>Vui lòng quét mã VietQR hiển thị trên màn hình thanh toán để thực hiện chuyển khoản tự động. Ngay sau khi hệ thống nhận được giao dịch, bạn sẽ nhận được email bàn giao link tải xuống file tài nguyên <strong>AI Skill Builder</strong> lập tức.</p>
+    `;
+    signatureHtml = `<p style="margin-top: 20px; font-size: 14px;">Thân mến,<br/><strong>Ban Quản Trị AI Skill OS</strong></p>`;
+  } else {
+    instructionHtml = `
+      <h4 style="color: #8b6332; margin-top: 20px; font-size: 15px;">HƯỚNG DẪN NHẬN HÀNG</h4>
+      <p>Bản đồ cá nhân hóa của bạn đang được mình phân tích và chuẩn bị. Nó sẽ được gửi tới bạn trong vòng 72 giờ tới qua Zalo hoặc Email này.</p>
+      <p>Sau khi nhận báo cáo, tụi mình sẽ chủ động liên hệ để đặt lịch hẹn cho buổi luận giải trực tiếp 1-1 kéo dài 60 phút.</p>
+    `;
+    signatureHtml = `<p style="margin-top: 20px; font-size: 14px;">Thân mến,<br/><strong>Hoàng | DNA Kinh Doanh</strong></p>`;
+  }
+
   const html = `
     <div style="font-family: sans-serif; padding: 20px; max-width: 600px; border: 1px solid #eee; border-radius: 8px; line-height: 1.6; color: #2a1b10;">
-      <h2 style="color: #e9b85d; margin-top: 0; border-bottom: 2px solid #fff8ee; padding-bottom: 10px;">Xác nhận đơn hàng thành công</h2>
+      <h2 style="color: ${isAiSkillBuilder ? '#c9a84c' : '#e9b85d'}; margin-top: 0; border-bottom: 2px solid #fff8ee; padding-bottom: 10px;">Xác nhận đơn hàng thành công</h2>
       <p>Chào bạn <strong>${customerName}</strong>,</p>
       <p>Cảm ơn bạn đã lựa chọn dịch vụ của tụi mình. Đơn hàng của bạn đã được ghi nhận thành công trên hệ thống.</p>
       
-      <div style="background: #fff8ee; border: 1px solid rgba(233,184,93,0.3); border-radius: 8px; padding: 16px; margin: 20px 0;">
-        <h4 style="margin: 0 0 10px 0; color: #8b6332; font-size: 14px; letter-spacing: 0.5px;">THÔNG TIN ĐƠN HÀNG</h4>
+      <div style="background: #fff8ee; border: 1px solid ${isAiSkillBuilder ? 'rgba(201,168,76,0.3)' : 'rgba(233,184,93,0.3)'}; border-radius: 8px; padding: 16px; margin: 20px 0;">
+        <h4 style="margin: 0 0 10px 0; color: ${isAiSkillBuilder ? '#8b7032' : '#8b6332'}; font-size: 14px; letter-spacing: 0.5px;">THÔNG TIN ĐƠN HÀNG</h4>
         <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
           <tr>
             <td style="padding: 6px 0; color: #666; width: 120px;">Mã đơn hàng:</td>
@@ -135,7 +157,7 @@ async function sendOrderConfirmationEmail({ orderId, customerName, customerEmail
           </tr>
           <tr>
             <td style="padding: 6px 0; color: #666;">Số tiền:</td>
-            <td style="padding: 6px 0; font-weight: bold; color: #8b6332; font-size: 16px;">${amountFormatted}đ</td>
+            <td style="padding: 6px 0; font-weight: bold; color: ${isAiSkillBuilder ? '#8b7032' : '#8b6332'}; font-size: 16px;">${amountFormatted}đ</td>
           </tr>
           <tr>
             <td style="padding: 6px 0; color: #666;">Trạng thái:</td>
@@ -144,45 +166,49 @@ async function sendOrderConfirmationEmail({ orderId, customerName, customerEmail
         </table>
       </div>
 
-      <h4 style="color: #8b6332; margin-top: 20px; font-size: 15px;">HƯỚNG DẪN NHẬN HÀNG</h4>
-      <p>Bản đồ cá nhân hóa của bạn đang được mình phân tích và chuẩn bị. Nó sẽ được gửi tới bạn trong vòng 72 giờ tới qua Zalo hoặc Email này.</p>
-      <p>Sau khi nhận báo cáo, tụi mình sẽ chủ động liên hệ để đặt lịch hẹn cho buổi luận giải trực tiếp 1-1 kéo dài 60 phút.</p>
+      ${instructionHtml}
       
       <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;" />
       <p style="font-style: italic; color: #666; font-size: 13px; line-height: 1.5;">
-        Thật ra, việc sở hữu bản đồ chỉ là bước khởi đầu. Hành động và vận hành nó một cách bền bỉ mới thực sự quyết định kết quả. Hy vọng tấm bản đồ này sẽ giúp ích nhiều cho bạn.
+        ${isAiSkillBuilder 
+          ? 'Đúc AI Skill là nền móng bền vững để xây dựng tài sản AI thực tế cho doanh nghiệp. Hy vọng bộ Kit này giúp ích được nhiều cho công việc của bạn.'
+          : 'Thật ra, việc sở hữu bản đồ chỉ là bước khởi đầu. Hành động và vận hành nó một cách bền bỉ mới thực sự quyết định kết quả. Hy vọng tấm bản đồ này sẽ giúp ích nhiều cho bạn.'}
       </p>
-      <p style="margin-top: 20px; font-size: 14px;">Thân mến,<br/><strong>Hoàng | DNA Kinh Doanh</strong></p>
+      ${signatureHtml}
     </div>
   `;
 
   return sendEmail({
     to: customerEmail,
     subject: subject,
-    html: html
+    html: html,
+    fromName: brandName
   });
 }
 
 // Helper gửi email bàn giao sản phẩm số qua Resend REST API
 async function sendDigitalProductDeliveryEmail({ orderId, customerName, customerEmail, productName, amount, downloadLink }) {
   const amountFormatted = parseFloat(amount).toLocaleString('vi-VN');
+  const isAiSkillBuilder = productName.toLowerCase().includes("ai skill");
+  const brandName = isAiSkillBuilder ? "AI Skill OS" : "DNA Kinh Doanh";
   const subject = `[Tải File] Đơn hàng #${orderId} - ${productName} đã hoàn tất!`;
+  
   const html = `
     <div style="font-family: sans-serif; padding: 20px; max-width: 600px; border: 1px solid #eee; border-radius: 8px; line-height: 1.6; color: #2a1b10;">
-      <h2 style="color: #e9b85d; margin-top: 0; border-bottom: 2px solid #fff8ee; padding-bottom: 10px;">Thanh toán thành công & Nhận tài liệu</h2>
+      <h2 style="color: ${isAiSkillBuilder ? '#c9a84c' : '#e9b85d'}; margin-top: 0; border-bottom: 2px solid #fff8ee; padding-bottom: 10px;">Thanh toán thành công & Nhận tài liệu</h2>
       <p>Chào bạn <strong>${customerName}</strong>,</p>
       <p>Cảm ơn bạn đã hoàn tất thanh toán cho sản phẩm <strong>${productName}</strong>.</p>
       
-      <div style="background: #fff8ee; border: 1px solid rgba(233,184,93,0.3); border-radius: 8px; padding: 20px; margin: 20px 0; text-align: center;">
-        <h3 style="margin-top: 0; color: #8b6332;">ĐƯỜNG DẪN TẢI FILE TÀI LIỆU</h3>
+      <div style="background: #fff8ee; border: 1px solid ${isAiSkillBuilder ? 'rgba(201,168,76,0.3)' : 'rgba(233,184,93,0.3)'}; border-radius: 8px; padding: 20px; margin: 20px 0; text-align: center;">
+        <h3 style="margin-top: 0; color: ${isAiSkillBuilder ? '#8b7032' : '#8b6332'};">ĐƯỜNG DẪN TẢI FILE TÀI LIỆU</h3>
         <p style="font-size: 14px; color: #555; margin-bottom: 20px;">Bạn có thể tải tài liệu về máy bất cứ lúc nào qua liên kết bảo mật dưới đây:</p>
-        <a href="${downloadLink}" style="display: inline-block; padding: 14px 28px; background: #e9b85d; color: #24170b; font-weight: bold; text-decoration: none; border-radius: 8px; font-size: 16px; box-shadow: 0 4px 12px rgba(233,184,93,0.25);">
+        <a href="${downloadLink}" style="display: inline-block; padding: 14px 28px; background: ${isAiSkillBuilder ? '#c9a84c' : '#e9b85d'}; color: #24170b; font-weight: bold; text-decoration: none; border-radius: 8px; font-size: 16px; box-shadow: 0 4px 12px ${isAiSkillBuilder ? 'rgba(201,168,76,0.25)' : 'rgba(233,184,93,0.25)'};">
           TẢI XUỐNG FILE SẢN PHẨM
         </a>
       </div>
 
       <div style="font-size: 14px; color: #555;">
-        <h4 style="margin: 0 0 10px 0; color: #8b6332; font-size: 14px; letter-spacing: 0.5px;">THÔNG TIN ĐƠN HÀNG</h4>
+        <h4 style="margin: 0 0 10px 0; color: ${isAiSkillBuilder ? '#8b7032' : '#8b6332'}; font-size: 14px; letter-spacing: 0.5px;">THÔNG TIN ĐƠN HÀNG</h4>
         <table style="width: 100%; border-collapse: collapse;">
           <tr>
             <td style="padding: 6px 0; color: #666; width: 120px;">Mã đơn hàng:</td>
@@ -190,7 +216,7 @@ async function sendDigitalProductDeliveryEmail({ orderId, customerName, customer
           </tr>
           <tr>
             <td style="padding: 6px 0; color: #666;">Số tiền:</td>
-            <td style="padding: 6px 0; font-weight: bold; color: #8b6332;">${amountFormatted}đ</td>
+            <td style="padding: 6px 0; font-weight: bold; color: ${isAiSkillBuilder ? '#8b7032' : '#8b6332'};">${amountFormatted}đ</td>
           </tr>
         </table>
       </div>
@@ -199,14 +225,15 @@ async function sendDigitalProductDeliveryEmail({ orderId, customerName, customer
       <p style="font-style: italic; color: #666; font-size: 13px;">
         Nếu gặp bất kỳ khó khăn nào trong quá trình tải xuống hoặc sử dụng, vui lòng phản hồi email này hoặc nhắn tin qua Zalo hỗ trợ để được trợ giúp ngay lập tức.
       </p>
-      <p style="margin-top: 20px; font-size: 14px;">Thân mến,<br/><strong>Hoàng | DNA Kinh Doanh</strong></p>
+      <p style="margin-top: 20px; font-size: 14px;">Thân mến,<br/><strong>${isAiSkillBuilder ? 'Ban Quản Trị AI Skill OS' : 'Hoàng | DNA Kinh Doanh'}</strong></p>
     </div>
   `;
 
   return sendEmail({
     to: customerEmail,
     subject: subject,
-    html: html
+    html: html,
+    fromName: brandName
   });
 }
 
@@ -368,15 +395,7 @@ const server = http.createServer(async (req, res) => {
         return sendError(res, 404, "Không tìm thấy đơn hàng.");
       }
 
-      let downloadUrl = null;
-      if (order.status === 'completed' && order.slug) {
-        const meta = PRODUCTS_METADATA[order.slug];
-        if (meta && meta.downloadUrl) {
-          downloadUrl = meta.downloadUrl;
-        }
-      }
-
-      return sendJson(res, 200, { status: order.status, downloadUrl: downloadUrl });
+      return sendJson(res, 200, { status: order.status });
     } catch (err) {
       console.error(err);
       return sendError(res, 500, err.message);
@@ -945,9 +964,15 @@ const server = http.createServer(async (req, res) => {
               return res.end("500 Internal Server Error - Không thể đọc giao diện.");
             }
 
+            const brandName = (slug === 'ai-skill-builder') ? 'AI Skill OS' : 'DNA Kinh Doanh';
+            const brandMark = (slug === 'ai-skill-builder') ? 'AI' : 'DNA';
+
             let renderedHtml = html
               .replace(/{{PRODUCT_NAME}}/g, product.name)
-              .replace(/{{SLUG}}/g, slug);
+              .replace(/{{PRODUCT_ID}}/g, product.id)
+              .replace(/{{SLUG}}/g, slug)
+              .replace(/{{BRAND_NAME}}/g, brandName)
+              .replace(/{{BRAND_MARK}}/g, brandMark);
 
             res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
             return res.end(renderedHtml);
@@ -970,9 +995,14 @@ const server = http.createServer(async (req, res) => {
               return res.end("500 Internal Server Error - Không thể đọc giao diện.");
             }
 
+            const brandName = (slug === 'ai-skill-builder') ? 'AI Skill OS' : 'DNA Kinh Doanh';
+            const brandMark = (slug === 'ai-skill-builder') ? 'AI' : 'DNA';
+
             let renderedHtml = html
               .replace(/{{PRODUCT_NAME}}/g, product.name)
-              .replace(/{{SLUG}}/g, slug);
+              .replace(/{{SLUG}}/g, slug)
+              .replace(/{{BRAND_NAME}}/g, brandName)
+              .replace(/{{BRAND_MARK}}/g, brandMark);
 
             res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
             return res.end(renderedHtml);
@@ -1027,6 +1057,7 @@ const server = http.createServer(async (req, res) => {
       else if (ext === '.gif') contentType = 'image/gif';
       else if (ext === '.svg') contentType = 'image/svg+xml';
       else if (ext === '.ico') contentType = 'image/x-icon';
+      else if (ext === '.zip') contentType = 'application/zip';
 
       res.writeHead(200, { 'Content-Type': contentType });
       res.end(content);
