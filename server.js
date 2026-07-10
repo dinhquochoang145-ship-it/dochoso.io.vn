@@ -718,10 +718,20 @@ const server = http.createServer(async (req, res) => {
       }
 
       const body = await getJsonBody(req);
-      const memo = body.transaction_content || "";
-      const amountIn = parseFloat(body.amount_in || 0);
+      
+      // Hỗ trợ song song cả dữ liệu thật từ SePay (content, code, transferAmount) và script giả lập (transaction_content, amount_in)
+      let rawMemo = body.code || body.transaction_content || body.content || "";
+      let memo = "";
+      const match = rawMemo.match(/(SKB\d+)/i);
+      if (match) {
+        memo = match[1].toUpperCase();
+      } else {
+        memo = rawMemo.trim();
+      }
 
-      console.log(`[SePay Webhook] Nhận biến động số dư: Nội dung chuyển="${memo}", Số tiền=${amountIn}đ`);
+      const amountIn = parseFloat(body.transferAmount || body.amount_in || 0);
+
+      console.log(`[SePay Webhook] Nhận biến động số dư: Nội dung chuyển="${memo}" (Gốc: "${rawMemo}"), Số tiền=${amountIn}đ`);
 
       if (!memo) {
         return sendJson(res, 200, { success: false, message: "Không tìm thấy nội dung chuyển khoản" });
