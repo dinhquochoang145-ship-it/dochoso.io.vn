@@ -355,8 +355,9 @@ function renderMarkdownToHtml(md, filename) {
              .replace(/^## (.*$)/gim, '<h2>$1</h2>')
              .replace(/^# (.*$)/gim, '<h1>$1</h1>');
 
-  // Xử lý các đường kẻ ngang ---
+  // Xử lý các đường kẻ ngang --- và đường kẻ bằng ký tự Unicode (════, ━━━━)
   html = html.replace(/^---$/gim, '<hr style="border:none; border-top:1px solid rgba(255,232,190,0.15); margin: 24px 0;" />');
+  html = html.replace(/^[═━─\s]{5,}$/gim, '<hr style="border:none; border-top:1px solid rgba(255,232,190,0.15); margin: 24px 0;" />');
 
   // Xử lý in đậm, in nghiêng, code inline
   html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
