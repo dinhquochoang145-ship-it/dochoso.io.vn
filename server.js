@@ -342,11 +342,248 @@ function sendError(res, statusCode, message) {
   sendJson(res, statusCode, { error: message });
 }
 
+// Helper render Markdown thành HTML trực quan (Dark/Gold theme) cho Demo Day
+function renderMarkdownToHtml(md, filename) {
+  // Parser markdown siêu đơn giản bằng Regex
+  let html = md
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+
+  // Xử lý tiêu đề
+  html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>')
+             .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+             .replace(/^# (.*$)/gim, '<h1>$1</h1>');
+
+  // Xử lý các đường kẻ ngang ---
+  html = html.replace(/^---$/gim, '<hr style="border:none; border-top:1px solid rgba(255,232,190,0.15); margin: 24px 0;" />');
+
+  // Xử lý in đậm, in nghiêng, code inline
+  html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+             .replace(/\*(.*?)\*/g, '<em>$1</em>')
+             .replace(/`(.*?)`/g, '<code>$1</code>');
+
+  // Xử lý danh sách gạch đầu dòng và xuống dòng
+  const lines = html.split('\n');
+  let inList = false;
+  for (let i = 0; i < lines.length; i++) {
+    let line = lines[i].trim();
+    if (line.startsWith('- ') || line.startsWith('* ')) {
+      const itemContent = line.substring(2);
+      if (!inList) {
+        lines[i] = '<ul class="md-list">\n<li>' + itemContent + '</li>';
+        inList = true;
+      } else {
+        lines[i] = '<li>' + itemContent + '</li>';
+      }
+    } else {
+      if (inList) {
+        lines[i] = '</ul>\n' + lines[i];
+        inList = false;
+      }
+      // Dòng trống -> tạo khoảng cách nhịp điệu của Hoàng DQ
+      if (line === '') {
+        lines[i] = '<div class="spacer"></div>';
+      } else if (!line.startsWith('<h') && !line.startsWith('<ul') && !line.startsWith('<li') && !line.startsWith('</ul') && !line.startsWith('<hr') && !line.startsWith('<!--')) {
+        lines[i] = '<p>' + lines[i] + '</p>';
+      }
+    }
+  }
+  if (inList) {
+    lines.push('</ul>');
+  }
+  html = lines.join('\n');
+
+  return `<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>${filename} — Kế hoạch kinh doanh</title>
+  <style>
+    :root {
+      --bg: #0f0c08;
+      --bg-2: #17110c;
+      --text: #fff8ee;
+      --muted: #d8c8b1;
+      --gold: #e9b85d;
+      --gold-2: #f7d58d;
+      --line: rgba(255, 232, 190, 0.16);
+      --radius-xl: 16px;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--bg-2);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+    }
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+    .btn-back:hover {
+      color: var(--gold-2);
+    }
+    .doc-filename {
+      font-family: monospace;
+      font-size: 13px;
+      color: var(--gold);
+      background: rgba(233, 184, 93, 0.1);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+    h1, h2, h3 {
+      color: var(--gold-2);
+      margin-top: 1.6em;
+      margin-bottom: 0.6em;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+    h1 { font-size: 2.2rem; margin-top: 0; }
+    h2 { font-size: 1.6rem; border-bottom: 1px solid rgba(233,184,93,0.1); padding-bottom: 8px; }
+    h3 { font-size: 1.25rem; }
+    p {
+      color: var(--muted);
+      margin: 0 0 1.2em 0;
+    }
+    .spacer {
+      height: 1em;
+    }
+    ul.md-list {
+      padding-left: 20px;
+      margin: 0 0 1.5em 0;
+    }
+    li {
+      color: var(--muted);
+      margin-bottom: 0.5em;
+    }
+    strong {
+      color: var(--text);
+      font-weight: 700;
+    }
+    code {
+      font-family: monospace;
+      color: var(--gold);
+      background: rgba(233, 184, 93, 0.08);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header-bar">
+      <a href="/ke-hoach" class="btn-back">← Quay lại Dashboard</a>
+      <span class="doc-filename">${filename}</span>
+    </div>
+    ${html}
+  </div>
+</body>
+</html>`;
+}
+
 // Server HTTP chính
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, `http://${req.headers.host}`);
   const pathname = url.pathname;
   const method = req.method;
+
+  // --- PITCH / SUBMISSION FLOW: /ke-hoach & /ke-hoach/[filename] ---
+  if (pathname === '/ke-hoach' || pathname === '/ke-hoach/') {
+    try {
+      const dashboardPath = path.join(__dirname, 'ke-hoach-kinh-doanh', 'index.html');
+      fs.readFile(dashboardPath, 'utf8', (err, html) => {
+        if (err) {
+          res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
+          return res.end("500 Internal Server Error - Không thể đọc giao diện.");
+        }
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+        return res.end(html);
+      });
+      return;
+    } catch (err) {
+      console.error("Lỗi phục vụ trang Ke-hoach:", err);
+      res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
+      return res.end("500 Internal Server Error.");
+    }
+  }
+
+  if (pathname.startsWith('/ke-hoach/')) {
+    try {
+      const filename = pathname.replace('/ke-hoach/', '');
+      const localFilePath = path.join(__dirname, 'ke-hoach-kinh-doanh', filename);
+      
+      // Ngăn chặn path traversal
+      if (filename.includes('..') || filename.includes('/') || filename.includes('\\')) {
+        res.writeHead(403, { 'Content-Type': 'text/plain; charset=utf-8' });
+        return res.end("403 Forbidden - Lỗi bảo mật đường dẫn.");
+      }
+
+      fs.access(localFilePath, fs.constants.F_OK, (err) => {
+        if (err) {
+          res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
+          return res.end("404 Not Found - Không tìm thấy tài liệu.");
+        }
+
+        fs.readFile(localFilePath, 'utf8', (readErr, content) => {
+          if (readErr) {
+            res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
+            return res.end("500 Internal Server Error.");
+          }
+
+          const ext = path.extname(localFilePath).toLowerCase();
+          if (ext === '.md') {
+            // Render markdown thành HTML cực kỳ trực quan & đẹp mắt (Dark/Gold theme)
+            const htmlContent = renderMarkdownToHtml(content, filename);
+            res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+            return res.end(htmlContent);
+          } else if (ext === '.html') {
+            res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+            return res.end(content);
+          } else {
+            let contentType = 'text/plain; charset=utf-8';
+            if (ext === '.css') contentType = 'text/css';
+            else if (ext === '.js') contentType = 'application/javascript';
+            else if (ext === '.png') contentType = 'image/png';
+            else if (ext === '.jpg' || ext === '.jpeg') contentType = 'image/jpeg';
+            res.writeHead(200, { 'Content-Type': contentType });
+            return res.end(content);
+          }
+        });
+      });
+      return;
+    } catch (err) {
+      console.error("Lỗi phục vụ file trong ke-hoach:", err);
+      res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
+      return res.end("500 Internal Server Error.");
+    }
+  }
 
   // --- API TEST EMAIL VIA RESEND ---
   if (pathname === '/api/test-email' && method === 'GET') {
